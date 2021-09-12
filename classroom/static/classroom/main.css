@@ -1,0 +1,158 @@
+html,
+body {
+  min-width: 290px;
+  color: black;
+  background-color: #ffffff;
+  font-family: 'Open Sans', Arial, sans-serif;
+  line-height: 1.5;
+}
+
+#navbar {
+  position: fixed;
+  min-width: 290px;
+  top: 0px;
+  left: 0px;
+  width: 300px;
+  height:100% ;
+  border: solid;
+  border-color: rgba(0, 22, 22, 0.4);
+}
+
+#navbar > header{
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 81%;
+    margin-left: 10%;
+}
+
+header {
+  color: black;
+  margin: 10px;
+  text-align: center;
+  font-size: 1.8em;
+  font-weight: thin;
+  
+}
+
+#main-doc header {
+  text-align: left;
+  margin: 0px;
+}
+
+#navbar ul {
+  height: 88%;
+  padding: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-left: 10%;
+}
+
+#navbar li {
+  color: red;
+  border: 1px solid black;
+  border-radius: 5px;
+  list-style: none;
+  padding-left: 0px;
+  position: relative;
+  width: 90%;
+  margin-bottom: 10px;
+}
+.current-page{
+  background-color: rgba(237, 185, 247, 0.705);
+  border-left: 3px solid red;
+  
+}
+#navbar a {
+  display: block;
+  padding: 10px 30px;
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#navbar a:hover{
+  transform: scale(1.1);
+}
+
+#main-doc {
+  position: absolute;
+  margin-left: 310px;
+  padding: 20px;
+  margin-bottom: 110px;
+}
+
+
+@media only screen and (max-width: 815px) {
+  /* For mobile phones: */
+  #navbar ul {
+    border: 1px solid;
+    height: 207px;
+  }
+
+  #navbar {
+    background-color: white;
+    position: absolute;
+    top: 0;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    max-height: 275px;
+    border: none;
+    z-index: 1;
+    border-bottom: 2px solid;
+  }
+
+  #main-doc {
+    position: relative;
+    margin-left: 0px;
+    margin-top: 270px;
+  }
+}
+
+code{
+    display:block;
+    text-align: left;
+    white-space: pre;
+    position: relative;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 2;
+    background-color:#daf5f0;
+    /* background-color: #2F4350; */
+    border-radius:5px;
+    color: rgb(10, 5, 92);
+    /* color: white; */
+    border-left: 5px solid blue;
+  }
+.note{
+  border: 1px solid rgb(40, 28, 202);
+  background-color: rgb(250, 250, 215);
+  padding: 20px;
+  border-left: 5px solid rgb(248, 211, 45);
+}
+
+.main-section > header {
+    border: 1px solid blueviolet;
+    border-left: 5px solid blueviolet;
+    padding: 5px;
+}
+
+/* 
+#main-doc > nav a:hover{
+  background-color: rgb(250, 176, 127);
+} */
+
+#error-code{
+    display:block;
+    text-align: left;
+    white-space: pre;
+    position: relative;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 2;
+    background-color:#ffcccb;
+    border-radius:5px;
+    color: black;
+    border-left: 5px solid red;
+}
+

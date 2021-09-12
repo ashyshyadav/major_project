@@ -1,0 +1,53 @@
+*{
+    box-sizing: 0;
+    margin: 0;
+}
+
+.main-div {
+    display:flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background: linear-gradient(90deg, rgba(226, 90, 253, 0.705), #fa8a8a);
+    height: 100vh;
+    color: rgb(143, 56, 71);
+    font-family: 'Rock Salt', cursive;
+    font-size: 2rem;
+}
+.subjects > h2 {
+    margin: 1.5rem;
+    text-align: center;
+    /* border: 1px solid black; */
+    font-size: 2rem;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+.subjects > h2:hover{
+    background-color: teal;
+}
+
+.text-white{
+    color: white;
+}
+
+.register{
+    display: flex;
+}
+
+.register > div {
+    color: rgb(143, 56, 71);
+    margin:0 100px;
+    
+}
+.register > div > h2> a{
+    color: rgb(143, 56, 71);
+}
+
+.register > div:hover {
+    background-color: white;
+    border-radius: 5px; 
+}

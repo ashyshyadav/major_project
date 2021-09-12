@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- GOOGLE FONTS LINKS START HERE -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <!-- GOOGLE FONTS LINKS END HERE -->
+
+    <link rel="stylesheet" href="{% static 'classroom/welcome.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <div class="main-div">
+            <div class="welcome-text">
+                <h1>Welcome to ClassInator</h1>
+            </div>
+            <div class="subjects">
+                <h2><a href="{% url 'index' 'html'%}">HTML</a></h2>
+                <h2><a href="{% url 'index' 'css' %}">CSS</a></h2>
+                <h2><a href="{% url 'index' 'javascript' %}">JavaScript</a></h2>
+                <h2><a href="{% url 'index' 'python' %}">Python</a></h2>
+            </div>
+            <div class="register">
+                {% if user.is_authenticated %}
+                    <div><h2><a href="{% url 'logout' %}">Logout</a></h2><div>
+                {% else %}
+                <div><h2><a href="{% url 'login' %}">Login</a></h2></div>
+                <div><h2><a href="{% url 'register' %}">Register</a></h2></div>        
+                {% endif %}
+                
+            </div>
+         </div>    
+    </main>
+</body>
+</html>

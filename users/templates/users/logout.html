@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    <title>Register</title>
+</head>
+<body>
+    
+
+<div class="container">
+<div class="content-section">
+    <h3>You have logged out</h4>
+    <div class="border-top pt-3">
+        <small class="text-muted">
+            Need An Account?<a class="ml-2" href="{% url 'register'%}">Register</a>
+            <br>
+            Already Have An Account<a class="ml-2" href="{% url 'login'%}">Login</a>
+        </small>
+    </div>
+</div>
+</div>
+
+</body>
+</html>
