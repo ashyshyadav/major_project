@@ -7,7 +7,7 @@ class Exam(models.Model):
     name = models.CharField(max_length=120)
     subject = models.ForeignKey(Subject, on_delete=models.CASCADE)
     number_of_questions = models.IntegerField()
-    required_score_pass =models.IntegerField(default=40, help_text='required to pass in %')
+    required_score_pass =models.IntegerField(default=40,)
     time = models.IntegerField(help_text="duration of test in minutes")
 
     

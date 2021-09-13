@@ -2,6 +2,7 @@ from django.shortcuts import render
 from .models import Exam, Question, Answer, Result
 from classroom.models import Subject
 from django.contrib.auth.decorators import login_required
+from .forms import ExamCreationForm
 # Create your views here.
 
 def index(request, subject):
@@ -58,3 +59,11 @@ def exam(request, subject, exam_pk):
             # 'question_list': question_list,
         }    
         return render(request,'exam/exam.html', context)
+@login_required
+def create_exam(request,subject):
+    exam_creation_form = ExamCreationForm()
+    context = {
+        'subject':subject,
+        'exam_creation_form' :exam_creation_form
+    }
+    return render(request, 'exam/create_exam.html', context)
