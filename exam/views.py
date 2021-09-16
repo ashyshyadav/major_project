@@ -1,9 +1,12 @@
-from django.shortcuts import render
+from django.http.response import HttpResponse
+from django.shortcuts import redirect, render
 from .models import Exam, Question, Answer, Result
 from classroom.models import Subject
 from django.contrib.auth.decorators import login_required
-from .forms import ExamCreationForm
+from .forms import ExamCreationForm, AddQuestions
 # Create your views here.
+
+# EXAM INDEX VIEW IT SHOW THE LIST OF EXAM FOR A PARTICULAR SUBJECT
 
 def index(request, subject):
     sub = Subject.objects.get(name=subject)
@@ -15,6 +18,10 @@ def index(request, subject):
     }
     return render(request,'exam/exam_index.html', context)
     
+# EXAM INDEX VIEW ENDS HERE
+
+
+
 @login_required
 def exam(request, subject, exam_pk):
     if request.method == 'POST':
@@ -30,22 +37,23 @@ def exam(request, subject, exam_pk):
             get_correct_list.append(get_correct)
         answer_input = []    
         for question in question_list:
-            answer_input.append(request.POST[question.text])   
-        testAnswer = Answer.objects.get(text=answer_input[0])   
-        testAnswer = testAnswer.correct
-        username = request.user
+            answer_input.append(request.POST[question.text])
+        user = request.user
         score_in_percentage = (score/len(get_correct_list)) * 100
+        result = Result(exam = exam, user = user, score = score_in_percentage)
+        result.save()
+        print(result)
         context = {
                 'question_list':question_list,
                 'answer_input': answer_input,
-                'test_answer': testAnswer ,
                 'get_correct': get_correct,
                 'get_correct_list': get_correct_list,
                 'score':score,
                 'scoreP': score_in_percentage,
-                'username':username,
+                'username':user,
+                'result': result
             }   
-        return render (request, 'exam/submit.html', context)
+        return render (request, 'exam/submit.html', context)       
     else:
         exam = Exam.objects.get(pk=exam_pk)
         # question_query = exam.get_questions() 
@@ -59,11 +67,37 @@ def exam(request, subject, exam_pk):
             # 'question_list': question_list,
         }    
         return render(request,'exam/exam.html', context)
+
+
+
+
 @login_required
 def create_exam(request,subject):
-    exam_creation_form = ExamCreationForm()
+    if request.method == 'POST':
+        exam_creation_form = ExamCreationForm(request.POST)
+        if exam_creation_form.is_valid():
+            exam_creation_form.save()
+            if exam_creation_form.save() :
+                print("saved")
+            else:
+                print('not saved')    
+            nubmer_of_questions = exam_creation_form.cleaned_data['number_of_questions']
+            return redirect('add_questions', subject)
+    else:
+        exam_creation_form = ExamCreationForm()
+        context = {
+            'subject':subject,
+            'exam_creation_form' :exam_creation_form
+        }
+        return render(request, 'exam/create_exam.html', context)
+
+
+@login_required
+def add_questions(request, subject):
+    add_question_form = AddQuestions()
     context = {
-        'subject':subject,
-        'exam_creation_form' :exam_creation_form
+        'test': 'hey',
+        'subject': subject,
+        'add_question_form': add_question_form,
     }
-    return render(request, 'exam/create_exam.html', context)
+    return render(request, 'exam/add_questions.html', context)

@@ -8,31 +8,45 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <title>{{subject | capfirst}} | Exam</title>
+    <title>Result</title>
   </head>
   <body>
-    <!-- <h3>{{subject | capfirst}}</h3> -->
-    <div class="jumbotron">
-    <h4>{{exam.name}}</h4>
-    <br>
-    <p></p>
-    <br>
-    <form method="post">
-    {% csrf_token %}
-    {% for question in exam.get_questions %}
-        <p>{{question}}</p>
-        {% for answer in question.get_answers %}
-            <input type="radio" name="{{question.text}}" id="{{answer.text}}" value="{{answer.text}}" required>
-            <label for="{{answer.text}}">{{answer.text}}</label>
-            <br>
-        {% endfor %}
-        <hr>
-        <br>
-    {% endfor %}
-    <button type="submit">submit</button>
-    </form>
-    </div>
-    
+
+{{user}}
+<h5>HTML</h5>
+{% for r in result %}
+{% if r.exam.subject.name == 'html' %}
+<p>{{r.exam.name}}: {{r.score}}%</p>
+{% endif %}
+{% endfor %}
+
+
+<h5>CSS</h5>
+{% for r in result %}
+{% if r.exam.subject.name == 'css' %}
+<p>{{r.exam.name}}: {{r.score}}%</p>
+{% else %}
+{% endif %}
+{% endfor %}
+
+
+
+<h5>JavaScript</h5>
+{% for r in result %}
+{% if r.exam.subject.name == 'javascript' %}
+<p>{{r.exam.name}}: {{r.score}}%</p>
+{% endif %}
+{% endfor %}
+
+
+<h5>Python</h5>
+{% for r in result %}
+{% if r.exam.subject.name == 'python' %}
+<p>{{r.exam.name}}: {{r.score}}%</p>
+{% endif %}
+{% endfor %}
+
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

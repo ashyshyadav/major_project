@@ -20,8 +20,8 @@
     
     <nav id="navbar">
     {% if user.is_authenticated %}
-      <header {% if subject == 'profile' %}class="current-page" {% endif %}>
-          <a href="{% url 'index' 'profile' %}" class="active"><i class="fas fa-user"></i>{{user.username}}</a>
+      <header>
+          <a href="{% url 'profile'%}" class="active"><i class="fas fa-user"></i>{{user.username}}</a>
       </header>
     {% endif %}
         

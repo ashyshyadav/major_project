@@ -10,16 +10,11 @@
     <!-- BOOTSTRAP LINKS STARTS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-- BOOTSTRAP LINKS ENDS HERE -->
+    
 
-    <title>Creating Exam</title>
+    <title>Add Questions</title>
 </head>
 <body>
-    {{subject}}
-    <br>
-    <form  method="post">
-        {% csrf_token %}
-        {{exam_creation_form | crispy}}
-        <button class="btn btn-success" type="submit">Submit</button>
-    </form>
+    {{add_question_form | crispy}}
 </body>
 </html>
