@@ -1,20 +1,30 @@
-from django.http.response import HttpResponse
+from django.http.response import HttpResponseRedirect
 from django.shortcuts import redirect, render
 from .models import Exam, Question, Answer, Result
 from classroom.models import Subject
 from django.contrib.auth.decorators import login_required
 from .forms import ExamCreationForm, AddQuestions
+from django.contrib import messages 
+
 # Create your views here.
 
 # EXAM INDEX VIEW IT SHOW THE LIST OF EXAM FOR A PARTICULAR SUBJECT
-
+@login_required
 def index(request, subject):
     sub = Subject.objects.get(name=subject)
-    sub_pk = sub.pk
-    exams = Exam.objects.filter(subject=sub_pk)
+    user = request.user
+    exams_taken = Result.objects.filter(user=user).values_list('exam_id', flat=True)
+    new_exams = Exam.objects.filter(subject=sub.pk).exclude(id__in=exams_taken)
+    completed_exam_list = []
+    for exam_id in exams_taken:
+        exam = Exam.objects.get(pk=exam_id)
+        completed_exam_list.append(exam.name)
     context = {
-        'exams' : exams,
-        'subject': subject
+        'subject': subject,
+        'user':user,
+        'exams_taken':exams_taken,
+        'new_exam': new_exams,
+        'completed_exam_list':completed_exam_list
     }
     return render(request,'exam/exam_index.html', context)
     
@@ -52,8 +62,9 @@ def exam(request, subject, exam_pk):
                 'scoreP': score_in_percentage,
                 'username':user,
                 'result': result
-            }   
-        return render (request, 'exam/submit.html', context)       
+            }
+        messages.success(request, "Your response has been recorded")    
+        return HttpResponseRedirect('/user/profile/')       
     else:
         exam = Exam.objects.get(pk=exam_pk)
         # question_query = exam.get_questions() 

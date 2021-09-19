@@ -2,18 +2,21 @@
 {% block main %}
 <h3>{{subject}}</h3>
 <hr>
-{% for e  in exams %}
-<p>{{e.name}}</p>
-    {% comment %} {% for q in e.get_questions %}
-        <h4>{{q}}</h4>
-        {% for a in q.get_answers%}
-            <input type="radio" name="" id="{{q.text}}">
-            <label for="{{q.text}}">&emsp;{{a.text}}</label>
-            <br>
-        {% endfor %}
-    <hr>    
-    {% endfor %} {% endcomment %}
-<a href="{% url 'exam-view' subject e.pk  %}">Start</a>    
+<div class="new-exams bg-warning">
+{% for exam in new_exam %}
+<div class="new-exam-items">
+<p>{{exam}}</p>
+<a href="{% url 'exam-view' subject exam.pk  %}">Start</a>    
+<hr>
+</div>
 {% endfor %}
+</div>
 
+<br>
+
+<div class="exam_taken bg-success">
+{% for e in completed_exam_list %}
+{{e}}
+<p>Completed</p>
+{% endfor %}
 {% endblock main %}
