@@ -2,21 +2,29 @@
 {% block main %}
 <h3>{{subject}}</h3>
 <hr>
-<div class="new-exams bg-warning">
-{% for exam in new_exam %}
-<div class="new-exam-items">
-<p>{{exam}}</p>
-<a href="{% url 'exam-view' subject exam.pk  %}">Start</a>    
-<hr>
-</div>
-{% endfor %}
-</div>
+<div class="exam-index">
+    <div class="new-exams">
+        {% for exam in new_exam %}
+        <div class="new-exam-items">
+            <p>{{exam}}</p>
+            <a href="{% url 'exam-view' subject exam.pk  %}">Start</a>    
+            <hr>
+        </div>
+        {% endfor %}
+        {% if not new_exam %}
+            NO Pending exams
+        {% endif %}
+    </div>
 
-<br>
-
-<div class="exam_taken bg-success">
+<div class="exam_taken">
 {% for e in completed_exam_list %}
 {{e}}
 <p>Completed</p>
+<hr>    
 {% endfor %}
+{% if not completed_exam_list %}
+Completed exam will be displayed here
+{% endif %}
 {% endblock main %}
+
+</div>

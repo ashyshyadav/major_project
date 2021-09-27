@@ -16,15 +16,19 @@ def index(request, subject):
     exams_taken = Result.objects.filter(user=user).values_list('exam_id', flat=True)
     new_exams = Exam.objects.filter(subject=sub.pk).exclude(id__in=exams_taken)
     completed_exam_list = []
+
     for exam_id in exams_taken:
         exam = Exam.objects.get(pk=exam_id)
-        completed_exam_list.append(exam.name)
+        if str(exam.subject) == subject:
+            completed_exam_list.append(exam.name)
+        else:
+            print(f"ELSE : EXAM.SUBJECT: {exam.subject}")    
     context = {
         'subject': subject,
         'user':user,
         'exams_taken':exams_taken,
         'new_exam': new_exams,
-        'completed_exam_list':completed_exam_list
+        'completed_exam_list':completed_exam_list,
     }
     return render(request,'exam/exam_index.html', context)
     
