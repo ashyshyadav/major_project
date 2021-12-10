@@ -14,12 +14,14 @@
     <title>Creating Exam</title>
 </head>
 <body>
-    {{subject}}
-    <br>
+    <div class="container">
+    <h5>{{subject | capfirst}}</h5>
+
     <form  method="post">
         {% csrf_token %}
         {{exam_creation_form | crispy}}
         <button class="btn btn-success" type="submit">Submit</button>
     </form>
+    </div>
 </body>
 </html>

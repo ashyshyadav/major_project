@@ -12,3 +12,11 @@ class AddQuestions(forms.ModelForm):
     class Meta:
         model =  Question
         fields = '__all__'
+        exclude = ['exam']
+
+class AddAnswer(forms.ModelForm):
+    class Meta:
+        model = Answer
+        fields = '__all__'
+        exclude =('question',)
+        

@@ -15,6 +15,25 @@
     <title>Add Questions</title>
 </head>
 <body>
-    {{add_question_form | crispy}}
+<div class="container">
+    <div class="content-section ">
+    <form method="post">
+        {% csrf_token %}
+        <fieldset class="form-group">
+            <legend class="border-bottom mb-4">Add Questions</legend>
+            <div class="border px-5">
+            {% for question_form in question_form_list %}        
+                {{question_form | crispy}}
+            <hr>
+            {% endfor %}
+            </div>
+
+        </fieldset>
+        <div class="form-group">
+            <button class="btn btn-info border border-dark" type="submit">Submit</button>
+        </div>
+    </form>
+    </div>
+</div>    
 </body>
 </html>

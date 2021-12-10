@@ -3,7 +3,7 @@ from django.shortcuts import redirect, render
 from .models import Exam, Question, Answer, Result
 from classroom.models import Subject
 from django.contrib.auth.decorators import login_required
-from .forms import ExamCreationForm, AddQuestions
+from .forms import ExamCreationForm, AddQuestions, AddAnswer
 from django.contrib import messages 
 
 # Create your views here.
@@ -93,11 +93,12 @@ def create_exam(request,subject):
         if exam_creation_form.is_valid():
             exam_creation_form.save()
             if exam_creation_form.save() :
+                nubmer_of_questions = exam_creation_form.cleaned_data['number_of_questions']
+                exam_name = exam_creation_form.cleaned_data['name']
+                return redirect('add_questions', subject, exam_name, nubmer_of_questions)
                 print("saved")
             else:
-                print('not saved')    
-            nubmer_of_questions = exam_creation_form.cleaned_data['number_of_questions']
-            return redirect('add_questions', subject)
+                print('not saved')                
     else:
         exam_creation_form = ExamCreationForm()
         context = {
@@ -105,14 +106,23 @@ def create_exam(request,subject):
             'exam_creation_form' :exam_creation_form
         }
         return render(request, 'exam/create_exam.html', context)
-
-
+        
 @login_required
-def add_questions(request, subject):
-    add_question_form = AddQuestions()
-    context = {
+def add_questions(request, subject, exam_name, number_of_questions): 
+    if request.method == 'POST':
+        add_questions = AddQuestions(request.POST)
+    else:
+        i = 1
+        question_form_list = []
+        while i <= number_of_questions:
+            question_form_list.append(AddQuestions())
+            i+=1
+        context = {
         'test': 'hey',
         'subject': subject,
-        'add_question_form': add_question_form,
+        # 'add_question_form': add_question_form,
+        'number_of_questions':number_of_questions,
+        'exam_name':exam_name,
+        'question_form_list': question_form_list
     }
     return render(request, 'exam/add_questions.html', context)
