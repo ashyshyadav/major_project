@@ -22,13 +22,16 @@
         <fieldset class="form-group">
             <legend class="border-bottom mb-4">Add Questions</legend>
             <div class="border px-5">
-            {% for question_form in question_form_list %}        
-                {{question_form | crispy}}
+            <!-- {% for question_form in question_form_list %}        
+                {{question_form | crispy}} -->
             <hr>
             {% endfor %}
             </div>
-
-        </fieldset>
+          <!-- {{form | crispy}} -->
+          
+          {{cf | crispy}}
+              
+       </fieldset>
         <div class="form-group">
             <button class="btn btn-info border border-dark" type="submit">Submit</button>
         </div>

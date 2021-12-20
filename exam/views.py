@@ -1,11 +1,13 @@
+from os import name
+from typing import Text
 from django.http.response import HttpResponseRedirect
 from django.shortcuts import redirect, render
 from .models import Exam, Question, Answer, Result
 from classroom.models import Subject
 from django.contrib.auth.decorators import login_required
-from .forms import ExamCreationForm, AddQuestions, AddAnswer
+from .forms import ExamCreationForm, AddQuestions, AddAnswer, CustomQuestionForm
 from django.contrib import messages 
-
+from django.forms import modelformset_factory
 # Create your views here.
 
 # EXAM INDEX VIEW IT SHOW THE LIST OF EXAM FOR A PARTICULAR SUBJECT
@@ -109,20 +111,85 @@ def create_exam(request,subject):
         
 @login_required
 def add_questions(request, subject, exam_name, number_of_questions): 
+    QuestionFormSet = modelformset_factory(Question, fields=('text',), extra = number_of_questions)
+    customform = CustomQuestionForm()
+    form = QuestionFormSet()
     if request.method == 'POST':
-        add_questions = AddQuestions(request.POST)
-    else:
-        i = 1
-        question_form_list = []
-        while i <= number_of_questions:
-            question_form_list.append(AddQuestions())
-            i+=1
+        customform = CustomQuestionForm(request.POST)
+        if customform.is_valid():
+            print('TRUE--------------')
+            q1 = customform.cleaned_data['question']
+            a1 = customform.cleaned_data['option_1']
+            a2 = customform.cleaned_data['option_2']
+            a3 = customform.cleaned_data['option_3']
+            a4 = customform.cleaned_data['option_4']
+            c = customform.cleaned_data['correct_option']
+            if c == 1 :
+                co = a1
+            elif c == 2 :
+                co = a2 
+            elif c == 3 :
+                co = a3
+            else:
+                co = a4    
+            exam = Exam.objects.get(name=exam_name)    
+            question = Question(text=q1, exam=exam)
+            question.save()
+
+            if co == a1 :
+                answer_1 = Answer(text=a1, correct=True, question=question)
+                answer_1.save()
+            else :
+                answer_1 = Answer(text=a1, correct=False, question=question)    
+                answer_1.save()
+            if co == a2 :
+                answer_2 = Answer(text=a2, correct=True, question=question)
+                answer_2.save()
+            else :
+                answer_2 = Answer(text=a2, correct=False, question=question)
+                answer_2.save()
+            if co == a3 :
+                answer_3 = Answer(text=a3, correct=True, question=question)
+                answer_3.save()
+            else :
+                answer_3 = Answer(text=a3, correct=False, question=question)
+                answer_3.save()
+            if co == a4 :
+                answer_4 = Answer(text=a4, correct=True, question=question)
+                answer_4.save()
+            else :
+                answer_4 = Answer(text=a4, correct=False, question=question)
+                answer_4.save()
+            print(question)    
+            print(f'{q1}-------------{a1}--{a2}--{a3}--{a4}--{c}--{a4}')
+
+        else:
+            print('FALSE--------------')    
         context = {
-        'test': 'hey',
+        'form' : form,  
+        'cf': customform
+        }
+        return redirect('/thankyou/')
+    else:
+        add_questions = AddQuestions()
+        answer_1 = AddAnswer(prefix='answer_1')
+        answer_2 = AddAnswer(prefix='answer_2')
+        answer_3 = AddAnswer(prefix='answer_3')
+        answer_4 = AddAnswer(prefix='answer_4')
+        
+        context = {
+        'form' : form,    
+        'add': add_questions,
+        'a1': answer_1,
+        'a2': answer_2,
+        'a3': answer_3,
+        'a4': answer_4,
         'subject': subject,
         # 'add_question_form': add_question_form,
-        'number_of_questions':number_of_questions,
+        # 'number_of_questions':number_of_questions,
         'exam_name':exam_name,
-        'question_form_list': question_form_list
+        # 'question_form_list': question_form_list
+        'cf': customform
     }
+    
     return render(request, 'exam/add_questions.html', context)

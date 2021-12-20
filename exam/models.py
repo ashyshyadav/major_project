@@ -6,7 +6,7 @@ from django.contrib.auth.models import User
 class Exam(models.Model):
     name = models.CharField(max_length=120)
     subject = models.ForeignKey(Subject, on_delete=models.CASCADE)
-    number_of_questions = models.IntegerField()
+    number_of_questions = models.IntegerField(default=10)
     required_score_pass =models.IntegerField(default=40,)
     time = models.IntegerField(help_text="duration of test in minutes")
 
