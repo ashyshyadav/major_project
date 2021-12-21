@@ -1,5 +1,6 @@
 from os import name
 from typing import Text
+from django.forms.formsets import formset_factory
 from django.http.response import HttpResponseRedirect
 from django.shortcuts import redirect, render
 from .models import Exam, Question, Answer, Result
@@ -10,7 +11,7 @@ from django.contrib import messages
 from django.forms import modelformset_factory
 # Create your views here.
 
-# EXAM INDEX VIEW IT SHOW THE LIST OF EXAM FOR A PARTICULAR SUBJECT
+# EXAM INDEX VIEW IT SHOWS THE LIST OF EXAM FOR A PARTICULAR SUBJECT
 @login_required
 def index(request, subject):
     sub = Subject.objects.get(name=subject)
@@ -98,7 +99,6 @@ def create_exam(request,subject):
                 nubmer_of_questions = exam_creation_form.cleaned_data['number_of_questions']
                 exam_name = exam_creation_form.cleaned_data['name']
                 return redirect('add_questions', subject, exam_name, nubmer_of_questions)
-                print("saved")
             else:
                 print('not saved')                
     else:
@@ -111,85 +111,63 @@ def create_exam(request,subject):
         
 @login_required
 def add_questions(request, subject, exam_name, number_of_questions): 
-    QuestionFormSet = modelformset_factory(Question, fields=('text',), extra = number_of_questions)
-    customform = CustomQuestionForm()
-    form = QuestionFormSet()
+    CustomFormset = formset_factory(CustomQuestionForm, extra=number_of_questions)
+    exam =Exam.objects.get(name=exam_name)
     if request.method == 'POST':
-        customform = CustomQuestionForm(request.POST)
-        if customform.is_valid():
-            print('TRUE--------------')
-            q1 = customform.cleaned_data['question']
-            a1 = customform.cleaned_data['option_1']
-            a2 = customform.cleaned_data['option_2']
-            a3 = customform.cleaned_data['option_3']
-            a4 = customform.cleaned_data['option_4']
-            c = customform.cleaned_data['correct_option']
-            if c == 1 :
-                co = a1
-            elif c == 2 :
-                co = a2 
-            elif c == 3 :
-                co = a3
-            else:
-                co = a4    
-            exam = Exam.objects.get(name=exam_name)    
-            question = Question(text=q1, exam=exam)
-            question.save()
+        # customform = CustomQuestionForm(request.POST)
+        formset = CustomFormset(request.POST)
+        print(f'--------------{formset.is_valid()}-------')
+        if formset.is_valid():
+            for f in formset:
+                input_question = f.cleaned_data['question']
+                input_option_1 = f.cleaned_data['option_1']
+                input_option_2 = f.cleaned_data['option_2']
+                input_option_3 = f.cleaned_data['option_3']
+                input_option_4 = f.cleaned_data['option_4']
+                input_correct  = f.cleaned_data['correct_option']
+                print(f'---{input_question}---\n------{input_option_1}\n------{input_option_2}\n------{input_option_3}\n------{input_option_4}')
+                question = Question(text=input_question, exam=exam)
+                question.save()
+                print(f"questio____{question}")
+                if input_correct == input_option_1 :
+                    answer_1 = Answer(text=input_option_1, correct=True, question=question)
+                    answer_1.save()
+                else :
+                    answer_1 = Answer(text=input_option_1, correct=False, question=question)    
+                    answer_1.save()
 
-            if co == a1 :
-                answer_1 = Answer(text=a1, correct=True, question=question)
-                answer_1.save()
-            else :
-                answer_1 = Answer(text=a1, correct=False, question=question)    
-                answer_1.save()
-            if co == a2 :
-                answer_2 = Answer(text=a2, correct=True, question=question)
-                answer_2.save()
-            else :
-                answer_2 = Answer(text=a2, correct=False, question=question)
-                answer_2.save()
-            if co == a3 :
-                answer_3 = Answer(text=a3, correct=True, question=question)
-                answer_3.save()
-            else :
-                answer_3 = Answer(text=a3, correct=False, question=question)
-                answer_3.save()
-            if co == a4 :
-                answer_4 = Answer(text=a4, correct=True, question=question)
-                answer_4.save()
-            else :
-                answer_4 = Answer(text=a4, correct=False, question=question)
-                answer_4.save()
-            print(question)    
-            print(f'{q1}-------------{a1}--{a2}--{a3}--{a4}--{c}--{a4}')
+                if input_correct == input_option_2 :
+                    answer_2 = Answer(text=input_option_2, correct=True, question=question)
+                    answer_2.save()
+                else :
+                    answer_2 = Answer(text= input_option_2, correct=False, question=question)
+                    answer_2.save()
 
-        else:
-            print('FALSE--------------')    
+                if input_correct == input_option_3 :
+                    answer_3 = Answer(text=input_option_3, correct=True, question=question)
+                    answer_3.save()
+                else :  
+                    answer_3 = Answer(text=input_option_3, correct=False, question=question)
+                    answer_3.save()
+
+                if input_correct == input_option_4 :
+                    answer_4 = Answer(text=input_option_4, correct=True, question=question)
+                    answer_4.save()
+                else :
+                    answer_4 = Answer(text=input_option_4, correct=False, question=question)
+                    answer_4.save()            
         context = {
-        'form' : form,  
-        'cf': customform
+        'cfs': CustomFormset
         }
         return redirect('/thankyou/')
     else:
-        add_questions = AddQuestions()
-        answer_1 = AddAnswer(prefix='answer_1')
-        answer_2 = AddAnswer(prefix='answer_2')
-        answer_3 = AddAnswer(prefix='answer_3')
-        answer_4 = AddAnswer(prefix='answer_4')
-        
         context = {
-        'form' : form,    
-        'add': add_questions,
-        'a1': answer_1,
-        'a2': answer_2,
-        'a3': answer_3,
-        'a4': answer_4,
         'subject': subject,
         # 'add_question_form': add_question_form,
         # 'number_of_questions':number_of_questions,
         'exam_name':exam_name,
         # 'question_form_list': question_form_list
-        'cf': customform
+        'cfs': CustomFormset
     }
     
     return render(request, 'exam/add_questions.html', context)

@@ -20,16 +20,13 @@
     <form method="post">
         {% csrf_token %}
         <fieldset class="form-group">
+            
             <legend class="border-bottom mb-4">Add Questions</legend>
             <div class="border px-5">
-            <!-- {% for question_form in question_form_list %}        
-                {{question_form | crispy}} -->
-            <hr>
-            {% endfor %}
+            {{cfs | crispy}}
             </div>
-          <!-- {{form | crispy}} -->
           
-          {{cf | crispy}}
+          <!-- {{cf | crispy}} -->
               
        </fieldset>
         <div class="form-group">
