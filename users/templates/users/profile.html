@@ -12,6 +12,16 @@
   </head>
   <body>
 
+
+    {% if messages%}
+    {% for message in messages %}
+    <div class="alert alert-{{message.tags}}">
+    {{message}}
+    </div>
+    {% endfor %}
+  {% endif %}
+    
+
 {{user}}
 <h5>HTML</h5>
 {% for r in result %}

@@ -42,6 +42,7 @@ def index(request, subject):
 @login_required
 def exam(request, subject, exam_pk):
     if request.method == 'POST':
+        # print(f"-------------{request.POST}------------------")s
         score = 0
         exam = Exam.objects.get(pk=exam_pk)
         question_list = []
@@ -49,8 +50,14 @@ def exam(request, subject, exam_pk):
         for question in exam.get_questions():
             question_list.append(question)
             get_correct = question.get_correct_answers()
+            # print(f"-------question.get_correct_answers()--------{question.get_correct_answers()}")
+            # print(f'_______QUESTION___{question}_____________')
+            # print(f"-------POST------{request.POST[question.text]}------------------")
+            # print(f"------get_correct-------{get_correct}-----get_correct_list-----{get_correct_list}")
+
             if get_correct == request.POST[question.text]:
                 score = score + 1
+                # print(f"-----------------{score}-------------")
             get_correct_list.append(get_correct)
         answer_input = []    
         for question in question_list:
@@ -60,6 +67,7 @@ def exam(request, subject, exam_pk):
         result = Result(exam = exam, user = user, score = score_in_percentage)
         result.save()
         print(result)
+        messages.success(request, "Your response has been recorded")
         context = {
                 'question_list':question_list,
                 'answer_input': answer_input,
@@ -68,9 +76,8 @@ def exam(request, subject, exam_pk):
                 'score':score,
                 'scoreP': score_in_percentage,
                 'username':user,
-                'result': result
+                'result': result,
             }
-        messages.success(request, "Your response has been recorded")    
         return HttpResponseRedirect('/user/profile/')       
     else:
         exam = Exam.objects.get(pk=exam_pk)
@@ -125,32 +132,42 @@ def add_questions(request, subject, exam_name, number_of_questions):
                 input_option_3 = f.cleaned_data['option_3']
                 input_option_4 = f.cleaned_data['option_4']
                 input_correct  = f.cleaned_data['correct_option']
-                print(f'---{input_question}---\n------{input_option_1}\n------{input_option_2}\n------{input_option_3}\n------{input_option_4}')
+                print(f'---{input_question}---\n------{input_option_1}\n------{input_option_2}\n------{input_option_3}\n------{input_option_4}\n-----{input_correct}')
                 question = Question(text=input_question, exam=exam)
                 question.save()
                 print(f"questio____{question}")
-                if input_correct == input_option_1 :
+                if input_correct == 1 :
+                    co = input_option_1
+                elif input_correct == 2 :
+                    co = input_option_2 
+                elif input_correct == 3 :
+                    co = input_option_3
+                else:
+                    co = input_option_4 
+
+                if co == input_option_1 :
                     answer_1 = Answer(text=input_option_1, correct=True, question=question)
                     answer_1.save()
                 else :
                     answer_1 = Answer(text=input_option_1, correct=False, question=question)    
                     answer_1.save()
 
-                if input_correct == input_option_2 :
+                if co == input_option_2 :
                     answer_2 = Answer(text=input_option_2, correct=True, question=question)
                     answer_2.save()
                 else :
                     answer_2 = Answer(text= input_option_2, correct=False, question=question)
                     answer_2.save()
 
-                if input_correct == input_option_3 :
+                if co == input_option_3 :
                     answer_3 = Answer(text=input_option_3, correct=True, question=question)
                     answer_3.save()
                 else :  
                     answer_3 = Answer(text=input_option_3, correct=False, question=question)
                     answer_3.save()
-
-                if input_correct == input_option_4 :
+                print(f'OUTSIDE-----------{input_correct}----------{input_option_4}---{co}')
+                if co == input_option_4 :
+                    print(f'{input_correct}-----EQUALS-----{input_option_4}')
                     answer_4 = Answer(text=input_option_4, correct=True, question=question)
                     answer_4.save()
                 else :
