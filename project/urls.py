@@ -19,6 +19,11 @@ import classroom
 from users import views as users_views
 from classroom import views as classroom_views
 from django.contrib.auth import views as auth_views
+from django.conf import settings
+from django.conf.urls.static import static
+from exam import views as exam_views 
+
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',classroom_views.welcome, name='welcome'),
@@ -26,6 +31,11 @@ urlpatterns = [
     path('register/', users_views.register, name='register'),
     path('login/', auth_views.LoginView.as_view(template_name='users/login.html'), name='login'),
     path('logout/', auth_views.LogoutView.as_view(template_name='users/logout.html'), name='logout'),
+    path('thankyou/', exam_views.thankyou, name="exam-thankyou" ),
     path('<str:subject>/', include('classroom.urls')),
     path('<str:subject>/exam/', include('exam.urls'), name='main_exam'),
-]
+    
+] 
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)

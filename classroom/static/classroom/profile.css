@@ -1,0 +1,44 @@
+.user-info{
+    border: 1px solid black;
+    display: flex;
+    padding: 3rem;
+}
+.profile-pic  img{
+    height: 20rem;
+    width: 20rem;
+    border-radius: 50%;
+}
+
+.result-div-1{
+    display: flex;
+}
+
+.result-div-1 div{
+    border: 1px solid salmon;
+    height: 70vh;
+    width: 50%;
+    padding-left: 0rem;
+    padding-right: 0rem;
+    margin: 5rem;
+    text-align: center;
+    overflow-y: scroll;
+}
+
+
+
+.result-div-2 div{
+    border: 1px solid salmon;
+    height: 70vh;
+    width: 50%;
+    padding-left: 10rem;
+    padding-right: 10rem;
+}
+
+
+.result-div-1{
+    display: flex;
+}
+
+.result-div-2{
+    display: flex;
+}

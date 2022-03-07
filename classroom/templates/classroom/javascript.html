@@ -2,7 +2,12 @@
 {% block main %}
         <section class="main-section" id="Introduction">
           <header>
-            Introduction
+            Introduction&nbsp;&nbsp;&nbsp;&nbsp;
+            {% for c in c_list %}
+                {% if c.chapter == 'Introduction' and c.is_complete %}
+                    <i class="fas fa-check"></i>
+                {% endif %} 
+            {% endfor %} 
           </header>
           <article>
             <p>JavaScript is a cross-platform, object-oriented scripting language. It is a small and lightweight language. Inside a host environment (for example, a web browser), JavaScript can be connected to the objects of its environment to provide programmatic control over them.</p>
@@ -15,7 +20,14 @@
         </section>
       
         <section class="main-section" id="What_you_should_already_know">
-          <header>What you should already know</header>
+          <header>
+            What you should already know&nbsp;&nbsp;&nbsp;&nbsp;
+            {% for c in c_list %}
+                {% if c.chapter == 'What you should already know' and c.is_complete %}
+                    <i class="fas fa-check"></i>
+                {% endif %} 
+            {% endfor %} 
+          </header>
           <article>
             <p>This guide assumes you have the following basic background:</p>
       
@@ -33,7 +45,13 @@
         </section>
       
         <section class="main-section" id="Javascript_and_Java">
-          <header>JavaScript and Java</header>
+          <header>JavaScript and Java&nbsp;&nbsp;&nbsp;&nbsp;
+            {% for c in c_list %}
+                {% if c.chapter == 'JavaScript and Java' and c.is_complete %}
+                    <i class="fas fa-check"></i>
+                {% endif %} 
+            {% endfor %}
+          </header>
           <article>
       
             <p>
@@ -50,7 +68,12 @@
       
         <section class="main-section" id="Hello_world">
           <header>
-            Hello world
+            Hello world&nbsp;&nbsp;&nbsp;&nbsp;
+            {% for c in c_list %}
+                {% if c.chapter == 'Hello world' and c.is_complete %}
+                    <i class="fas fa-check"></i>
+                {% endif %} 
+            {% endfor %}
           </header>
           <article>
             <p>
@@ -68,7 +91,12 @@
       
         <section class="main-content" id="Variables">
           <header>
-            Variables
+            Variables&nbsp;&nbsp;&nbsp;&nbsp;
+            {% for c in c_list %}
+                {% if c.chapter == 'Variables' and c.is_complete %}
+                    <i class="fas fa-check"></i>
+                {% endif %} 
+            {% endfor %}
           </header>
           <p>You can declare a variable in three ways:</p>
           <p>With the keyword var. For example,</p>
@@ -85,7 +113,15 @@
       
         
         <section class="main-section" id="Declaring_variables"> 
-          <header>Declaring variables</header>
+          <header>
+            Declaring variables&nbsp;&nbsp;&nbsp;&nbsp;
+            {% for c in c_list %}
+                {% if c.chapter == 'Declaring variables' and c.is_complete %}
+                    <i class="fas fa-check"></i>
+                {% endif %} 
+            {% endfor %}
+
+          </header>
           <article>
             <p>You can declare a variable in three ways:</p>
             <p>With the keyword var. For example,</p>
@@ -103,7 +139,12 @@
         
         <section class="main-content" id="Scope_of_variables">
           <header>
-            Variable scope
+            Variable scope&nbsp;&nbsp;&nbsp;&nbsp;
+            {% for c in c_list %}
+                {% if c.chapter == 'Variable scope' and c.is_complete %}
+                    <i class="fas fa-check"></i>
+                {% endif %} 
+            {% endfor %}
           </header>
           <article>
             <p>When you declare a variable outside of any function, it is called a global variable, because it is available to any other code in the current document. When you declare a variable within a function, it is called a local variable, because it is available only within that function.
@@ -117,7 +158,14 @@
       
         
        <section class="main-section" id="Global_variables">
-          <header>Global variables</header>
+          <header>
+            Global variables&nbsp;&nbsp;&nbsp;&nbsp;
+            {% for c in c_list %}
+                {% if c.chapter == 'Global variables' and c.is_complete %}
+                    <i class="fas fa-check"></i>
+                {% endif %} 
+            {% endfor %}
+          </header>
           <article>
           <p>Global variables are in fact properties of the global object. In web pages the global object is window, so you can set and access global variables using the window.variable syntax.</p>
           <p>Consequently, you can access global variables declared in one window or frame from another window or frame by specifying the window or frame name. For example, if a variable called phoneNumber is declared in a document, you can refer to this variable from an iframe as parent.phoneNumber.
@@ -126,7 +174,14 @@
         </section>
        
        <section class="main-section" id="Constants">
-         <header>Constants</header>
+         <header>
+           Constants&nbsp;&nbsp;&nbsp;&nbsp;
+           {% for c in c_list %}
+               {% if c.chapter == 'Constants' and c.is_complete %}
+                   <i class="fas fa-check"></i>
+               {% endif %} 
+           {% endfor %}
+         </header>
          <article>
            <p>You can create a read-only, named constant with the const keyword. The syntax of a constant identifier is the same as for a variable identifier: it must start with a letter, underscore or dollar sign and can contain alphabetic, numeric, or underscore characters.</p>
            <code>const PI = 3.14;</code>
@@ -143,7 +198,14 @@
       
       
       <section class="main-section" id="Data_types">
-        <header>Data types</header>
+        <header>
+          Data types&nbsp;&nbsp;&nbsp;&nbsp;
+          {% for c in c_list %}
+              {% if c.chapter == 'Data types' and c.is_complete %}
+                  <i class="fas fa-check"></i>
+              {% endif %} 
+          {% endfor %}
+        </header>
         <article>
           <p>The latest ECMAScript standard defines seven data types:</p>
           <ul>
@@ -166,7 +228,14 @@
       
       
       <section class="main-section" id="if...else_statement">
-        <header>if...else statement</header>
+        <header>
+          if...else statement&nbsp;&nbsp;&nbsp;&nbsp;
+          {% for c in c_list %}
+              {% if c.chapter == 'if...else statement' and c.is_complete %}
+                  <i class="fas fa-check"></i>
+              {% endif %} 
+          {% endfor %}
+        </header>
         <p>Use the if statement to execute a statement if a logical condition is true. Use the optional else clause to execute a statement if the condition is false. An if statement looks as follows:
         </p>
         <code>
@@ -202,7 +271,14 @@
       </section>
       
       <section class="main-section" id="while_statement">
-        <header>while statement</header>
+        <header>
+          while statement&nbsp;&nbsp;&nbsp;&nbsp;
+          {% for c in c_list %}
+              {% if c.chapter == 'while statement' and c.is_complete %}
+                  <i class="fas fa-check"></i>
+              {% endif %} 
+          {% endfor %}
+        </header>
         <article>
         <p>
       A while statement executes its statements as long as a specified condition evaluates to true. A while statement looks as follows:
@@ -228,7 +304,12 @@
       
       <section class="main-section" id="Function_declarations">
         <header>
-          Function declaration
+          Function declaration&nbsp;&nbsp;&nbsp;&nbsp;
+          {% for c in c_list %}
+              {% if c.chapter == 'Function declaration' and c.is_complete %}
+                  <i class="fas fa-check"></i>
+              {% endif %} 
+          {% endfor %}
         </header>
         <article>
           <p>
@@ -253,7 +334,14 @@
       </section>
         
       <section class="main-section" id="Reference">
-        <header>Reference</header>
+        <header>
+          Reference&nbsp;&nbsp;&nbsp;&nbsp;
+          {% for c in c_list %}
+              {% if c.chapter == 'Reference' and c.is_complete %}
+                  <i class="fas fa-check"></i>
+              {% endif %} 
+          {% endfor %}
+        </header>
         <article>
           <ul>
             <li>All the documentation in this page is taken from <a href="https://developer.mozilla.org/"</a>MDN</li>

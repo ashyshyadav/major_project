@@ -6,7 +6,12 @@
 <!-- INTRODUCTION SECTION STARTS HERE -->
 <section class="main-section">
     <header>
-        Introduction
+        Introduction&nbsp;&nbsp;&nbsp;&nbsp;
+        {% for c in c_list %}
+            {% if c.chapter == 'Introduction' and c.is_complete %}
+                <i class="fas fa-check"></i>
+            {% endif %} 
+        {% endfor %}    
     </header>
     <br>
     <article>
@@ -77,7 +82,12 @@
 
 <section class="main-section">
   <header>
-    CSS Selectors
+    CSS Selectors&nbsp;&nbsp;&nbsp;&nbsp;
+    {% for c in c_list %}
+        {% if c.chapter == 'CSS Selectors' and c.is_complete %}
+            <i class="fas fa-check"></i>
+        {% endif %} 
+    {% endfor %}    
   </header>
   <br>
   <article>
@@ -199,7 +209,14 @@
 <!-- HOW TO ADD CSS SECTION STARTS HERE -->
 
 <section class="main-section">
-  <header>How To Add CSS</header>
+  <header>
+    How To Add CSS&nbsp;&nbsp;&nbsp;&nbsp;
+    {% for c in c_list %}
+        {% if c.chapter == 'How To Add CSS' and c.is_complete %}
+            <i class="fas fa-check"></i>
+        {% endif %} 
+    {% endfor %}    
+  </header>
   <br>
   <article>
     <h4>Three Ways to Insert CSS</h4>
