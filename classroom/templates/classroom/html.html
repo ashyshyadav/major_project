@@ -3,16 +3,73 @@
 {% block main %}
 {% load static %}
 
+<!-- CHANGE HTML TO CN -->
+
+<!-- TESTING FOR INDEX -->
+
+<section class="main-section">
+    <header>INDEX</header>
+    <br></br>
+    <h5>Module 1</h5>
+    <ul>
+        <li><a href="#Introduction_to_Networking"> Chapter 1 : Introduction to Networking </a></li>
+        <ol>    
+            <li>Introduction</li>
+            <li>Network Benefits</li>
+            <li>Network Serices</li>
+            <li>Network Topology Types</li>
+            <li>Line Configurations</li>
+            <li>Types of communication Simple  Hall Duplex, duplex</li>
+            <li>Network Hardware</li>
+            <li>Network scale </li>
+            <li>Network Classifications by their Geography</li>
+            <li>Network Software</li>
+            <li>Network Architecture</li>
+            <li>Design Issue for the layers</li>
+            <li>Interface and Services</li>
+            <li>Connection Oriented and Connectionless Services</li>
+            <li>Relationship of Services to Protocols</li>
+            <li>Refereance Models</li>
+            <li>OSI Model</li>
+            <li>TCP/IP Protocol Suite</li>
+            <li>Detailed Description of Each Layer in TCP/IP</li>
+            <li>Addressing in TCP/IP</li>
+            <li>Multiplexing and Demultiplexing in TCP/IP</li>
+            <li>Comparison of OSI ANd TCP/IP</li>
+            <li>Addressing</li>
+        </ol>
+    </ul>
+    <br></br>
+    <h5>Module 2</h5>
+    <ul>
+    <li>Chapter 2 : Physical layer</li>
+    <ol>
+        <li>Introduction to Communication System </li>
+        <li>The Electromagnetic Spectrum</li>
+        <li>Digital Communication</li>
+        <li>Introduction to Physical Layer</li>
+        <li>Twisted Pair Cables</li>
+        <li>Co-axial Cables</li>
+        <li>Optical Fibers Cables</li>
+        <li>Unguided Media</li>
+        <li>Typesof Wireless Media</li>
+        <li>Use OF Infrared Light for Transmission</li>
+        <li>Bluetooth</li>
+        <li>Introduction to Switching</li>
+        <li>Circuit Switching Networks</li>
+        <li>Packet Switching</li>
+        <li>Virtual Circut Packet Switching</li>
+        <li>Comparison of Circuit and Packet Switching</li>
+    </ol>  
+    </ul>
+    <br></br>
+    
+<!-- TESTING FOR INDEX ENDS HERE -->
 
 <!-- Introduction Section -->
-<section class="main-section">
+<section id="Introduction_to_Networking" class="main-section">
     <header>
-        Introduction&nbsp;&nbsp;&nbsp;&nbsp;
-        {% for c in c_list %}
-            {% if c.chapter == 'Introduction' and c.is_complete %}
-                <i class="fas fa-check"></i>
-            {% endif %}    
-        {% endfor %}   
+        Introduction 
     </header>
     <br>
     <article>

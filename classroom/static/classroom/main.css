@@ -7,6 +7,20 @@ body {
   line-height: 1.5;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+/* Table Styling */
+table, th, td{
+   border: 1px solid black;
+   border-collapse: collapse;
+   border-spacing: 0px;
+   text-align: left;
+}
+
+/*Table Styling ends here*/
+
 #navbar {
   position: fixed;
   min-width: 290px;

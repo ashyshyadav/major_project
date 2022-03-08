@@ -9,18 +9,18 @@ def index(request, subject):
         active_page = subject
         c_list = []
         sub = Subject.objects.get(name=subject)
-        print(f'--------{sub.get_curriculums()}')
-        for c in sub.get_curriculums():
-            c_list.append(c)
+        # print(f'--------{sub.get_curriculums()}')
+        # for c in sub.get_curriculums():
+        #     c_list.append(c)
         context ={
             'subject':subject,
             'active_page':active_page,
             'c_list': c_list
         }
-        
+        print(template_path)
         return render (request, template_path, context)
     # except:    
-        # raise Http404("Page not found")    
+    #     raise Http404("Page not found")    
     
 
 def welcome(request):

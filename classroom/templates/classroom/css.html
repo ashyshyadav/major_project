@@ -2,11 +2,77 @@
 {% block main %}
 {% load static %}
 
+<!-- CHANGE CSS TO MMS -->
+<!-- TESTING FOR INDEX  -->
+<section class="main-section">
+  <header>INDEX</header>
+  <br>
+  <ul>
+      <li><h5>Chapter 1: Introduction to multimedia</h5></li>
+      <ol>
+          <li>Objects of Multimedia</li>
+          <li>Multimedia System Archetecture - IMA, Workstation, Network </li>
+          <li>Transmission meida in Multimedia Systems</li>
+          <li>Multimedia I/O deviecs - Salient Feature,Storage Media, Multimedia Database</li>
+          <li>Multimedia Databases</li>
+
+      </ol>
+
+      <br>
+
+      <li><h5>Chapter 2: Text & Digital Image</h5></li>
+      <ol>
+          <li>Introduction to Digital Text</li>
+          <li>Text File Format</li>
+          <li>Text Compression Techniques</li>
+          <li>Introduction to Digital Image</li>
+          <li>Image File Formats: BMP, JPG</li>
+          <li>Image Compression Technique: fundamentals, Types - lossless ANd Lossy, Lossless Comperssion ALgorithms - Shannon--Fano, CCITT group 2D, Lossy Compression Algorithm - JPEG</li>
+      </ol>
+
+      <br>
+
+      <li><h5>Chapter 3: Digital Audio</h5></li>
+      <ol>
+          <li>Basic Sound Concepts: computer representatin of sound</li>
+          <li>File Formats - WAV, MPEG Audio</li>
+          <li>Compressin: PCM, DM, DPCM</li>
+      </ol>
+
+      <br>
+
+      <li><h5>Chapter 4: DIgital Video</h5></li>
+      <ol>
+          <li>Digitization of Videom types of video signals</li>
+          <li>File Formats: MPEG Video, H.261</li>
+          <li>Compression: MPEG</li>
+      </ol>
+
+      <br>
+
+      <li><h5>Chapter 5: Multimedia Network Communcation and Representation</h5></li>
+      <ol>
+          <li>Quality of Service</li>
+          <li>Multimedia over IP</li>
+          <li>Representation - Authoring sustems and user interface</li>
+      </ol>
+
+      <br>
+
+      <li><h5>Chapter 6: Multimedia Security</h5></li>
+      <ol>
+          <li>Requirements and properties</li>
+          <li>MEchanisms - Digital Signatures, Steganographic Methods</li>
+          <li>Sample Application - unidirectional distributed systens, information systems and conference systems</li>
+      </ol>
+  </ul>
+</section>
+<!-- TESTING FOR INDEX ENDS HERE -->
 
 <!-- INTRODUCTION SECTION STARTS HERE -->
 <section class="main-section">
     <header>
-        Introduction&nbsp;&nbsp;&nbsp;&nbsp;
+        Chapter 1: Introduction to Multimedia&nbsp;&nbsp;&nbsp;&nbsp;
         {% for c in c_list %}
             {% if c.chapter == 'Introduction' and c.is_complete %}
                 <i class="fas fa-check"></i>
@@ -15,33 +81,597 @@
     </header>
     <br>
     <article>
-        <h4>What is CSS?</h4>
-        <ul>
-            <li>CSS stands for Cascading Style Sheets</li>
-            <li>CSS describes how HTML elements are to be displayed on screen, paper, or in other media</li>
-            <li>CSS saves a lot of work. It can control the layout of multiple web pages all at once</li>
-            <li>External stylesheets are stored in CSS files</li>
-        </ul>
-        <h4>Why Use CSS?</h4>
-        <p>CSS is used to define styles for your web pages, including the design, layout and variations in display for different devices and screen sizes.</p>
-        <p>CSS Example</p>
-        <code>
-            body {
-                background-color: lightblue;
-              }
-              
-              h1 {
-                color: white;
-                text-align: center;
-              }
-              
-              p {
-                font-family: verdana;
-                font-size: 20px;
-              }
-        </code>
+
+        <h2>Overview of Multimedia</h2>
         <br>
-        <h4>CSS Solved a Big Problem</h4>
+
+        <h4>Object and elements of multimedia</h4>
+        <ul>
+            <li>Facsimile: Transmitting documants images over telephone lines. Supports both high resolution and low resolutiono images. Uses RLE technique for low resolution image. High reolution increases the clarity</li>
+            <li>Documents images: used for storing business documents that must be retained for long period of time and can be accessed by large number oof peopl> Providing multimedia access removes the need for making several copies for storage and distributioon> High resolution image requires very efficient compressioon and decompression techniques.</li>
+            <li>Photographic uimages: used for identification at security reasons, patient mediacl histories, maintaining employee records for instant identification etc.</li>
+            <li>GIS maps: widely used for wildlife managements as well as for urban planning</li>
+            <li>Voice coommanfs: based no command operating sustem. Used for hands free compter operation by spoken commands</li>
+            <li>Audio message: voice mail can be send as attachments and emails</li>
+            <li>Video messages: similar to audio messafe, video messages can also be attached through emails.</li>
+            <li>Full motion video: CD-ROM technology has provided the basis for the development of full mootion video</li>
+            <li>Holographic images: it extends the concept of virtual reality by allowing user to ger the "inside" part of image. View operation from inside.</li>
+            <li>Text: Text is the most common multimedia element. Text expresses the information the developer is trying to fet across to their viewers. Even though pictures grab the viewers attention, text is a good idea to include, as well just in case the picture does not load simplest of data types. Require least amount of storage. Also used for searching and sorting in database. Used for description and include image elemnts they can also include a short amount of text for the user's brower to include as an alternative , in case the digital image item is not available</li>
+            <li>Image: An image catches the viewers attention much more quickly than just plain text. Interactive elemnts, such as buttons often use custom images created a variety of formats and files extension. Amoung the most common are JPEGs and PNGs both of thes often appear on website, as the firmats allow developers to minimize on file size while maximizing on picture quality. Graphic design software programs such as photoshop and Paint.NET allow developers to create complex visual effects with digital images.</li>
+            <li>Audio: Audio files and strams play a major role in some multimedia systems. Audion files appears as part of application content and al;so to aid interactin. When they appear within Web application and sites, audio files spmetimes need to be deployed using pluf-in-media players. Audio formats include MP3, WMA, Wave,MIDI and RealAudio. When developers include audio within a website,they will generally use a acompressed format to iminmize on download times. Audio consists of music,soeech vocie commanfsm telephone conversation and so on. Audio objects have a time dimension assciated with them.</li>
+            <li>Video: Digtal video appears in many multimedia application particaulary on the web. As with audio, websites can stream digital video to increase the speed and availability of playback. Common digital vido formats include Flash, MPEG, AVI, WMV and QuickTime. Most digital video require use of brewser plug-ins to play required resources install. Various alforithms are used for compression and decompression of video. From processing perspective video presented to the user should be smooth and withou breaks.</li>
+        </ul>
+        <br>
+        <h4>Application of Multimedia System</h4>
+        <ul>
+          <li>Electronic Messeging: sending audioo and video as attachments via email. Downloading audio and video. Sending simple text data through mails. Its also provides store and forward message facility</li>
+          <li>Image Enhancement: highlighting details of image by increasing contrast making picture darker and increasing grey scale level of pixels. Rotating image in real time. Adjusting RGB to get image with proper colors</li>
+          <li>Document Imaging: storing, Retrieving and manupulating large volumes of data i.e documents. Complex documents can be send in electronics form rateher than on paper. Document image sustem uses woekflow method</li>
+          <li>Multimedia in Education field: Multimedia is used to instruct as a master because nowadays, multimedia CD are used insted of text books. KNowlege can be easily obtained by using multimedia CD in computer because multimedia CF includes text, picture, sound and  film which helps the students to understand more easily and clearly than the text books. For the use of multimedia as educationo help the PC contains a high quality deisplay. THis all has promoted the development of a wide rande of computer based training.</li>
+          <li>Multimedia in Entertainment: now a days the live internet pay to play gaming with multiple players has become popluar. Actually the first applicatiopn of multimedia system was in the field of entertainment and that too in the video game industry. The integrated audio and video effects make various types of games more entertaining. Generally most of the video games need joystick play. Multimedia is mostly used in games. Text, audio, image and animations are mostly used in computer games. The use of multimedia in games mafe possidble to make innovative and interactive games. It is also used in movies for entertainment, especially to develop special eggects in movies and animations. Multimedia application that allows users to actively participate is called INteractive multimedia</li>
+          <li>Multimedia in advertising: Multimedia technology is commonly used in advertisement. To propmote the business and products multimedia is used for preparing advertisements.</li>
+          <li>Multimedia in Business: The business application of multimedia includes, productsdemos, instant messaging. Multimeid ais used in business for training employees using projectors, presenting sales, educating customers etc. It helps for the promotion of business and new products. One the excellent application is vice and live conferening. A multimedia can make a audience come live</li>
+          <li>Science and technology: Multimedia had a wide applicatin in the field of science and technology. The multimedia system is capalble of transferring audio and clips in addition to the regular text. IT is even capable of sending message and formatted multimedia documents. At the same time the multimedia also help in live which is a live interaction through audio message and it is only possible with the multimedia. It reduces the time and cost and can be arranged at any moment even in emergencies. It is enough for communication and meeting. At the same time the multimedia is enough useful services based on image. Similarly it is usedful for surgeons as they can use images created from imaging scans of human body to practice complicated procedures such as rbrain removal and reconstructive surgery . The plans can be made in a better wat to reduce the costs and complication</li>
+          <li>Multimedia in Software: Software Engineers may use multimedia in computer from entertainment to designing digital games; it can be used as a learning process. THe multimedia software's are created by professionals and software engineers</li>
+          <li>Multimedia on the web: offering various online facilities like live TV, PRe- recoded videos, phots, animations. Plug-in and media players are software programmes that allow us to experience multimedia on the web Plug-i ns is software Programmes that work with web browser to display multimedia. When web browser encounters a multimedia file it hads off the data to plug-in play or display the file. Multimedia players are also software programmes that can play audio and video files both ON and OFF the web.</li>
+        </ul>
+
+        <br>
+        <h2>Multimedia System Architecture</h2>
+        <br>
+
+        <h4>Multimedia System Architecture</h4>
+        <img src="{% static 'css_img/Multimedia System Architecture.png'%}" alt="Error 404 Image Not Found">
+        <ul>
+          <li>While focusing on multimedia system architecture, the most important point under consideration is on multimedia applications.</li>
+          <li>Applications can be training app, conferencing app, messaging app, education app.</li>
+          <li>After that multimedia application interface with windows or with presentation manager.</li>
+          <li>API’s support wide range of applications for publishing and interacting with applications.</li>
+          <li>Multimedia applications such as educational, online training electronic messaging, and video conferencing kind of applications we are using at very first level of architecture.</li>
+          <li>Multimedia architecture is of three types:</li>
+          <ol>
+            <li>Multimedia workstation architecture</li>
+            <li>IMA architectural framework</li>
+            <li>Network Architecture for multimedia systems</li>
+          </ol>
+        </ul>
+
+        <br>
+        <h4>Multimedia Workstation Architecture</h4>
+        <ul>
+          <li>If we are using windows operating system on the computer then interface is necessary between multimedia applications and windows based system.</li>
+          <li>For getting these interface, we require specific driver connectivity which will be compatible with multimedia application for getting access on windows</li>
+          <li>These, multimedia applications requires some devices or peripherals to connect with applications.</li>
+          <li>So, again hardware interface with specific application is needed on our system.</li>
+          <li>Multimedia system architecture gives the idea about how to run multimedia application on our desktop. What type of interface is required and for hardware connecting what specifications are required</li>
+          <li>Multimedia system architecture is categorized in 3 different layers</li>
+          <ol>
+            <li>Application compatibility layer: This layer consist of various multimedia applications.</li>
+            <li>System compatibility layer: This layer offers interface between multimedia application with system e.g. O.S.</li>
+            <li>Hardware compatibility layer : This layer offers compatibility of hardware or add-on devices with multimedia applications through the computer system</li>
+          </ol>
+          <li>There are many OS that can enhance the multimedia experience. Best use of multimedia can be on android or Windows.</li>
+          <li>Software drivers are the applications that help the OS connect to the H/W being used in the system.</li>
+          <li>E.g. Graphic card software</li>
+        </ul>
+
+        <br>
+        <h4>Multimedia System Network Architecture</h4>
+        <ul>
+          <li>Multimedia systems have special networking requirements because, rather than just small volumes of data, large volumes of images are being transmitted. These transfers are executed over LANs & WANs.</li>
+          <li>The increase use of e-mail and other web services has placed extensive demands on the networking infrastructure.</li>
+          <li>The leading causes for network congestion are:</li>
+          <ol>
+            <li>Number of users accessing in the network.</li>
+            <li>Business needs for more complex networks for a large variety of data transmissions including voice, data, and video messaging.</li>
+            <li>Graphics-intensive applications</li>
+            <li>Voice and video-based multimedia applications that require large volumes of data storage.</li>
+            <li>The tasks can be broken down into the following types on the basis of the nature of the requirements for volume of data, potential sources of data and transfer speeds.</li>
+            <li> Data transfer for text.</li>
+            <li>Data transfer for images.</li>
+            <li>Data transfer for audio and video clips.</li>
+          </ol>
+          <li>Date transfer for text is the least demanding of the various transfer's types. A simpler and potentially lower cost, network services can provide adequate performance for text transfers.</li>
+          <li>Data transfer for images is considerably more demanding due to high volume of data. A page of text may be as large as 2.5Kbytes. A black and white image of a page may, however range from 60Kbytes to 220 Kbytes even after compression.</li>
+          <li>Data transfer for audio and video clip is much more intense than imaging. This is because of the third dimension, Time. A higher class of services is needed to provide acceptable performance.</li>
+        </ul>
+
+        <br>
+        <h2>Transmission media in Multimedia Systems</h2>
+        <br>
+
+        <h4>Types of Transmission media in Multimedia Systems</h4>
+        <ol>
+          <li> <b>Perception Media</b> <p>Perception media refers to the nature of information perceived by humans, which is not strictly identical to the sense that is stimulated.For example, a still image and a movie convey information of a different nature, though stimulating the same sense.The question to ask here is: How do humans perceive information?</p> <p>In this context, we distinguish primarily between what we see and what we hear.Auditory media include music,sound and voice.Visual media include text, graphics and still and moving pictures.This differentiation can be further refined.For example, a visual medium can consist of moving pictures, animation, and text. In turn, moving pictures normally consist of series of scenes that, in turn, are composed of single pictures.</p></li>
+          <li><b>Representation Media</b> <p>The term representation media refers to how information is represented internally to the computer.The encoding used is of essential importance. The question to ask here is: How is information encoded in the computer? There are several option:</p>
+            <ul>
+              <li>Each character of a piece of text is encoded in ASCII.</li>
+              <li>A picture is encoded by the CEPT or CAPTAIN standard, or the GKS graphics standard can serve as a basis.</li>
+              <li>An audio data stream is available in simple PCM encoding and a linear quantization of 16 bits per sampling value.</li>
+              <li>A single image is encoded as group-3 facsimile or in JPEG format.</li>
+              <li>A combined audio-video sequence is stored in the computer in various TV standards (eg. PAL, SECAM or NTSC), in the CCIR-601 standard, or in MPEG format.</li>
+            </ul>
+          </li>
+          <li><b>Presentation Media</b><p>The term presentation media refers to the physical means used by systems to reproduce information for humans. For example, a TV set uses a cathode-ray tube and loudspeaker. The question to ask here is: Which medium is used to output information from the computer or input in the computer?</p><p>We distinguish primarily between output and input. Media such as paper, computer monitors, and loudspeakers are output media, while keyboards, cameras, and microphones are input media.</p></li>
+          <li><b>Storage Media</b><p>The term storage media is often used in computing to refer to various physical means for storing computer data, such as magnetic tapes, magnetic disks, or digital optical disks. However, data storage is not limited to the components available in a computer, which means that paper is also considered a storage medium. The question to ask here is: Where is information stored?</p></li>
+          <li><b>Transmission Media</b><p>The term transmission media refers to the physical means-cables of various types, radio tower, satellite, or ether (the medium that transmit radio waves)-that allow the transmission of telecommunication signals. The question to ask here is: Which medium is used to transmit data?</p></li>
+          <li><b>Information Exchange Media</b><p>Information exchange media include all data media used to transport information, e.g., all storage and transmission media. The question to ask here is: Which data medium is used to exchange information between different locations?</p><p>For example, information can be exchanged by storing it on a removable medium and transporting the medium from one location to another. These storage media include microfilms, paper, and floppy disks. Information can also be exchanged directly, if transmission media such as coaxial cables, optical fibers, or radio waves are used</p></li>
+        </ol>
+
+        <br>
+        <h2>Multimedia I/O Devices</h2>
+        <br>
+
+        <h4>Digital Camera</h4>
+        <img src="{% static 'css_img/Digital Camera.png'%}" alt="Error 404 Image not Found">
+        <ul>
+          <li>Working of Digital Camera:</li>
+          <ol>
+            <li>Based on CCD mechanism.</li>
+            <li>CCD consists of cells arranged in fixed array on surface/behind the lens.</li>
+            <li>CCD cells get charged by intensity of light.</li>
+            <li>This charge generates voltage which is then fed to A-D converter.</li>
+            <li>It converts charge voltage to digital value.</li>
+            <li>This values are stored in camera memory</li>
+            <li>This data can be moved from camera memory to computer memory, other memory devices and so on.</li>
+          </ol>
+        </ul>
+
+        <br>
+        <h4>Printers and Different Types of Printers</h4>
+        <ul>
+          <b>Printer:</b>
+          <li>Printer is a peripheral that allows you to make a print out (on paper) of computer data.</li>
+          <li>Some printers print only the textual information whereas other printers print graphics also.</li>
+          <li>The quality of the printer is determined by its resolution i.e. the clarity of print it can produce.</li>
+          <b>Characteristics of Printer:</b>
+          <ul>
+            <li>Printer speed: Expressed in pages per minute (ppm), print speed represents the printers ability print a large numbers of pages per minute. Speed varies for color printer.</li>
+            <li>Resolution: Expressed in dots per inch (dpi), resolution means the sharpness of printed text. Resolution varies for color print out.</li>
+            <li>Warm-up time: The waiting time necessary before the first print-out. A printer cannot print when it is “cold”. A certain temperature must be reached for the printer run optimally</li>
+            <li>Onboard memory: The quantity of memory that allows the printer to store print jobs. The higher the amount of memory, the longer the printer queue can be.</li>
+            <li>Paper format: Depending on their size, printers are able to print different sized documents. Generally A4 or A3 size . • Paper feed : The method of loading paper into the printer, characterizing the way in which blank paper is stored.</li>
+            <li>The main paper feed modes are:</li>
+            <ol>
+              <li>The feed tray, which uses an internal paper feed source. Its capacity is equal to the maximum number of sheets of paper that the tray can fit.</li>
+              <li>The sheet feeder is a manual feed method that allows you to insert sheets of paper in small quantities (of about 100). The sheet feeder in the back of the printer is either horizontal or vertical.</li>
+              <li>Cartridges : cartridges are rarely standard and depend highly on the printer brand and model. Some manufacturers favors multicolored cartridges whereas others offer separate ink cartridges</li>
+              <li>It is interesting to examine the printing cost per sheet. The size of the ink drop is especially important. The smaller the drop of ink, the lower the printing cost will be and the better the image quality will be. Some printers produce drops that are 1 or 2 picolitres.</li>
+              <li>A picolitre is a trillionth (one millionth of a millionth, or 10 to the -12th power) of a liter, which can be represented numerically as 0.000000000001/liter.</li>
+            </ol>
+            <b>Types of Printer:</b>
+            <li>Impact Printers:</li>
+            <ol>
+              <li>Impact printers print the characters by striking them on the ribbon which is then pressed on the paper. Impact printers are classified into line printers and character printers.</li>
+              <li> Line printers print single line at a time and the printing speed varies from 300-3000 lines per minute.</li>
+              <li>Character printers print a single character at a time and their printing speed varies from 30-600 characters per second.</li>
+              <li>Examples of impact printers:</li>
+              <ul>
+                <li>Dot−matrix printers: <p>These printers are examples of impact printers. They print one character at a time and their speed is measured in characters per second.</p>
+                <img src="{% static 'css_img/Dot-matrix printer.png'%}" alt="Error 404 Image not found">
+                </li>
+                <li>Dot matrix printer:</li>
+                <ul>
+                  <li>Dots are formed by tiny pins in the print head that strike an inked ribbon against the paper.</li>
+                  <li>The print head moves leaving a pattern of dots which form letters and images.</li>
+                  <li>These printers are slow and noisy and are not usually used for personal computers anymore.</li>
+                  <li>However, since the printing cost is less and several carbon-copies can be printed at the same time, they are used to print airline tickets and shop receipts (shown in fig. above)</li>
+                  <li>Daisy wheel printer</li>
+                  <img src="{% static 'css_img/Daisywheelprinter.png'%}" alt="Error 404 Image not Found">
+                </ul>
+                <li>Daisy wheel printers:</li>
+                <ul>
+                  <li>These printers are able to print letter-quality documents. These documents have the same quality as that produced by a typewriter However, they cannot print graphics. They are slow and expensive than dot matrix printers.</li>
+                  <li>In these printers, the print head is like a daisy flower and is made up of metallic or plastic wheels. A raised character is placed on the top of the arms of the wheel. For printing any character, the print wheel is rotated until the desired character is under the print hammer. The arm is then struck from behind by the print hammer against the ink ribbon and paper, creating the character.</li>
+                  <li>Drum printers: <img src="{% static 'css_img/Drumprinter.png'%}" alt="Error 404 Image not Found"></li>
+                  <li>These printers are much faster than the dot matrix and daisy wheel printers as they print a line in a single operation. • Thus, drum printers are quiet loud, very expensive and produce low quality print. • In these printers, a complete character set is embossed around the circumference of a drum at every print position. For instance, for 110-column printer there are 110 character sets wrapped around the circumference of the drum. • Thus, the drum revolves continuously and when the character is to be printed, the hammer strikes the character.</li>
+                </ul>
+              </ul>
+            </ol>
+            <li>Non−impact printers:</li>
+            <ul>
+              <li>Non-impact printers print the characters without using ribbons. They provide a higher speed in terms of characters per second.</li>
+              <li>Examples of non-impact printers:</li>
+              <ol>
+                <li>Inkjet printers: <p>The most commonly used printer for home computers is the inkjet printer. These printers form the images on paper by spraying tiny droplets of ink from the print head. Several colored ink can be used to produce colorful printouts.</p></li>
+                <li>Inkjet printers hardly make any noise: <p>They are relatively cheap to manufacture but the high cost of the ink make them expensive to operate in the long run.</p></li>
+                <img src="{% static 'css_img/IPHMAN.png'%}" alt="Error 404 Image not Found">
+                <li>Laser printers: <p>These printers produce marks on paper by using a fine dust called toner. A laser makes the toner stick to the paper forming characters or images. The cost of Laser printers is high but they are cheap to use. A single toner cartridge can print 5000-10,000 pages. The printing is done relatively quietly and very fast compared to other printers, a page is printed in a few seconds. For these reasons laser printers are preferred in offices.</p></li>
+                <img src="{% static 'css_img/laser.png'%}" alt="">
+              </ol>
+            </ul>
+          </ul>
+        </ul>
+
+        <br>
+        <h4>Scanner and Different types of scanners</h4>
+        <ul>
+          <b>Scanner:</b>
+          <li>An image scanner—often abbreviated to just scanner, is a device that optically scans images, printed text, handwriting or an object and converts it to a digital image.</li>
+          <li>Converting a paper document to digital image.</li>
+          <img src="{% static 'css_img/Scanner.png'%}" alt="Error 404 Image not Found">
+          <li>Scanning bed in the scanner, a glass plate is utilized to place a document for scanning.</li>
+          <li>A light source is mounted on a traction mechanism which moves from one end of the document to other end during scan session.</li>
+          <li>A mirror is used to reflect each illuminated scan line to fixed CCD array as light source moves across the document.</li>
+          <li>The CCD array determines the pixel intensity in the selected line for each pixel across the line.</li>
+          <li>Once the scan is complete, the image is transferred to a computer via USB.</li>
+          <b>Types of Scanner:</b>
+          <li>Rotary Drum Scanner:</li>
+          <img src="{% static 'css_img/rdscanner.png'%}" alt="Error 404 Image not Found">
+          <ol>
+            <li>In case of flatbed scanner at a time we can scan only one side of paper. But mechanism of rotary drum scanner is somewhat different that is in which two digital cameras with CCD array are mounted in a fixed position near the drum.</li>
+            <li>As per the name suggest this scanner contains drum to wrap the paper and two set of belts three set roller guides to guide the paper.</li>
+            <li>So this rotary drum scanner will scan both the sides of papers in single attempt and scanning mechanism with CCD array is same like flatbed scanner.</li>
+            <li>A fixed CCD array absorbs reflected light and generates analog voltage which in turn gets converted to a digital value.</li>
+            <li>The front side of the page is scanned in position 1 as it is around the drum and the back side of the page is scanned in position 2 as the transport mechanism pulls the paper from the drum and ejects it out to the stacking tray.</li>
+          </ol>
+          <li>Handheld Scanner:</li>
+          <img src="{% static 'css_img/hhscanner.png'%}" alt="Error 404 Image not Found">
+          <ol>
+            <li>Hand held document scanners are manual devices that are dragged across the surface of the image to be scanned.</li>
+            <li>Scanning documents in this manner requires a steady hand, as an uneven scanning rate would produce distorted images.</li>
+            <li>They typically have a "start" button, which is held by the user for the duration of the scan.</li>
+            <li>Mainly used to capture a part of page from a book, part of newspaper.</li>
+            <li>A handheld scanner can be used for surfaces the have some curve. Mainly, handheld scanners offer portability and the convenience of a simple device at a cost lower than that of a flatbed scanner.</li>
+            <li>Handheld scanners use a light bulb as a light source to illuminate the scan line being scanned. The light is reflected from the document as the user moves the scanner across document. A fixed CCD array absorbs the reflected light and generates an voltage, Which in turn gets converted to a digital value.</li>
+          </ol>
+        </ul>
+
+        <br>
+        <h4>Plotter</h4>
+        <img src="{% static 'css_img/plotter.jpg'%}" alt="">
+        <ul>
+          <li>Plotters are special output devices that use pens to draw on paper. The pens are held in an arm that can move up and down across the paper. The arm and the pen together can draw just like a human but more accurately and quickly. Different colored pens can be used to get colored drawings. Plotters are used by designers and architects since they work with large pieces of paper.</li>
+          <li>Plotters are widely used in applications such as computer aided design.</li>
+          <li>Pen plotters print by moving a pen or other instrument across the surface of a piece of paper.</li>
+          <li>Pen plotters can draw complex line art including text, but they do very slowly because of the mechanical movement of the pens.</li>
+          <li>Pen plotters are incapable of creating solid region of color, but can hatch an area by drawing a number of close regular lines.</li>
+          <li> This was often the fastest way to produce very large drawings or high resolution art work when computer memory was expensive and processor power was very limited.</li>
+          <li>The pens were mounted on a travelling bar whereby the y-axis was represented by the motion up and down the length of the bar and the x-axis was represented by motion of the bar back and forth across the plotting table.</li>
+          <li>Plotters are used primarily in technical drawing CAD applications, where they have the advantage of working on very large paper sizes while maintaining high resolution.</li>
+          <li>Pen plotters speed is measured by pen speed and acceleration rate, instead of by page printing speed.</li>
+          <li>A pen plotter's speed is primarily limited by the type of pen used, so the choice of pen is a key factor in pen plotter output speed.</li>
+          <li>Indeed, most modern pen plotters have he commands to control slowing speed depending on the type of pen currently in use</li>
+        </ul>
+
+        <br>
+        <h4>Jukebox (Optical Disk Library)</h4>
+        <ul>
+          <li>The difference in musical jukebox and optical jukebox is that optical disk library, the platters are optical and contain objects such as data, audio, video and images. Instead of a turn able, an optical disk has one or more optical drives.</li>
+          <li>Another difference is optical disk library uses a very high speed and accurate servo-controlled electromechanical robotically elevator mechanism for moving the optical platters from a drive and return it to its slot on the stack after the disk has finished playing. Optical disk libraries range from desktop jukeboxes with on 5" drive and a 10 -slot optical disk stack for up to 10 GB of storage to large libraries using as many as four12" drives with an 80 -slot optical disk stack for up to terabytes of storage.</li>
+          <li>A jukebox may contain drives of different types, including WORM, re-writable or multi-function. Jukebox can contain one or more drives. The drive is daisy chained on a SCSI bus with their own SCSI IDS. The robotics device also behaves as a SCSI device with its own SCSI ID, thereby allowing programmatic control of the device. The size of jukebox varies from small desktop versions.</li>
+          <li><b>Way of using</b> <p>Jukebox based optical disk libraries can be networked so that multiple users can access the information. Optical disk libraries serve as near-line archive for audio and video serves for audio and video objects stored as part of old but nit purged office mail.</p></li>
+          <li><b>Performance</b><p>The best case performance is achieved when the required information is in an optical disk which is already mounted in a drive. The worst case performance is when the required information is on the platter and which is not mounted in a drive and all drives have other mounted disk volumes.</p><p>The optical disk library logic can be unmounted and returned to its slot. The required disk volume is then fetched by the robotics and inserted into the drive and spun to its rated speed (20-25 s). The disk access and transferred time are so so small compared to the disk fetch and insertion time and mechanical latencies for the robotics that are almost inconsequential in this case</p></li>
+          <li><b>Application</b><p>Optical disks provide the most effective media i.e. almost on-line. The following examples illustrate the types of multimedia applications that are good candidates for hierarchical storage.</p></li>
+          <ol>
+            <li>Police records with fingerprints and mug shots require multimedia applications. Video interviews of witnesses and criminals, and their associated documents, can be stored permanently on WORM disk libraries to provide a vast resource database.</li>
+            <li>Insurance companies can photograph or video clips of vehicles and accident scene and store them on optical disk for use during processing claims.</li>
+            <li>City and country Government use optical storage for maintaining near-line electronic database of paper files on properties and constituents for tax records, deed recording and so on.</li>
+          </ol>
+        </ul>
+
+        <br>
+        <h4>DVD</h4>
+        <ul>
+          <li>DVD (Digital Versatile Disc, or less commonly Digital Video Disc) is an "alternative" to the compact disc (CD) with six times as much storage space.</li>
+          <li>The DVD is designed to make data addressable and accessible at random (non-sequentially). It has a complex structure which provides greater interactivity. DVD is plastic discs of 12 cm in diameter and 1.2 mm thick, which are read using a laser beam.</li>
+          <li>DVD burners use a red laser with a wavelength of 635 nm or 650 nm. The main reason to use DVDs is their storage capacity, which makes them an excellent medium for video recording.</li>
+          <li>A 4.7GB DVD can store more than 2 hours of compressed video in MPEG-2 (Motion Pictures Experts Group), a format used for compressing images while still keeping them high-quality.</li>
+          <b>Structure of DVD</b>
+          <ol>
+            <li>Physical Structure:</li>
+            <ul>
+              <li>DVDs exist in both single layer and dual layer(DL) versions.</li>
+              <li>(DL stands for Dual Layer), also called DVD-R9, is a derivative of the DVD-R format standard. DVD-R DL discs hold 8.5 GB by utilizing two recordable dye layers, each capable of storing a little less than the 4.7 gigabyte (GB) of a single layer disc, almost doubling the total disc capacity.</li>
+              <li>The larger capacity formats are not supported by most standalone DVD players, but they can be used with many computer-based DVD drives.</li>
+              <li>DVD-R format can be recorded only once, while DVD-RWs can be rewritten up to about 1000 times. Both the formats can store upto 4.7 GB on a disc.</li>
+              <li>DVD discs are generally divided in to four families, each with different storage capacities depending on their physical characteristics:</li>
+              <table>
+                <tr>
+                  <th>Types of disc</th>
+                  <th>Charcteristic</th>
+                  <th>Storage capacity</th>
+                </tr>
+                <tr>
+                  <td>DVD-5</td>
+                  <td>Single sided, Single layer</td>
+                  <td>4.7 GB</td>
+                </tr>
+                <tr>
+                  <td>DVD-9</td>
+                  <td>Single sided, Dual layer</td>
+                  <td>8.5 GB</td>
+                </tr>
+                <tr>
+                  <td>DVD-10</td>
+                  <td>Double sided, Single layer</td>
+                  <td>9.4 GB</td>
+                </tr>
+                <tr>
+                  <td>DVD-17</td>
+                  <td>Double sided, Dual layer</td>
+                  <td>18 GB</td>
+                </tr>
+              </table>
+            </ul>
+            <li>Logical structure: <p>The DVD is essentially made up of three zones, which represent information area,</p></li>
+            <img src="{% static 'css_img/lgstr.jpg'%}" alt="">
+            <ul>
+              <li>Lead-in Area (or LIA for short) only contains data which describes the disc's contents (this information is stored in the Table of Contents). This area lets the DVD player/drive to synchronize itself with the data found in the program area.</li>
+              <li>The Program Area is the area which contains the data.</li>
+              <li>The Lead-Out Area (or LOA for short) containing null data, marks the end of the DVD.</li>
+            </ul>
+          </ol>
+        </ul>
+
+        <br>
+        <h2>Multimedia Databases</h2>
+        <br>
+
+        <h4>Multimedia Database</h4>
+        <ul>
+          <li>Multimedia database is database containing multimedia collections.</li>
+          <li>Multimedia database management system is essential to manage multimedia data like text, graphics, animation, music, etc.</li>
+          <li>Multimedia database management system can be defined as a software system that manages a collection of multimedia data and provides access to users to query and retrieve multimedia objects . • Generally, multimedia database contains text, image, animation, video, audio, movie, sound etc. which is stored in binary form.</li>
+          <li>SQL query language is used for query and retrieval of data.</li>
+          <li>There are generally two types of multimedia databases.</li>
+          <li>Linked Multimedia Databases and Embedded Multimedia Databases.</li>
+          <li>Linked multimedia databases In this database, multimedia elements are organized as image, audio/ MP3, video etc. All the data may be stored either on off-line sources (CD-ROM, Hard Disc, DVD etc.) or on Online sources. One great advantage of this type of database is that the size of database will be small due to the reason that multimedia elements are not embedded in the database, but only linked to it.</li>
+          <li>Embedded multimedia database Embedded Multimedia Database implies that the database itself contains the multimedia objects as in the binary form in the database. The main advantage of such kind of database is that retrieval of data will be faster because of the reduced data access time. However, the size of the database will be very large.</li>
+          <h6><b>Characteristics of MDBMS</b></h6>
+          <li>A MDBMS (Multimedia Database Management System) can be characterized based on its objectives at the time of handling multimedia objects.</li>
+          <li><b>Corresponding storage media: </b>Multimedia data must be stored and managed according to the specific characteristics of the available storage media.</li>
+          <li><b>Comprehensive search methods:</b>During a search in the database, an entry, given in the form of text or a graphical image, is found using different search queries and the corresponding search methods.</li>
+          <li><b>Format independent interface:</b>database queries should be independent of media format. MDBMS should provide information in formats requested by the application</li>
+          <li><b>Simultaneous data access:</b>The same multimedia data can be accessed (even simultaneously) through different queries by several applications. Hence, consistent access to shared data can be implemented.</li>
+          <li><b>Management of large amount of data:</b>The MDBMS must be capable of handling and managing large amounts of data.</li>
+          <li><b>Long Transaction:</b>The performance of a transaction in a MDBMS means that transfer of a large amount of data will take a long time and must be done in a reliable manner.</li>
+          <li><b>Real-time Data:</b>The read and write operations of continuous data must be done in real-time. The data transfer of continuous data has a higher priority than other database management actions.</li>
+          <h6><b>Operations of multimedia databases:</b></h6>
+          <li><b> Input (insert/record) operation:</b>The data will be written to the database. The raw and registering data are always needed; descriptive data can be attached later.</li>
+          <li><b>Output (play) operation:</b>It involves reading the raw data from the database according to the registered data.</li>
+          <li><b>Modification:</b>It involves changing of raw, registering and descriptive data. Modification can also be understood as a data conversion from one format to another.</li>
+          <li><b> Deletion Operation:</b>This operation removes an entry from the database. The consistency of the data must be preserved.</li>
+        </ul>
+
+        <br>
+        <Header>Chapter 2: Text and Digital Image</Header>
+        <br>
+
+        <h2>Introduction to Digital Text</h2>
+        <br>
+
+        <h4>How Text can be Digitally Representation?</h4>
+        <ul>
+          <li>In digitization of text, older print books are being scanned and optical character recognition technologies applied by academic and public libraries, and private companies like Google.</li>
+          <li>Document digitization is the process of converting manual documents into digital formats. In this process of document digitizing, any type of document like texts, images, video are digitized and converted into digital formats such as text, html, xml, pdf, doc, xls, gif, Jpeg.</li>
+          <li>The most vital contribution of data digitization is a perpetual preservation of your important documents. Another benefit is that digitized data can also be stored on any media format such as CDs, Pen drives, HDDs.</li>
+          <b>The benefits of data digitizing of text:</b>
+          <ol>
+            <li>Perpetual preservation of all your physical documents.</li>
+            <li>Easy storing advantages.</li>
+            <li>Effortless duplication of data.</li>
+            <li>Quick and easy retrieval.</li>
+            <li>Easy access.</li>
+            <li>Easy transportation.</li>
+            <li>Easy to share.</li>
+            <li>Makes data compatible with all modes of digital data transfer.</li>
+          </ol>
+          <b>Document digitizing Vs. Document scanning:</b>
+          <li>Document scanning services is a service that is used to scan the hard copies of documents into scanned images.</li>
+          <li>Document digitizing or the other hand refers to a process wherein data from newspapers, books, paper documents, periodicals or image files are converted into digitized data and delivered in any file format such as XML, HTML PDF, Access, Excel, Word etc.</li>
+        </ul>
+
+        <br>
+        <h2>Text File Format</h2>
+        <br>
+
+        <h4>RTF text file format</h4>
+        <ul>
+          <li>A file format is a standard way that information is encoded for storage in a computer file.</li>
+          <li>A file format specifies how bits are used to encode information in a digital storage medium.</li>
+          <li>File formats may be either proprietary or free.</li>
+          <li>For example : image file format , audio file format , video file format and Text Formats etc.</li>
+          <br>
+          <b>RTF (Rich Text Format)</b>
+          <li>Stands for Rich Text Format</li>
+          <li>RTF documents are designed to transfer documents between word processing software.</li>
+          <li>These files use .rtf filename extensions.</li>
+          <li>The Rich Text Format (RTF) specification is a method of encoding formatted text and graphics for easy transfer between applications.</li>
+          <li>Currently, users depend on special translation software to move word-processing documents between different MS-DOS, Windows and Macintosh</li>
+          <li>The RTF specification provides a format for text and graphics interchange that can be used with different output devices and operating systems.</li>
+          <li>RTF uses the ANSI, PC-8, Macintosh, or IBM PC character set to control the representation and formatting of a document, both on the screen and in print.</li>
+          <li>With the RTF Specification documents created under different operating systems and with different software applications can be transferred between those operating systems and applications</li>
+          <li>Text editor carry information in American Standard Code for Information Interchange (ASCII). Or Extended Binary Coded Decimal Interchange Code (EBCDIC) form, but they do not carry formatting information.</li>
+          <li>So when text was moved from one application to another, all formatting was lost and had to be reentered for printing.</li>
+          <li>RTF is a solution for that which carry formatting information also.</li>
+          <br>
+          <b>The key format information carried across in RTF document files includes:</b>
+          <li><b>Character Set:</b>The character sets determine the characters that are supported in particular implementation. Common examples are ASCII and EBCDIC character set.</li>
+          <li><b>Font table:</b>A font table lists all fonts used in the document. These fonts are mapped to the fonts available in the receiving application for displaying the text.</li>
+          <li>The color table lists the colors used in the document for highlighting text. The color table is also mapped for display by the receiving application to the nearest set of colors available to that application.</li>
+          <li><b>Document Formatting:</b>RTE provides true document margins. Paragraph indents are specified relative to the document margin. This information helps ensure that when a document is printed by a receiving application, the printed page looks similar to the original page.</li>
+          <li><b>General Formatting:</b>Formatting information in this group includes items such as footnotes, bookmarks and pictures.</li>
+          <li><b>Character Formatting:</b>Formatting information including bold, italic, underline strikethrough, shadow text, hidden text are specified using control characters.</li>
+          <li><b>Special Characters:</b>These include hyphens, non- breaking spaces, backlashes and so on.</li>
+          <li><b>Advantages of RTF:</b>From the perspective of a multimedia system, rich text format is important because it is used to attach, imbed or link other text files or even binary files such as executables, audio files, and video files.</li>
+          <li><b>Disadvantages of RTF:</b>Some problems remain even with rich text format because of incomplete implementations of rich text formats. These imperfections result in text not aligning properly in columns margins not being correct, or text attributes such as color showing up incorrectly when text file is moved to a different word processor.</li>
+        </ul>
+
+        <h4>TIFF</h4>
+        <ul>
+          <li>TIFF is an industry standard file format designed to represent image data generated by scanners, and paint applications.</li>
+          <li>It is designed to describe images in several color models with different data compression technique.</li>
+          <li>It is processor and device independent file format, it allows interchanging files across different platforms.</li>
+          <li>The TIFF design is flexible enough to take advantage of the functionality offered by image capture devices.</li>
+          <li>TIFF is extensible, allowing new enhancing specification without sacrificing download compatibility.</li>
+          <li><b>TIFF file format header</b></li>
+          <img src="{% static 'css_img/tiff_ffh.png'%}" alt="">
+          <li><b>Structure of TIFF Image File Directory (IFD)</b></li>
+          <img src="{% static 'css_img/tiff_ifd.jpg'%}" alt="">
+          <i>In tagged file formats, tags are used to keep all attribute information in a standard manner . For e.g. The TIFF file format provides tags that store information such as:</i>
+          <li>about resolution,</li>
+          <li>pixel information,</li>
+          <li>visual characteristics,</li>
+          <li>color,</li>
+          <li>the compression technique used for capturing,</li>
+          <li>the date and time for capture,</li>
+          <li>name of image,</li>
+          <li>software version and even the name of creator who created the file</li>
+          <li>A search through a file is quick since tag locations are found through pointers. If more space is required for changes or updates to a specific type of information more space is allocated, and the pointer to the new block is inserted into the pointer field provided by the tagged block.</li>
+          <br>
+          <b>TIFF version 5.0 supports following five classes:</b>
+          <li>Class B for binary images.</li>
+          <li>Class F for fax</li>
+          <li>Class G for gray-scale image</li>
+          <li>Class P for palette color images</li>
+          <li>Class R for RGB full-color images</li>
+          <li>In TIFF version 6, classes of version 5 are a part of the baseline specification.</li>
+          <li>Class extensions in version 6.0 consist of the following</li>
+          <ol>
+            <li>Images that use the color models CMYK</li>
+            <li>Compression schemes including CCITT Group 3 1D, RLE, Huffman Coding, JPEG compression.</li>
+          </ol>
+          <li>As can be seen from the above, TIFF version 6.0 allows a much wider range of specifications.</li>
+          <br>
+          <b>TIFF IMPLEMENTATION ISSUES</b>
+          <li>The TIFF file reader must read all tags that it is designed to interpret and assemble the information for processing the image data.</li>
+          <li>The TIFF file writer should create TIFF file efficiently, that is, TIFF writer should follow the TIFF specification rigidly so that any TIFF reader will be able to read the TIFF file gracefully/easily.</li>
+          <br>
+          <i>Advantages of TIFF</i>
+          <li>Search is quicker because of tags.</li>
+          <li>More space is provided for new information by adding another tagged block to the file.</li>
+        </ul>
+
+        <br>
+        <h2>Text Compression Techniques</h2>
+        <br>
+
+        <h4>Need of Data Compression</h4>
+        <ul>
+          <li>Multimedia object consists of color image, photographic or video image, audio data etc. These data object needs to be stored, retrieved, transmitted and displayed. This large data objects present two problems viz, storage and transmission.</li>
+          <li>Transfer of data in the Internet age is very time-dependent. Take for example an audio file, which is nothing but changes in the intensity of sound over a fixed period. This audio is transferred across networks in the form of sound files. If the size of the sound files is too large, the time taken to transfer the files increases. The time taken to transfer a file can be decreased using compression.</li>
+          <li> Compression in computer terms means reducing the physical size of data such that it occupies less storage space and memory, Compressed files are, therefore, easier to transfer because there is a sizable amount of reduction in the size of data to be transferred.</li>
+          <li>This results in a reduction in the time needed for file transfer as well as a reduction in the bandwidth utilization even for a slow network.</li>
+          <li>Thus, the process of reducing the amount of data required to represent information is called compression.</li>
+          <br>
+          <h5>There are two types of compression</h5>
+          <b>Lossless Compression</b>
+          <li>Lossless data compression is a class of data compression algorithms that allows the exact original data to be reconstructed from the compressed data. i.e. In lossless data compression, the compressed-then-decompressed data is an exact replication of the original data.</li>
+          <li>Lossless data compression is used in many applications. For example, the zip file format produced by the WinZip program on a PC produces exact copies of the original material that was encoded within the zip file. It is also used in the Unix tool gzip.</li>
+          <li>Lossless compression is , used in cases where it is important that the original and the decompressed data be identical. Typical examples are executable programs, text documents and source code. Some image file formats, like PNG or GIF, use only lossless compression.</li>
+          <br>
+          <b>Lossless compression techniques:</b>
+          <li>Packbits encoding (Run Length Encoding) RLE</li>
+          <li>CCITT Group 3 1D</li>
+          <li>CCITT Group 3 2D</li>
+          <li>CCITT Group 4</li>
+          <li>LZW</li>
+          <br>
+          <b>Lossy Compression</b>
+          <li>Lossy data compression, which only allows an approximation of the original data to be reconstructed i.e. In lossy data compression, the decompressed data may be different from the original data. Typically, there is some distortion between the original and reproduced data.</li>
+          <li>Lossy compression is a data encoding method which discards (loses) some of the data, in order to achieve its goal, with the result that decompressing the data yields content that is different from the original, though similar enough to be useful in some way.</li>
+          <li>Lossy compression is most commonly used to compress multimedia data (audio, video). This method is used where absolute data accuracy is not essential. Lossy compression is the most commonly used compression type. This compression technique is used for image documents, audio, and video objects.</li>
+          <br>
+          <b>Lossy Compression techniques:</b>
+          <li>Joint Photographic Experts Group (JPEG)</li>
+          <li> Motion Picture Experts Group (MPEG)</li>
+          <li> Adaptive Differential Pulse Code Modulation (ADPCM)</li>
+          <li>CCITT H.261 (Px64) Video Coding Algorithm</li>
+          <li>Intel DVI (Digital Video Interactive)</li>
+          <i>Example:</i>
+          <img src="{% static 'css_img/eg_ct.jpg'%}" alt="">
+        </ul>
+
+        <br>
+        <h4>Compare Lossy v/s Lossless Compression</h4>
+        <table>
+          <tr>
+            <th><b>Sr No</b></th>
+            <th><b>Lossy Compression</b></th>
+            <th><b>Lossless Compression</b></th>
+          </tr>
+          <tr>
+            <th>1</th>
+            <th>The technique involves some loss of information.</th>
+            <th>Involves no loss of information.</th>
+          </tr>
+          <tr>
+            <th>2</th>
+            <th>Data that has been compressed using this technique can’t be recovered and reconstructed exactly.</th>
+            <th>If data has been (lossless) compressed, the original data can be recovered from the compressed data.</th>
+          </tr>
+          <tr>
+            <th>3</th>
+            <th>Used for application that can tolerate difference between the original and reconstructed data.</th>
+            <th>Used for application that can’t tolerate any difference between original and reconstructed data.</th>
+          </tr>
+          <tr>
+            <th>4</th>
+            <th>In return for accepting this distortion in reconstructed data we obtain high compression rate</th>
+            <th>No loss in information so compression rate is small.</th>
+          </tr>
+          <tr>
+            <th>5</th>
+            <th>Sound and Image compression uses lossy compression.</th>
+            <th>Text compression uses lossless compression</th>
+          </tr>
+          <tr>
+            <th>6</th>
+            <th>More data can be accommodated in channel.</th>
+            <th>Less data can be accommodated in channel.</th>
+          </tr>
+          <tr>
+            <th>7</th>
+            <th>Distortion</th>
+            <th>Distortion less</th>
+          </tr>
+          <tr>
+            <th>8</th>
+            <th>E.g
+              <ol>
+                <li>Telephone System</li>
+                <li>Video CD</li>
+              </ol>
+            </th>
+            <th>E.g
+              <ol>
+                <li>Fax Machine</li>
+                <li>Radiological Imaging</li>
+              </ol>
+            </th>
+          </tr>
+          <tr>
+            <th>9</th>
+            <th>Example: Text compression -> It is very important that the reconstruction is identical to original text, as very small difference can result in statements with very different meanings. Consider “ Do not send Money “ and “ Do now send Money “</th>
+            <th>Example: When viewing a reconstruction of a video sequence, the fact that the reconstruction is different from the original is generally not important as long as the difference do not result in annoying artifacts. Thus, video is generally compressed using lossy compression.</th>
+          </tr>
+        </table>
+
+        <br>
+          <h4>RLE Encoding</h4>
+          <ul>
+            <li>RLE works by reducing physical size of repeating string of character. This repeating string called as RUN is basically encoded into 2 bytes. The first repersents the number of repeaned cahracter in Run and called as Run count. The second byte is value of charater in the Run which is in range 0-255 and called as Run value.</li>
+            <p>Following is Uncompressed string:</p>
+            <b>PPPPPPPPPPPPPPPPPPPPPP</b>
+            <li>Compressed string with RLE:</li>
+            <img src="{% static 'css_img/cs_rle.png'%}" alt="not found">
+            <li>The 20P code generated to represent character string is called RLE Packet.</li>
+            <li> Two bytes are required to store '20P'.</li>
+            <li>First 1 byte require to store 20 and second byte is required to store 'Run value' i.e. 'P' But, initially uncompressed string require 20 bytes to store same data.</li>
+            <br>
+            <b>Advantages</b>
+            <li>A black and white image that is mostly white, such as page of book will encode very well due to large amount of contiguous data that is all the same color.</li>
+            <li>In sequential processing, A bitmap is encoded starting at upper left corner and proceeding from left to right across each scan line(The axis).</li>
+            <img src="{% static 'css_img/en_alx-a.png'%}" alt="">
+            <li>Alternative RLE schemes can also be written to encode data down the length of bitmap (the Y-axis).</li>
+            <img src="{% static 'css_img/en_aly-a.png'%}" alt="">
+            <li>Encode pixels on a diagonal in zig-zag fashion.</li>
+            <img src="{% static 'css_img/zzen_brlemf.png'%}" alt="">
+          </ul>
+
+
+
         <p>HTML was NEVER intended to contain tags for formatting a web page!</p>
         <p>HTML was created to describe the content of a web page, like:</p>
         <p>&lt;h1&gt;This is a heading&lt;/h1&gt;</p>
