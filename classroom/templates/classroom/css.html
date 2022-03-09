@@ -2,53 +2,54 @@
 {% block main %}
 {% load static %}
 
-<!-- CHANGE CSS TO MMS -->
-<!-- TESTING FOR INDEX  -->
+<!-- INDEX STARTS HERE -->
 <section class="main-section">
-  <header>INDEX</header>
-  <br>
-  <ul>
-      <li><h5><a href="#Chapter_1">Chapter 1: Introduction to multimedia</a></h5></li>
-      <ol>
-          <li><a href="#Objects_of_Multimedia">Objects of Multimedia</a></li>
-          <li><a href="#System_Archetecture">System Archetecture - IMA, Workstation, Network</a></li>
-          <li><a href="#Transmission_media_in_Multimedia_Systems">Transmission media in Multimedia Systems</a></li>
-          <li><a href="#Multimedia_I/O_deviecs">Multimedia I/O deviecs - Salient Feature,Storage Media, Multimedia Database,</a></a></li>
-          <li><a href="#Multimedia_Databases">Multimedia Databases</a></li>
-
-      </ol>
-
-      <br>
-
-      <li><h5><a href="#Chapter_2">Chapter 2: Text & Digital Image</a></h5></li>
-      <ol>
-          <li><a href="#Introduction_to_Digital_Text">Introduction to Digital Text</a></li>
-          <li><a href="#Text_File_Format">Text File Format</a></li>
-          <li><a href="#Text_Compression_Techniques">Text Compression Techniques</a></li>
-          <li><a href="#Introduction_to_Digital_Image">Introduction to Digital Image</a></li>
-          <li><a href="#Image_File_Formats">Image File Formats: BMP, JPG</a></li>
-          <li><a href="#Image_Compression_Technique">Image Compression Technique: fundamentals, Types - lossless ANd Lossy, Lossless Comperssion ALgorithms - Shannon--Fano, CCITT group 2D, Lossy Compression Algorithm - JPEG</a></li>
-      </ol>
-  </ul>
+    <header>INDEX</header>
+    <br><br>
+    <ul>
+        <li><h5><a href="#Chapter_1">Chapter 1: Introduction to multimedia</a></h5></li>
+        <ol>
+            <li><a href="#Overview_of_Multimedia">Overview of Multimedia</a></li>
+            <li><a href="#System_Archetecture">System Archetecture - IMA, Workstation, Network</a></li>
+            <li><a href="#Transmission_media_in_Multimedia_Systems">Transmission media in Multimedia Systems</a></li>
+            <li><a href="#Multimedia_I/O_deviecs">Multimedia I/O deviecs - Salient Feature,Storage Media, Multimedia Database,</a></a></li>
+            <li><a href="#Multimedia_Databases">Multimedia Databases</a></li>
+  
+        </ol>
+  
+        <br>
+  
+        <li><h5><a href="#Chapter_2">Chapter 2: Text & Digital Image</a></h5></li>
+        <ol>
+            <li><a href="#Introduction_to_Digital_Text">Introduction to Digital Text</a></li>
+            <li><a href="#Text_File_Format">Text File Format</a></li>
+            <li><a href="#Text_Compression_Techniques">Text Compression Techniques</a></li>
+            <li><a href="#Introduction_to_Digital_Image">Introduction to Digital Image</a></li>
+            <li><a href="#Image_File_Formats">Image File Formats: BMP, JPG</a></li>
+            <li><a href="#Image_Compression_Technique">Image Compression Technique: fundamentals, Types - lossless ANd Lossy, Lossless Comperssion ALgorithms - Shannon--Fano, CCITT group 2D, Lossy Compression Algorithm - JPEG</a></li>
+        </ol>
+    </ul>
+    
 </section>
-<!-- TESTING FOR INDEX ENDS HERE -->
+<!-- INDEX ENDS HERE -->
 
-<!-- INTRODUCTION SECTION STARTS HERE -->
-<section class="main-section">
-    <header id="Chapter_1">
+<!-- CHAPTER 1 STARTS HERE -->
+<section class="main-section"   id="Chapter_1">
+    <header>
         Chapter 1: Introduction to Multimedia&nbsp;&nbsp;&nbsp;&nbsp;
         {% for c in c_list %}
             {% if c.chapter == 'Introduction' and c.is_complete %}
                 <i class="fas fa-check"></i>
             {% endif %} 
-        {% endfor %}    
+        {% endfor %}
     </header>
-    <br>a
+    <br>
+
+    <!-- OVERVIEW OF MULTIMEDIA STARTS HERE -->
     <article>
+        <h3 id="Overview_of_Multimedia">Overview of Multimedia</h3>
 
-        <h2>Overview of Multimedia</h2>
-        <br>
-
+        <!-- OBJECTS OF MULTIMEDIA STARTS HERE -->
         <h4 id="Objects_of_Multimedia">Object and elements of multimedia</h4>
         <ul>
             <li>Facsimile: Transmitting documants images over telephone lines. Supports both high resolution and low resolutiono images. Uses RLE technique for low resolution image. High reolution increases the clarity</li>
@@ -65,7 +66,10 @@
             <li>Audio: Audio files and strams play a major role in some multimedia systems. Audion files appears as part of application content and al;so to aid interactin. When they appear within Web application and sites, audio files spmetimes need to be deployed using pluf-in-media players. Audio formats include MP3, WMA, Wave,MIDI and RealAudio. When developers include audio within a website,they will generally use a acompressed format to iminmize on download times. Audio consists of music,soeech vocie commanfsm telephone conversation and so on. Audio objects have a time dimension assciated with them.</li>
             <li>Video: Digtal video appears in many multimedia application particaulary on the web. As with audio, websites can stream digital video to increase the speed and availability of playback. Common digital vido formats include Flash, MPEG, AVI, WMV and QuickTime. Most digital video require use of brewser plug-ins to play required resources install. Various alforithms are used for compression and decompression of video. From processing perspective video presented to the user should be smooth and withou breaks.</li>
         </ul>
+        <!-- OBJECTS OF MULTIMEDIA ENDS HERE -->
         <br>
+
+        <!-- APPLICATION OF MULTIMEDIA STARTS HERE -->
         <h4 >Application of Multimedia System</h4>
         <ul>
           <li>Electronic Messeging: sending audioo and video as attachments via email. Downloading audio and video. Sending simple text data through mails. Its also provides store and forward message facility</li>
@@ -79,13 +83,21 @@
           <li>Multimedia in Software: Software Engineers may use multimedia in computer from entertainment to designing digital games; it can be used as a learning process. THe multimedia software's are created by professionals and software engineers</li>
           <li>Multimedia on the web: offering various online facilities like live TV, PRe- recoded videos, phots, animations. Plug-in and media players are software programmes that allow us to experience multimedia on the web Plug-i ns is software Programmes that work with web browser to display multimedia. When web browser encounters a multimedia file it hads off the data to plug-in play or display the file. Multimedia players are also software programmes that can play audio and video files both ON and OFF the web.</li>
         </ul>
-
-        <br>
-        <h2 id="System_Archetecture">Multimedia System Architecture</h2>
+        <!-- APPLICATIN OF MULTIMEDIA ENDS HERE -->
         <br>
 
+    </article>
+    <!-- OVERVIEW OF MULTIMEDIA ENDS HERE -->
+
+    <!-- SYSTEM ARCHITECTURE STARTS HERE -->
+    <article>
+
+        <h3 id="System_Archetecture">Multimedia System Architecture</h3>
+        <br>
+
+        <!-- MULTIMEDIA SYSTEM ARCHETECTURE STARTS HERE -->
         <h4>Multimedia System Architecture</h4>
-        <img src="{% static 'css_img/Multimedia System Architecture.png'%}" alt="Error 404 Image Not Found">
+        <img src="{% static 'css_img/Multimedia System Architecture.png'%}" class="img-fluid" alt="Error 404 Image Not Found">
         <ul>
           <li>While focusing on multimedia system architecture, the most important point under consideration is on multimedia applications.</li>
           <li>Applications can be training app, conferencing app, messaging app, education app.</li>
@@ -99,8 +111,10 @@
             <li>Network Architecture for multimedia systems</li>
           </ol>
         </ul>
-
+        <!-- MULTIMEDIA SYSTEM ARCHETECTURE ENDS HERE -->
         <br>
+        
+        <!-- MULTIMEDIA WORKSTATION ARCHITECTURE STARTS HERE -->
         <h4>Multimedia Workstation Architecture</h4>
         <ul>
           <li>If we are using windows operating system on the computer then interface is necessary between multimedia applications and windows based system.</li>
@@ -118,8 +132,10 @@
           <li>Software drivers are the applications that help the OS connect to the H/W being used in the system.</li>
           <li>E.g. Graphic card software</li>
         </ul>
-
+        <!-- MULTIMEDIA WORKSTATION ARCHITECTURE ENDS HERE -->
         <br>
+
+        <!-- MULTIMEDIA SYSTEM NETWORK ARCHITECTURE STARTS HERE -->
         <h4>Multimedia System Network Architecture</h4>
         <ul>
           <li>Multimedia systems have special networking requirements because, rather than just small volumes of data, large volumes of images are being transmitted. These transfers are executed over LANs & WANs.</li>
@@ -139,11 +155,18 @@
           <li>Data transfer for images is considerably more demanding due to high volume of data. A page of text may be as large as 2.5Kbytes. A black and white image of a page may, however range from 60Kbytes to 220 Kbytes even after compression.</li>
           <li>Data transfer for audio and video clip is much more intense than imaging. This is because of the third dimension, Time. A higher class of services is needed to provide acceptable performance.</li>
         </ul>
-
-        <br>
-        <h2 id="Transmission_media_in_Multimedia_Systems">Transmission media in Multimedia Systems</h2>
+        <!-- MULTIMEDIA SYSTEM NETWORK ARCHITECTURE ENDS HERE -->
         <br>
 
+    </article>
+    <!-- SYSTEM ARCHITECTURE ENDS HERE -->
+    
+    <!-- TRANSMISSION OF ARCHITECTURE STARTS HERE -->
+    <article>
+        <h3 id="Transmission_media_in_Multimedia_Systems">Transmission media in Multimedia Systems</h3>
+        <br>
+
+        <!-- TYPES OF TRANSMISSION MEDIA IN MULTIMEDIA STARTS HERE -->
         <h4>Types of Transmission media in Multimedia Systems</h4>
         <ol>
           <li> <b>Perception Media</b> <p>Perception media refers to the nature of information perceived by humans, which is not strictly identical to the sense that is stimulated.For example, a still image and a movie convey information of a different nature, though stimulating the same sense.The question to ask here is: How do humans perceive information?</p> <p>In this context, we distinguish primarily between what we see and what we hear.Auditory media include music,sound and voice.Visual media include text, graphics and still and moving pictures.This differentiation can be further refined.For example, a visual medium can consist of moving pictures, animation, and text. In turn, moving pictures normally consist of series of scenes that, in turn, are composed of single pictures.</p></li>
@@ -161,99 +184,110 @@
           <li><b>Transmission Media</b><p>The term transmission media refers to the physical means-cables of various types, radio tower, satellite, or ether (the medium that transmit radio waves)-that allow the transmission of telecommunication signals. The question to ask here is: Which medium is used to transmit data?</p></li>
           <li><b>Information Exchange Media</b><p>Information exchange media include all data media used to transport information, e.g., all storage and transmission media. The question to ask here is: Which data medium is used to exchange information between different locations?</p><p>For example, information can be exchanged by storing it on a removable medium and transporting the medium from one location to another. These storage media include microfilms, paper, and floppy disks. Information can also be exchanged directly, if transmission media such as coaxial cables, optical fibers, or radio waves are used</p></li>
         </ol>
-
-        <br>
-        <h2 id="Multimedia_I/O_deviecs">Multimedia I/O Devices</h2>
+        <!-- TYPES OF TRANSMISSION MEDIA IN MULTIMEDIA ENDS HERE -->
         <br>
 
+    </article>
+    <!-- TRANSMISSION OF ARCHITECTURE ENDS HERE -->
+
+    <!-- MULTIMEDIA I/O DEVICES STARTS HERE -->
+     <article>
+        <h3 id="Multimedia_I/O_deviecs">Multimedia I/O Devices</h3>
+        <br>
+
+        <!-- DIGITAL CAMERA STARTS HERE -->
         <h4>Digital Camera</h4>
-        <img src="{% static 'css_img/Digital Camera.png'%}" alt="Error 404 Image not Found">
+        <img src="{% static 'css_img/Digital Camera.png'%}" class="img-fluid" alt="Error 404 Image not Found">
         <ul>
-          <li>Working of Digital Camera:</li>
-          <ol>
-            <li>Based on CCD mechanism.</li>
+            <li>Working of Digital Camera:</li>
+            <li>Based on CCD mechanism</li>
             <li>CCD consists of cells arranged in fixed array on surface/behind the lens.</li>
             <li>CCD cells get charged by intensity of light.</li>
             <li>This charge generates voltage which is then fed to A-D converter.</li>
             <li>It converts charge voltage to digital value.</li>
             <li>This values are stored in camera memory</li>
             <li>This data can be moved from camera memory to computer memory, other memory devices and so on.</li>
-          </ol>
         </ul>
-
+        <!-- DIGITAL CAMERA ENDS HERE -->
         <br>
+
+        <!-- PRINTER AND THEIR TYPES STARTS HERE -->
         <h4>Printers and Different Types of Printers</h4>
         <ul>
-          <b>Printer:</b>
-          <li>Printer is a peripheral that allows you to make a print out (on paper) of computer data.</li>
-          <li>Some printers print only the textual information whereas other printers print graphics also.</li>
-          <li>The quality of the printer is determined by its resolution i.e. the clarity of print it can produce.</li>
-          <b>Characteristics of Printer:</b>
-          <ul>
-            <li>Printer speed: Expressed in pages per minute (ppm), print speed represents the printers ability print a large numbers of pages per minute. Speed varies for color printer.</li>
-            <li>Resolution: Expressed in dots per inch (dpi), resolution means the sharpness of printed text. Resolution varies for color print out.</li>
-            <li>Warm-up time: The waiting time necessary before the first print-out. A printer cannot print when it is “cold”. A certain temperature must be reached for the printer run optimally</li>
-            <li>Onboard memory: The quantity of memory that allows the printer to store print jobs. The higher the amount of memory, the longer the printer queue can be.</li>
-            <li>Paper format: Depending on their size, printers are able to print different sized documents. Generally A4 or A3 size . • Paper feed : The method of loading paper into the printer, characterizing the way in which blank paper is stored.</li>
-            <li>The main paper feed modes are:</li>
-            <ol>
-              <li>The feed tray, which uses an internal paper feed source. Its capacity is equal to the maximum number of sheets of paper that the tray can fit.</li>
-              <li>The sheet feeder is a manual feed method that allows you to insert sheets of paper in small quantities (of about 100). The sheet feeder in the back of the printer is either horizontal or vertical.</li>
-              <li>Cartridges : cartridges are rarely standard and depend highly on the printer brand and model. Some manufacturers favors multicolored cartridges whereas others offer separate ink cartridges</li>
-              <li>It is interesting to examine the printing cost per sheet. The size of the ink drop is especially important. The smaller the drop of ink, the lower the printing cost will be and the better the image quality will be. Some printers produce drops that are 1 or 2 picolitres.</li>
-              <li>A picolitre is a trillionth (one millionth of a millionth, or 10 to the -12th power) of a liter, which can be represented numerically as 0.000000000001/liter.</li>
-            </ol>
-            <b>Types of Printer:</b>
-            <li>Impact Printers:</li>
-            <ol>
-              <li>Impact printers print the characters by striking them on the ribbon which is then pressed on the paper. Impact printers are classified into line printers and character printers.</li>
-              <li> Line printers print single line at a time and the printing speed varies from 300-3000 lines per minute.</li>
-              <li>Character printers print a single character at a time and their printing speed varies from 30-600 characters per second.</li>
-              <li>Examples of impact printers:</li>
-              <ul>
-                <li>Dot−matrix printers: <p>These printers are examples of impact printers. They print one character at a time and their speed is measured in characters per second.</p>
-                <img src="{% static 'css_img/Dot-matrix printer.png'%}" alt="Error 404 Image not found">
-                </li>
-                <li>Dot matrix printer:</li>
-                <ul>
-                  <li>Dots are formed by tiny pins in the print head that strike an inked ribbon against the paper.</li>
-                  <li>The print head moves leaving a pattern of dots which form letters and images.</li>
-                  <li>These printers are slow and noisy and are not usually used for personal computers anymore.</li>
-                  <li>However, since the printing cost is less and several carbon-copies can be printed at the same time, they are used to print airline tickets and shop receipts (shown in fig. above)</li>
-                  <li>Daisy wheel printer</li>
-                  <img src="{% static 'css_img/Daisywheelprinter.png'%}" alt="Error 404 Image not Found">
-                </ul>
-                <li>Daisy wheel printers:</li>
-                <ul>
-                  <li>These printers are able to print letter-quality documents. These documents have the same quality as that produced by a typewriter However, they cannot print graphics. They are slow and expensive than dot matrix printers.</li>
-                  <li>In these printers, the print head is like a daisy flower and is made up of metallic or plastic wheels. A raised character is placed on the top of the arms of the wheel. For printing any character, the print wheel is rotated until the desired character is under the print hammer. The arm is then struck from behind by the print hammer against the ink ribbon and paper, creating the character.</li>
-                  <li>Drum printers: <img src="{% static 'css_img/Drumprinter.png'%}" alt="Error 404 Image not Found"></li>
-                  <li>These printers are much faster than the dot matrix and daisy wheel printers as they print a line in a single operation. • Thus, drum printers are quiet loud, very expensive and produce low quality print. • In these printers, a complete character set is embossed around the circumference of a drum at every print position. For instance, for 110-column printer there are 110 character sets wrapped around the circumference of the drum. • Thus, the drum revolves continuously and when the character is to be printed, the hammer strikes the character.</li>
-                </ul>
-              </ul>
-            </ol>
-            <li>Non−impact printers:</li>
+            <b>Printer:</b>
+            <li>Printer is a peripheral that allows you to make a print out (on paper) of computer data.</li>
+            <li>Some printers print only the textual information whereas other printers print graphics also.</li>
+            <li>The quality of the printer is determined by its resolution i.e. the clarity of print it can produce.</li>
+            <b>Characteristics of Printer:</b>
             <ul>
-              <li>Non-impact printers print the characters without using ribbons. They provide a higher speed in terms of characters per second.</li>
-              <li>Examples of non-impact printers:</li>
-              <ol>
-                <li>Inkjet printers: <p>The most commonly used printer for home computers is the inkjet printer. These printers form the images on paper by spraying tiny droplets of ink from the print head. Several colored ink can be used to produce colorful printouts.</p></li>
-                <li>Inkjet printers hardly make any noise: <p>They are relatively cheap to manufacture but the high cost of the ink make them expensive to operate in the long run.</p></li>
-                <img src="{% static 'css_img/IPHMAN.png'%}" alt="Error 404 Image not Found">
-                <li>Laser printers: <p>These printers produce marks on paper by using a fine dust called toner. A laser makes the toner stick to the paper forming characters or images. The cost of Laser printers is high but they are cheap to use. A single toner cartridge can print 5000-10,000 pages. The printing is done relatively quietly and very fast compared to other printers, a page is printed in a few seconds. For these reasons laser printers are preferred in offices.</p></li>
-                <img src="{% static 'css_img/laser.png'%}" alt="">
-              </ol>
+                <li>Printer speed: Expressed in pages per minute (ppm), print speed represents the printers ability print a large numbers of pages per minute. Speed varies for color printer.</li>
+                <li>Resolution: Expressed in dots per inch (dpi), resolution means the sharpness of printed text. Resolution varies for color print out.</li>
+                <li>Warm-up time: The waiting time necessary before the first print-out. A printer cannot print when it is “cold”. A certain temperature must be reached for the printer run optimally</li>
+                <li>Onboard memory: The quantity of memory that allows the printer to store print jobs. The higher the amount of memory, the longer the printer queue can be.</li>
+                <li>Paper format: Depending on their size, printers are able to print different sized documents. Generally A4 or A3 size . • Paper feed : The method of loading paper into the printer, characterizing the way in which blank paper is stored.</li>
+                <li>The main paper feed modes are:</li>
+                <ol>
+                    <li>The feed tray, which uses an internal paper feed source. Its capacity is equal to the maximum number of sheets of paper that the tray can fit.</li>
+                    <li>The sheet feeder is a manual feed method that allows you to insert sheets of paper in small quantities (of about 100). The sheet feeder in the back of the printer is either horizontal or vertical.</li>
+                    <li>Cartridges : cartridges are rarely standard and depend highly on the printer brand and model. Some manufacturers favors multicolored cartridges whereas others offer separate ink cartridges</li>
+                    <li>It is interesting to examine the printing cost per sheet. The size of the ink drop is especially important. The smaller the drop of ink, the lower the printing cost will be and the better the image quality will be. Some printers produce drops that are 1 or 2 picolitres.</li>
+                    <li>A picolitre is a trillionth (one millionth of a millionth, or 10 to the -12th power) of a liter, which can be represented numerically as 0.000000000001/liter.</li>
+                </ol>
+                <b>Types of Printer:</b>
+                <li>Impact Printers:</li>
+                <ol>
+                    <li>Impact printers print the characters by striking them on the ribbon which is then pressed on the paper. Impact printers are classified into line printers and character printers.</li>
+                    <li>Character printers print a single character at a time and their printing speed varies from 30-600 characters per second.</li>
+                    <li>Examples of impact printers:</li>
+                    <ul>
+                        <li>Dot−matrix printers: <p>These printers are examples of impact printers. They print one character at a time and their speed is measured in characters per second.</p>
+                        <img src="{% static 'css_img/Dot-matrix printer.png'%}" class="img-fluid" alt="Error 404 Image not found">
+                        </li>
+                        <li>Dot matrix printer:</li>
+                        <ul>
+                            <li>Dots are formed by tiny pins in the print head that strike an inked ribbon against the paper.</li>
+                            <li>The print head moves leaving a pattern of dots which form letters and images.</li>
+                            <li>These printers are slow and noisy and are not usually used for personal computers anymore.</li>
+                            <li>However, since the printing cost is less and several carbon-copies can be printed at the same time, they are used to print airline tickets and shop receipts (shown in fig. above)</li>
+                            <li>Daisy wheel printer</li>
+                            <img src="{% static 'css_img/Daisywheelprinter.png'%}" class="img--fluid" alt="Error 404 Image not Found">
+                        </ul>
+                <li>Daisy wheel printers:</li>
+                        </ul>
+                        <li>Daisy wheel printers:</li>
+                        <ul>
+                            <li>These printers are able to print letter-quality documents. These documents have the same quality as that produced by a typewriter However, they cannot print graphics. They are slow and expensive than dot matrix printers.</li>
+                            <li>In these printers, the print head is like a daisy flower and is made up of metallic or plastic wheels. A raised character is placed on the top of the arms of the wheel. For printing any character, the print wheel is rotated until the desired character is under the print hammer. The arm is then struck from behind by the print hammer against the ink ribbon and paper, creating the character.</li>
+                            <li>Drum printers: </li>
+                            <img src="{% static 'css_img/Drumprinter.png'%}" class="img-fluid" alt="Error 404 Image not Found">
+                            <p>These printers are much faster than the dot matrix and daisy wheel printers as they print a line in a single operation. • Thus, drum printers are quiet loud, very expensive and produce low quality print. • In these printers, a complete character set is embossed around the circumference of a drum at every print position. For instance, for 110-column printer there are 110 character sets wrapped around the circumference of the drum. • Thus, the drum revolves continuously and when the character is to be printed, the hammer strikes the character.</p>
+                        </ul>
+                    </ul>    
+                </ol>
+                <li>Non−impact printers:</li>
+                <ul>
+                    <li>Non-impact printers print the characters without using ribbons. They provide a higher speed in terms of characters per second.</li>
+                    <li>Examples of non-impact printers:</li>
+                    <ol>
+                        <li>Inkjet printers: <p>The most commonly used printer for home computers is the inkjet printer. These printers form the images on paper by spraying tiny droplets of ink from the print head. Several colored ink can be used to produce colorful printouts.</p></li>
+                        <li>Inkjet printers hardly make any noise: <p>They are relatively cheap to manufacture but the high cost of the ink make them expensive to operate in the long run.</p></li>
+                        <img src="{% static 'css_img/IPHMAN.png'%}" class="img-fluid" alt="Error 404 Image not Found">
+                        <li>Laser printers: <p>These printers produce marks on paper by using a fine dust called toner. A laser makes the toner stick to the paper forming characters or images. The cost of Laser printers is high but they are cheap to use. A single toner cartridge can print 5000-10,000 pages. The printing is done relatively quietly and very fast compared to other printers, a page is printed in a few seconds. For these reasons laser printers are preferred in offices.</p></li>
+                        <img src="{% static 'css_img/laser.png'%}" alt="">
+                    </ol>
+                </ul>
             </ul>
-          </ul>
         </ul>
-
+        <!-- PRINTER AND THEIR TYPES ENDS HERE -->
         <br>
+
+        <!-- SCANNER AND THEIR TYPES STARTS HERE -->
         <h4>Scanner and Different types of scanners</h4>
         <ul>
           <b>Scanner:</b>
           <li>An image scanner—often abbreviated to just scanner, is a device that optically scans images, printed text, handwriting or an object and converts it to a digital image.</li>
           <li>Converting a paper document to digital image.</li>
-          <img src="{% static 'css_img/Scanner.png'%}" alt="Error 404 Image not Found">
+          <img src="{% static 'css_img/Scanner.png'%}" class="img-fluid" alt="Error 404 Image not Found">
           <li>Scanning bed in the scanner, a glass plate is utilized to place a document for scanning.</li>
           <li>A light source is mounted on a traction mechanism which moves from one end of the document to other end during scan session.</li>
           <li>A mirror is used to reflect each illuminated scan line to fixed CCD array as light source moves across the document.</li>
@@ -261,8 +295,7 @@
           <li>Once the scan is complete, the image is transferred to a computer via USB.</li>
           <b>Types of Scanner:</b>
           <li>Rotary Drum Scanner:</li>
-          <img src="{% static 'css_img/rdscanner.png'%}" alt="Error 404 Image not Found">
-          <ol>
+            <img src="{% static 'css_img/rdscanner.png'%}" class="img-fluid" alt="Error 404 Image not Found">
             <li>In case of flatbed scanner at a time we can scan only one side of paper. But mechanism of rotary drum scanner is somewhat different that is in which two digital cameras with CCD array are mounted in a fixed position near the drum.</li>
             <li>As per the name suggest this scanner contains drum to wrap the paper and two set of belts three set roller guides to guide the paper.</li>
             <li>So this rotary drum scanner will scan both the sides of papers in single attempt and scanning mechanism with CCD array is same like flatbed scanner.</li>
@@ -270,7 +303,7 @@
             <li>The front side of the page is scanned in position 1 as it is around the drum and the back side of the page is scanned in position 2 as the transport mechanism pulls the paper from the drum and ejects it out to the stacking tray.</li>
           </ol>
           <li>Handheld Scanner:</li>
-          <img src="{% static 'css_img/hhscanner.png'%}" alt="Error 404 Image not Found">
+          <img src="{% static 'css_img/hhscanner.png'%}" class="img-fluid" alt="Error 404 Image not Found">
           <ol>
             <li>Hand held document scanners are manual devices that are dragged across the surface of the image to be scanned.</li>
             <li>Scanning documents in this manner requires a steady hand, as an uneven scanning rate would produce distorted images.</li>
@@ -280,10 +313,12 @@
             <li>Handheld scanners use a light bulb as a light source to illuminate the scan line being scanned. The light is reflected from the document as the user moves the scanner across document. A fixed CCD array absorbs the reflected light and generates an voltage, Which in turn gets converted to a digital value.</li>
           </ol>
         </ul>
-
+        <!-- SCANNER AND THEIR TYPES ENDS HERE -->
         <br>
+
+        <!-- PLOTTER STARTS HERE -->
         <h4>Plotter</h4>
-        <img src="{% static 'css_img/plotter.jpg'%}" alt="">
+        <img src="{% static 'css_img/plotter.jpg'%}"  class="img-fluid" alt="">
         <ul>
           <li>Plotters are special output devices that use pens to draw on paper. The pens are held in an arm that can move up and down across the paper. The arm and the pen together can draw just like a human but more accurately and quickly. Different colored pens can be used to get colored drawings. Plotters are used by designers and architects since they work with large pieces of paper.</li>
           <li>Plotters are widely used in applications such as computer aided design.</li>
@@ -297,8 +332,10 @@
           <li>A pen plotter's speed is primarily limited by the type of pen used, so the choice of pen is a key factor in pen plotter output speed.</li>
           <li>Indeed, most modern pen plotters have he commands to control slowing speed depending on the type of pen currently in use</li>
         </ul>
-
+        <!-- PLOTTER ENDS HERE -->
         <br>
+
+        <!-- JUKEBOX STARTS HERE -->
         <h4>Jukebox (Optical Disk Library)</h4>
         <ul>
           <li>The difference in musical jukebox and optical jukebox is that optical disk library, the platters are optical and contain objects such as data, audio, video and images. Instead of a turn able, an optical disk has one or more optical drives.</li>
@@ -313,8 +350,10 @@
             <li>City and country Government use optical storage for maintaining near-line electronic database of paper files on properties and constituents for tax records, deed recording and so on.</li>
           </ol>
         </ul>
-
+        <!-- JUKEBOX ENDS HERE -->
         <br>
+
+        <!-- DVD STARTS HERE -->
         <h4>DVD</h4>
         <ul>
           <li>DVD (Digital Versatile Disc, or less commonly Digital Video Disc) is an "alternative" to the compact disc (CD) with six times as much storage space.</li>
@@ -359,7 +398,7 @@
               </table>
             </ul>
             <li>Logical structure: <p>The DVD is essentially made up of three zones, which represent information area,</p></li>
-            <img src="{% static 'css_img/lgstr.jpg'%}" alt="">
+            <img src="{% static 'css_img/lgstr.jpg'%}"  class="img-fluid" alt="">
             <ul>
               <li>Lead-in Area (or LIA for short) only contains data which describes the disc's contents (this information is stored in the Table of Contents). This area lets the DVD player/drive to synchronize itself with the data found in the program area.</li>
               <li>The Program Area is the area which contains the data.</li>
@@ -367,12 +406,16 @@
             </ul>
           </ol>
         </ul>
-
-        <br>
-        <h2>Multimedia Databases</h2>
+        <!-- DVD ENDS HERE -->
         <br>
 
-        <h4 id="Multimedia_Databases">Multimedia Database</h4>
+    </article>   
+    <!-- MULTIMEDIA I/O DEVICES ENDS HERE -->
+
+    
+    <!-- MULTIMEDIA DATABASES START HERE -->
+    <article>
+        <h3 id="Multimedia_Databases">Multimedia Database</h3>
         <ul>
           <li>Multimedia database is database containing multimedia collections.</li>
           <li>Multimedia database management system is essential to manage multimedia data like text, graphics, animation, music, etc.</li>
@@ -399,254 +442,258 @@
         </ul>
 
         <br>
+    </article>
+    <!-- MULTIMEDIA DATABASES ENDS HERE -->
 
-  </article>
 </section>
+<!-- CHAPTER 1 ENDS HERE -->
 
-
-
-
-
-<section>
-  <header id="Chapter_2">Chapter 2: Text and Digital Image</header>
-  <br>
-   <!--INTRODUCTION TO DIGITAL TEXT STARTS  -->
-  <h2 id="Introduction_to_Digital_Text">Introduction to Digital Text</h2>
-  <br>
-  <article>
-    <!-- TEXT DIGITAL REPRESENTATION START -->
-    <h4>How Text can be Digitally Representation?</h4>
-      <ul>
-        <li>In digitization of text, older print books are being scanned and optical character recognition technologies applied by academic and public libraries, and private companies like Google.</li>
-        <li>Document digitization is the process of converting manual documents into digital formats. In this process of document digitizing, any type of document like texts, images, video are digitized and converted into digital formats such as text, html, xml, pdf, doc, xls, gif, Jpeg.</li>
-        <li>The most vital contribution of data digitization is a perpetual preservation of your important documents. Another benefit is that digitized data can also be stored on any media format such as CDs, Pen drives, HDDs.</li>
-        <b>The benefits of data digitizing of text:</b>
-        <ol>
-          <li>Perpetual preservation of all your physical documents.</li>
-          <li>Easy storing advantages.</li>
-          <li>Effortless duplication of data.</li>
-          <li>Quick and easy retrieval.</li>
-          <li>Easy access.</li>
-          <li>Easy transportation.</li>
-          <li>Easy to share.</li>
-          <li>Makes data compatible with all modes of digital data transfer.</li>
-        </ol>
-        <b>Document digitizing Vs. Document scanning:</b>
-        <li>Document scanning services is a service that is used to scan the hard copies of documents into scanned images.</li>
-        <li>Document digitizing or the other hand refers to a process wherein data from newspapers, books, paper documents, periodicals or image files are converted into digitized data and delivered in any file format such as XML, HTML PDF, Access, Excel, Word etc.</li>
-      </ul>
-      <!-- TEXT DIGITAL REPRESENTATION ENDS -->
-  </article>
-  <!--INTRODUCTION TO DIGITAL TEXT ENDS  -->
+<!-- CHAPTER 2 STARTS HERE -->
+<section class="main-section" id="Chapter_2">
+    <header>Text and Digital Image</header>
     <br>
-  <article>
-    <!-- TEXT FILE FORMAT START -->
-    <h2 id="Text_File_Format">Text File Format</h2>
-      <br>
-      <!-- RTF START -->
+
+    <!--INTRODUCTION TO DIGITAL TEXT STARTS  -->
+    <article>
+        <h2 id="Introduction_to_Digital_Text">Introduction to Digital Text</h2>
+        <br>
+        <!-- TEXT DIGITAL REPRESENTATION START -->
+        <h4>How Text can be Digitally Representation?</h4>
+          <ul>
+            <li>In digitization of text, older print books are being scanned and optical character recognition technologies applied by academic and public libraries, and private companies like Google.</li>
+            <li>Document digitization is the process of converting manual documents into digital formats. In this process of document digitizing, any type of document like texts, images, video are digitized and converted into digital formats such as text, html, xml, pdf, doc, xls, gif, Jpeg.</li>
+            <li>The most vital contribution of data digitization is a perpetual preservation of your important documents. Another benefit is that digitized data can also be stored on any media format such as CDs, Pen drives, HDDs.</li>
+            <b>The benefits of data digitizing of text:</b>
+            <ol>
+            <li>Perpetual preservation of all your physical documents.</li>
+              <li>Easy storing advantages.</li>
+              <li>Effortless duplication of data.</li>
+              <li>Quick and easy retrieval.</li>
+              <li>Easy access.</li>
+              <li>Easy transportation.</li>
+              <li>Easy to share.</li>
+              <li>Makes data compatible with all modes of digital data transfer.</li>
+            </ol>
+            <b>Document digitizing Vs. Document scanning:</b>
+            <li>Document scanning services is a service that is used to scan the hard copies of documents into scanned images.</li>
+            <li>Document digitizing or the other hand refers to a process wherein data from newspapers, books, paper documents, periodicals or image files are converted into digitized data and delivered in any file format such as XML, HTML PDF, Access, Excel, Word etc.</li>
+          </ul>
+        <!-- TEXT DIGITAL REPRESENTATION ENDS -->
+    </article>
+    <!--INTRODUCTION TO DIGITAL TEXT ENDS  -->
+    <br>
+
+    <!-- TEXT FILE FORMAT START HERE -->
+    <article>
+        <h2 id="Text_File_Format">Text File Format</h2>
+        <br>
+
+        <!-- RTF START -->
       <h4>RTF text file format</h4>
-        <ul>
-          <li>A file format is a standard way that information is encoded for storage in a computer file.</li>
-          <li>A file format specifies how bits are used to encode information in a digital storage medium.</li>
-          <li>File formats may be either proprietary or free.</li>
-          <li>For example : image file format , audio file format , video file format and Text Formats etc.</li>
-          <br>
-          <b>RTF (Rich Text Format)</b>
-          <li>Stands for Rich Text Format</li>
-          <li>RTF documents are designed to transfer documents between word processing software.</li>
-          <li>These files use .rtf filename extensions.</li>
-          <li>The Rich Text Format (RTF) specification is a method of encoding formatted text and graphics for easy transfer between applications.</li>
-          <li>Currently, users depend on special translation software to move word-processing documents between different MS-DOS, Windows and Macintosh</li>
-          <li>The RTF specification provides a format for text and graphics interchange that can be used with different output devices and operating systems.</li>
-          <li>RTF uses the ANSI, PC-8, Macintosh, or IBM PC character set to control the representation and formatting of a document, both on the screen and in print.</li>
-          <li>With the RTF Specification documents created under different operating systems and with different software applications can be transferred between those operating systems and applications</li>
-          <li>Text editor carry information in American Standard Code for Information Interchange (ASCII). Or Extended Binary Coded Decimal Interchange Code (EBCDIC) form, but they do not carry formatting information.</li>
-          <li>So when text was moved from one application to another, all formatting was lost and had to be reentered for printing.</li>
-          <li>RTF is a solution for that which carry formatting information also.</li>
-          <br>
-          <b>The key format information carried across in RTF document files includes:</b>
-          <li><b>Character Set:</b>The character sets determine the characters that are supported in particular implementation. Common examples are ASCII and EBCDIC character set.</li>
-          <li><b>Font table:</b>A font table lists all fonts used in the document. These fonts are mapped to the fonts available in the receiving application for displaying the text.</li>
-          <li>The color table lists the colors used in the document for highlighting text. The color table is also mapped for display by the receiving application to the nearest set of colors available to that application.</li>
-          <li><b>Document Formatting:</b>RTE provides true document margins. Paragraph indents are specified relative to the document margin. This information helps ensure that when a document is printed by a receiving application, the printed page looks similar to the original page.</li>
-          <li><b>General Formatting:</b>Formatting information in this group includes items such as footnotes, bookmarks and pictures.</li>
-          <li><b>Character Formatting:</b>Formatting information including bold, italic, underline strikethrough, shadow text, hidden text are specified using control characters.</li>
-          <li><b>Special Characters:</b>These include hyphens, non- breaking spaces, backlashes and so on.</li>
-          <li><b>Advantages of RTF:</b>From the perspective of a multimedia system, rich text format is important because it is used to attach, imbed or link other text files or even binary files such as executables, audio files, and video files.</li>
-          <li><b>Disadvantages of RTF:</b>Some problems remain even with rich text format because of incomplete implementations of rich text formats. These imperfections result in text not aligning properly in columns margins not being correct, or text attributes such as color showing up incorrectly when text file is moved to a different word processor.</li>
-        </ul>
-      <!-- RTF ENDS -->
-      <br>
-        
-      <!-- TIFF STARTS -->
-      <h4>TIFF</h4>
-        <ul>
-          <li>TIFF is an industry standard file format designed to represent image data generated by scanners, and paint applications.</li>
-          <li>It is designed to describe images in several color models with different data compression technique.</li>
-          <li>It is processor and device independent file format, it allows interchanging files across different platforms.</li>
-          <li>The TIFF design is flexible enough to take advantage of the functionality offered by image capture devices.</li>
-          <li>TIFF is extensible, allowing new enhancing specification without sacrificing download compatibility.</li>
-          <li><b>TIFF file format header</b></li>
-          <img src="{% static 'css_img/tiff_ffh.png'%}" alt="">
-          <li><b>Structure of TIFF Image File Directory (IFD)</b></li>
-          <img src="{% static 'css_img/tiff_ifd.jpg'%}" alt="">
-          <i>In tagged file formats, tags are used to keep all attribute information in a standard manner . For e.g. The TIFF file format provides tags that store information such as:</i>
-          <li>about resolution,</li>
-          <li>pixel information,</li>
-          <li>visual characteristics,</li>
-          <li>color,</li>
-          <li>the compression technique used for capturing,</li>
-          <li>the date and time for capture,</li>
-          <li>name of image,</li>
-          <li>software version and even the name of creator who created the file</li>
-          <li>A search through a file is quick since tag locations are found through pointers. If more space is required for changes or updates to a specific type of information more space is allocated, and the pointer to the new block is inserted into the pointer field provided by the tagged block.</li>
-          <br>
-          <b>TIFF version 5.0 supports following five classes:</b>
-          <li>Class B for binary images.</li>
-          <li>Class F for fax</li>
-          <li>Class G for gray-scale image</li>
-          <li>Class P for palette color images</li>
-          <li>Class R for RGB full-color images</li>
-          <li>In TIFF version 6, classes of version 5 are a part of the baseline specification.</li>
-          <li>Class extensions in version 6.0 consist of the following</li>
-          <ol>
-            <li>Images that use the color models CMYK</li>
-            <li>Compression schemes including CCITT Group 3 1D, RLE, Huffman Coding, JPEG compression.</li>
-          </ol>
-          <li>As can be seen from the above, TIFF version 6.0 allows a much wider range of specifications.</li>
-          <br>
-          <b>TIFF IMPLEMENTATION ISSUES</b>
-          <li>The TIFF file reader must read all tags that it is designed to interpret and assemble the information for processing the image data.</li>
-          <li>The TIFF file writer should create TIFF file efficiently, that is, TIFF writer should follow the TIFF specification rigidly so that any TIFF reader will be able to read the TIFF file gracefully/easily.</li>
-          <br>
-          <i>Advantages of TIFF</i>
-          <li>Search is quicker because of tags.</li>
-          <li>More space is provided for new information by adding another tagged block to the file.</li>
-        </ul>
-
-      <!-- TIFF ENDS -->
-      
-    <!-- TEXT FILE FORMAT ENDS -->
-  </article>
-        <br>
-  <article>
-    <!--TEXT COMPRESSION TECHNIQUES STARTS  -->
-
-    <h2 id="Text_Compression_Techniques">Text Compression Techniques</h2>
-    <br>
-    <!-- NEED OF DATA COMPRESSION START -->
-    <h4>Need of Data Compression</h4>
       <ul>
-        <li>Multimedia object consists of color image, photographic or video image, audio data etc. These data object needs to be stored, retrieved, transmitted and displayed. This large data objects present two problems viz, storage and transmission.</li>          <li>Transfer of data in the Internet age is very time-dependent. Take for example an audio file, which is nothing but changes in the intensity of sound over a fixed period. This audio is transferred across networks in the form of sound files. If the size of the sound files is too large, the time taken to transfer the files increases. The time taken to transfer a file can be decreased using compression.</li>
-        <li> Compression in computer terms means reducing the physical size of data such that it occupies less storage space and memory, Compressed files are, therefore, easier to transfer because there is a sizable amount of reduction in the size of data to be transferred.</li>
-        <li>This results in a reduction in the time needed for file transfer as well as a reduction in the bandwidth utilization even for a slow network.</li>
-        <li>Thus, the process of reducing the amount of data required to represent information is called compression.</li>
+        <li>A file format is a standard way that information is encoded for storage in a computer file.</li>
+        <li>A file format specifies how bits are used to encode information in a digital storage medium.</li>
+        <li>File formats may be either proprietary or free.</li>
+        <li>For example : image file format , audio file format , video file format and Text Formats etc.</li>
         <br>
-        <h5>There are two types of compression</h5>
-        <b>Lossless Compression</b>
-        <li>Lossless data compression is a class of data compression algorithms that allows the exact original data to be reconstructed from the compressed data. i.e. In lossless data compression, the compressed-then-decompressed data is an exact replication of the original data.</li>
-        <li>Lossless data compression is used in many applications. For example, the zip file format produced by the WinZip program on a PC produces exact copies of the original material that was encoded within the zip file. It is also used in the Unix tool gzip.</li>
-        <li>Lossless compression is , used in cases where it is important that the original and the decompressed data be identical. Typical examples are executable programs, text documents and source code. Some image file formats, like PNG or GIF, use only lossless compression.</li>
+        <b>RTF (Rich Text Format)</b>
+        <li>Stands for Rich Text Format</li>
+        <li>RTF documents are designed to transfer documents between word processing software.</li>
+        <li>These files use .rtf filename extensions.</li>
+        <li>The Rich Text Format (RTF) specification is a method of encoding formatted text and graphics for easy transfer between applications.</li>
+        <li>Currently, users depend on special translation software to move word-processing documents between different MS-DOS, Windows and Macintosh</li>
+        <li>The RTF specification provides a format for text and graphics interchange that can be used with different output devices and operating systems.</li>
+        <li>RTF uses the ANSI, PC-8, Macintosh, or IBM PC character set to control the representation and formatting of a document, both on the screen and in print.</li>
+        <li>With the RTF Specification documents created under different operating systems and with different software applications can be transferred between those operating systems and applications</li>
+        <li>Text editor carry information in American Standard Code for Information Interchange (ASCII). Or Extended Binary Coded Decimal Interchange Code (EBCDIC) form, but they do not carry formatting information.</li>
+        <li>So when text was moved from one application to another, all formatting was lost and had to be reentered for printing.</li>
+        <li>RTF is a solution for that which carry formatting information also.</li>
         <br>
-        <b>Lossless compression techniques:</b>
-        <li>Packbits encoding (Run Length Encoding) RLE</li>
-        <li>CCITT Group 3 1D</li>
-        <li>CCITT Group 3 2D</li>
-        <li>CCITT Group 4</li>
-        <li>LZW</li>
-        <br>
-        <b>Lossy Compression</b>
-        <li>Lossy data compression, which only allows an approximation of the original data to be reconstructed i.e. In lossy data compression, the decompressed data may be different from the original data. Typically, there is some distortion between the original and reproduced data.</li>
-        <li>Lossy compression is a data encoding method which discards (loses) some of the data, in order to achieve its goal, with the result that decompressing the data yields content that is different from the original, though similar enough to be useful in some way.</li>
-        <li>Lossy compression is most commonly used to compress multimedia data (audio, video). This method is used where absolute data accuracy is not essential. Lossy compression is the most commonly used compression type. This compression technique is used for image documents, audio, and video objects.</li>
-        <br>
-        <b>Lossy Compression techniques:</b>
-        <li>Joint Photographic Experts Group (JPEG)</li>
-        <li> Motion Picture Experts Group (MPEG)</li>
-        <li> Adaptive Differential Pulse Code Modulation (ADPCM)</li>
-        <li>CCITT H.261 (Px64) Video Coding Algorithm</li>
-        <li>Intel DVI (Digital Video Interactive)</li>
-        <i>Example:</i>
-        <img src="{% static 'css_img/eg_ct.jpg'%}" alt="">
+        <b>The key format information carried across in RTF document files includes:</b>
+        <li><b>Character Set:</b>The character sets determine the characters that are supported in particular implementation. Common examples are ASCII and EBCDIC character set.</li>
+        <li><b>Font table:</b>A font table lists all fonts used in the document. These fonts are mapped to the fonts available in the receiving application for displaying the text.</li>
+        <li>The color table lists the colors used in the document for highlighting text. The color table is also mapped for display by the receiving application to the nearest set of colors available to that application.</li>
+        <li><b>Document Formatting:</b>RTE provides true document margins. Paragraph indents are specified relative to the document margin. This information helps ensure that when a document is printed by a receiving application, the printed page looks similar to the original page.</li>
+        <li><b>General Formatting:</b>Formatting information in this group includes items such as footnotes, bookmarks and pictures.</li>
+        <li><b>Character Formatting:</b>Formatting information including bold, italic, underline strikethrough, shadow text, hidden text are specified using control characters.</li>
+        <li><b>Special Characters:</b>These include hyphens, non- breaking spaces, backlashes and so on.</li>
+        <li><b>Advantages of RTF:</b>From the perspective of a multimedia system, rich text format is important because it is used to attach, imbed or link other text files or even binary files such as executables, audio files, and video files.</li>
+        <li><b>Disadvantages of RTF:</b>Some problems remain even with rich text format because of incomplete implementations of rich text formats. These imperfections result in text not aligning properly in columns margins not being correct, or text attributes such as color showing up incorrectly when text file is moved to a different word processor.</li>
       </ul>
-    <!-- NEED OF DATA COMPRESSION ENDS -->
-
+    <!-- RTF ENDS -->
     <br>
-    <!-- LOSSY V/S LOSSLESS START -->
-    <h4>Compare Lossy v/s Lossless Compression</h4>
-      <table>
-        <tr>
-          <th><b>Sr No</b></th>
-          <th><b>Lossy Compression</b></th>
-          <th><b>Lossless Compression</b></th>
-        </tr>
-        <tr>
-          <th>1</th>
-          <th>The technique involves some loss of information.</th>
-          <th>Involves no loss of information.</th>
-        </tr>
-        <tr>
-          <th>2</th>
-          <th>Data that has been compressed using this technique can’t be recovered and reconstructed exactly.</th>
-          <th>If data has been (lossless) compressed, the original data can be recovered from the compressed data.</th>
-        </tr>
-        <tr>
-          <th>3</th>
-          <th>Used for application that can tolerate difference between the original and reconstructed data.</th>
-          <th>Used for application that can’t tolerate any difference between original and reconstructed data.</th>
-        </tr>
-        <tr>
-          <th>4</th>
-          <th>In return for accepting this distortion in reconstructed data we obtain high compression rate</th>
-          <th>No loss in information so compression rate is small.</th>
-        </tr>
-        <tr>
-          <th>5</th>
-          <th>Sound and Image compression uses lossy compression.</th>
-          <th>Text compression uses lossless compression</th>
-        </tr>
-        <tr>
-          <th>6</th>
-          <th>More data can be accommodated in channel.</th>
-          <th>Less data can be accommodated in channel.</th>
-        </tr>
-        <tr>
-          <th>7</th>
-          <th>Distortion</th>
-          <th>Distortion less</th>
-        </tr>
-        <tr>
-          <th>8</th>
-          <th>E.g
-            <ol>
-              <li>Telephone System</li>
-              <li>Video CD</li>
-            </ol>
-          </th>
-          <th>E.g
-            <ol>
-              <li>Fax Machine</li>
-              <li>Radiological Imaging</li>
-            </ol>
-          </th>
-        </tr>
-        <tr>
-          <th>9</th>
-          <th>Example: Text compression -> It is very important that the reconstruction is identical to original text, as very small difference can result in statements with very different meanings. Consider “ Do not send Money “ and “ Do now send Money “</th>
-          <th>Example: When viewing a reconstruction of a video sequence, the fact that the reconstruction is different from the original is generally not important as long as the difference do not result in annoying artifacts. Thus, video is generally compressed using lossy compression.</th>
-        </tr>
-      </table>
 
-    <!-- LOSSY V/S LOSSLESS ENDS-->
+    <!-- TIFF STARTS -->
+    <h4>TIFF</h4>
+    <ul>
+      <li>TIFF is an industry standard file format designed to represent image data generated by scanners, and paint applications.</li>
+      <li>It is designed to describe images in several color models with different data compression technique.</li>
+      <li>It is processor and device independent file format, it allows interchanging files across different platforms.</li>
+      <li>The TIFF design is flexible enough to take advantage of the functionality offered by image capture devices.</li>
+      <li>TIFF is extensible, allowing new enhancing specification without sacrificing download compatibility.</li>
+      <li><b>TIFF file format header</b></li>
+      <img src="{% static 'css_img/tiff_ffh.png'%}" class="img-fluid" alt="">
+      <li><b>Structure of TIFF Image File Directory (IFD)</b></li>
+      <img src="{% static 'css_img/tiff_ifd.jpg'%}"  class="img-fluid" alt="">
+      <i>In tagged file formats, tags are used to keep all attribute information in a standard manner . For e.g. The TIFF file format provides tags that store information such as:</i>
+      <li>about resolution,</li>
+      <li>pixel information,</li>
+      <li>visual characteristics,</li>
+      <li>color,</li>
+      <li>the compression technique used for capturing,</li>
+      <li>the date and time for capture,</li>
+      <li>name of image,</li>
+      <li>software version and even the name of creator who created the file</li>
+      <li>A search through a file is quick since tag locations are found through pointers. If more space is required for changes or updates to a specific type of information more space is allocated, and the pointer to the new block is inserted into the pointer field provided by the tagged block.</li>
+      <br>
+      <b>TIFF version 5.0 supports following five classes:</b>
+      <li>Class B for binary images.</li>
+      <li>Class F for fax</li>
+      <li>Class G for gray-scale image</li>
+      <li>Class P for palette color images</li>
+      <li>Class R for RGB full-color images</li>
+      <li>In TIFF version 6, classes of version 5 are a part of the baseline specification.</li>
+      <li>Class extensions in version 6.0 consist of the following</li>
+      <ol>
+        <li>Images that use the color models CMYK</li>
+        <li>Compression schemes including CCITT Group 3 1D, RLE, Huffman Coding, JPEG compression.</li>
+      </ol>
+      <li>As can be seen from the above, TIFF version 6.0 allows a much wider range of specifications.</li>
+      <br>
+      <b>TIFF IMPLEMENTATION ISSUES</b>
+      <li>The TIFF file reader must read all tags that it is designed to interpret and assemble the information for processing the image data.</li>
+      <li>The TIFF file writer should create TIFF file efficiently, that is, TIFF writer should follow the TIFF specification rigidly so that any TIFF reader will be able to read the TIFF file gracefully/easily.</li>
+      <br>
+      <i>Advantages of TIFF</i>
+      <li>Search is quicker because of tags.</li>
+      <li>More space is provided for new information by adding another tagged block to the file.</li>
+    </ul>
+    <!-- TIFF ENDS -->
+
+    </article>
+    <!-- TEXT FILE FORMAT ENDS HERE -->
     <br>
-    <!-- RLE ENCODING START -->
+
+    <!-- TEXT COMPRESSION TECHNIQUE STARTS HERE -->
+    <article>
+       <h2 id="Text_Compression_Techniques">Text Compression Techniques</h2>
+       <br>
+
+       <!-- NEED OF DATA COMPRESSION START -->
+        <h4>Need of Data Compression</h4>
+        <ul>
+            <li>Multimedia object consists of color image, photographic or video image, audio data etc. These data object needs to be stored, retrieved, transmitted and displayed. This large data objects present two problems viz, storage and transmission.</li>          <li>Transfer of data in the Internet age is very time-dependent. Take for example an audio file, which is nothing but changes in the intensity of sound over a fixed period. This audio is transferred across networks in the form of sound files. If the size of the sound files is too large, the time taken to transfer the files increases. The time taken to transfer a file can be decreased using compression.</li>
+            <li> Compression in computer terms means reducing the physical size of data such that it occupies less storage space and memory, Compressed files are, therefore, easier to transfer because there is a sizable amount of reduction in the size of data to be transferred.</li>
+            <li>This results in a reduction in the time needed for file transfer as well as a reduction in the bandwidth utilization even for a slow network.</li>
+            <li>Thus, the process of reducing the amount of data required to represent information is called compression.</li>
+            <br>
+            <h5>There are two types of compression</h5>
+            <b>Lossless Compression</b>
+            <li>Lossless data compression is a class of data compression algorithms that allows the exact original data to be reconstructed from the compressed data. i.e. In lossless data compression, the compressed-then-decompressed data is an exact replication of the original data.</li>
+            <li>Lossless data compression is used in many applications. For example, the zip file format produced by the WinZip program on a PC produces exact copies of the original material that was encoded within the zip file. It is also used in the Unix tool gzip.</li>
+            <li>Lossless compression is , used in cases where it is important that the original and the decompressed data be identical. Typical examples are executable programs, text documents and source code. Some image file formats, like PNG or GIF, use only lossless compression.</li>
+            <br>
+            <b>Lossless compression techniques:</b>
+            <li>Packbits encoding (Run Length Encoding) RLE</li>
+            <li>CCITT Group 3 1D</li>
+            <li>CCITT Group 3 2D</li>
+            <li>CCITT Group 4</li>
+            <li>LZW</li>
+            <br>
+            <b>Lossy Compression</b>
+            <li>Lossy data compression, which only allows an approximation of the original data to be reconstructed i.e. In lossy data compression, the decompressed data may be different from the original data. Typically, there is some distortion between the original and reproduced data.</li>
+            <li>Lossy compression is a data encoding method which discards (loses) some of the data, in order to achieve its goal, with the result that decompressing the data yields content that is different from the original, though similar enough to be useful in some way.</li>
+            <li>Lossy compression is most commonly used to compress multimedia data (audio, video). This method is used where absolute data accuracy is not essential. Lossy compression is the most commonly used compression type. This compression technique is used for image documents, audio, and video objects.</li>
+            <br>
+            <b>Lossy Compression techniques:</b>
+            <li>Joint Photographic Experts Group (JPEG)</li>
+            <li> Motion Picture Experts Group (MPEG)</li>
+            <li> Adaptive Differential Pulse Code Modulation (ADPCM)</li>
+            <li>CCITT H.261 (Px64) Video Coding Algorithm</li>
+            <li>Intel DVI (Digital Video Interactive)</li>
+            <i>Example:</i>
+            <!-- <img src="{% static 'css_img/eg_ct.jpg'%}" class="img-fluid" alt=""> -->
+            
+        </ul>
+        <!-- NEED OF DATA COMPRESSION ENDS -->
+        <br>
+
+        <!-- LOSSY V/S LOSSLESS START -->
+        <h4>Compare Lossy v/s Lossless Compression</h4>
+        <table>
+        <tr>
+            <th><b>Sr No</b></th>
+            <th><b>Lossy Compression</b></th>
+            <th><b>Lossless Compression</b></th>
+        </tr>
+        <tr>
+            <th>1</th>
+            <th>The technique involves some loss of information.</th>
+            <th>Involves no loss of information.</th>
+        </tr>
+        <tr>
+            <th>2</th>
+            <th>Data that has been compressed using this technique can’t be recovered and reconstructed exactly.</th>
+            <th>If data has been (lossless) compressed, the original data can be recovered from the compressed data.</th>
+        </tr>
+          <tr>
+            <th>3</th>
+            <th>Used for application that can tolerate difference between the original and reconstructed data.</th>
+            <th>Used for application that can’t tolerate any difference between original and reconstructed data.</th>
+          </tr>
+          <tr>
+            <th>4</th>
+            <th>In return for accepting this distortion in reconstructed data we obtain high compression rate</th>
+            <th>No loss in information so compression rate is small.</th>
+          </tr>
+          <tr>
+            <th>5</th>
+            <th>Sound and Image compression uses lossy compression.</th>
+            <th>Text compression uses lossless compression</th>
+          </tr>
+          <tr>
+            <th>6</th>
+            <th>More data can be accommodated in channel.</th>
+            <th>Less data can be accommodated in channel.</th>
+          </tr>
+          <tr>
+            <th>7</th>
+            <th>Distortion</th>
+            <th>Distortion less</th>
+          </tr>
+          <tr>
+            <th>8</th>
+            <th>E.g
+              <ol>
+                <li>Telephone System</li>
+                <li>Video CD</li>
+              </ol>
+            </th>
+            <th>E.g
+              <ol>
+                <li>Fax Machine</li>
+                <li>Radiological Imaging</li>
+              </ol>
+            </th>
+          </tr>
+          <tr>
+            <th>9</th>
+            <th>Example: Text compression -> It is very important that the reconstruction is identical to original text, as very small difference can result in statements with very different meanings. Consider “ Do not send Money “ and “ Do now send Money “</th>
+            <th>Example: When viewing a reconstruction of a video sequence, the fact that the reconstruction is different from the original is generally not important as long as the difference do not result in annoying artifacts. Thus, video is generally compressed using lossy compression.</th>
+          </tr>
+        </table>
+
+        <!-- LOSSY V/S LOSSLESS ENDS-->
+        <br>
+
+        <!-- RLE ENCODING START -->
     <h4>RLE Encoding</h4>
       <ul>
         <li>RLE works by reducing physical size of repeating string of character. This repeating string called as RUN is basically encoded into 2 bytes. The first repersents the number of repeaned cahracter in Run and called as Run count. The second byte is value of charater in the Run which is in range 0-255 and called as Run value.</li>
         <p>Following is Uncompressed string:</p>
         <b>PPPPPPPPPPPPPPPPPPPPPP</b>
         <li>Compressed string with RLE:</li>
-        <img src="{% static 'css_img/cs_rle.png'%}" alt="not found">
+        <img src="{% static 'css_img/cs_rle.png'%}" class="img-fluid" alt="not found">
         <li>The 20P code generated to represent character string is called RLE Packet.</li>
         <li> Two bytes are required to store '20P'.</li>
         <li>First 1 byte require to store 20 and second byte is required to store 'Run value' i.e. 'P' But, initially uncompressed string require 20 bytes to store same data.</li>
@@ -654,18 +701,19 @@
         <b>Advantages</b>
         <li>A black and white image that is mostly white, such as page of book will encode very well due to large amount of contiguous data that is all the same color.</li>
         <li>In sequential processing, A bitmap is encoded starting at upper left corner and proceeding from left to right across each scan line(The axis).</li>
-        <img src="{% static 'css_img/en_alx-a.png'%}" alt="">
+        <img src="{% static 'css_img/en_alx-a.png'%}" class="img-fluid" alt="">
         <li>Alternative RLE schemes can also be written to encode data down the length of bitmap (the Y-axis).</li>
-        <img src="{% static 'css_img/en_aly-a.png'%}" alt="">
+        <img src="{% static 'css_img/en_aly-a.png'%}" class="img-fluid" alt="">
         <li>Encode pixels on a diagonal in zig-zag fashion.</li>
-        <img src="{% static 'css_img/zzen_brlemf.png'%}" alt="">
+        <img src="{% static 'css_img/zzen_brlemf.png'%}" class="img-fluid" alt="">
         <li>Example: Use the RLE method to compress the following sequence of symbols:</li>
         <p>AAAACCBBBDDDDDEFF</p>
         <p>Sol:</p>
-        <img src="{% static 'css_img/rle_encoding.png' %}" alt="">
+        <img src="{% static 'css_img/rle_encoding.png' %}" class="img-fluid"  alt="">
         <li>In this way a string of 17 symbols has been compressed into a string of only 12 symbols.</li>
         <li>In such a case only the count of one of the symblos which occurs between each occurence of the other symbol is used.</li>
       </ul>
+        
     <!-- RLE ENCODING ENDS -->
 
     <!-- HUFFMAN ENCODING STARTS HERE -->
@@ -682,14 +730,13 @@
         <li>0111111111110</li>
         <li>The resulting string would be “aeed”</li>
         <li>Example:</li>
-        <img src="{% static 'css_img/huffman_example.jpg' %}" alt="">
+        <!-- <img src="{% static 'css_img/huffman_example.jpg' %}" class="img-fluid" alt=""> -->
+        
       </ul>
 
     <!-- HUFFMAN ENCODING ENDS HERE -->
-    <br>  
-  
 
-    <!-- CCITT Group3 1D STARTS HERE -->
+      <!-- CCITT Group3 1D STARTS HERE -->
     <h4>CCITT Group3 1D</h4>
     <p>Group 3 One-Dimensional encoding (G31D) is a variation of the Huffman keyed compression scheme. A bi-level image is composed of a series of black-and-white 1-bit pixel runs of various lengths (1 = black and 0 = white). A Group 3 encoder determines the length of a pixel run in a scan line and outputs a variable-length binary code word representing the length and color of the run. Because the code word output is shorter than the input, pixel data compression is achieved.</p>
     <p>The run-length code words are taken from a predefined table of values representing runs of black or white pixels. This table is part of the T.4 specification and is used to encode and decode all Group 3 data.</p>
@@ -700,7 +747,7 @@
     <p><strong>Here are some examples of several different encoded runs:</strong></p>
     <p>A run of 20 black pixels would be represented by the terminating code for a black run length of 20. This reduces a 20-bit run to the size of an 11-bit code word, a compression ratio of nearly 2:1. This is illustrated in Figure 9-7, a.</p>
     <p>A run of 8800 black pixels would be encoded as three makeup codes of 2560 black pixels (7680 pixels), a makeup code of 1088 black pixels, followed by the terminating code for 32 black pixels (2560 + 2560 + 2560 + 1088 + 32 = 8800). In this case, we will have encoded 8800 run-length bits into five code words with a total length of 61 bits, for an approximate compression ratio of 144:1. This is illustrated in Figure 1, c.</p>
-    <img src="{% static 'css_img/ccit_group3_1d.jpg' %}" alt="not found">
+    
     <p><strong>Advantages of CCITT G3 1D</strong></p>
     <li>Very simple to implement.</li>
     <li>It is a standard for document imaging applications (Fax images).</li>
@@ -710,18 +757,19 @@
     <br>
 
     <!-- CCITT Group3 1D ENDS HERE -->
-  
-
-    <!-- TEXT COMPRESSION TECHNIQUES ENDS -->
-  </article>
-        
-  
-  <article>
-    <!-- INTRODUCTION TO DIGITAL IMAGE STARTS -->
-    <h2 id="Introduction_to_Digital_Image">Introduction to Digital Image</h2>
     <br>
 
-    <!-- DIGITAL IMAGE STARTS HERE -->
+
+
+    </article>
+    <!-- TEXT COMPRESSION TECHNIQUE ENDS HERE -->
+    <br>
+
+    <!-- INTRODUCTION TO DIGITAL IMAGE STARTS -->
+    <article>
+        <h3 id="Introduction_to_Digital_Image">Introduction to Digital Image</h3>
+        <br>
+        <!-- DIGITAL IMAGE STARTS HERE -->
 
     <h4>Digital Image</h4>
     <ul>
@@ -734,26 +782,23 @@
       <li>An image displayed on a computer monitor consists of many small dots. Theses dots are called pixels. There are a fixed number of pixels on a horizontal line and a fixed number lines in the vertical dimension (i e, a digital image consists of a rectangular array of pixels). </li>
       <li>Different pixels may have different brightness or intensity. The intensity range from black to white depends on the required image quality or number of bits used for each pixel. For example, when 8 bits are used to represent a pixel, a total of 256 different intensity levels can be represented, black being 0 and white being 255. </li>
       <li>The arrangement of these pixel values in a contiguous region of in memory in array form is called a bitmap. </li>
-      <li>Example</li>
-      <img src="{% static 'css_img/digital_img_eg.jpg' %}" alt="">
+    
       <p>Color Image</p>
       <li>A color image also consists of a rectangular array of pixels. The only difference from gray scale images is that we need three values to represent each pixel.</li>
       <li>Each value represents one primary color. This representation is based on the tri stimulus theory of color production, which states that any color can be reproduced by an appropriate mixing of three primary colors. The primary colors used in television systems and computer monitors are red, green, and blue. </li>
       <li>Therefore a color image can be represented by three two-dimensional arrays, corresponding to the red, green and blue components of the image, respectively. </li>
-      <p>Example:</p>
-      <img src="{% static 'css_img/color_image_eg.jpg' %}" alt="not found">
-      <p><em>Monochrome Image</em></p>
+     
       <li>Monochrome photos are photos that contain variations of only one color and nothing else. This could be different shades of blue, green, or grey, for example.</li>
       <li>In computing, monochrome has two meanings:</li>
       <li>it may mean having only one color which is either on or off (also known as a binary image),</li>
       <li>allowing shades of that color.</li>
       <li>Each pixel is stored as a single bit.</li>
       <li>Example</li>
-      <img src="{% static 'css_img/monochrome_img_eg.jpg' %}" alt="">
+      <img src="{% static 'css_img/monochrome_img_eg.jpg' %}" class="img-fluid" alt="">
     </ul>
 
     <!-- DIGITAL IMAGE ENDS HERE -->
-    <br>
+
     <!-- USES OF DIGITAL IMAGE IN DIFFRENT FIELDS START-->
 
     <h4>Use of Digital Images in Different Fields</h4>
@@ -784,7 +829,7 @@
         <li>
           <b>Line Follower robot</b>
           <p>Most of the robots work today by following a line and thus are called line follower robots. This has also acheived through image processing.</p>
-          <img src="{% static 'css_img/ch2_images_different_field.jpg' %}" alt="">
+          <img src="{% static 'css_img/ch2_images_different_field.jpg' %}" class="img-fluid" alt="">
         </li>
         <li>
           <b>Colour processing</b>
@@ -802,108 +847,10 @@
 
     <!-- USES OF DIGITAL IMAGE IN DIFFRENT FIELDS END-->
 
-
+    </article>
     <!-- INTRODUCTION TO DIGITAL IMAGE ENDS -->
-  </article>
     
-    <br>
-  <article>
-    <!-- IMAGE FILE FORMAT STARTS -->
-
-    <h2 id="Image_File_Formats"> Image File Formats</h2>
-    <br>
-
-    <!-- BMP IMAGE FILE FORMAT START -->
-
-    <h4>BMP image file format</h4>
-      <p><strong>BMP image format</strong></p>
-      <p>BMP is an outdated image file format for computers running the Windows operating system. The format was developed by Microsoft for storing bitmap files in a device-independent bitmap (DIB) format that would allow Windows to display the bitmap on any type of display device. The term ‘device independent’ means that the bitmap specifies pixel color in a form independent of the method used by a display to represent color.</p>
-      <p>Since BMP is a fairly simple file format, its structure is pretty straightforward. Each bitmap file contains:</p>
-      <ul>
-        <li><b> a bitmap-file header:</b>this contains information about the type, size, and layout of a device-independent bitmap file.</li>
-        <li><b>a bitmap-information header</b>which specifies the dimensions, compression type, and color format for the bitmap.</li>
-        <li><b>a color table</b>defined as an array of RGBQUAD structures, contains as many elements as there are colors in the bitmap. The color table is not present for bitmaps with 24 color bits because each pixel is represented by 24-bit red-green-blue (RGB) values in the actual bitmap data area.</li>
-        <li><b>an array of bytes that defines the bitmap bits:</b>These are the actual image data, represented by consecutive rows or ‘scan lines’ of the bitmap. Each scan line consists of consecutive bytes representing the pixels in the scan line, in left-to-right order.</p></li>
-      </ul>
-      <br>
-      <p><strong>Structure</strong></p>
-      <p>A BMP file consists of either 3 or 4 parts as shown in the Fig 1 below. The first part is a header, this is followed by a information section, if the image is indexed color then the palette follows, and last of all is the pixel data. The position of the image data with respect to the start of the file is contained in the header. Information such as the image width and height, the type of compression, the number of colors is contained in the information header.</p>
-      <img src="{% static 'css_img/ch2_bmp_struct.png' %}" alt="">
-      <br>
-      <b>Information</b>
-      <p>The image info data that follows is 40 bytes in length, it is described in the struct given below. The fields of most interest below are the image width and height, the number of bits per pixel (should be 1, 4, 8 or 24), the number of planes (assumed to be 1 here), and the compression type (assumed to be 0 here).</p>
-      <code>
-        typedef struct {
-
-          unsigned int size; /* Header size in bytes */
-          
-          int width,height; /* Width and height of image */
-        
-          unsigned short int planes; /* Number of colour planes */
-        
-          unsigned short int bits; /* Bits per pixel */
-        
-          unsigned int compression; /* Compression type */
-        
-          unsigned int imagesize; /* Image size in bytes */
-        
-          int xresolution,yresolution; /* Pixels per meter */
-        
-          unsigned int ncolours; /* Number of colours */
-
-          unsigned int importantcolours; /* Important colours */
-        
-        } INFOHEADER;
-      </code>
-      <p>The compression types supported by BMP are listed below :</p>
-      <ul>
-        <li>0 - no compression</li>
-        <li>1 - 8 bit run length encoding</li>
-        <li>2 - 4 bit run length encoding</li>
-        <li>3 - RGB bitmap with mask</li>
-      </ul>
-      <br>
-      <b>24 bit Image Data</b>
-      <p>The simplest data to read is 24 bit true colour images. In this case the image data follows immediately after the information header, that is, there is no colour palette. It consists of three bytes per pixel in b,g,r order. Each byte gives the saturation for that colour component, 0 for black and 1 for white (fully saturated).</p>
-      <br>
-      <b>Indexed Colour Data</b>
-      <p>If the image is indexed colour then immediately after the information header there will be a table of infoheader.ncolours colours, each of 4 bytes. The first three bytes correspond to b,g,r components, the last byte is reserved/unused but could obviously represent the alpha channel. For 8 bit greyscale images this colour index will generally just be a greyscale ramp. If you do the sums....then the length of the header plus the length of the information block plus 4 times the number of palette colours should equal the image data offset. In other words</p>
-      <p>14 + 40 + 4 * infoheader.ncolours = header.offset</p>
-
-    <!-- BMP IMAGE FILE FORMAT ENDS -->
-    <br>
-
-    <!-- JPG IMAGE FILE FORMAT START -->
-    <h4>JPG image file format</h4>
-      <ul>
-        <li>JPG, originally JPEG stands for Joint Photographic Expert Group.</li>
-        <li>The file name for a JPEG image is .jpg or .jpeg.</li>
-        <li>There is actually no difference between JPG and JPEG, except for the number of characters used.</li>
-        <li>JPEG is the most commonly used format for photographs. It is specifically good for color photographs or for images with many blends or gradients. However, it is not the best with sharp edges and might lead to a little blurring. This is mainly because JPEG is a method of lossy compression for digital photography.</li>
-        <li>An advantage to using the JPEG format is that due to compression, a JPEG image will take up a few MB of data.</li>
-        <li>This means that while saving the image in a JPEG format, there is a slight loss of quality due to compression. Hence, JPEG is not the greatest format in case one needs to keep making numerous edits and re-saves to the image.</li>
-        <li>As with each re-save there a slight loss of quality due to compression. Still, if one only makes a few edits and the image is saved in a high quality format, the slight loss of quality due to compression is mainly negligible.</li>
-        <li>The JPEG is quite popular for web hosting of images, for amateur and average photographers, digital cameras, etc. This is mainly due to the fact that high quality images can be saved using less space.</li>
-        <li>JPEG is one of the most common image formats proposed by the Joint Photographic Experts Group to save and store digital images.</li>
-        <li>The file format is referred to as the JPEG file interchange format (sort for JIFF) that was created for the sole purpose of storing digital images, particularly the ones used by digital photography.</li>
-        <li>Almost all high-definition digital cameras including modern-day Smartphone cameras use JPEG file extension to store image files.</li>
-        <li>One downside of JPEG is that it’s a lossy compression algorithm which significantly reduces the size of the file with each compression, which results in degradation of image quality.</li>
-        <li>Like ZIP files exploit the redundancies in files to achieve utmost compression, JPEG does that by removing blocks of pixels or sections of images, thereby reducing image quality.</li>
-        <li>Technically, it compares each pixel with adjacent pixels to adjust the compression ratio.</li>
-        <li>This results in loss of density in digital photography, making it less appropriate for those trying to make a lot of edits and resaves to the image files.</li>
-        <li>With each save, there’s a slight loss of image quality due to compression. It can be saved with both JPG and JPEG file extensions.</li>
-        <br>  
-    </ul>
-    <b>Difference between JPG and JPEG</b>
-    <ul>
-      <li><b>Operating System of JPG and JPEG</b><p>The previous versions of operating systems such as MS DOS and Windows could only read three letter extensions for image file formats so the Joint Photographic Experts Group ditched the word “E” from JPEG to use JPG. However, there’s no such limitation in Macintosh. So JPEG is a common file format among Mac users.</p></li>
-      <li><b>Number of Characters</b><p>Both JPG and JPEG are often used interchangeably because they are virtually same and developed by the Joint Photographic Experts Group, however, the main difference between the two is the number of characters used in each file extension. Both are a little distinct file extensions with some association with JPEG-handling.</p></li>
-      <li><b>File Size of JPG and JPEG</b><p>The size of the image files with JPEG extension is comparatively less because of the lossy compression algorithm which results in a significant data loss. On the contrary, JPG makes the most out of the compression method to preserve the image quality with less data redundancy.</p></li>
-      <li><b>Image Applications of JPG and JPEG</b><p>Most of the image editing and processing applications such as Microsoft Paint and Adobe Photoshop use “.jpg” extension for saving all the JPEG image files for both Mac and Windows users. Both the file formats are ideal for digital photography with perfect variations of tones and colors such as art paintings.</p></li>
-    </ul>
-    <!-- JPG IMAGE FILE FORMAT ENDS -->
-
-    <!-- IMAGE FILE FORMAT ENDS -->
+      <!-- IMAGE FILE FORMAT ENDS -->
   </article>
   <br>
 
@@ -930,7 +877,7 @@
         <b>Step2: Apply DCT (Discrete Cosine Transform):</b>
         <ol>
           <li>In this step, grey scale image with 8*8 block image is divided into 8-pixel by 8-pixel block shown in Fig1 below.</li>
-          <img src="{% static 'css_img/ch2_dct.png' %}" alt="">
+          <img src="{% static 'css_img/ch2_dct.png' %}" class="img-fluid" alt="">
           <b>Fig1: Input Matrix of DCT coefficient</b>
           <li>This image is given as an input to DCT formula</li>
           <b>DCT Calculation:</b>
@@ -1042,7 +989,7 @@
           </ul>
           <li>Then DCT coefficients are generated by applying DCT formula on 8*8 block using Equation 1 shown above.</li>
           <li>After applying DCT formula, we will get 8*8 output matrix showing DCT coefficients as shown in Fig2 below</li>
-          <img src="{% static 'css_img/ch2_dct2.png' %}" alt="">
+          <img src="{% static 'css_img/ch2_dct2.png' %}" class="img-fluid" alt="">
           <b>Fig2: Output Matrix of DCT coefficient</b>
         </ol>
       </li>
@@ -1055,7 +1002,7 @@
           <li> Quantized coefficient is result of dividing a DCT output matrix by a quantum matrix to generate quantized DCT values</li>
           <li>Typically, JPEG quantum matrix has large values in lower half of quantum matrix which in turn results in zero quantized coefficients in lower half of quantized matrix.</li>
           <li>Quantized matrix is shown below in Fig3</li>
-          <img src="{% static 'css_img/ch2_dct3.png' %}" alt="">
+          <img src="{% static 'css_img/ch2_dct3.png' %}" class="img-fluid" alt="">
           <li>Therefore, matrix ends up with most DCT values as zeros and some non-zero DCT values.</li>
         </ol>
       </li>
@@ -1063,7 +1010,7 @@
         <b>Step4: Zig-Zag sequence:</b>
         <ol>
           <li>JPEG came up with ordering quantized DCT coefficient in zigzag sequence as shown in figure below.</li>
-          <img src="{% static 'css_img/ch2_dct4.png' %}" alt="">
+          <img src="{% static 'css_img/ch2_dct4.png' %}" class="img-fluid" alt="">
           <li>After the quantization step, most of the coefficients towards the lower right corner are zero.</li>
           <li>The zigzag ordering rearranges the coefficients in one dimensional order, in result most of the zeros will be placed at the end of the stream.</li>
         </ol>
@@ -1098,7 +1045,7 @@
           <p>C 6</p>
           <p>D 6</p>
           <p>E 5</p>
-          <img src="{% static 'css_img/ch2_shannofanno.jpg' %}" alt="">
+          <img src="{% static 'css_img/ch2_shannofanno.jpg' %}" class="img-fluid" alt="">
           <p>Symbol: ABCDE</p>
           <p>Code</p>
           <p>A 00</p>
@@ -1112,7 +1059,8 @@
 
     <!-- IMAGE COMPRESSION TECHNIQUES ENDS -->
   </article>
-</section>  
 
+</section>
+<!-- CHAPTER 2 ENDS HERE -->
 
 {% endblock main %}
