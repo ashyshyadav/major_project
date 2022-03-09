@@ -1,6 +1,433 @@
 {% extends 'classroom/base.html' %}
 {% block main %}
+{% load static %}
         <section class="main-section" id="Introduction">
+          <header>INDEX</header>
+          <ul>
+            <br>
+            <h4>Module 1</h4>
+            <br>
+            <li><a href="#IDC"><h5>Chapter 1: Introduction Database Concepts</h5></a></li>
+            <ol>
+              <li><a href="#IDBMS">Introductionto DBMS</a></li>
+              <li><a href="#CDBMS">Characteristics of DBMS</a></li>
+              <li><a href="#FSvDS">File System v/s Database System</a></li>
+              <li><a href="#DBU">Database Users</a></li>
+            </ol>
+            <br>
+            <li><h5><a href="#DBAHTR">Chapter 2: Database Architecture</a></h5></li>
+            <ol>
+              <li><a href="#3LSAHTR">Three-Levels Schema Architecture</a></li>
+              <li><a href="#DI">Data Independence</a></li>
+              <li><a href="#DBA">Database Administrator</a></li>
+              <li><a href="#DDBMSAHTR">Detailed DBMS Architecture</a></li>
+              <li><a href="#WDBMS">Working DBMS</a></li>
+            </ol>
+            <br>
+            <h4>Module 2</h4>
+            <br>
+            <li><h5>Chapter 3:Entity Relationship Data Model</h5></li>
+            <ol>
+              <li>Entity Relationship(ER) Model</li>
+              <li>Entity set</li>
+              <li>Attributes</li>
+              <li>Relationship</li>
+              <li>Relationship Types based on Constraints</li>
+              <li>Extendend Entity Relationship(ER) Model</li>
+              <li>Aggregation</li>
+            </ol>
+            <br>
+            <h4>Module 3</h4>
+            <br>
+            <li><h5>Chapter 4: Relational Data Model</h5></li>
+            <ol>
+              <li>Relational Model</li>
+              <li>Relational Database Schema</li>
+              <li>Relational Model Constraints</li>
+              <li>Domain Relational Constraints</li>
+              <li>Referential Integrity / Foreign Key</li>
+              <li>Concept of Keys</li>
+              <li>Mapping Entities to Tables</li>
+              <li>Mapping Attributes to Columns of Table</li>
+              <li>Mapping Relationships</li>
+              <li>Mapping Inheriteance constraints</li>
+            </ol>
+            <br>
+            <li><h5>Chapter 5: Relational Algebra</h5></li>
+            <ol>
+              <li>Relational Algebra</li>
+              <li>Selection Operation</li>
+              <li>Projection Operation</li>
+              <li>Rename Operation</li>
+              <li>Set Operation</li>
+              <li>Cross Product / Cartesian product</li>
+              <li>Join Operation</li>
+              <li>Relational Division Operator</li>
+            </ol>
+            <br>
+            <h4>Module 4</h4>
+            <br>
+            <li><h5>Chapter 6: Structured Query Language</h5></li>
+            <ol>
+              <li>Overview of SQL</li>
+              <li>SQL Data Types</li>
+              <li>Data Definition Language(DDL)</li>
+              <li>CREATE Statement / CREATE Table</li>
+              <li>Create Table with Integrity Constraints</li>
+              <li>Alter Table</li>
+              <li>Rename Table</li>
+              <li>Truncate Table</li>
+              <li>Drop Command / DROP Table</li>
+              <li>Data Manipulation Language(DML)</li>
+              <li>Data Control Language(DCL)</li>
+              <li>Privileges</li>
+              <li>Granting Privileges</li>
+              <li>Revoking of Privileges</li>
+              <li>Transaction Control Language(TCL)</li>
+            </ol>
+            <br>
+            <li><h5>SQL Security</h5></li>
+            <ol>
+              <li>Aggregate Functions</li>
+              <li>GROUP BY Clause - Grouping Query Results</li>
+              <li>HAVING Clause - Filtering grouped Query Results</li>
+              <li>Introduction of Views</li>
+              <li>Nested and Complex Queries</li>
+            </ol>
+            <br>
+            <li><h5>Trigger</h5></li>
+            <ol><li>Trigger</li></ol>
+            <br>
+            <h4>Module 5</h4>
+            <br>
+            <li><h5>Chapter 9: Relational Database Design</h5></li>
+            <ol>
+              <li>Pitfalls in Relational Database Design</li>
+              <li>Design Guideline for Relational Schema</li>
+              <li>Normalization Process</li>
+              <li>Functional Dependencies</li>
+              <li>FD Properties(Armstrong's Axioms / Closures of FD)</li>
+              <li>Decomposition</li>
+              <li>Keys and Attributes in keys</li>
+              <li>First Normal Form(1NF)</li>
+              <li>Second Normal Form(2NF)</li>
+              <li>Third Normal Form(3NF)</li>
+              <li>Boyce-Codd Normal Form(BCNF)</li>
+              <li>Converting Relational Schema to Higher Normal Forms</li>
+              <li>Fourth Normal Form(BCNF)</li>
+            </ol>
+            <br>
+            <h4>Module 6</h4>
+            <br>
+            <li><h5>Transaction</h5></li>
+            <ol>
+              <li>Concept of Transaction</li>
+              <li>Fundamental Properties of Transaction / ACID Properties</li>
+              <li>Transaction States</li>
+              <li>Transaction Schedules</li>
+              <li>Serial Executions / Transaction / Schedules</li>
+              <li>Serializability / Serializable Schedule</li>
+              <li>Precdence Graph(Test of Serializability)</li>              
+            </ol>
+            <br>
+            <li><h5>Concurrency Control</h5></li>
+            <ol>
+              <li>Concept of Concurrency Control</li>
+              <li>Conflicting Transactions</li>
+              <li>Problems Caused by Concurrent Executions</li>
+              <li>Concurrency Control Schemes</li>
+              <li>Lock Based Protocols</li>
+              <li>Two Phase Locking(2PL)</li>
+              <li>Timestamp Based Protocols</li>
+              <li>Thomas Write Rule</li>
+            </ol>
+            <br>
+            <li><h5>Chapter 12: Recovery System</h5></li>
+            <ol>
+              <li>Database Recovery Concepts - System Recovery</li>
+              <li>Database Recovery Concepts - System Failure</li>
+              <li>Log-Based Recovery</li>
+              <li>Recovery Related Structure - Checkpoint</li>
+              <li>Shadow Paging</li>
+              <li>ARIES - Algorithm</li>
+              <li>Concepts of Deadlock</li>
+            </ol>
+          </ul>
+          <br>
+            <br>
+
+            <section>
+              <header id="IDC">Chapter 1: Introduction Database Concepts</header>
+
+              <br>
+              <article>
+                <!-- Introduction of DBMS Starts here  -->
+
+
+                <h2 id="IDBMS">Introduction to DBMS</h2>
+                <ul>
+                  <li>Many of us are very fimilar with the term called as data</li>
+                  <li>We come across term "data" regualarly in our day to day life</li>
+                  <li>The name of a person, the price of a book, number of syudent in a colege, pin code of a city, etc are some example of dat</li>
+                  <li>IN ours daily life, we may need to remember the bulk amount of data, which is quiet difficult for us due to memory constraints</li>
+                  <br>
+                  <b>Example</b>
+                  <li>We may be in a position to tell accurately the age, height, income, educational qualification, resdiential address etc of our close friends</li>
+                  <li>But it could be very difficult for us to memorize all these information for a large number of individuals in an organisation</li>
+                  <br>
+                  <b>1. Data</b>
+                  <li>The facts and figures that can be recorded in system and that have secical meaning assigned to it is called as data</li>
+                  <li>The system use to record these data can be a manual sysetem or it can be computerized system.</li>
+                  <br>
+                  <b>Example:</b>
+                  <li>DAta of a coustomer like name, telephone number, adress and product purchased data etc.</li>
+                  <li>As need of data increases there is need to develop a computer-based system for storing and managing data as a file system or information system</li>
+                  <b>2 Database</b>
+                  <li>A database is a collection of data items store in one place and having some common base between them</li>
+                  <li>Example: <p>A college database contain data such as teacher, student, books, canteen etc college is common between all above data items</p></li>
+                  <li>So, Data with a common base is called as Database</li> 
+                  <li>The database acts as a logical collection of relevant data. IT is designed to offer an organized mechanism for storing, managing and retrieving stored information</li>
+                  <img src="{% static 'js_img/egdb.png' %}" alt="">
+                  <b>3. Databse Mangement system(DBMS)</b>
+                  <li>A DBMS is a collection of softwate or programs which help user in creation and maintenance of database.Hence its is also known as computerized record-keeping system</li>
+                  <li>DBMS is the software system that helps inthe process of defining, contructing, manipulating the database</li>
+                  <li>Database management system has become an integral part of the information systems of many organization as it is used to handle a huge amount of data</li>
+                  <li>Computer-base Infromation System(IS) is capable of serving many complex task in a coordinated manner. Such systems handle large volumes of data, multiple users adn several applications in a centralized database enviorment</li>
+                  <li>The hatt of IS is database management system. This is because most IS have to handle hugr amounts of data. THis core module of an IS is also called as DBMS</li>
+                  <br>
+                  <b>Example:</b>
+                  <li>MS Access, Fox Pro by Microsoft</li>
+                  <li>Oracle by Oracle crop</li>
+                  <li>SQL server by Microsoft</li>
+                  <li>Ingres, DB2 by IBM</li>
+                </ul> 
+                <!-- Introduction of DBMS ends here -->
+              </article>
+            
+              <br>
+
+              <article>
+                <!-- Characteristics of DBMS starts here -->
+
+
+                <h2 id="CDBMS">Characteristics of DBMS</h2>
+                <ol>
+                  <p>Characteristics of DBMS are as follow –</p>
+                  <li><b>Storing the data:</b><p>In database management system data is stored into tables, structure for the table is created initially . This table structure is also known as schema in dbms</p><p>Schema in dbms provides the information about various attributes of name the table , data type of the attribute. DBMS a provide a facility to represent a relationship among the related table.</p></li>
+                  <li><b>Reduced Redundancy</b><p>This is one of the important feature of the dbms that it reduces the redundancy. Here the term redundancy can be seen as unnecessary repetition or duplicacyof data in database.</p><p>To reduce the redundancy DBMS use <b> Normalization in DBMS</b> concept which decompose the given table into smaller tables in order to minimize the redundancy. Note that DBMS does not guarantee the 100% removal of the redundancy it can only minimize the redundancy.</p></li>
+                  <li><b>Concurrent Access</b><p>DBMS support the concurrent access of the database to the multiple users. Multiple users can work on the database at the same time and still maintained the consistency. Here the term consistency represents the correctness of the database.</p></li>
+                  <li><b>Data Consistency</b><p>The term data consistency means state of data should be consistent means it should be correct at any instant of time. Result of any manipulation or updation should be reflected.</p></li>
+                  <li><b>Support to Structure Query Language</b><p>DBMS support to SQL . SQL Queries provide a easy way to the user to create, insert, update, delete the data in database.</p></li>
+                  <li><b>Security</b><p>DBMS give s the facility to protect the database from unauthorized users. Different user s accounts may have different access permissions, using which user can easily secure their data by unauthorized users..</p></li>
+                  <li><b>Transaction Support</b><p>DBMS supports transactions which helps the user to maintain the integrity of the database.Some DBMS software used in software industry are Oracle, MY SQL and SQL server</p></li>
+                </ol>
+
+                <!-- Characteristics of DBMS ends here -->
+
+              </article>
+            
+            <br>
+            <article>
+              <!-- File System V/S Database System Starts here -->
+              <h2 id="FSvDS">File System V/S Database System</h2>
+              <Table>
+                <tr>
+                  <th>Database Mangement System</th>
+                  <th>File Processing System</th>
+                </tr>
+                <tr>
+                  <th>Computerized record-keeping system is used in DBMS</th>
+                  <th>Collection of individual files accessed by application programs is called FIle processing System</th>
+                </tr>
+                <tr>
+                  <th>DBMS allows flexible access to data</th>
+                  <th>File-PRcessing System is desigend to allow predetermeined access to data</th>
+                </tr>
+                <tr>
+                  <th>It co-ordinate both the physical and logical</th>
+                  <th>It co-ordinateds only the physical access to data</th>
+                </tr>
+                <tr>
+                  <th>DBMS provides multiple user interface</th>
+                  <th>Data is isolated in the fole system</th>
+                </tr>
+                <tr>
+                  <th>Unauthorized access is restricted in DBMS</th>
+                  <th>Unauthorized access cannot be restricted</th>
+                </tr>
+                <tr>
+                  <th>Redundancy can be controlled</th>
+                  <th>Redundancy cannot be controlled</th>
+                </tr>
+              </Table>
+
+              <!-- File System V/S Database System ends here -->
+            </article>
+
+            <br>
+            <article>
+              <!--Database Users Start here  -->
+
+              <h2 id="DBU">Database Users</h2>
+              <p>Database users are the one who really use and take the benefits of database. There will be different types of users depending on their need and way of accessing the database.</p>
+              <ol>
+                <li><b>Application Programmers</b><p>They are the developers who interact with the database by means of DML queries. These DML queries are written in the application programs like C, C++, JAVA, Pascal etc.These queries are converted into object code to communicate with the database</p><p>For example, writing a C program to generate the report of employees who are working in particular department will involve a query to fetch the data from database. It will include a embedded SQL query in the C Program.</p></li>
+                <li><b>Sophisticated Users</b><p>They are database developers, who write SQL queries to select/insert/delete/update data. They do not use any application or programs to request the database. They directly interact with the database by means of query language like SQL. These users will be scientists, engineers, analysts who thoroughly study SQL and DBMS to apply the concepts in their requirement. In short, we can say this category includes designers and developers of DBMS and SQL.</p></li>
+                <li><b>Specialized Users </b><p>These are also sophisticated users, but they write special database application programs. They are the developers who develop the complex programs to the requirement</p></li>
+                <li><b>Stand-alone Users</b><p>These users will have stand –alone database for their personal use. These kinds of database will have readymade database packages which will have menus and graphical interfaces.</p></li>
+                <li><b>Native Users</b><p>these are the users who use the existing application to interact with the database. For example, online library system, ticket booking systems, ATMs etc. which has existing application and users use them to interact with the database to fulfil their requests.</p></li>
+              </ol>
+              <!-- End of Database user Architecture -->
+            </article>
+            
+            <!-- End of Chapter 1 -->
+            </section>
+            <br>
+            <br>
+            <section>
+              <!-- chapter 2 Starts here -->
+
+              <header id="DBAHTR">Chapter 2: Database Architecture</header>
+              <br><br>
+              <article>
+                <!-- 3 level schema architecture starts here  -->
+                <h2 id="3LSAHTR">Three-Levels Schema Architecture</h2>
+                <p>The three schema architecture describes how the data is represented or viewed by the user in the database. This architecture is also known as three-level architecture and is sometimes called ANSI/ SPARC architecture.</p>
+                <p>The three schema architecture divides the database into three-level to create a separation between the physical database and the user application. In simple words, this architecture hides the details of physical storage from the user. The database administrator (DBA) should be able to change the structure of database storage without affecting the user’s view.</p>
+                <p>This architecture contains three layers or levels of the database management system:</p>
+                <img src="{% static 'dbms_img/3lsahtr.png' %}" alt="">
+                <ol>
+                  <li><b>External or View level:</b>This is the highest level of database abstraction. External or view level describes the actual view of data that is relevant to the particular user. This level also provides different views of the same database for a specific user or a group of users. An external view provides a powerful and flexible security mechanism by hiding the parts of the database from a particular user.</li>
+                  <li><b>Conceptual or Logical level:</b><p>The conceptual level describes the structure of the whole database. This level acts as a middle layer between the physical storage and user view. It explains what data to be stored in the database, what relationship exists among those data, and what the datatypes are. There is only one conceptual schema per database.</p><p>Database administrator and the programmers work at this level. This level does not provide any access or storage details but concentrates on the relational model of the database. The conceptual schema also includes features that specify the checks to retain integrity and consistency.</p></li>
+                  <li><b>Internal or Physical level:</b><p>This is the lowest level of database abstraction. It describes how the data is actually stored in the database and provides methods to access data from the database. It allows viewing the physical representation of the database on the computer system. The interface between the conceptual schema and the internal schema identifies how an element in the conceptual schema is stored and how it may be accessed.</p><p>If there is any change in the internal or physical schema, it needs to be addressed to the interface between the conceptual and internal schema. But there is no need to change in the interface of a conceptual and external schema. It means that the changes in physical storage devices such as hard disks, and the files organized on storage devices, are transparent to application programs and users.</p></li>
+                </ol>
+
+                <!-- 3 level schema archtiecture ends here -->
+              </article>
+
+              <br><br>
+              <article>
+                <!-- Data independence starts here -->
+            
+                <h2 id="DI">Data independence</h2>
+                <p>Data independence refers characteristic of being able to modify the schema at one level of the database system without altering the schema at the next higher level.</p>
+                <p>There are two types of data independence:</p>
+                <ol>
+                  <li><b>Logical Data Independence</b>
+                    <ul>
+                      <li>Logical data independence refers characteristic of being able to change the conceptual schema without having to change the external schema.</li>
+                      <li>Logical data independence is used to separate the external level from the conceptual view</li>
+                      <li>If we do any changes in the conceptual view of the data, then the user view of the data would not be affected.</li>
+                      <li>Logical data independence occurs at the user interface level.</li>
+                    </ul>
+                  </li>
+                  <li><b>2. Physical Data Independence</b>
+                    <ul>
+                      <li>Physical data independence can be defined as the capacity to change the internal schema without having to change the conceptual schema.</li>
+                      <li>If we do any changes in the storage size of the database system server, then the Conceptual structure of the database will not be affected.</li>
+                      <li>Physical data independence is used to separate conceptual levels from the internal levels.</li>
+                      <li>Physical data independence occurs at the logical interface level.</li>
+                      <img src="{% static 'dbms_img/c2_dipd.png' %}" alt="">
+                    </ul>
+                  </li>
+                </ol>
+
+                <!-- Data Independence ends here -->
+              </article>
+              <br><br>
+              <article>
+                <!-- Database administrator DBA starts here -->
+                <h2 id="DBA"><b>Database Administrator</b></h2>
+                <p>A Database Administrator (DBA) is individual or person responsible for controlling, maintenance, coordinating, and operation of database management system. Managing, securing, and taking care of database system is prime responsibility.</p>
+                <p>They are responsible and in charge for authorizing access to database, coordinating, capacity, planning, installation, and monitoring uses and for acquiring and gathering software and hardware resources as and when needed. Their role also varies from configuration, database design, migration, security, troubleshooting, backup, and data recovery. Database administration is major and key function in any firm or organization that is relying on one or more databases. They are overall commander of Database system.</p>
+                <br>
+                <!-- Role and Responsiblites of Database Administrator -->
+                <h4><b>Role and Duties of Database Administrator (DBA) :</b></h4>
+                <ul>
+                  <li><b>Decides hardware –</b><p>They decides economical hardware, based upon cost, performance and efficiency of hardware, and best suits organisation. It is hardware which is interface between end users and database</p></li>
+                  <li><b>Manages data integrity and security</b><p>Data integrity need to be checked and managed accurately as it protects and restricts data from unauthorized use. DBA eyes on relationship within data to maintain data integrity.</p></li>
+                  <li><b>Database design</b><p>DBA is held responsible and accountable for logical, physical design, external model design, and integrity and security control.</p></li>
+                  <li><b>Database implementation</b><p>DBA implements DBMS and checks database loading at time of its implementation.</p></li>
+                  <li><b>Query processing performance</b><p>DBA enhances query processing by improving their speed, performance and accuracy.</p></li>
+                  <li><b>Tuning Database Performance </b><p>If user is not able to get data speedily and accurately then it may loss organization business. So by tuning SQL commands DBA can enhance performance of database.</p></li>
+                </ul>
+                <!-- DBA ends here -->
+
+              </article>
+              <br><br>a
+              <article>
+                <!-- Detailed DBMS Architecture -->
+                <h2 id="DDBMSAHTR">Detailed DBMS Architecture</h2>
+                <p>A Database can be separated into 2 different modules that deal with all operations of the overall system</p>
+                <b>Components of Database System:</b>
+                <ol>
+                  <li>
+                    <b>Query Processor : </b>
+                    <p>It interprets the requests (queries) received from end user via an application program into instructions. It also executes the user request which is received from the DML compiler. </p>
+                    <p>Query Processor contains the following components –</p>
+                    <ul>
+                      <li>DML Compiler – <p>It processes the DML statements into low level instruction (machine language), so that they can be executed. </p></li>
+                      <li>Embedded DML Pre-compiler – <p>Embedded DML Pre-compiler – </p></li>
+                      <li>Query Optimizer – <p>It executes the instruction generated by DML Compiler.</p></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <b>It executes the instruction generated by DML Compiler.</b>
+                    <p>Storage Manager is a program that provides an interface between the data stored in the database and the queries received. It is also known as Database Control System. It maintains the consistency and integrity of the database by applying the constraints and executes the DCL statements. It is responsible for updating, storing, deleting, and retrieving data in the database.</p>
+                    <p>It contains the following components –</p>
+                    <ul>
+                      <li>Authorization Manager – <p>It ensures role-based access control, i.e,. checks whether the particular person is privileged to perform the requested operation or not. </p></li>
+                      <li>Integrity Manager – <p>It checks the integrity constraints when the database is modified. </p></li>
+                      <li>Transaction Manager –<p>It controls concurrent access by performing the operations in a scheduled way that it receives the transaction. Thus, it ensures that the database remains in the consistent state before and after the execution of a transaction.</p></li>
+                      <li>File Manager – <p>It manages the file space and the data structure used to represent information in the database.</p></li>
+                      <li>Buffer Manager – <p>It is responsible for cache memory and the transfer of data between the secondary storage and main memory.</p></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <b>Transaction Management</b>
+                    <p>ransactions are a set of operations used to perform a logical set of work. A transaction usually means that the data in the database has changed. One of the major uses of DBMS is to protect the user’s data from system failures. It is done by ensuring that all the data is restored to a consistent state when the computer is restarted after a crash. The transaction is any one execution of the user program in a DBMS. Executing the same program multiple times will generate multiple transactions.</p>
+                    <p>Uses of Transaction Management : </p>
+                    <ul>
+                      <li>The DBMS is used to schedule the access of data concurrently. It means that the user can access multiple data from the database without being interfered with each other. Transactions are used to manage concurrency. </li>
+                      <li>It is also used to satisfy ACID properties</li>
+                      <li>It is used to solve Read/Write Conflict.</li>
+                      <li>It is used to implement Recoverability, Serializability, and Cascading.</li>
+                      <li>Transaction Management is also used for Concurrency Control Protocols and Locking of data.</li>
+                    </ul>
+                  </li>
+                </ol>
+                <!-- Detailed DBMS Architecture Ends here -->
+              </article>
+
+              <br><br>
+
+              <article>
+                <!-- Working of DBMS Starts here -->
+                <h2 id="WDBMS">Working of DBMS</h2>
+                <ul>
+                  <li>User requests data item from database.</li>
+                  <li>DBMS intercepts and interprets the request.</li>
+                  <li>Retrieves the data from the physical database.</li>
+                  <li>Constructs the record using physical/conceptual mapping.</li>
+                  <li>Records constructed using relevant conceptual/external mapping.</li>
+                  <li>Derives the required external record from conceptual record.</li>
+                  <b>Example:</b>
+                  <li>Consider the situation in a library. Here, we have data corresponding to books, authors, suppliers, borrowers, etc. The total volume of data stored and handled in a library may be quite large.</li>
+                  <li>The Library DBMS may require several operations, such as issue, return or purchase of books; handle queries related to book information, borrowing information, etc.</li>
+                  <li>Moreover, there are different types of users who operate various stages or activities. For instance, a borrower may merely view certain information, whereas an issuer may be allowed to update the status of a book during issue or return. </li>
+                  <li>The Library staff may, on the other hand, add new books, their supplier, price and other information to the database.</li>
+                  <li>Each user category has a different access right on both, the data, as well as the processing capabilities.</li>
+                  <li>Multiple users may concurrently operate the library DBMS performing several tasks at the same time.</li>
+                  <li>They may even try to access the same data simultaneously. It is the job of a DBMS to handle the data and it's processing in an integrated, coordinated and consistent manner. </li>
+                </ul>
+                <!-- Working of DBMS Ends here -->
+              </article>
+            
+            </section>
+            
+
+
+
           <header>
             Introduction&nbsp;&nbsp;&nbsp;&nbsp;
             {% for c in c_list %}

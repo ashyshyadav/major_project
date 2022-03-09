@@ -20,7 +20,11 @@ table, th, td{
 }
 
 /*Table Styling ends here*/
-
+/* <a> tag style */
+.main--section a{
+  text-decoration: none;
+}
+/* <a> tag style end */
 #navbar {
   position: fixed;
   min-width: 290px;
@@ -202,3 +206,5 @@ code{
   background: rgb(15, 223, 154);
 }
 /* CSS FOR exam_index.html ENDS HERE */
+
+

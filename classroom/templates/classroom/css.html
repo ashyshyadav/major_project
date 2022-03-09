@@ -8,62 +8,26 @@
   <header>INDEX</header>
   <br>
   <ul>
-      <li><h5>Chapter 1: Introduction to multimedia</h5></li>
+      <li><h5><a href="#Chapter_1">Chapter 1: Introduction to multimedia</a></h5></li>
       <ol>
-          <li>Objects of Multimedia</li>
-          <li>Multimedia System Archetecture - IMA, Workstation, Network </li>
-          <li>Transmission meida in Multimedia Systems</li>
-          <li>Multimedia I/O deviecs - Salient Feature,Storage Media, Multimedia Database</li>
-          <li>Multimedia Databases</li>
+          <li><a href="#Objects_of_Multimedia">Objects of Multimedia</a></li>
+          <li><a href="#System_Archetecture">System Archetecture - IMA, Workstation, Network</a></li>
+          <li><a href="#Transmission_media_in_Multimedia_Systems">Transmission media in Multimedia Systems</a></li>
+          <li><a href="#Multimedia_I/O_deviecs">Multimedia I/O deviecs - Salient Feature,Storage Media, Multimedia Database,</a></a></li>
+          <li><a href="#Multimedia_Databases">Multimedia Databases</a></li>
 
       </ol>
 
       <br>
 
-      <li><h5>Chapter 2: Text & Digital Image</h5></li>
+      <li><h5><a href="#Chapter_2">Chapter 2: Text & Digital Image</a></h5></li>
       <ol>
-          <li>Introduction to Digital Text</li>
-          <li>Text File Format</li>
-          <li>Text Compression Techniques</li>
-          <li>Introduction to Digital Image</li>
-          <li>Image File Formats: BMP, JPG</li>
-          <li>Image Compression Technique: fundamentals, Types - lossless ANd Lossy, Lossless Comperssion ALgorithms - Shannon--Fano, CCITT group 2D, Lossy Compression Algorithm - JPEG</li>
-      </ol>
-
-      <br>
-
-      <li><h5>Chapter 3: Digital Audio</h5></li>
-      <ol>
-          <li>Basic Sound Concepts: computer representatin of sound</li>
-          <li>File Formats - WAV, MPEG Audio</li>
-          <li>Compressin: PCM, DM, DPCM</li>
-      </ol>
-
-      <br>
-
-      <li><h5>Chapter 4: DIgital Video</h5></li>
-      <ol>
-          <li>Digitization of Videom types of video signals</li>
-          <li>File Formats: MPEG Video, H.261</li>
-          <li>Compression: MPEG</li>
-      </ol>
-
-      <br>
-
-      <li><h5>Chapter 5: Multimedia Network Communcation and Representation</h5></li>
-      <ol>
-          <li>Quality of Service</li>
-          <li>Multimedia over IP</li>
-          <li>Representation - Authoring sustems and user interface</li>
-      </ol>
-
-      <br>
-
-      <li><h5>Chapter 6: Multimedia Security</h5></li>
-      <ol>
-          <li>Requirements and properties</li>
-          <li>MEchanisms - Digital Signatures, Steganographic Methods</li>
-          <li>Sample Application - unidirectional distributed systens, information systems and conference systems</li>
+          <li><a href="#Introduction_to_Digital_Text">Introduction to Digital Text</a></li>
+          <li><a href="#Text_File_Format">Text File Format</a></li>
+          <li><a href="#Text_Compression_Techniques">Text Compression Techniques</a></li>
+          <li><a href="#Introduction_to_Digital_Image">Introduction to Digital Image</a></li>
+          <li><a href="#Image_File_Formats">Image File Formats: BMP, JPG</a></li>
+          <li><a href="#Image_Compression_Technique">Image Compression Technique: fundamentals, Types - lossless ANd Lossy, Lossless Comperssion ALgorithms - Shannon--Fano, CCITT group 2D, Lossy Compression Algorithm - JPEG</a></li>
       </ol>
   </ul>
 </section>
@@ -71,7 +35,7 @@
 
 <!-- INTRODUCTION SECTION STARTS HERE -->
 <section class="main-section">
-    <header>
+    <header id="Chapter_1">
         Chapter 1: Introduction to Multimedia&nbsp;&nbsp;&nbsp;&nbsp;
         {% for c in c_list %}
             {% if c.chapter == 'Introduction' and c.is_complete %}
@@ -79,13 +43,13 @@
             {% endif %} 
         {% endfor %}    
     </header>
-    <br>
+    <br>a
     <article>
 
         <h2>Overview of Multimedia</h2>
         <br>
 
-        <h4>Object and elements of multimedia</h4>
+        <h4 id="Objects_of_Multimedia">Object and elements of multimedia</h4>
         <ul>
             <li>Facsimile: Transmitting documants images over telephone lines. Supports both high resolution and low resolutiono images. Uses RLE technique for low resolution image. High reolution increases the clarity</li>
             <li>Documents images: used for storing business documents that must be retained for long period of time and can be accessed by large number oof peopl> Providing multimedia access removes the need for making several copies for storage and distributioon> High resolution image requires very efficient compressioon and decompression techniques.</li>
@@ -102,7 +66,7 @@
             <li>Video: Digtal video appears in many multimedia application particaulary on the web. As with audio, websites can stream digital video to increase the speed and availability of playback. Common digital vido formats include Flash, MPEG, AVI, WMV and QuickTime. Most digital video require use of brewser plug-ins to play required resources install. Various alforithms are used for compression and decompression of video. From processing perspective video presented to the user should be smooth and withou breaks.</li>
         </ul>
         <br>
-        <h4>Application of Multimedia System</h4>
+        <h4 >Application of Multimedia System</h4>
         <ul>
           <li>Electronic Messeging: sending audioo and video as attachments via email. Downloading audio and video. Sending simple text data through mails. Its also provides store and forward message facility</li>
           <li>Image Enhancement: highlighting details of image by increasing contrast making picture darker and increasing grey scale level of pixels. Rotating image in real time. Adjusting RGB to get image with proper colors</li>
@@ -117,7 +81,7 @@
         </ul>
 
         <br>
-        <h2>Multimedia System Architecture</h2>
+        <h2 id="System_Archetecture">Multimedia System Architecture</h2>
         <br>
 
         <h4>Multimedia System Architecture</h4>
@@ -177,7 +141,7 @@
         </ul>
 
         <br>
-        <h2>Transmission media in Multimedia Systems</h2>
+        <h2 id="Transmission_media_in_Multimedia_Systems">Transmission media in Multimedia Systems</h2>
         <br>
 
         <h4>Types of Transmission media in Multimedia Systems</h4>
@@ -199,7 +163,7 @@
         </ol>
 
         <br>
-        <h2>Multimedia I/O Devices</h2>
+        <h2 id="Multimedia_I/O_deviecs">Multimedia I/O Devices</h2>
         <br>
 
         <h4>Digital Camera</h4>
@@ -408,7 +372,7 @@
         <h2>Multimedia Databases</h2>
         <br>
 
-        <h4>Multimedia Database</h4>
+        <h4 id="Multimedia_Databases">Multimedia Database</h4>
         <ul>
           <li>Multimedia database is database containing multimedia collections.</li>
           <li>Multimedia database management system is essential to manage multimedia data like text, graphics, animation, music, etc.</li>
@@ -435,38 +399,52 @@
         </ul>
 
         <br>
-        <Header>Chapter 2: Text and Digital Image</Header>
-        <br>
 
-        <h2>Introduction to Digital Text</h2>
-        <br>
+  </article>
+</section>
 
-        <h4>How Text can be Digitally Representation?</h4>
-        <ul>
-          <li>In digitization of text, older print books are being scanned and optical character recognition technologies applied by academic and public libraries, and private companies like Google.</li>
-          <li>Document digitization is the process of converting manual documents into digital formats. In this process of document digitizing, any type of document like texts, images, video are digitized and converted into digital formats such as text, html, xml, pdf, doc, xls, gif, Jpeg.</li>
-          <li>The most vital contribution of data digitization is a perpetual preservation of your important documents. Another benefit is that digitized data can also be stored on any media format such as CDs, Pen drives, HDDs.</li>
-          <b>The benefits of data digitizing of text:</b>
-          <ol>
-            <li>Perpetual preservation of all your physical documents.</li>
-            <li>Easy storing advantages.</li>
-            <li>Effortless duplication of data.</li>
-            <li>Quick and easy retrieval.</li>
-            <li>Easy access.</li>
-            <li>Easy transportation.</li>
-            <li>Easy to share.</li>
-            <li>Makes data compatible with all modes of digital data transfer.</li>
-          </ol>
-          <b>Document digitizing Vs. Document scanning:</b>
-          <li>Document scanning services is a service that is used to scan the hard copies of documents into scanned images.</li>
-          <li>Document digitizing or the other hand refers to a process wherein data from newspapers, books, paper documents, periodicals or image files are converted into digitized data and delivered in any file format such as XML, HTML PDF, Access, Excel, Word etc.</li>
-        </ul>
 
-        <br>
-        <h2>Text File Format</h2>
-        <br>
 
-        <h4>RTF text file format</h4>
+
+
+<section>
+  <header id="Chapter_2">Chapter 2: Text and Digital Image</header>
+  <br>
+   <!--INTRODUCTION TO DIGITAL TEXT STARTS  -->
+  <h2 id="Introduction_to_Digital_Text">Introduction to Digital Text</h2>
+  <br>
+  <article>
+    <!-- TEXT DIGITAL REPRESENTATION START -->
+    <h4>How Text can be Digitally Representation?</h4>
+      <ul>
+        <li>In digitization of text, older print books are being scanned and optical character recognition technologies applied by academic and public libraries, and private companies like Google.</li>
+        <li>Document digitization is the process of converting manual documents into digital formats. In this process of document digitizing, any type of document like texts, images, video are digitized and converted into digital formats such as text, html, xml, pdf, doc, xls, gif, Jpeg.</li>
+        <li>The most vital contribution of data digitization is a perpetual preservation of your important documents. Another benefit is that digitized data can also be stored on any media format such as CDs, Pen drives, HDDs.</li>
+        <b>The benefits of data digitizing of text:</b>
+        <ol>
+          <li>Perpetual preservation of all your physical documents.</li>
+          <li>Easy storing advantages.</li>
+          <li>Effortless duplication of data.</li>
+          <li>Quick and easy retrieval.</li>
+          <li>Easy access.</li>
+          <li>Easy transportation.</li>
+          <li>Easy to share.</li>
+          <li>Makes data compatible with all modes of digital data transfer.</li>
+        </ol>
+        <b>Document digitizing Vs. Document scanning:</b>
+        <li>Document scanning services is a service that is used to scan the hard copies of documents into scanned images.</li>
+        <li>Document digitizing or the other hand refers to a process wherein data from newspapers, books, paper documents, periodicals or image files are converted into digitized data and delivered in any file format such as XML, HTML PDF, Access, Excel, Word etc.</li>
+      </ul>
+      <!-- TEXT DIGITAL REPRESENTATION ENDS -->
+  </article>
+  <!--INTRODUCTION TO DIGITAL TEXT ENDS  -->
+    <br>
+  <article>
+    <!-- TEXT FILE FORMAT START -->
+    <h2 id="Text_File_Format">Text File Format</h2>
+      <br>
+      <!-- RTF START -->
+      <h4>RTF text file format</h4>
         <ul>
           <li>A file format is a standard way that information is encoded for storage in a computer file.</li>
           <li>A file format specifies how bits are used to encode information in a digital storage medium.</li>
@@ -497,8 +475,11 @@
           <li><b>Advantages of RTF:</b>From the perspective of a multimedia system, rich text format is important because it is used to attach, imbed or link other text files or even binary files such as executables, audio files, and video files.</li>
           <li><b>Disadvantages of RTF:</b>Some problems remain even with rich text format because of incomplete implementations of rich text formats. These imperfections result in text not aligning properly in columns margins not being correct, or text attributes such as color showing up incorrectly when text file is moved to a different word processor.</li>
         </ul>
-
-        <h4>TIFF</h4>
+      <!-- RTF ENDS -->
+      <br>
+        
+      <!-- TIFF STARTS -->
+      <h4>TIFF</h4>
         <ul>
           <li>TIFF is an industry standard file format designed to represent image data generated by scanners, and paint applications.</li>
           <li>It is designed to describe images in several color models with different data compression technique.</li>
@@ -543,456 +524,595 @@
           <li>More space is provided for new information by adding another tagged block to the file.</li>
         </ul>
 
-        <br>
-        <h2>Text Compression Techniques</h2>
-        <br>
-
-        <h4>Need of Data Compression</h4>
-        <ul>
-          <li>Multimedia object consists of color image, photographic or video image, audio data etc. These data object needs to be stored, retrieved, transmitted and displayed. This large data objects present two problems viz, storage and transmission.</li>
-          <li>Transfer of data in the Internet age is very time-dependent. Take for example an audio file, which is nothing but changes in the intensity of sound over a fixed period. This audio is transferred across networks in the form of sound files. If the size of the sound files is too large, the time taken to transfer the files increases. The time taken to transfer a file can be decreased using compression.</li>
-          <li> Compression in computer terms means reducing the physical size of data such that it occupies less storage space and memory, Compressed files are, therefore, easier to transfer because there is a sizable amount of reduction in the size of data to be transferred.</li>
-          <li>This results in a reduction in the time needed for file transfer as well as a reduction in the bandwidth utilization even for a slow network.</li>
-          <li>Thus, the process of reducing the amount of data required to represent information is called compression.</li>
-          <br>
-          <h5>There are two types of compression</h5>
-          <b>Lossless Compression</b>
-          <li>Lossless data compression is a class of data compression algorithms that allows the exact original data to be reconstructed from the compressed data. i.e. In lossless data compression, the compressed-then-decompressed data is an exact replication of the original data.</li>
-          <li>Lossless data compression is used in many applications. For example, the zip file format produced by the WinZip program on a PC produces exact copies of the original material that was encoded within the zip file. It is also used in the Unix tool gzip.</li>
-          <li>Lossless compression is , used in cases where it is important that the original and the decompressed data be identical. Typical examples are executable programs, text documents and source code. Some image file formats, like PNG or GIF, use only lossless compression.</li>
-          <br>
-          <b>Lossless compression techniques:</b>
-          <li>Packbits encoding (Run Length Encoding) RLE</li>
-          <li>CCITT Group 3 1D</li>
-          <li>CCITT Group 3 2D</li>
-          <li>CCITT Group 4</li>
-          <li>LZW</li>
-          <br>
-          <b>Lossy Compression</b>
-          <li>Lossy data compression, which only allows an approximation of the original data to be reconstructed i.e. In lossy data compression, the decompressed data may be different from the original data. Typically, there is some distortion between the original and reproduced data.</li>
-          <li>Lossy compression is a data encoding method which discards (loses) some of the data, in order to achieve its goal, with the result that decompressing the data yields content that is different from the original, though similar enough to be useful in some way.</li>
-          <li>Lossy compression is most commonly used to compress multimedia data (audio, video). This method is used where absolute data accuracy is not essential. Lossy compression is the most commonly used compression type. This compression technique is used for image documents, audio, and video objects.</li>
-          <br>
-          <b>Lossy Compression techniques:</b>
-          <li>Joint Photographic Experts Group (JPEG)</li>
-          <li> Motion Picture Experts Group (MPEG)</li>
-          <li> Adaptive Differential Pulse Code Modulation (ADPCM)</li>
-          <li>CCITT H.261 (Px64) Video Coding Algorithm</li>
-          <li>Intel DVI (Digital Video Interactive)</li>
-          <i>Example:</i>
-          <img src="{% static 'css_img/eg_ct.jpg'%}" alt="">
-        </ul>
-
-        <br>
-        <h4>Compare Lossy v/s Lossless Compression</h4>
-        <table>
-          <tr>
-            <th><b>Sr No</b></th>
-            <th><b>Lossy Compression</b></th>
-            <th><b>Lossless Compression</b></th>
-          </tr>
-          <tr>
-            <th>1</th>
-            <th>The technique involves some loss of information.</th>
-            <th>Involves no loss of information.</th>
-          </tr>
-          <tr>
-            <th>2</th>
-            <th>Data that has been compressed using this technique can’t be recovered and reconstructed exactly.</th>
-            <th>If data has been (lossless) compressed, the original data can be recovered from the compressed data.</th>
-          </tr>
-          <tr>
-            <th>3</th>
-            <th>Used for application that can tolerate difference between the original and reconstructed data.</th>
-            <th>Used for application that can’t tolerate any difference between original and reconstructed data.</th>
-          </tr>
-          <tr>
-            <th>4</th>
-            <th>In return for accepting this distortion in reconstructed data we obtain high compression rate</th>
-            <th>No loss in information so compression rate is small.</th>
-          </tr>
-          <tr>
-            <th>5</th>
-            <th>Sound and Image compression uses lossy compression.</th>
-            <th>Text compression uses lossless compression</th>
-          </tr>
-          <tr>
-            <th>6</th>
-            <th>More data can be accommodated in channel.</th>
-            <th>Less data can be accommodated in channel.</th>
-          </tr>
-          <tr>
-            <th>7</th>
-            <th>Distortion</th>
-            <th>Distortion less</th>
-          </tr>
-          <tr>
-            <th>8</th>
-            <th>E.g
-              <ol>
-                <li>Telephone System</li>
-                <li>Video CD</li>
-              </ol>
-            </th>
-            <th>E.g
-              <ol>
-                <li>Fax Machine</li>
-                <li>Radiological Imaging</li>
-              </ol>
-            </th>
-          </tr>
-          <tr>
-            <th>9</th>
-            <th>Example: Text compression -> It is very important that the reconstruction is identical to original text, as very small difference can result in statements with very different meanings. Consider “ Do not send Money “ and “ Do now send Money “</th>
-            <th>Example: When viewing a reconstruction of a video sequence, the fact that the reconstruction is different from the original is generally not important as long as the difference do not result in annoying artifacts. Thus, video is generally compressed using lossy compression.</th>
-          </tr>
-        </table>
-
-        <br>
-          <h4>RLE Encoding</h4>
-          <ul>
-            <li>RLE works by reducing physical size of repeating string of character. This repeating string called as RUN is basically encoded into 2 bytes. The first repersents the number of repeaned cahracter in Run and called as Run count. The second byte is value of charater in the Run which is in range 0-255 and called as Run value.</li>
-            <p>Following is Uncompressed string:</p>
-            <b>PPPPPPPPPPPPPPPPPPPPPP</b>
-            <li>Compressed string with RLE:</li>
-            <img src="{% static 'css_img/cs_rle.png'%}" alt="not found">
-            <li>The 20P code generated to represent character string is called RLE Packet.</li>
-            <li> Two bytes are required to store '20P'.</li>
-            <li>First 1 byte require to store 20 and second byte is required to store 'Run value' i.e. 'P' But, initially uncompressed string require 20 bytes to store same data.</li>
-            <br>
-            <b>Advantages</b>
-            <li>A black and white image that is mostly white, such as page of book will encode very well due to large amount of contiguous data that is all the same color.</li>
-            <li>In sequential processing, A bitmap is encoded starting at upper left corner and proceeding from left to right across each scan line(The axis).</li>
-            <img src="{% static 'css_img/en_alx-a.png'%}" alt="">
-            <li>Alternative RLE schemes can also be written to encode data down the length of bitmap (the Y-axis).</li>
-            <img src="{% static 'css_img/en_aly-a.png'%}" alt="">
-            <li>Encode pixels on a diagonal in zig-zag fashion.</li>
-            <img src="{% static 'css_img/zzen_brlemf.png'%}" alt="">
-          </ul>
-
-
-
-        <p>HTML was NEVER intended to contain tags for formatting a web page!</p>
-        <p>HTML was created to describe the content of a web page, like:</p>
-        <p>&lt;h1&gt;This is a heading&lt;/h1&gt;</p>
-        <p>&lt;p&gt;This is a paragraph.&lt;/p&gt;</p>
-        <p>When tags like &lt;font&gt;, and color attributes were added to the HTML 3.2 specification, it started a nightmare for web developers. Development of large websites, where fonts and color information were added to every single page, became a long and expensive process.</p>
-        <p>To solve this problem, the World Wide Web Consortium (W3C) created CSS.</p>
-        <p>CSS removed the style formatting from the HTML page!</p>
-        <h4>CSS Syntax</h4>
-        <br>
-        <img src="{% static 'css_img/css_img_one.gif'%}" alt="Not found">
-        <!-- css_img_one.gif goes here -->
-        <p></p>
-        <p>The selector points to the HTML element you want to style.</p>
-        <p>The declaration block contains one or more declarations separated by semicolons.</p>
-        <p>Each declaration includes a CSS property name and a value, separated by a colon.</p>
-        <p>Multiple CSS declarations are separated with semicolons, and declaration blocks are surrounded by curly braces.</p>
-        <h4>Example</h4>
-        <p>In this example all <p> elements will be center-aligned, with a red text color:</p>
-        <code>
-          p {
-            color: red;
-            text-align: center;
-          }
-        </code>
-        <br>
-        <h4>Example Explained</h4>
-        <ul>
-          <li>p is a selector in CSS (it points to the HTML element you want to style: &lt;p&gt;).</li>
-          <li>color is a property, and red is the property value</li>
-          <li>text-align is a property, and center is the property value</li>
-        </ul>
-    </article>
-</section>
-<!-- INTRODUCTION ENDS HERE -->
-<br>
-
-<!-- CSS SELECTORS SECTION STARTS HERE  -->
-
-<section class="main-section">
-  <header>
-    CSS Selectors&nbsp;&nbsp;&nbsp;&nbsp;
-    {% for c in c_list %}
-        {% if c.chapter == 'CSS Selectors' and c.is_complete %}
-            <i class="fas fa-check"></i>
-        {% endif %} 
-    {% endfor %}    
-  </header>
-  <br>
-  <article>
-    <p>CSS selectors are used to "find" (or select) the HTML elements you want to style.</p>
-    <p>We can divide CSS selectors into five categories:</p>  
-    <ul>
-      <li>Combinator selectors (select elements based on a specific relationship between them)</li>
-      <li>Pseudo-class selectors (select elements based on a certain state)</li>
-      <li>Pseudo-elements selectors (select and style a part of an element)</li>
-      <li>Attribute selectors (select elements based on an attribute or attribute value)</li>
-      <li>This page will explain the most basic CSS selectors</li>
-    </ul>
-    <h4>
-      The CSS element Selector
-    </h4>
-    <p>The element selector selects HTML elements based on the element name.</p>
-    <h4>Example</h4>
-    <p>Here, all &lt;p&gt; elements on the page will be center-aligned, with a red text color: </p>
-    <code>
-      p {
-        text-align: center;
-        color: red;
-      }
-    </code>
-    <br>
-      <h4>
-        The CSS id Selector
-      </h4>
-      <p>The id selector uses the id attribute of an HTML element to select a specific element.</p>
-      <p>The id of an element is unique within a page, so the id selector is used to select one unique element!<p>  
-      <p>To select an element with a specific id, write a hash (#) character, followed by the id of the element.</p>
-      <h4>Example</h4>
-      <p>The CSS rule below will be applied to the HTML element with id="para1": </p>
-      <code>
-        #para1 {
-          text-align: center;
-          color: red;
-        }
-      </code>
-      <br>
-      <p class="note"><strong>Note:</strong> An id name cannot start with a number!</p>
-      <h4>The CSS class Selector</h4>
-      <p>The class selector selects HTML elements with a specific class attribute.</p>
-      <p>To select elements with a specific class, write a period (.) character, followed by the class name.</p>
-      <h4>Example</h4>
-      <code>
-        .center {
-          text-align: center;
-          color: red;
-        }
-      </code>
-      <br>
-      <p>You can also specify that only specific HTML elements should be affected by a class.</p>
-      <h4>Example</h4>
-      <p>In this example only &lt;p&gt; elements with class="center" will be red and center-aligned: </p>
-      <code>
-        p.center {
-          text-align: center;
-          color: red;
-        }
-      </code>
-      <br>
-      <p>HTML elements can also refer to more than one class.</p>
-      <h4>Example</h4>
-      <p>In this example the &lt;p&gt; element will be styled according to class="center" and to class="large": </p>
-      <code>
-        &lt;p class="center large"&gt;This paragraph refers to two classes.&lt;/p&gt;
-      </code>
-      <br>
-      <p class="note">Note: A class name cannot start with a number!</p>
-      <h4>The CSS Universal Selector</h4>
-      <p>The universal selector (*) selects all HTML elements on the page.</p>
-      <h4>Example</h4>
-      <p>The CSS rule below will affect every HTML element on the page: </p>
-      <code>
-        * {
-          text-align: center;
-          color: blue;
-        }
-      </code>
-      <br>
-      <h4>The CSS Grouping Selector</h4>
-      <p>The grouping selector selects all the HTML elements with the same style definitions.</p>
-      <p>Look at the following CSS code (the h1, h2, and p elements have the same style definitions):</p>
-      <code>
-        h1 {
-          text-align: center;
-          color: red;
-        }
-        
-        h2 {
-          text-align: center;
-          color: red;
-        }
-        
-        p {
-          text-align: center;
-          color: red;
-        }
-      </code>
-      <br>
-      <p>It will be better to group the selectors, to minimize the code.</p>
-      <p>To group selectors, separate each selector with a comma.</p>
-      <h4>Example</h4>
-      <p>In this example we have grouped the selectors from the code above: </p>
-      <code>
-        h1, h2, p {
-          text-align: center;
-          color: red;
-        }
-      </code>     
-  </article>
-</section>
-
-<!-- CSS SELECTORS SECTION ENDS HERE -->
-
-<br>
-
-<!-- HOW TO ADD CSS SECTION STARTS HERE -->
-
-<section class="main-section">
-  <header>
-    How To Add CSS&nbsp;&nbsp;&nbsp;&nbsp;
-    {% for c in c_list %}
-        {% if c.chapter == 'How To Add CSS' and c.is_complete %}
-            <i class="fas fa-check"></i>
-        {% endif %} 
-    {% endfor %}    
-  </header>
-  <br>
-  <article>
-    <h4>Three Ways to Insert CSS</h4>
-    <p>There are three ways of inserting a style sheet:</p>
-    <ul>
-      <li>External CSS</li>
-      <li>Internal CSS</li>
-      <li>Inline CSS</li>
-    </ul>
-    <h4>External CSS</h4>
-    <p>With an external style sheet, you can change the look of an entire website by changing just one file!</p>
-    <p>Each HTML page must include a reference to the external style sheet file inside the &lt;link&gt; element, inside the head section.</p>
-    <h4>Example</h4>
-    <p>External styles are defined within the &lt;link&gt; element, inside the &lt;head&gt; section of an HTML page:</p>
-    <code>
-      &lt;!DOCTYPE html&gt;
-      &lt;html&gt;
-      &lt;head&gt;
-      &lt;link rel="stylesheet" href="mystyle.css"&gt;
-      &lt;/head&gt;
-      &lt;body&gt;
-
-      &lt;h1&gt;This is a heading&lt;/h1&gt;
-      &lt;p&gt;This is a paragraph.&lt;/p&gt;
-
-      &lt;/body&gt;
-      &lt;/html&gt;
-    </code>
-    <br>
-    <p>An external style sheet can be written in any text editor, and must be saved with a .css extension.</p>
-    <p>The external .css file should not contain any HTML tags.</p>
-    <p>Here is how the "mystyle.css" file looks:</p>
-    <h4>"mystyle.css"</h4>
-    <code>
-      body {
-        background-color: lightblue;
-      }
+      <!-- TIFF ENDS -->
       
-      h1 {
-        color: navy;
-        margin-left: 20px;
-      }
-    </code>
-    <br>
-    <p class="note">Note: Do not add a space between the property value and the unit (such as margin-left: 20 px;). The correct way is: margin-left: 20px;</p>
-    <h4>Internal CSS</h4>
-    <p>An internal style sheet may be used if one single HTML page has a unique style.</p>
-    <p>The internal style is defined inside the &lt;style&gt;s element, inside the head section.</p>
-    <h5>Example</h5>  
-    <p>Internal styles are defined within the &lt;style&gt; element, inside the &lt;head&gt; section of an HTML page:</p>
-    <code>
-      &lt;!DOCTYPE html&gt;
-      &lt;html&gt;
-      &lt;head&gt;
-      &lt;style&gt;
-        body {
-          background-color: linen;
-        }
-        
-        h1 {
-          color: maroon;
-          margin-left: 40px;
-        }
-        &lt;/style&gt;
-        &lt;/head&gt;
-        &lt;body&gt;
-        
-        &lt;h1>This is a heading&lt;/h1&gt;
-        &lt;p>This is a paragraph.&lt;/p&gt;
-        
-        &lt;/body&gt;
-        &lt;/html&gt;
-  </code> 
-  <br>
-  <h4>Inline CSS</h4>
-  <p>An inline style may be used to apply a unique style for a single element.</p>
-  <p>To use inline styles, add the style attribute to the relevant element. The style attribute can contain any CSS property.</p>
-  <h5>Example</h5>
-  <p>Inline styles are defined within the "style" attribute of the relevant element:</p>
-  <code>
-    &lt;!DOCTYPE html&gt;
-    &lt;html&gt;
-    &lt;body&gt;
-
-    &lt;h1 style="color:blue;text-align:center;"&gt;This is a heading&lt;/h1&gt;
-    &lt;p style="color:red;"&gt;This is a paragraph.&lt;/p&gt;
-
-    &lt;/body&gt;
-    &lt;/html&gt;
-  </code>
-  <br>
-  <p class="note">Tip: An inline style loses many of the advantages of a style sheet (by mixing content with presentation). Use this method sparingly.</p>
-  <h4>Multiple Style Sheets</h4>
-  <p>If some properties have been defined for the same selector (element) in different style sheets, the value from the last read style sheet will be used. </p>
-  <p>Assume that an external style sheet has the following style for the &lt;h1&gt; element:</p>
-  <code>
-    h1 {
-      color: navy;
-    }    
-  </code>
-  <br>
-  <p>Then, assume that an internal style sheet also has the following style for the &lt;h1&gt; element:</p>
-  <code>
-    h1 {
-      color: orange;   
-    }
-  </code>
-  <br>
-  <h5>Example</h5>
-  <p>If the internal style is defined after the link to the external style sheet, the &lt;h1&gt; elements will be "orange":</p>
-  <code>
-    &lt;head&gt;
-    &lt;link rel="stylesheet" type="text/css" href="mystyle.css"&gt;
-    &lt;style&gt;
-    h1 {
-      color: orange;
-    }
-    &lt;/style&gt;
-    &lt;/head&gt;
-  </code>
-  <br>
-  <h5>Example</h5>
-  <p>However, if the internal style is defined before the link to the external style sheet, the &lt;h1&gt; elements will be "navy": 
-  <code>
-    &lt;head&gt;
-    &lt;style&gt;
-    h1 {
-      color: orange;
-    }
-    &lt;/style&gt;
-    &lt;link rel="stylesheet" type="text/css" href="mystyle.css"&gt;
-    &lt;/head&gt;
-  </code>
-  <h4>Cascading Order</h4>
-  <p>What style will be used when there is more than one style specified for an HTML element?</p>
-  <p>All the styles in a page will "cascade" into a new "virtual" style sheet by the following rules, where number one has the highest priority:</p>
-  <ul>
-    <li>Inline style (inside an HTML element)</li>
-    <li>External and internal style sheets (in the head section)</li>
-    <li>Browser default</li>
-  </ul>  
-  <p>So, an inline style has the highest priority, and will override external and internal styles and browser defaults.</p>
+    <!-- TEXT FILE FORMAT ENDS -->
   </article>
-</section>
+        <br>
+  <article>
+    <!--TEXT COMPRESSION TECHNIQUES STARTS  -->
 
-<!-- HOW TO ADD CSS SECTION ENDS HERE --> 
+    <h2 id="Text_Compression_Techniques">Text Compression Techniques</h2>
+    <br>
+    <!-- NEED OF DATA COMPRESSION START -->
+    <h4>Need of Data Compression</h4>
+      <ul>
+        <li>Multimedia object consists of color image, photographic or video image, audio data etc. These data object needs to be stored, retrieved, transmitted and displayed. This large data objects present two problems viz, storage and transmission.</li>          <li>Transfer of data in the Internet age is very time-dependent. Take for example an audio file, which is nothing but changes in the intensity of sound over a fixed period. This audio is transferred across networks in the form of sound files. If the size of the sound files is too large, the time taken to transfer the files increases. The time taken to transfer a file can be decreased using compression.</li>
+        <li> Compression in computer terms means reducing the physical size of data such that it occupies less storage space and memory, Compressed files are, therefore, easier to transfer because there is a sizable amount of reduction in the size of data to be transferred.</li>
+        <li>This results in a reduction in the time needed for file transfer as well as a reduction in the bandwidth utilization even for a slow network.</li>
+        <li>Thus, the process of reducing the amount of data required to represent information is called compression.</li>
+        <br>
+        <h5>There are two types of compression</h5>
+        <b>Lossless Compression</b>
+        <li>Lossless data compression is a class of data compression algorithms that allows the exact original data to be reconstructed from the compressed data. i.e. In lossless data compression, the compressed-then-decompressed data is an exact replication of the original data.</li>
+        <li>Lossless data compression is used in many applications. For example, the zip file format produced by the WinZip program on a PC produces exact copies of the original material that was encoded within the zip file. It is also used in the Unix tool gzip.</li>
+        <li>Lossless compression is , used in cases where it is important that the original and the decompressed data be identical. Typical examples are executable programs, text documents and source code. Some image file formats, like PNG or GIF, use only lossless compression.</li>
+        <br>
+        <b>Lossless compression techniques:</b>
+        <li>Packbits encoding (Run Length Encoding) RLE</li>
+        <li>CCITT Group 3 1D</li>
+        <li>CCITT Group 3 2D</li>
+        <li>CCITT Group 4</li>
+        <li>LZW</li>
+        <br>
+        <b>Lossy Compression</b>
+        <li>Lossy data compression, which only allows an approximation of the original data to be reconstructed i.e. In lossy data compression, the decompressed data may be different from the original data. Typically, there is some distortion between the original and reproduced data.</li>
+        <li>Lossy compression is a data encoding method which discards (loses) some of the data, in order to achieve its goal, with the result that decompressing the data yields content that is different from the original, though similar enough to be useful in some way.</li>
+        <li>Lossy compression is most commonly used to compress multimedia data (audio, video). This method is used where absolute data accuracy is not essential. Lossy compression is the most commonly used compression type. This compression technique is used for image documents, audio, and video objects.</li>
+        <br>
+        <b>Lossy Compression techniques:</b>
+        <li>Joint Photographic Experts Group (JPEG)</li>
+        <li> Motion Picture Experts Group (MPEG)</li>
+        <li> Adaptive Differential Pulse Code Modulation (ADPCM)</li>
+        <li>CCITT H.261 (Px64) Video Coding Algorithm</li>
+        <li>Intel DVI (Digital Video Interactive)</li>
+        <i>Example:</i>
+        <img src="{% static 'css_img/eg_ct.jpg'%}" alt="">
+      </ul>
+    <!-- NEED OF DATA COMPRESSION ENDS -->
+
+    <br>
+    <!-- LOSSY V/S LOSSLESS START -->
+    <h4>Compare Lossy v/s Lossless Compression</h4>
+      <table>
+        <tr>
+          <th><b>Sr No</b></th>
+          <th><b>Lossy Compression</b></th>
+          <th><b>Lossless Compression</b></th>
+        </tr>
+        <tr>
+          <th>1</th>
+          <th>The technique involves some loss of information.</th>
+          <th>Involves no loss of information.</th>
+        </tr>
+        <tr>
+          <th>2</th>
+          <th>Data that has been compressed using this technique can’t be recovered and reconstructed exactly.</th>
+          <th>If data has been (lossless) compressed, the original data can be recovered from the compressed data.</th>
+        </tr>
+        <tr>
+          <th>3</th>
+          <th>Used for application that can tolerate difference between the original and reconstructed data.</th>
+          <th>Used for application that can’t tolerate any difference between original and reconstructed data.</th>
+        </tr>
+        <tr>
+          <th>4</th>
+          <th>In return for accepting this distortion in reconstructed data we obtain high compression rate</th>
+          <th>No loss in information so compression rate is small.</th>
+        </tr>
+        <tr>
+          <th>5</th>
+          <th>Sound and Image compression uses lossy compression.</th>
+          <th>Text compression uses lossless compression</th>
+        </tr>
+        <tr>
+          <th>6</th>
+          <th>More data can be accommodated in channel.</th>
+          <th>Less data can be accommodated in channel.</th>
+        </tr>
+        <tr>
+          <th>7</th>
+          <th>Distortion</th>
+          <th>Distortion less</th>
+        </tr>
+        <tr>
+          <th>8</th>
+          <th>E.g
+            <ol>
+              <li>Telephone System</li>
+              <li>Video CD</li>
+            </ol>
+          </th>
+          <th>E.g
+            <ol>
+              <li>Fax Machine</li>
+              <li>Radiological Imaging</li>
+            </ol>
+          </th>
+        </tr>
+        <tr>
+          <th>9</th>
+          <th>Example: Text compression -> It is very important that the reconstruction is identical to original text, as very small difference can result in statements with very different meanings. Consider “ Do not send Money “ and “ Do now send Money “</th>
+          <th>Example: When viewing a reconstruction of a video sequence, the fact that the reconstruction is different from the original is generally not important as long as the difference do not result in annoying artifacts. Thus, video is generally compressed using lossy compression.</th>
+        </tr>
+      </table>
+
+    <!-- LOSSY V/S LOSSLESS ENDS-->
+    <br>
+    <!-- RLE ENCODING START -->
+    <h4>RLE Encoding</h4>
+      <ul>
+        <li>RLE works by reducing physical size of repeating string of character. This repeating string called as RUN is basically encoded into 2 bytes. The first repersents the number of repeaned cahracter in Run and called as Run count. The second byte is value of charater in the Run which is in range 0-255 and called as Run value.</li>
+        <p>Following is Uncompressed string:</p>
+        <b>PPPPPPPPPPPPPPPPPPPPPP</b>
+        <li>Compressed string with RLE:</li>
+        <img src="{% static 'css_img/cs_rle.png'%}" alt="not found">
+        <li>The 20P code generated to represent character string is called RLE Packet.</li>
+        <li> Two bytes are required to store '20P'.</li>
+        <li>First 1 byte require to store 20 and second byte is required to store 'Run value' i.e. 'P' But, initially uncompressed string require 20 bytes to store same data.</li>
+        <br>
+        <b>Advantages</b>
+        <li>A black and white image that is mostly white, such as page of book will encode very well due to large amount of contiguous data that is all the same color.</li>
+        <li>In sequential processing, A bitmap is encoded starting at upper left corner and proceeding from left to right across each scan line(The axis).</li>
+        <img src="{% static 'css_img/en_alx-a.png'%}" alt="">
+        <li>Alternative RLE schemes can also be written to encode data down the length of bitmap (the Y-axis).</li>
+        <img src="{% static 'css_img/en_aly-a.png'%}" alt="">
+        <li>Encode pixels on a diagonal in zig-zag fashion.</li>
+        <img src="{% static 'css_img/zzen_brlemf.png'%}" alt="">
+        <li>Example: Use the RLE method to compress the following sequence of symbols:</li>
+        <p>AAAACCBBBDDDDDEFF</p>
+        <p>Sol:</p>
+        <img src="{% static 'css_img/rle_encoding.png' %}" alt="">
+        <li>In this way a string of 17 symbols has been compressed into a string of only 12 symbols.</li>
+        <li>In such a case only the count of one of the symblos which occurs between each occurence of the other symbol is used.</li>
+      </ul>
+    <!-- RLE ENCODING ENDS -->
+
+    <!-- HUFFMAN ENCODING STARTS HERE -->
+    
+    <h4>Huffman Encoding</h4>
+      <ul>
+        <li>Huffman coding is a lossless data compression algorithm. The idea is to assign variable-length codes to input characters, lengths of the assigned codes are based on the frequencies of corresponding characters. </li>
+        <li>The most frequent character gets the smallest code and the least frequent character gets the largest code.</li>
+        <li>The variable-length codes assigned to input characters are Prefix Codes, means the codes (bit sequences) are assigned in such a way that the code assigned to one character is not prefix of code assigned to any other character. This is how Huffman Coding makes sure that there is no ambiguity when decoding the generated bit stream. </li>
+        <li>Let us understand prefix codes with a counter example. Let there be four characters a, b, c and d, and their corresponding variable length codes be 00, 01, 0 and 1. This coding leads to ambiguity because code assigned to c is prefix of codes assigned to a and b. If the compressed bit stream is 0001, the de-compressed output may be “cccd” or “ccb” or “acd” or “ab”.</li>
+        <p><strong>Decoding:</strong></p>
+        <li>Decoding is an exact reverse procedure of encoding. In Huffman's tree the leaves represent the character and from the given code word we can find out the original characters.</li>
+        <li>In above example, if we decode bits,</li>
+        <li>0111111111110</li>
+        <li>The resulting string would be “aeed”</li>
+        <li>Example:</li>
+        <img src="{% static 'css_img/huffman_example.jpg' %}" alt="">
+      </ul>
+
+    <!-- HUFFMAN ENCODING ENDS HERE -->
+    <br>  
+  
+
+    <!-- CCITT Group3 1D STARTS HERE -->
+    <h4>CCITT Group3 1D</h4>
+    <p>Group 3 One-Dimensional encoding (G31D) is a variation of the Huffman keyed compression scheme. A bi-level image is composed of a series of black-and-white 1-bit pixel runs of various lengths (1 = black and 0 = white). A Group 3 encoder determines the length of a pixel run in a scan line and outputs a variable-length binary code word representing the length and color of the run. Because the code word output is shorter than the input, pixel data compression is achieved.</p>
+    <p>The run-length code words are taken from a predefined table of values representing runs of black or white pixels. This table is part of the T.4 specification and is used to encode and decode all Group 3 data.</p>
+    <p>The size of the code words were originally determined by the CCITT, based statistically on the average frequency of black-and-white runs occurring in typical type and handwritten documents. The documents included line art and were written in several different languages. Run lengths that occur more frequently are assigned smaller code words while run lengths that occur less frequently are assigned larger code words.</p>
+    <p>In printed and handwritten documents, short runs occur more frequently than long runs. Two- to 4-pixel black runs are the most frequent in occurrence. The maximum size of a run length is bounded by the maximum width of a Group 3 scan line.</p>
+    <p>Run lengths are represented by two types of code words: makeup and terminating. An encoded pixel run is made up of zero or more makeup code words and a terminating code word. Terminating code words represent shorter runs, and makeup codes represent longer runs. There are separate terminating and makeup code words for both black and white runs.</p>
+    <p>Pixel runs with a length of 0 to 63 are encoded using a single terminating code. Runs of 64 to 2623 pixels are encoded by a single makeup code and a terminating code. Run lengths greater than 2623 pixels are encoded using one or more makeup codes and a terminating code. The run length is the sum of the length values represented by each code word.</p>
+    <p><strong>Here are some examples of several different encoded runs:</strong></p>
+    <p>A run of 20 black pixels would be represented by the terminating code for a black run length of 20. This reduces a 20-bit run to the size of an 11-bit code word, a compression ratio of nearly 2:1. This is illustrated in Figure 9-7, a.</p>
+    <p>A run of 8800 black pixels would be encoded as three makeup codes of 2560 black pixels (7680 pixels), a makeup code of 1088 black pixels, followed by the terminating code for 32 black pixels (2560 + 2560 + 2560 + 1088 + 32 = 8800). In this case, we will have encoded 8800 run-length bits into five code words with a total length of 61 bits, for an approximate compression ratio of 144:1. This is illustrated in Figure 1, c.</p>
+    <img src="{% static 'css_img/ccit_group3_1d.jpg' %}" alt="not found">
+    <p><strong>Advantages of CCITT G3 1D</strong></p>
+    <li>Very simple to implement.</li>
+    <li>It is a standard for document imaging applications (Fax images).</li>
+    <br>
+    <p><strong>Limitations:</strong></p>
+    <li>Useful only for low resolution images.</li>
+    <br>
+
+    <!-- CCITT Group3 1D ENDS HERE -->
+  
+
+    <!-- TEXT COMPRESSION TECHNIQUES ENDS -->
+  </article>
+        
+  
+  <article>
+    <!-- INTRODUCTION TO DIGITAL IMAGE STARTS -->
+    <h2 id="Introduction_to_Digital_Image">Introduction to Digital Image</h2>
+    <br>
+
+    <!-- DIGITAL IMAGE STARTS HERE -->
+
+    <h4>Digital Image</h4>
+    <ul>
+      <li>Digital images are commonly obtained by the following methods. </li>
+      <li>The first method is to digitize photographs and printed pictures using a scanner.</li>
+      <li>In digital cameras, ADCs are built in. The second source of digital images is from individual frames of digitized video.</li>
+      <li>In the third method, images are generated by some sort of graphics (painting) package.</li>
+      <p><strong>Images can be:</strong></p>
+      <p><em>Grayscale Image</em></p>
+      <li>An image displayed on a computer monitor consists of many small dots. Theses dots are called pixels. There are a fixed number of pixels on a horizontal line and a fixed number lines in the vertical dimension (i e, a digital image consists of a rectangular array of pixels). </li>
+      <li>Different pixels may have different brightness or intensity. The intensity range from black to white depends on the required image quality or number of bits used for each pixel. For example, when 8 bits are used to represent a pixel, a total of 256 different intensity levels can be represented, black being 0 and white being 255. </li>
+      <li>The arrangement of these pixel values in a contiguous region of in memory in array form is called a bitmap. </li>
+      <li>Example</li>
+      <img src="{% static 'css_img/digital_img_eg.jpg' %}" alt="">
+      <p>Color Image</p>
+      <li>A color image also consists of a rectangular array of pixels. The only difference from gray scale images is that we need three values to represent each pixel.</li>
+      <li>Each value represents one primary color. This representation is based on the tri stimulus theory of color production, which states that any color can be reproduced by an appropriate mixing of three primary colors. The primary colors used in television systems and computer monitors are red, green, and blue. </li>
+      <li>Therefore a color image can be represented by three two-dimensional arrays, corresponding to the red, green and blue components of the image, respectively. </li>
+      <p>Example:</p>
+      <img src="{% static 'css_img/color_image_eg.jpg' %}" alt="not found">
+      <p><em>Monochrome Image</em></p>
+      <li>Monochrome photos are photos that contain variations of only one color and nothing else. This could be different shades of blue, green, or grey, for example.</li>
+      <li>In computing, monochrome has two meanings:</li>
+      <li>it may mean having only one color which is either on or off (also known as a binary image),</li>
+      <li>allowing shades of that color.</li>
+      <li>Each pixel is stored as a single bit.</li>
+      <li>Example</li>
+      <img src="{% static 'css_img/monochrome_img_eg.jpg' %}" alt="">
+    </ul>
+
+    <!-- DIGITAL IMAGE ENDS HERE -->
+    <br>
+    <!-- USES OF DIGITAL IMAGE IN DIFFRENT FIELDS START-->
+
+    <h4>Use of Digital Images in Different Fields</h4>
+      <p><strong>Medical Field</strong></p>
+      <ul>
+        <p>The common applications of DIP in the field of medical is</p>
+        <li>Gamma ray imaging</li>
+        <li>PET scan</li>
+        <li>X Ray Imaging</li>
+        <li>Medical CT</li>
+        <li>UV imaging</li>
+      </ul>
+      <b>UV Imaging</b>
+      <ul>
+        <li>In the field of remote sensing, the area of the earth is scanned by a satellite or from a very high ground and then it is analyzed to obtain information about it. One particular application of remote sensing is to detect infrastructure damages caused by an earthquake.</li>
+        <li>As it takes longer time to grasp damage. since the area effected by the earthquake is sometimes so wide, that it is not possible to examine it with human eye in order to examine the damages. Even if it is, then it is very hectic and time consuming procedure. An image of the effected area is captured from the above ground and then it is analyzed to detect the various type of damage done by the earthquake.</li>
+      </ul>
+      <p>The key steps include in the analysis are extraction of edges and analysis and enhancement of various types of edges:-</p>
+      <ol>
+        <li>
+          <b>Transmission and Encoding</b>
+          <p>The very first image that has been transmitted over the wire was from London to New York via a submarine cable. This field does not only focus on transmission, but also on encoding. Many different formats have been developed for high or low bandwidth to encode photos and then stream it over the internet etc.</p>
+        </li>
+        <li>
+          <b>Machine/Robot Vision</b>
+          <p>Apart from the many challenges that a Robot face today, one of the biggest challenge still is to increase the vision of the robot. Much work has been contributed by this field and a complete other field of computer vision has been introduced to work on it.</p>
+        </li>
+        <li>
+          <b>Line Follower robot</b>
+          <p>Most of the robots work today by following a line and thus are called line follower robots. This has also acheived through image processing.</p>
+          <img src="{% static 'css_img/ch2_images_different_field.jpg' %}" alt="">
+        </li>
+        <li>
+          <b>Colour processing</b>
+          <p>Colour processing includes processing of coloured images and different colours spaces that are used. It also involves studying tranmission, storage and encoding of these colours images.</p>
+        </li>
+        <li>
+          <b>Pattern Recognition</b>
+          <p>Pattern recognition involves study from image processing and from various other fields that includes machine learning (a branch of AI). Pattern recognition is used in computer aided diagnosis, recognition of handwritting, recognition of images etc.</p>
+        </li>
+        <li>
+          <b>Video processing</b>
+          <p>A video is nothing but just a very fast movement of pictures. Video processing involves noise reduction, detail enhancement, motion detection, frame rate conversion, aspect ratio conversion, colour spcae conversion etc.</p>
+        </li>
+      </ol>
+
+    <!-- USES OF DIGITAL IMAGE IN DIFFRENT FIELDS END-->
+
+
+    <!-- INTRODUCTION TO DIGITAL IMAGE ENDS -->
+  </article>
+    
+    <br>
+  <article>
+    <!-- IMAGE FILE FORMAT STARTS -->
+
+    <h2 id="Image_File_Formats"> Image File Formats</h2>
+    <br>
+
+    <!-- BMP IMAGE FILE FORMAT START -->
+
+    <h4>BMP image file format</h4>
+      <p><strong>BMP image format</strong></p>
+      <p>BMP is an outdated image file format for computers running the Windows operating system. The format was developed by Microsoft for storing bitmap files in a device-independent bitmap (DIB) format that would allow Windows to display the bitmap on any type of display device. The term ‘device independent’ means that the bitmap specifies pixel color in a form independent of the method used by a display to represent color.</p>
+      <p>Since BMP is a fairly simple file format, its structure is pretty straightforward. Each bitmap file contains:</p>
+      <ul>
+        <li><b> a bitmap-file header:</b>this contains information about the type, size, and layout of a device-independent bitmap file.</li>
+        <li><b>a bitmap-information header</b>which specifies the dimensions, compression type, and color format for the bitmap.</li>
+        <li><b>a color table</b>defined as an array of RGBQUAD structures, contains as many elements as there are colors in the bitmap. The color table is not present for bitmaps with 24 color bits because each pixel is represented by 24-bit red-green-blue (RGB) values in the actual bitmap data area.</li>
+        <li><b>an array of bytes that defines the bitmap bits:</b>These are the actual image data, represented by consecutive rows or ‘scan lines’ of the bitmap. Each scan line consists of consecutive bytes representing the pixels in the scan line, in left-to-right order.</p></li>
+      </ul>
+      <br>
+      <p><strong>Structure</strong></p>
+      <p>A BMP file consists of either 3 or 4 parts as shown in the Fig 1 below. The first part is a header, this is followed by a information section, if the image is indexed color then the palette follows, and last of all is the pixel data. The position of the image data with respect to the start of the file is contained in the header. Information such as the image width and height, the type of compression, the number of colors is contained in the information header.</p>
+      <img src="{% static 'css_img/ch2_bmp_struct.png' %}" alt="">
+      <br>
+      <b>Information</b>
+      <p>The image info data that follows is 40 bytes in length, it is described in the struct given below. The fields of most interest below are the image width and height, the number of bits per pixel (should be 1, 4, 8 or 24), the number of planes (assumed to be 1 here), and the compression type (assumed to be 0 here).</p>
+      <code>
+        typedef struct {
+
+          unsigned int size; /* Header size in bytes */
+          
+          int width,height; /* Width and height of image */
+        
+          unsigned short int planes; /* Number of colour planes */
+        
+          unsigned short int bits; /* Bits per pixel */
+        
+          unsigned int compression; /* Compression type */
+        
+          unsigned int imagesize; /* Image size in bytes */
+        
+          int xresolution,yresolution; /* Pixels per meter */
+        
+          unsigned int ncolours; /* Number of colours */
+
+          unsigned int importantcolours; /* Important colours */
+        
+        } INFOHEADER;
+      </code>
+      <p>The compression types supported by BMP are listed below :</p>
+      <ul>
+        <li>0 - no compression</li>
+        <li>1 - 8 bit run length encoding</li>
+        <li>2 - 4 bit run length encoding</li>
+        <li>3 - RGB bitmap with mask</li>
+      </ul>
+      <br>
+      <b>24 bit Image Data</b>
+      <p>The simplest data to read is 24 bit true colour images. In this case the image data follows immediately after the information header, that is, there is no colour palette. It consists of three bytes per pixel in b,g,r order. Each byte gives the saturation for that colour component, 0 for black and 1 for white (fully saturated).</p>
+      <br>
+      <b>Indexed Colour Data</b>
+      <p>If the image is indexed colour then immediately after the information header there will be a table of infoheader.ncolours colours, each of 4 bytes. The first three bytes correspond to b,g,r components, the last byte is reserved/unused but could obviously represent the alpha channel. For 8 bit greyscale images this colour index will generally just be a greyscale ramp. If you do the sums....then the length of the header plus the length of the information block plus 4 times the number of palette colours should equal the image data offset. In other words</p>
+      <p>14 + 40 + 4 * infoheader.ncolours = header.offset</p>
+
+    <!-- BMP IMAGE FILE FORMAT ENDS -->
+    <br>
+
+    <!-- JPG IMAGE FILE FORMAT START -->
+    <h4>JPG image file format</h4>
+      <ul>
+        <li>JPG, originally JPEG stands for Joint Photographic Expert Group.</li>
+        <li>The file name for a JPEG image is .jpg or .jpeg.</li>
+        <li>There is actually no difference between JPG and JPEG, except for the number of characters used.</li>
+        <li>JPEG is the most commonly used format for photographs. It is specifically good for color photographs or for images with many blends or gradients. However, it is not the best with sharp edges and might lead to a little blurring. This is mainly because JPEG is a method of lossy compression for digital photography.</li>
+        <li>An advantage to using the JPEG format is that due to compression, a JPEG image will take up a few MB of data.</li>
+        <li>This means that while saving the image in a JPEG format, there is a slight loss of quality due to compression. Hence, JPEG is not the greatest format in case one needs to keep making numerous edits and re-saves to the image.</li>
+        <li>As with each re-save there a slight loss of quality due to compression. Still, if one only makes a few edits and the image is saved in a high quality format, the slight loss of quality due to compression is mainly negligible.</li>
+        <li>The JPEG is quite popular for web hosting of images, for amateur and average photographers, digital cameras, etc. This is mainly due to the fact that high quality images can be saved using less space.</li>
+        <li>JPEG is one of the most common image formats proposed by the Joint Photographic Experts Group to save and store digital images.</li>
+        <li>The file format is referred to as the JPEG file interchange format (sort for JIFF) that was created for the sole purpose of storing digital images, particularly the ones used by digital photography.</li>
+        <li>Almost all high-definition digital cameras including modern-day Smartphone cameras use JPEG file extension to store image files.</li>
+        <li>One downside of JPEG is that it’s a lossy compression algorithm which significantly reduces the size of the file with each compression, which results in degradation of image quality.</li>
+        <li>Like ZIP files exploit the redundancies in files to achieve utmost compression, JPEG does that by removing blocks of pixels or sections of images, thereby reducing image quality.</li>
+        <li>Technically, it compares each pixel with adjacent pixels to adjust the compression ratio.</li>
+        <li>This results in loss of density in digital photography, making it less appropriate for those trying to make a lot of edits and resaves to the image files.</li>
+        <li>With each save, there’s a slight loss of image quality due to compression. It can be saved with both JPG and JPEG file extensions.</li>
+        <br>  
+    </ul>
+    <b>Difference between JPG and JPEG</b>
+    <ul>
+      <li><b>Operating System of JPG and JPEG</b><p>The previous versions of operating systems such as MS DOS and Windows could only read three letter extensions for image file formats so the Joint Photographic Experts Group ditched the word “E” from JPEG to use JPG. However, there’s no such limitation in Macintosh. So JPEG is a common file format among Mac users.</p></li>
+      <li><b>Number of Characters</b><p>Both JPG and JPEG are often used interchangeably because they are virtually same and developed by the Joint Photographic Experts Group, however, the main difference between the two is the number of characters used in each file extension. Both are a little distinct file extensions with some association with JPEG-handling.</p></li>
+      <li><b>File Size of JPG and JPEG</b><p>The size of the image files with JPEG extension is comparatively less because of the lossy compression algorithm which results in a significant data loss. On the contrary, JPG makes the most out of the compression method to preserve the image quality with less data redundancy.</p></li>
+      <li><b>Image Applications of JPG and JPEG</b><p>Most of the image editing and processing applications such as Microsoft Paint and Adobe Photoshop use “.jpg” extension for saving all the JPEG image files for both Mac and Windows users. Both the file formats are ideal for digital photography with perfect variations of tones and colors such as art paintings.</p></li>
+    </ul>
+    <!-- JPG IMAGE FILE FORMAT ENDS -->
+
+    <!-- IMAGE FILE FORMAT ENDS -->
+  </article>
+  <br>
+
+  <article>
+    <!-- IMAGE COMPRESSION TECHNIQUES STARTS -->
+    <h2 id="Image_Compression_Technique">Image Compression Techniques</h2>
+    <br>
+    
+    <!-- JPEG COMPRESSION ALGO STARTS -->
+    <h4>JPEG compression algorithm </h4>
+    <p><strong>JPEG compression steps in detail:-</strong></p>
+      <ul>
+      <li>
+        <b>• Step1: Converting the RGB image in to Grey scale image:</b>
+        <ol>
+          <li>The original RGB color image is first converted to black and white image.</li>
+          <li>To compress a grey-scale image in JPEG, each pixel value is translated into grey value (0-255).</li>
+          <li>A color image is composed of pixels; these pixel values have RGB values, so to compress RGB color image, the work is three times as much because JPEG treats each color component separately.</li>
+          <li>The R (red) component is compressed first, the G (green) component and lastly B (blue) component.</li>
+          <li>The black and white image allows greater compression without a significant effect on image quality.</li>
+        </ol>
+      </li>
+      <li>
+        <b>Step2: Apply DCT (Discrete Cosine Transform):</b>
+        <ol>
+          <li>In this step, grey scale image with 8*8 block image is divided into 8-pixel by 8-pixel block shown in Fig1 below.</li>
+          <img src="{% static 'css_img/ch2_dct.png' %}" alt="">
+          <b>Fig1: Input Matrix of DCT coefficient</b>
+          <li>This image is given as an input to DCT formula</li>
+          <b>DCT Calculation:</b>
+          <ul>
+            <li>The formula for discrete cosine transfer (creating DCT coefficient) is as follows:</li>
+            <math display='block'>
+            <semantics>
+               <mrow>
+                <mi>D</mi><mi>C</mi><mi>T</mi><mo stretchy='false'>(</mo><mi>i</mi><mo>,</mo><mi>j</mi><mo stretchy='false'>)</mo><mo>=</mo><mfrac>
+                 <mn>1</mn>
+                 <mrow>
+                  <msqrt>
+                   <mrow>
+                    <mn>2</mn><mi>N</mi></mrow>
+                  </msqrt>
+                  </mrow>
+                </mfrac>
+                <mi>C</mi><mo stretchy='false'>(</mo><mi>i</mi><mo stretchy='false'>)</mo><mi>C</mi><mo stretchy='false'>(</mo><mi>j</mi><mo stretchy='false'>)</mo><mstyle displaystyle='true'>
+                 <mo>&#x2211;</mo> <mrow>
+                  <mstyle displaystyle='true'>
+                   <mo>&#x2211;</mo> <mrow>
+                    <mi>p</mi><mi>i</mi><mi>x</mi><mi>e</mi><mi>l</mi><mo stretchy='false'>(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy='false'>)</mo><mi>cos</mi><mo stretchy='false'>[</mo><mfrac>
+                     <mrow>
+                      <mo stretchy='false'>(</mo><mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn><mo stretchy='false'>)</mo><mi>i</mi><mi>&#x03C0;</mi></mrow>
+                     <mrow>
+                      <mn>2</mn><mi>N</mi></mrow>
+                    </mfrac>
+                    <mo stretchy='false'>]</mo><mi>cos</mi><mo stretchy='false'>[</mo><mfrac>
+                     <mrow>
+                      <mo stretchy='false'>(</mo><mn>2</mn><mi>y</mi><mo>+</mo><mn>1</mn><mo stretchy='false'>)</mo><mi>j</mi><mi>&#x03C0;</mi></mrow>
+                     <mrow>
+                      <mn>2</mn><mi>N</mi></mrow>
+                    </mfrac>
+                    <mo stretchy='false'>]</mo><mo>&#x2212;</mo><mo>&#x2212;</mo><mo>&#x2212;</mo><mo>&#x2212;</mo><mo stretchy='false'>(</mo><mi>i</mi><mo stretchy='false'>)</mo></mrow>
+                  </mstyle></mrow>
+                </mstyle></mrow>
+              <annotation encoding='MathType-MTEF'>MathType@MTEF@5@5@+=
+              feaahqart1ev3aaatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbuLwBLn
+              hiov2DGi1BTfMBaeXatLxBI9gBaerbd9wDYLwzYbItLDharqqtubsr
+              4rNCHbGeaGqiVu0Je9sqqrpepC0xbbL8F4rqqrFfpeea0xe9Lq=Jc9
+              vqaqpepm0xbba9pwe9Q8fs0=yqaqpepae9pg0FirpepeKkFr0xfr=x
+              fr=xb9adbaqaaeGaciGaaiaabeqaamaabaabaaGcbaGaamiraiaado
+              eacaWGubGaaiikaiaadMgacaGGSaGaamOAaiaacMcacqGH9aqpdaWc
+              aaqaaiaaigdaaeaadaGcaaqaaiaaikdacaWGobaaleqaaaaakiaado
+              eacaGGOaGaamyAaiaacMcacaWGdbGaaiikaiaadQgacaGGPaWaaabq
+              aeaadaaeabqaaiaadchacaWGPbGaamiEaiaadwgacaWGSbGaaiikai
+              aadIhacaGGSaGaamyEaiaacMcaciGGJbGaai4BaiaacohacaGGBbWa
+              aSaaaeaacaGGOaGaaGOmaiaadIhacqGHRaWkcaaIXaGaaiykaiaadM
+              gacqaHapaCaeaacaaIYaGaamOtaaaacaGGDbGaci4yaiaac+gacaGG
+              ZbGaai4wamaalaaabaGaaiikaiaaikdacaWG5bGaey4kaSIaaGymai
+              aacMcacaWGQbGaeqiWdahabaGaaGOmaiaad6eaaaGaaiyxaiabgkHi
+              TiabgkHiTiabgkHiTiabgkHiTiaacIcacaWGPbGaaiykaaWcbeqab0
+              GaeyyeIuoaaSqabeqaniabggHiLdaaaa@73E3@
+              </annotation>
+            </semantics>
+            </math>
+            <li>The formula for inverse discrete cosine transform (restoring original pixel information from a DCT coefficient) is:</li>
+              <math display='block'>
+                <semantics>
+                 <mrow>
+                  <mi>P</mi><mi>i</mi><mi>x</mi><mi>e</mi><mi>l</mi><mo stretchy='false'>(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy='false'>)</mo><mo>=</mo><mfrac>
+                   <mn>1</mn>
+                   <mrow>
+                    <msqrt>
+                     <mrow>
+                      <mn>2</mn><mi>N</mi></mrow>
+                    </msqrt>
+                    </mrow>
+                  </mfrac>
+                  <mstyle displaystyle='true'>
+                   <mo>&#x2211;</mo> <mrow>
+                    <mstyle displaystyle='true'>
+                     <mo>&#x2211;</mo> <mrow>
+                      <mi>C</mi><mo stretchy='false'>(</mo><mi>i</mi><mo stretchy='false'>)</mo><mi>C</mi><mo stretchy='false'>(</mo><mi>j</mi><mo stretchy='false'>)</mo><mi>D</mi><mi>C</mi><mi>T</mi><mo stretchy='false'>(</mo><mi>i</mi><mo>,</mo><mi>j</mi><mo stretchy='false'>)</mo><mi>cos</mi><mo stretchy='false'>[</mo><mfrac>
+                       <mrow>
+                        <mo stretchy='false'>(</mo><mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn><mo stretchy='false'>)</mo><mi>i</mi><mi>&#x03C0;</mi></mrow>
+                       <mrow>
+                        <mn>2</mn><mi>N</mi></mrow>
+                      </mfrac>
+                      <mo stretchy='false'>]</mo><mi>cos</mi><mo stretchy='false'>[</mo><mfrac>
+                       <mrow>
+                        <mo stretchy='false'>(</mo><mn>2</mn><mi>y</mi><mo>+</mo><mn>1</mn><mo stretchy='false'>)</mo><mi>j</mi><mi>&#x03C0;</mi></mrow>
+                       <mrow>
+                        <mn>2</mn><mi>N</mi></mrow>
+                      </mfrac>
+                      <mo stretchy='false'>]</mo><mo>&#x2212;</mo><mo>&#x2212;</mo><mo>&#x2212;</mo><mo stretchy='false'>(</mo><mi>i</mi><mi>i</mi><mo stretchy='false'>)</mo></mrow>
+                    </mstyle></mrow>
+                  </mstyle></mrow>
+                 <annotation encoding='MathType-MTEF'>MathType@MTEF@5@5@+=
+                 feaahqart1ev3aaatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbuLwBLn
+                 hiov2DGi1BTfMBaeXatLxBI9gBaerbd9wDYLwzYbItLDharqqtubsr
+                 4rNCHbGeaGqiVu0Je9sqqrpepC0xbbL8F4rqqrFfpeea0xe9Lq=Jc9
+                 vqaqpepm0xbba9pwe9Q8fs0=yqaqpepae9pg0FirpepeKkFr0xfr=x
+                 fr=xb9adbaqaaeGaciGaaiaabeqaamaabaabaaGcbaGaamiuaiaadM
+                 gacaWG4bGaamyzaiaadYgacaGGOaGaamiEaiaacYcacaWG5bGaaiyk
+                 aiabg2da9maalaaabaGaaGymaaqaamaakaaabaGaaGOmaiaad6eaaS
+                 qabaaaaOWaaabqaeaadaaeabqaaiaadoeacaGGOaGaamyAaiaacMca
+                 caWGdbGaaiikaiaadQgacaGGPaGaamiraiaadoeacaWGubGaaiikai
+                 aadMgacaGGSaGaamOAaiaacMcaciGGJbGaai4BaiaacohacaGGBbWa
+                 aSaaaeaacaGGOaGaaGOmaiaadIhacqGHRaWkcaaIXaGaaiykaiaadM
+                 gacqaHapaCaeaacaaIYaGaamOtaaaacaGGDbGaci4yaiaac+gacaGG
+                 ZbGaai4wamaalaaabaGaaiikaiaaikdacaWG5bGaey4kaSIaaGymai
+                 aacMcacaWGQbGaeqiWdahabaGaaGOmaiaad6eaaaGaaiyxaiabgkHi
+                 TiabgkHiTiabgkHiTiaacIcacaWGPbGaamyAaiaacMcaaSqabeqani
+                 abggHiLdaaleqabeqdcqGHris5aaaa@73C4@
+                 </annotation>
+                </semantics>
+               </math>
+          </ul>
+          <li>Then DCT coefficients are generated by applying DCT formula on 8*8 block using Equation 1 shown above.</li>
+          <li>After applying DCT formula, we will get 8*8 output matrix showing DCT coefficients as shown in Fig2 below</li>
+          <img src="{% static 'css_img/ch2_dct2.png' %}" alt="">
+          <b>Fig2: Output Matrix of DCT coefficient</b>
+        </ol>
+      </li>
+      <li>
+        <b>Step3: Quantization:</b>
+        <ol>
+          <li>It is the process of reducing precision of an integer, thereby reducing the number of bits required to store the integer.</li>
+          <li>Quantization is the process to determine what information can be safely discarded with significant loss in visual fidelity.</li>
+          <li>The quantized coefficient is described by the following equation: Quantized coefficient (i, j) = DCT (i, j)/Quantum (i, j)</li>
+          <li> Quantized coefficient is result of dividing a DCT output matrix by a quantum matrix to generate quantized DCT values</li>
+          <li>Typically, JPEG quantum matrix has large values in lower half of quantum matrix which in turn results in zero quantized coefficients in lower half of quantized matrix.</li>
+          <li>Quantized matrix is shown below in Fig3</li>
+          <img src="{% static 'css_img/ch2_dct3.png' %}" alt="">
+          <li>Therefore, matrix ends up with most DCT values as zeros and some non-zero DCT values.</li>
+        </ol>
+      </li>
+      <li>
+        <b>Step4: Zig-Zag sequence:</b>
+        <ol>
+          <li>JPEG came up with ordering quantized DCT coefficient in zigzag sequence as shown in figure below.</li>
+          <img src="{% static 'css_img/ch2_dct4.png' %}" alt="">
+          <li>After the quantization step, most of the coefficients towards the lower right corner are zero.</li>
+          <li>The zigzag ordering rearranges the coefficients in one dimensional order, in result most of the zeros will be placed at the end of the stream.</li>
+        </ol>
+      </li>
+      <li>
+        <b>Step5: Entropy encoding:</b>
+        <ol>
+          <li>Entropy encoding is done using Huffman coding.</li>
+          <li>In Huffman coding, the most frequent character gets the smallest code and the least frequent character gets the largest code.</li>
+        </ol>
+      </li>
+    </ul>
+    <!-- JPEG COMPRESSION ALGO ENDS -->
+    
+    <br><br>
+    
+      <!-- SHANNON-FANO ALGO STARTS-->
+      <h4>Shannon--Fano algorithm</h4>
+      <p><strong>WORKING STEPS OF SHANNON FANO ALGORITHM</strong></p>
+      <ul>
+        <li>For a given list of symbols, develop a corresponding list of probabilities or frequency counts so that each symbol’s relative frequency of occurrence is known.</li>
+        <li>Sort the lists of symbols according to frequency, with the most frequently occurring symbols at the left and the least common at the right.</li>
+        <li>Divide the list into two parts, with the total frequency counts of the left part being as close to the total of the right as possible.</li>
+        <li>The left part of the list is assigned the binary digit 0, and the right part is assigned the digit 1. This means that the codes for the symbols in the first part will all start with 0, and the codes in the second part will all start with 1.</li>
+        <li>Recursively apply the steps 3 and 4 to each of the two halves, subdividing groups and adding bits to the codes until each symbol has become a corresponding code leaf on the tree.</li>
+        <li>
+          Example:
+          <p>Symbol: ABCDE</p>
+          <p>Count</p>
+          <p>A 15</p>
+          <p>B 7</p>
+          <p>C 6</p>
+          <p>D 6</p>
+          <p>E 5</p>
+          <img src="{% static 'css_img/ch2_shannofanno.jpg' %}" alt="">
+          <p>Symbol: ABCDE</p>
+          <p>Code</p>
+          <p>A 00</p>
+          <p>B 01</p>
+          <p>C 10</p>
+          <p>D 110</p>
+          <p>E 111</p>
+        </li>
+      </ul>
+      <!-- SHANNON-FANO ALGO ENDS -->
+
+    <!-- IMAGE COMPRESSION TECHNIQUES ENDS -->
+  </article>
+</section>  
 
 
 {% endblock main %}
