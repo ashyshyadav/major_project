@@ -2,7 +2,901 @@
 {% block main %}
 {% load static %}
 
+<!-- INDEX STARTS HERE -->
+<section class="main-section">
+    <header class="INDEX">INDEX</header>
+    <article>
+        <br>
+        <li><a href="#ch1"><h5> Chapter 1: 8086 Microprocessor </h5></a></li>
+        <ol>
+            <li><a href="#IMP">Introduction to Microprocessor</a></li>
+            <li><a href="#BOC">Basic Organization of a Computer</a></li>
+            <li><a href="#8086_sail_feat"> Salient Feature</a></li>
+            <li><a href="#8086_arch_work">8086 Archiecture and Working</a></li>
+            <li><a href="#8086_mem_segm">8086 Mermory Segmentation</a></li>
+            <li><a href="#8086_mem_bank">8086 Memory Banking</a></li>
+            <li><a href="#8086_pin_diag">8086 Pin Diagram</a> </li>
+        </ol>
+        <br>
+        <li><h5> Chapeter 2: 8086 Assembly Language</h5></li>
+        <ol>
+            <li><a href="#8086_Addg_Modes"> 8086 Addressing Modes</a></li>
+            <li><a href="#Data_mem_addrg_mode">Data Memory Addressing modes</a> </li>
+            <li><a href="#i/o_addrg_modes">I/O addressing Modes of 8086</a></li>
+            <li><a href="#addrg_mode_pgm_mem">Addressing Modes for Program Memory</a> </li>
+            <li> <a href="#soft_mdl"> 8086 Software Model</a></li>
+            <li><a href="#8086_intutn_set">8086 Insruction Set</a> </li>
+            <li><a href="#dtinst">Data Transfer Instruction</a> </li>
+            <li>Arithmetic Instruction</li>
+            <li>Decimal Adjust Instruction</li>
+            <li>ASCII Adjust Instruction</li>
+            <li>Logic Instruction(Bit Manipulation Instruction)</li>
+            <li>Shift Instructions</li>
+            <li>Rotate Instructions</li>
+            <li>Branch Instructions(Program Execution and Transfer)</li>
+            <li>Iteration Control Instructions</li>
+            <li>Processor Control / Machine Control Instructions</li>
+            <li>External Hardware Synchronization Instructions</li>
+            <li>Interrupt Control Instructions</li>
+            <li>String Instructions f 8086</li>
+            <li>8086 Instruction Template/Format</li>
+            <li>8086 Assembler Directive, Pseudo Opcodes</li>
+            <li>8086 Programming</li>
+            <li>8086 Passing Parameters to Subroutines</li>
+            <li>Mixed Language Programming using Assembly and C</li>
+        </ol>
+        <br>
+        <li><h5>Chapter 3: 8086 Interrupts</h5></li>
+        <ol>
+            <li>8086 Interrupts</li>
+            <li>Interrupt Vector Table</li>
+            <li>How 8086 Responds to an Interrupt</li>
+            <li>Interrupt Priorities</li>
+            <li>Interrupt Priority Flowchart</li>
+        </ol>
+        <br>
+        <li><h5>8086 Circuit Conofiguration</h5></li>
+        <ol>
+            <li>8282 8-bit(Octal) Latch</li>
+            <li>8286 8-bit Data Trans-receiver</li>
+            <li>8284 Clock Generator</li>
+            <li>8086 Minimum Mode Configuration</li>
+            <li>8086 Maximum Modes Configuration</li>
+        </ol>
+        <br>
+        <li><h5>Chapter 5: 8259 Programmable Interrupt Controller</h5></li>
+        <ol>
+            <li>8259 Introduction</li>
+            <li>Need for 8259 PIC</li>
+            <li>8259 Architecture Block Diagram</li>
+            <li>8259 Operating Modes</li>
+            <li>Initialization Sequence of 8259</li>
+            <li>8259 Interfacing and working of a single Modes</li>
+            <li>8259 Interfacing and Working of a Cascaded Modes</li>
+            <li>8259 Programming</li>
+        </ol>
+        <br>
+        <li><h5>Chapter 6: 8255 Programmable Peripheral Interface</li>
+        <ol>
+            <li>8255 Introduction</li>
+            <li>8255 Salient Feature</li>
+            <li>8255 Architecture Internal Block Diagram</li>
+            <li>Control Word of 8255- I/O Modes(I/O Commad)</li>
+            <li>Control Word of 8255 BSR Mode(BSR Command){ONLY for Port C}</li>
+            <li>8255 Data Tranfer Modes</li>
+            <li>8255 Interfacing with 8086</li>
+            <li>8255 Programming </li>
+        </ol>
+        <br>
+        <li><h5> Chapter 7: 8253 Programmable Interval Timer</li>
+        <ol>
+            <li>8253 Salient Feature</li>
+            <li>8253 Architecture</li>
+            <li>Control Word Register</li>
+            <li>8253 Timer Modes</li>
+            <li>8253 Programming</li>
+        </ol>
+    </ul>
+    </article>
 
+</section>
+<!-- INDEX ENDS HERE -->
+<br>
+
+<!-- CHAPTER 1 STARTS HERE -->
+<section class="main-section">
+    <header id="ch1">Chapter 1: 8086 Microprocessor</header>
+    <br>
+
+    <!-- INTRODUCTION OF MICROPROCESSOR START -->
+    <article>
+        <h3 id="IMP">Introduction to Microprocessor</h3>
+        <p>A Microprocessor is an important part of a computer architecture without which you will not be able to perform anything on your computer. It is a programmable device that takes in input performs some arithmetic and logical operations over it and produces the desired output. In simple words, a Microprocessor is a digital device on a chip that can fetch instructions from memory, decode and execute them and give results. </p>
+        <b>Basics of Microprocessor – </b>
+        <p>A Microprocessor takes a bunch of instructions in machine language and executes them, telling the processor what it has to do. Microprocessor performs three basic things while executing the instruction:</p>
+        <ol>
+            <li>It performs some basic operations like addition, subtraction, multiplication, division, and some logical operations using its Arithmetic and Logical Unit (ALU). New Microprocessors also perform operations on floating-point numbers also. </li>
+            <li>Data in microprocessors can move from one location to another. </li>
+            <li>It has a Program Counter (PC) register that stores the address of the next instruction based on the value of the PC, Microprocessor jumps from one location to another and takes decisions. </li>
+        </ol>
+    </article>
+    <!-- INTRODUCTION OF MICROPROCESSOR ENDS -->
+    <br>
+
+    
+
+    <!-- BASIC ORGANIZATIN OF A COMPUTER START -->
+    <article>
+        <h3 id="BOC">Basic Organization of a Computer</h3>
+        <br>
+        <p>Any computer can perform the four basic operations of Input, Processing, Output, and Storage (IPOS). These operations constitute the IPOS cycle. The internal design or structure of a computer may differ from one system to another though the basic operations remain the same. Figure 1.1 provides a block diagram of a computer. The figure displays all the functional units of a computer which carry out the basic computer operations. The lines in the figure indicate the flow of instructions and data, while the Control Unit and the Arithmetic/Logical Unit together direct the flow of control in the central processing unit.</p>
+        <img src="{% static 'mp_img/ch1_boc1.png'%}" class="img-fluid" alt="">
+        <ul>
+            <li>
+                <b>Microprocessor</b>
+                <ol>
+                    <li>ALU</li>
+                    <ul>
+                        <li>This unit executes all arithmetic and logical operations as specified by instruction set; and produces output</li>
+                        <li>The results of addition, subtraction, and logical operations (AND, OR, XOR) are stored in the registers or in memory unit or sent to output unit.</li>
+                    </ul>
+                    <li>Register unit</li>
+                    <ul>
+                        <li>Consists of various registers.</li>
+                        <li>Used for temporary storage of data during execution of data.</li>
+                    </ul>
+                    <li>CU</li>
+                    <ul>
+                        <li>Controls the operations of different instructions.</li>
+                        <li>Provides necessary timing and control signals to all the operations in the MP and peripherals including memory.</li>
+                    </ul>
+                </ol>
+            </li>
+            <li>
+                <b>Memory</b>
+                <ol>
+                    <li>Stores binary information such as instruction and data, and provide these information to MP when required.</li>
+                    <li>To execute programs, the MP reads data and instructions from memory and performs the computing operations.</li>
+                </ol>
+            </li>
+            <li>
+                <b>System bus</b>
+                <ul>
+                    <li>The system bus is a communication path between MP and peripherals</li>
+                    <li>It is used to carry data, address and control signals.</li>
+                    <li>
+                        It consists:
+                        <p>Data bus: carries data</p>
+                        <p>Address bus: carries address</p>
+                        <p>Control bus: carries control signals</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <b>I/O bus</b>
+                <ul>
+                    <li>Input unit is used to input instruction or data to the MP externally.</li>
+                    <li>Output unit is used to carry out the information from the MP unit.</li>
+                </ul>
+            </li>
+        </ul>
+    </article>
+    <!-- BASIC ORGANIZATIN OF A COMPUTER ENDS -->
+    <br>
+
+    <!-- SAILENT FEATURES START -->
+    <article>
+        <h3 id="8086_sail_feat">8086 Sailent Feature</h3>
+        <br>
+        <ol>
+            <li>Single +5V power supply</li>
+            <li>Clock speed range of 5-10MHz</li>
+            <li>capable of executing about 0.33 MIPS (Millions instructions per second)</li>
+            <li>It is 16-bit processor having 16-bit ALU, 16-bit registers, internal data bus, and 16-bit external data bus resulting in faster processing.</li>
+            <li>It uses two stages of pipelining, i.e. Fetch Stage and Execute Stage, which improves performance.</li>
+            <li>Fetch stage can prefetch up to 6 bytes of instructions and stores them in the queue.</li>
+            <li>It has 256 interrupts.</li>
+        </ol>
+        <b>Architecture of 8086</b>
+        <p>he following diagram depicts the architecture of a 8086 Microprocessor −</p>
+        <img src="{% static 'mp_img/ch1_sail_feat1.png'%}" class="img-fluid" alt="">
+        <p>8086 Microprocessor is divided into two functional units, i.e., EU (Execution Unit) and BIU (Bus Interface Unit).</p>
+        <b>EU (Execution Unit</b><p>Execution unit gives instructions to BIU stating from where to fetch the data and then decode and execute those instructions. Its function is to control operations on data using the instruction decoder & ALU. EU has no direct connection with system buses as shown in the above figure, it performs operations over data through BIU.</p>
+        <strong>functional parts of 8086 microprocessors.</strong>
+        <ul>
+            <li><b>ALU</b></li><p>It handles all arithmetic and logical operations, like +, −, ×, /, OR, AND, NOT operations.</p>
+            <li><b>Flag Register</b></li><p>It is a 16-bit register that behaves like a flip-flop, i.e. it changes its status according to the result stored in the accumulator. It has 9 flags and they are divided into 2 groups − Conditional Flags and Control Flags.</p>
+            <li>
+                <b>BIU (Bus Interface Unit)</b>
+                <p>BIU takes care of all data and addresses transfers on the buses for the EU like sending addresses, fetching instructions from the memory, reading data from the ports and the memory as well as writing data to the ports and the memory. EU has no direction connection with System Buses so this is possible with the BIU. EU and BIU are connected with the Internal Bus.</p>
+                <p>It has the following functional parts </p>
+                <ul>
+                    <li><b>Instruction queue</b></li>
+                    <p> BIU contains the instruction queue. BIU gets upto 6 bytes of next instructions and stores them in the instruction queue. When EU executes instructions and is ready for its next instruction, then it simply reads the instruction from this instruction queue resulting in increased execution speed.</p>
+                    <p>Fetching the next instruction while the current instruction executes is called pipelining.</p>
+                    <b><li>Segment register </li></b><p>BIU has 4 segment buses, i.e. CS, DS, SS& ES. It holds the addresses of instructions and data in memory, which are used by the processor to access memory locations. It also contains 1 pointer register IP, which holds the address of the next instruction to executed by the EU.</p>
+                    <li><b>CS</b></li><p>It stands for Code Segment. It is used for addressing a memory location in the code segment of the memory, where the executable program is stored.</p>
+                    <li><b>DS</b></li><p>It stands for Data Segment. It consists of data used by the program andis accessed in the data segment by an offset address or the content of other register that holds the offset address.</p>
+                    <li><b>SS</b></li><p>It stands for Stack Segment. It handles memory to store data and addresses during execution.</p>
+                    <li><b>ES</b></li><p>t stands for Extra Segment. ES is additional data segment, which is used by the string to hold the extra destination data.</p>
+                    <li><b>Instruction pointer</b></li><p>It is a 16-bit register used to hold the address of the next instruction to be executed.</p>
+                </ul>
+
+            </li>
+            <li>
+                <b>Concept of Pipelining</b>
+                <p>fetching the next instruction while the current instruction executes is known as pipelining to speed up program execution, the bus interface unit fatches as many as 6 instruction bytes ahead of time from the memory and these are held for execution unit in the (FIFO) group of registers called QUEUE.</p>
+                <p>The BIU can fetch instruction byte while EU is decoding or executing an instruction which does not require the use of buses. When is EU is ready for the next instruction, it simply reads the instruction from queue in the BIU.</p>
+                <p>the Queue is fellied when at least two bytes are empty as 8086 has a 16 bit data bus</p>
+            </li>
+        </ul>
+    </article>
+    <!-- SAILENT FEATURES END -->
+    <br>
+
+    <!-- 8086 ARCHITECTURE AND WORKING START -->
+        <article>
+            <h3 id="8086_arch_work">8086 Architecture and Working</h3>
+            <br>
+            <h5>Architecture of 8086</h5>
+            <p>A Microprocessor is an Integrated Circuit with all the functions of a CPU however, it cannot be used stand alone since unlike a microcontroller it has no memory or peripherals. </p>
+            <p>8086 does not have a RAM or ROM inside it. However, it has internal registers for storing intermediate and final results and interfaces with memory located outside it through the System Bus.</p>
+            <p>In case of 8086, it is a 16-bit Integer processor in a 40 pin, Dual Inline Packaged IC. </p>
+            <p>The size of the internal registers(present within the chip) indicate how much information the processor can operate on at a time (in this case 16-bit registers) and how it moves data around internally within the chip, sometimes also referred to as the internal data bus. </p>
+            <p>8086 provides the programmer with 14 internal registers, each 16 bits or 2 Bytes wide. </p>
+            <p>Memory segmentation: </p>
+            <ul>
+                <li>To increase execution speed and fetching speed, 8086 segments the memory. </li>
+                <li>It’s 20 bit address bus can address 1MB of memory, it segments it into 16 64kB segments. </li>
+                <li>8086 works only with four 64KB segments within the whole 1MB memory.</li>
+            </ul>
+            <p>The internal architecture of Intel 8086 is divided into 2 units: The Bus Interface Unit (BIU), and The Execution Unit (EU). These are explained as following below. </p>
+            <ol>
+                <li>
+                    <b>The Bus Interface Unit (BIU):</b>
+                    <p>It provides the interface of 8086 to external memory and I/O devices via the System Bus. It performs various machine cycles such as memory read, I/O read etc. to transfer data between memory and I/O devices. </p>
+                    <p>BIU performs the following functions- </p>
+                    <ul>
+                        <li>It generates the 20 bit physical address for memory access.</li>
+                        <li>It fetches instructions from the memory.</li>
+                        <li>It transfers data to and from the memory and I/O.</li>
+                        <li>Maintains the 6 byte prefetch instruction queue(supports pipelining).</li>
+                    </ul>
+                    <p>BIU mainly contains the 4 Segment registers, the Instruction Pointer, a prefetch queue and an Address Generation Circuit. </p>
+                    <br>
+                    <b>Instruction Pointer (IP): </b>
+                    <ul>
+                        <li>It is a 16 bit register. It holds offset of the next instructions in the Code Segment.</li>
+                        <li>IP is incremented after every instruction byte is fetched.</li>
+                        <li>IP gets a new value whenever a branch instruction occurs.</li>
+                        <li>CS is multiplied by 10H to give the 20 bit physical address of the Code Segment.</li>
+                        <li>Address of the next instruction is calculated as CS x 10H + IP.</li>
+                    </ul>
+                    <br>
+                    <b>Example: </b>
+                    <p class="note"> CS = 4321H TP = 1000H <br> then CS x10H = 43210H + offset = 210H</p>
+                    <br>
+                    <p>This is the address of the instruction. </p>
+                    <p><b>Code Segment register: </b></p>
+                    <p>CS holds the base address for the Code Segment. All programs are stored in the Code Segment and accessed via the IP. </p>
+                    <p><b>Data Segment register: </b></p>
+                    <p>DS holds the base address for the Data Segment</p>
+                    <p><b>Stack Segment register: </b></p>
+                    <p>SS holds the base address for the Stack Segment.</p>
+                    <p><b>Extra Segment register: </b></p>
+                    <p>ES holds the base address for the Extra Segment. </p>
+                    <p><b>Address Generation Circuit:</b></p>
+                    <ul>
+                        <li>The BIU has a Physical Address Generation Circuit.</li>
+                        <li>It generates the 20 bit physical address using Segment and Offset addresses using the formula: </li>
+                        <p class="note">Physical Address = Segment Address x 10H + Offset Address</p>
+                    </ul>
+                    <b>6 Byte Pre-fetch Queue: </b>
+                    <ul>
+                        <li>It is a 6 byte queue (FIFO).</li>
+                        <li>Fetching the next instruction (by BIU from CS) while executing the current instruction is called pipelining.</li>
+                        <li>Gets flushed whenever a branch instruction occurs. </li>
+                    </ul>
+                </li>
+                <li>
+                    <b>The Execution Unit (EU):</b>
+                    <p>The main components of the EU are General purpose registers, the ALU, Special purpose registers, Instruction Register and Instruction Decoder and the Flag/Status Register. </p>
+                    <ol>
+                        <li>Fetches instructions from the Queue in BIU, decodes and executes arithmetic and logic operations using the ALU.</li>
+                        <li>Sends control signals for internal data transfer operations within the microprocessor.</li>
+                        <li>Sends request signals to the BIU to access the external module.</li>
+                        <li>It operates with respect to T-states (clock cycles) and not machine cycles.</li>
+                    </ol>
+                    <p>8086 has four 16 bit general purpose registers AX, BX, CX and DX. Store intermediate values during execution. Each of these have two 8 bit parts (higher and lower). </p>
+                    <ul>
+                        <li>AX register: </li>
+                        <p>It holds operands and results during multiplication and division operations. Also an accumulator during String operations.</p>
+                        <li>BX register: </li>
+                        <p>It holds the memory address (offset address) in idirect addressing modes. </p>
+                        <li>CX register: </li>
+                        <p>It holds count for instructions like loop, rotate, shift and string operations. </p>
+                        <li>DX register: </li>
+                        <p>It is used with AX to hold 32 bit values during multiplication and division. </p>
+                    </ul>
+                    <b>Arithmetic Logic Unit (16 bit): </b>
+                    <p>Performs 8 and 16 bit arithmetic and logic operations. </p>
+                    <b>Special purpose registers (16-bit): </b>
+                    <ul>
+                        <li>Stack Pointer: </li><p>Points to Stack top. Stack is in Stack Segment, used during instructions like PUSH, POP, CALL, RET etc</p>
+                        <li>Base Pointer: </li><p>BP can hold offset address of any location in the stack segment. It is used to access random locations of the stack.</p>
+                        <li>Source Index: </li><p>It holds offset address in Data Segment during string operations.</p>
+                        <li>Destination Index: </li><p>It holds offset address in Extra Segment during string operations.</p>
+                    </ul>
+                    <b>Instruction Register and Instruction Decoder: </b><p>The EU fetches an opcode from the queue into the instruction register. The instruction decoder decodes it and sends the information to the control circuit for execution. </p>
+                    <b>Flag/Status register (16 bits): </b><p>It has 9 flags that help change or recognize the state of the microprocessor. </p>
+                    <b>6 Status flags: </b>
+                    <ol>
+                        <li>carry flag(CF)</li>
+                        <li>parity flag(PF)</li>
+                        <li>auxiliary carry flag(AF)</li>
+                        <li>zero flag(Z)</li>
+                        <li>sign flag(S)</li>
+                        <li>overflow flag (O)</li>
+                        <p>Status flags are updated after every arithmetic and logic operation. </p>
+                    </ol>
+                </li>
+                <li>
+                    <b>3 Control flags: </b>
+                    <ol>
+                         <li>trap flag(TF)</li>
+                         <li>interrupt flag(IF)</li>
+                         <li>direction flag(DF)</li>
+                    </ol>
+                    <p>These flags can be set or reset using control instructions like CLC, STC, CLD, STD, CLI, STI, etc. </p>
+                    <p>The Control flags are used to control certain operations.</p>
+                </li>
+            </ol>
+            <br>
+            <h5>Working of 8086</h5>
+            <ol>
+                <li>The BIU outputs the contents of the instruction pointer register (IP) onto the address bus, causing the selected byte or word to be read into the BIU</li>
+                <li>Register IP is incremented by 1 to prepare for the next instruction fetch.</li>
+                <li>Once inside the BIU, the instruction is passed to the queue</li>
+                <li>Assuming that the queue is initially empty, the EU immediately draws this instruction from the queue and begins execution</li>
+                <li>While the EU is executing this instruction, the BIU proceeds to fetch a new instruction. Depending on the execution time of the first instruction, the BIU may fill the queue with several new instructions before the EU is ready to draw its next instruction.</li>
+            </ol>
+
+            <p>The BIU is programmed to fetch a new instruction whenever the queue has room for two additional bytes. There are three conditions that will cause the EU to enter a “wait” mode or BIU to suspend fetching.</p>
+            <ol>
+                <p>The first one occurs when the instruction requires access to a memory location. Here the BIU must suspend fetching instructions and output the address of this memory location. Then the EU will resume execution.</p>
+                <p>The second will occur when the instruction to be executed is a “jump” instruction. In this case control is to be transferred to a new non-sequential address.</p>
+                <p>The third one will occur during the execution of an instruction that is slow to execute.For example, the instruction AAM (ASCII Adjust for Multiplication) requires 83 clock cycles to complete. At four cycles per instruction fetch, the queue will be completely filled during the execution of this single instruction.</p>
+            </ol>
+        </article>
+    <!-- 8086 ARCHITECTURE AND WORKING END -->
+
+    <br>
+
+    <!-- 8086 MEMORY SEGMETATION START -->
+    <article>
+        <h3 id="8086_mem_segm">8086 Memory Segmentation</h3>
+        <br>
+        <p><b>Segmentation</b> is the process in which the main memory of the computer is logically divided into different segments and each segment has its own base address. It is basically used to enhance the speed of execution of the computer system, so that the processor is able to fetch and execute the data from the memory easily and fast.</p>
+        <b>Need for Segmentation –</b><p>The Bus Interface Unit (BIU) contains four 16 bit special purpose registers (mentioned below) called as Segment Registers.</p>
+        <ul>
+            <li><b>Code segment register (CS):</b>is used for addressing memory location in the code segment of the memory, where the executable program is stored.</li>
+            <li><b>Data segment register (DS):</b>points to the data segment of the memory where the data is stored.</li>
+            <li><b>Extra Segment Register (ES):</b>also refers to a segment in the memory which is another data segment in the memory.</li>
+            <li><b>Stack Segment Register (SS):</b>s used for addressing stack segment of the memory. The stack segment is that segment of memory which is used to store stack data.</li>
+        </ul>
+        <p>The number of address lines in 8086 is 20, 8086 BIU will send 20bit address, so as to access one of the 1MB memory locations. The four segment registers actually contain the upper 16 bits of the starting addresses of the four memory segments of 64 KB each with which the 8086 is working at that instant of time. A segment is a logical unit of memory that may be up to 64 kilobytes long. Each segment is made up of contiguous memory locations. It is an independent, separately addressable unit. Starting address will always be changing. It will not be fixed.</p>
+        <p class="note">Note that the 8086 does not work the whole 1MB memory at any given time. However, it works only with four 64KB segments within the whole 1MB memory.</p>
+        <p>Below is the one way of positioning four 64 kilobyte segments within the 1M byte memory space of an 8086.</p>
+        <img src="{% static 'mp_img/ch1_mem_segm.png'%}" alt="">
+        <p><b>Types Of Segmentation –</b></p>
+        <ol>
+            <li><b>Overlapping Segment –</b>A segment starts at a particular address and its maximum size can go up to 64kilobytes. But if another segment starts along with this 64kilobytes location of the first segment, then the two are said to be Overlapping Segment.</li>
+            <li><b>Non-Overlapped Segment – </b>A segment starts at a particular address and its maximum size can go up to 64kilobytes. But if another segment starts before this 64kilobytes location of the first segment, then the two segments are said to be Non-Overlapped Segment.</li>
+        </ol>
+        <p>Rules of Segmentation Segmentation process follows some rules as follows:</p>
+        <ul>
+            <li>The starting address of a segment should be such that it can be evenly divided by 16.</li>
+            <li>Minimum size of a segment can be 16 bytes and the maximum can be 64 kB</li>
+            <img src="{% static 'mp_img/ch1_mem_segm2.png'%}" alt="">
+        </ul>
+        <p>Advantages of the Segmentation The main advantages of segmentation are as follows:</p>
+        <ul>
+            <p>It provides a powerful memory management mechanism.</p>
+            <p>Data related or stack related operations can be performed in different segments.</p>
+            <p>Code related operation can be done in separate code segments.</p>
+            <p>It allows to processes to easily share data.</p>
+            <p>It allows to extend the address ability of the processor, i.e. segmentation allows the use of 16 bit registers to give an addressing capability of 1 Megabytes. Without segmentation, it would require 20 bit registers.</p>
+            <p>It is possible to enhance the memory size of code data or stack segments beyond 64 KB by allotting more than one segment for each area.</p>
+        </ul>
+    </article>
+    <!-- 8086 MEMORY SEGMETATION END -->
+    <br>
+
+    <!-- 8086 MEMORY BANKING START -->
+    <article>
+        <h3 id="8086_mem_bank">8086 Memory Banking</h3>
+        <br>
+        <p>THe 8086 processor provides a 16-bit data bus. So it is capable of transferring in 16 bit in one cycle but each memory locatin is only of a byte, therefore we need 2 cycles to access16 bit ( 8 bit each) from two different memory location. The solution to this problem is Memory Banking. Through Memory banking, our goal is to access two consecutive memory locatin in one cycle(tranfer 16 bit)</p>
+        <p>The memory chip is equally divided into two parts(banks). One of the banks contains even addresses called Even bank and the other contains odd addresses called Odd bank. Even bank always gives lower byte So Even bank is also called Lower bank(LB) and Odd bank is also called Higher bank(HB).</p>
+        <li>This banking scheme allows to access two aligned memory locations from both banks simultaneously and process 16-bit data transfer. Memory banking doesn’t make it compulsory to transfer 16 bits, it facilitates the 16-bit data transfer. </li>
+        <li>The choice between 8 bit and 16-bit transfer depends on the instructions given by the programmer. </li>
+        <b>Example: </b>
+        <img src="{% static 'mp_img/memory_banking1.png' %}" alt="">
+        <p>The Least Significant bit of address (A0 is not used for byte selection) is reserved for bank selection. Therefore A0=0 will select Even bank. The BHE signal is used for the selection of odd banks. The processor will use a combination of these two signals to decide the type of data transfer. </p> 
+        <img src="{% static 'mp_img/memory_banking2.png' %}" alt="">
+    </article>
+    <!-- 8086 MEMORY BANKING ENDS -->
+    <br>
+
+    <!-- 8086 PIN DIAGRAM START -->
+    <article>
+        <h3 id="8086_pin_diag">8086 Pin Diagram</h3>
+        <p>8086 was the first 16-bit microprocessor available in 40-pin DIP (Dual Inline Package) chip. Let us now discuss in detail the pin configuration of a 8086 Microprocessor.</p>
+        <p>Here is the pin diagram of 8086 microprocessor −</p>
+        <img src="{% static 'mp_img/ch1_pin_diag.jpg' %}" alt="">
+        <p><b>Power supply and frequency signals</b></p><p>It uses 5V DC supply at VCC pin 40, and uses ground at VSS pin 1 and 20 for its operation</p>
+        <b>Clock signal</b><p>Clock signal is provided through Pin-19. It provides timing to the processor for operations. Its frequency is different for different versions, i.e. 5MHz, 8MHz and 10MHz</p>
+        <b>Address/data bus</b><p>AD0-AD15. These are 16 address/data bus. AD0-AD7 carries low order byte data and AD8AD15 carries higher order byte data. During the first clock cycle, it carries 16-bit address and after that it carries 16-bit data.</p>
+        <b>Address/status bus</b><p>A16-A19/S3-S6. These are the 4 address/status buses. During the first clock cycle, it carries 4-bit address and later it carries status signals.</p>
+        <b>S7/BHE</b><p>BHE stands for Bus High Enable. It is available at pin 34 and used to indicate the transfer of data using data bus D8-D15. This signal is low during the first clock cycle, thereafter it is active.</p>
+        <b>Read($\overline{RD}$)</b><p>It is available at pin 32 and is used to read signal for Read operation.</p>
+        <b>Ready</b><p>It is available at pin 22. It is an acknowledgement signal from I/O devices that data is transferred. It is an active high signal. When it is high, it indicates that the device is ready to transfer data. When it is low, it indicates wait state.</p>
+        <b>RESET</b><p>It is available at pin 21 and is used to restart the execution. It causes the processor to immediately terminate its present activity. This signal is active high for the first 4 clock cycles to RESET the microprocessor.</p>
+        <b>INTR</b><p>It is available at pin 18. It is an interrupt request signal, which is sampled during the last clock cycle of each instruction to determine if the processor considered this as an interrupt or not</p>
+        <b>NMI</b><p>It stands for non-maskable interrupt and is available at pin 17. It is an edge triggered input, which causes an interrupt request to the microprocessor.</p>
+        <i>$\overline{TEST}$</i>
+        <p>This signal is like wait state and is available at pin 23. When this signal is high, then the processor has to wait for IDLE state, else the execution continues.</p>
+        <b>MN/$\overline{MX}$</b><p>It stands for Minimum/Maximum and is available at pin 33. It indicates what mode the processor is to operate in; when it is high, it works in the minimum mode and vice-aversa</p>
+        <b>INTA</b><p>It is an interrupt acknowledgement signal and id available at pin 24. When the microprocessor receives this signal, it acknowledges the interrupt</p>
+        <b>ALE</b><p>It stands for address enable latch and is available at pin 25. A positive pulse is generated each time the processor begins any operation. This signal indicates the availability of a valid address on the address/data lines.</p>
+        <b>DEN</b><p>It stands for Data Enable and is available at pin 26. It is used to enable Transreceiver 8286. The transreceiver is a device used to separate data from the address/data bus.</p>
+        <b>DT/R</b><p>It stands for Data Transmit/Receive signal and is available at pin 27. It decides the direction of data flow through the transreceiver. When it is high, data is transmitted out and vice-a-versa.</p>
+        <b>M/IO</b><p>This signal is used to distinguish between memory and I/O operations. When it is high, it indicates I/O operation and when it is low indicates the memory operation. It is available at pin 28.</p>
+        <b>WR</b><p>It stands for write signal and is available at pin 29. It is used to write the data into the memory or the output device depending on the status of M/IO signal.</p>
+        <b>HLDA</b><p>It stands for Hold Acknowledgement signal and is available at pin 30. This signal acknowledges the HOLD signal</p>
+        <b>HOLD</b><p>This signal indicates to the processor that external devices are requesting to access the address/data buses. It is available at pin 31</p>
+        <b>QS1 and QS0</b><p>These are queue status signals and are available at pin 24 and 25. These signals provide the status of instruction queue. Their conditions are shown in the following table −</p>
+        <table>
+            <tr>
+                <th>QS0</th>
+                <th>QS1</th>
+                <th>STATUS</th>
+            </tr>
+            <tr>
+                <th>o</th>
+                <th>0</th>
+                <th>No operation</th>
+            </tr>
+            <tr>
+                <th>0</th>
+                <th>0</th>
+                <th>First byte of opcode from the queue</th>
+            </tr>
+            <tr>
+                <th>1</th>
+                <th>0</th>
+                <th>Empty the queue</th>
+            </tr>
+            <tr>
+                <th>1</th>
+                <th>1</th>
+                <th>Subsequent byte from the queue</th>
+            </tr>
+        </table>
+        <b>S0, S1, S2</b><p>These are the status signals that provide the status of operation, which is used by the Bus Controller 8288 to generate memory & I/O control signals. These are available at pin 26, 27, and 28. Following is the table showing their status −</p>
+        <table>
+            <tr>
+                <th>S2</th>
+                <th>S1</th>
+                <th>S0</th>
+                <th>STATUS</th>
+            </tr>
+            <tr>
+                <th>0</th>
+                <th>0</th>
+                <th>0</th>
+                <th>Interrupt Acknowledgement</th>
+            </tr>
+            <tr>
+                <th>0</th>
+                <th>0</th>
+                <th>1</th>
+                <th>I/O Read</th>
+            </tr>
+            <tr>
+                <th>0</th>
+                <th>1</th>
+                <th>0</th>
+                <th>I/O Write</th>
+            </tr>
+            <tr>
+                <th>0</th>
+                <th>1</th>
+                <th>1</th>
+                <th>Halt</th>
+            </tr>
+            <tr>
+                <th>1</th>
+                <th>0</th>
+                <th>0</th>
+                <th>Opcode fetch</th>
+            </tr>
+            <tr>
+                <th>1</th>
+                <th>0</th>
+                <th>1</th>
+                <th>Memory read</th>
+            </tr>
+            <tr>
+                <th>1</th>
+                <th>1</th>
+                <th>0</th>
+                <th>memory write</th>
+            </tr>
+            <tr>
+                <th>1</th>
+                <th>1</th>
+                <th>1</th>
+                <th>Passive</th>
+            </tr>
+        </table>
+        <b>LOCK</b><P>When this signal is active, it indicates to the other processors not to ask the CPU to leave the system bus. It is activated using the LOCK prefix on any instruction and is available at pin 29.</P>
+        <b>RQ/GT1 and RQ/GT0</b><p>These are the Request/Grant signals used by the other processors requesting the CPU to release the system bus. When the signal is received by CPU, then it sends acknowledgment. RQ/GT0 has a higher priority than RQ/GT1.</p>
+        <br>
+    </article>
+    <!-- 8086 PIN DIAGRAM END -->
+    <br>
+
+</section>
+<!-- CHAPTER 1 ENDS HERE -->
+
+<!-- CHAPTER 2 START -->
+<section class="main-section">
+    <header id="chap2">Chapter 2:8086 Assembly Language </header>
+    <br>
+
+    <!-- Addressing Modes START -->
+    <article>
+        <h3 id="8086_Addg_Modes">8086 Addressing Modes</h3>
+        <p>The different ways in which a source operand is denoted in an instruction is known as addressing modes. There are 8 different addressing modes in 8086 programming −</p>
+        <b>Immediate addressing mode</b><p>The addressing mode in which the data operand is a part of the instruction itself is known as immediate addressing mode.</p>
+        <p>Example</p>
+        <p class="note">MOV CX, 4929 H, ADD AX, 2387 H,  MOV AL, FFH </p>
+        <b>Register addressing mode</b><p>It means that the register is the source of an operand for an instruction.</p>
+        <p>Example</p>
+        <div class="note">
+            MOV CX, AX ; copies the contents of the 16-bit AX register into
+            <p> &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;         ; the 16-bit CX register),</p>
+            ADD BX, AX
+        </div>
+        <b>Direct addressing mode</b>
+        <p>The addressing mode in which the effective address of the memory location is written directly in the instruction.</p>
+        <p>Example</p>
+        <p class="note">MOV AX, [1592H], MOV AL, [0300H]</p>
+        <b>Register indirect addressing mode</b>
+        <p>This addressing mode allows data to be addressed at any memory location through an offset address held in any of the following registers: BP, BX, DI & SI.</p>
+        <p>Example</p>
+        <div class="note">
+                <p>MOV AX, [BX]  ; Suppose the register BX contains 4895H, then the contents</p>
+                <p>&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;; 4895H are moved to AX </p>
+                <p>ADD CX, {BX</p>
+        </div>
+        <b>Based addressing mode</b>
+        <p>In this addressing mode, the offset address of the operand is given by the sum of contents of the BX/BP registers and 8-bit/16-bit displacement.</p>
+        <p>Example</p>
+        <p class="note">MOV DX, [BX+04], ADD CL, [BX+08]</p>
+        <b>Indexed addressing mode</b>
+        <p>In this addressing mode, the operands offset address is found by adding the contents of SI or DI register and 8-bit/16-bit displacements.</p>
+        <p>Example</p>
+        <p class="note">MOV BX, [SI+16], ADD AL, [DI+16] </p>
+        <b>Based-index addressing mode</b>
+        <p>In this addressing mode, the offset address of the operand is computed by summing the base register to the contents of an Index register.</p>
+        <p>Example</p>
+        <p class="note">ADD CX, [AX+SI], MOV AX, [AX+DI] </p>
+        <b>Based indexed with displacement mode</b>
+        <p>In this addressing mode, the operands offset is computed by adding the base register contents. An Index registers contents and 8 or 16-bit displacement.</p>
+        <p>Example</p>
+        <p class="note">MOV AX, [BX+DI+08], ADD CX, [BX+SI+16]</p>
+    </article>
+    <!-- Addressing Modes END -->
+    <br>
+
+    <!-- DATA MEMORY ADDRESSING MODES START -->
+    <article>
+        <h3 id="Data_mem_addrg_mode">Data Memory Addressing Mode</h3>
+        <p>In this type of addressing mode, first the offset address is calculated, then the memory address is calculated and then the operand form that memory location is fetched. There are following modes which lie under the Data Addressing Mode:</p>
+        <ol>
+            <li>
+                <h5><b>Direct Addressing Mode</b></h5>
+                <p>In this addressing mode, the offset is specified within the instructions. What this means is that the offset address is directly stored within square brackets and is not present inside any register.</p>
+                <b>Example:</b>
+                <p class="note">MOV AL, [4000H] <br>  MOV [1234H], BX </p>
+            </li>
+            <li>
+                <h5><b>Base Addressing Mode</b></h5>
+                <p>In this addressing mode, the offset address for any operand is stored in the base register BX.</p>
+                <b>Example:</b>
+                <p class="note">MOV AL, [BX]</p>
+            </li>
+            <li>
+                <h5><b>Base Relative Addressing Mode</b></h5>
+                <p>In this addressing mode also, the offset address is stored within the Base register but the difference is that there is some displacement present with it. This displacement can be either of 8 bits or 16 bits. Hence, the offset address will be equal to the contents of the base register + 8/16 bit displacement.</p>
+                <b>Example:</b>
+                <p class="note">MOV AL, [BX + 05H]	{here, displacement is of 8 bits} <br> MOV AL, [BX+1243H] 	{here, displacement is of 16 bits}</p>
+            </li>
+            <li>
+                <h5><b>Index Addressing Mode</b></h5>
+                <p>In this addressing mode, the offset address is defined in the Index Register. (It should be noted here that the Index registers act as an offset for Data Segment as well.) So, the memory location of the operand is calculated with the help of DS and SI.</p>
+                <b>Example:</b>
+                <p class="note">MOV BL, [SI] <br> MOV [SI], DH</p>
+            </li>
+            <li>
+                <h5><b>Index relative addressing mode</b></h5>
+                <p>In this addressing mode, the offset address is equal to the content of index register plus the 8 or 16-bit displacement. It is important to note here that the displacement in all relative addressing modes is a signed number, i.e. the displacement value can either be a positive or a negative hexadecimal number.</p>
+                <b>Example:</b>
+                <p class="note ">MOV BL, [SI + 07H] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  {Here, the displacement is of 8 bits} <br>  MOV BL, [SI – 3034H] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 	{Here, the displacement is of 16 bits}</p>
+            </li>
+            <li>
+                <h5><b>Base plus Index Addressing Mode</b></h5>
+                <p>In this addressing Mode, the offset address is calculated by both the base register and the index register. Hence, the offset address will be equal to the content of the base register plus the content of the Index register.</p>
+                <b>Example:</b>
+                <p class="note">MOV AL, [BX + SI] <br>    MOV [BX + SI], CL</p>
+            </li>
+            <li>
+                <h5><b>Base relative plus Index Addressing Mode</b></h5>
+                <p>This addressing mode is almost same to the Base plus Index Addressing mode, but like the other relative addressing modes, the difference is only that this mode has a displacement of 8 or 16 bits.</p>
+                <b>Example:</b>
+                <p class="note">MOV CL, [BX + SI + 0AH] &nbsp;&nbsp;&nbsp;&nbsp;    {here, the displacement is of 8 bits}  <br>    MOV AL, [BX + SI + AE07H] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  {here, the displacement is of 16 bits}</p>
+            </li>
+        </ol>
+    </article>
+    <!-- DATA MEMORY ADDRESSING MODES END -->
+    <br>
+
+    <!-- I/O ADDRESSING MODES OF 8086 START -->
+    <article>
+        <h5 id="i/o_addrg_modes">I/O Addressing Modes of 8086</h5>
+        <ol>
+            <li>The 8086 can generate 16-bit of I/O address. Thus it can address up to 64 Kbyte I/O locations or 32 K word I/O locations. </li>
+            <li>The 16-bit I/O address appears on A_0 to A_15 address lines; A_16 to A_19 lines are at logic 0 during the I/O operations. </li>
+            <li>The 16-bit DX register is used as 16-bit I/O address pointer to address up to 64 IC devices in in-direct addressing mode. </li>
+            <li>The 1/0 instructions with direct addressing mode can directly address one or two of the 256 I/O byte locations in page 0 of the 1/0 address space.</li>
+            <img src="{% static 'mp_img/ch2_io_addrg_mode.png' %}" class="img-fluid" alt="Error 404">
+            <p>I/0 ports are addressed in the same manner as memory locations. Even addressed bytes are transferred on the D_7-D_0 bus lines and odd addressed bytes onD_15-D_8.</p>
+            <p>Care must be taken to assure that each register within an 8-bit peripheral located on the lower portion of the bus be addressed as even. </p>
+            <p>In the I/O space, Intel has reserved 00F8H to 00FF locations.</p>
+        </ol>
+    </article>
+    <!-- I/O ADDRESSING MODES OF 8086 END -->
+    <br>
+
+    <!-- ADDRESSING MODES FOR PROGRAM MEMORY START -->
+    <article>
+        <h3 id="addrg_mode_pgm_mem">Addressing Modes for Program Memory</h3>
+        <p>The Program Memory Addressing mode is used in branch instructions. These branch instructions are instructions which are responsible for changing the regular flow of the instruction execution and shifting the control to some other location. In 8086 microprocessor, these instructions are usually JMP and CALL instructions</p>
+        <p>The Program memory Addressing Mode contains further three addressing modes within it. They are:</p>
+        <ol>
+            <li>
+                <h5><b>Direct Program Memory Addressing</b></h5>
+                <p>In this addressing mode, the offset address where the control is to be shifted is defined within the instruction. This mode is called direct addressing mode because the required address is directly present in the instruction rather than being stored in some register.</p>
+                <p>Example:</p>
+                <p class="note">JMP 4032H</p>
+                <p>Here, the working of the above instruction will be as follows:</p>
+                <p>The current value of IP which holds the address of next instruction to be executed will be stored in the TOP OF THE STACK. Now, the IP will be replaced by the mentioned value, i.e. IP <- 4032H</p>
+                <p>Now, the Memory address is calculated as: (Contents of CS) X 10H + (contents of IP)</p>
+            </li>
+            <li>
+                <h5><b>Indirect Program Addressing mode</b></h5>
+                <p>As the name suggests, in this addressing mode, the offset address is not present directly in the instruction. It is rather stored in any of the CPU registers (Internal Register). So, the contents of the Instruction Pointer (IP) will be replaced by the contents of that register.</p>
+                <b>Example:</b>
+                <p class="note">JMP BX</p>
+                <b>Working:</b>
+                <p>Suppose that the content of the BX register is 0003H. So, the working of the microprocessor for executing the above instruction will be as follows:</p>
+                <div class="note">
+                    <p> IP <- contents of BX</p>
+                    <p>i.e.&nbsp; IP <- 0003H</p>
+                </div>
+                <p>And the required memory address is calculated in a similar way as in Direct Addressing mode: (Contents of CS) X 10H + (contents of IP)</p>
+            </li>
+            <li>
+                <h5><b>Relative Program Memory Addressing</b></h5>
+                <p>In this Addressing mode, the offset address is equal to the content of the Instruction Pointer (IP) plus the 8 or 16-bit displacement. For the 8 bit displacement, SHORT is used and for 16-bit displacement, LONG is used. This type of displacement will only be intra-segment, i.e. within the segment.</p>
+                <b>Example:</b>
+                <p class="note">JMP SHORT OVER</p>
+                <p>Here, SHORT is used to represent the 8-bit displacement and OVER is the Label defined for any particular memory location.</p>
+            </li>
+        </ol>
+
+    </article>
+    <!-- ADDRESSING MODES FOR PROGRAM MEMORY END -->
+    <br>
+
+    <!-- 8086 SOFTWARE MODEL START -->
+    <article>
+        <h3 id="soft_mdl">8086 Software Model</h3>
+        <img src="{% static 'mp_img/ch2_soft_mdl_8086.jpg' %}" alt="">
+        <p>Software Mode, also called Programmers model, Means all the refisters available to the progreammer. ID Programmers Model is asked in the exam, draw the above diagram and explain all the registers from the architecture answer</p>
+        <p>It must include <b>All GPRs: AC, BX, CX,DX. Segment Register: CS, SS,DS,ES, akk Offset Regisers: IP, SO, BP,SI, DI and Flag Register</b></p>
+        <p>The explanation of these register has alreafy been included in architecture</p>
+
+    </article>
+    <!-- 8086 SOFTWARE MODEL END -->
+
+    <br>
+
+    <!-- 8086 INSTRUCTION SET START -->
+    <article>
+        <h3 id="8086_intutn_set ">8086 Instruction Set</h3>
+        <b>Classification of Instruction Set of 8086</b>
+        <ol>
+            <li>
+                <b>Data Tranfer Instruction</b>
+                <p>Eg: MOV, PUSH, POP</p>
+            </li>
+            <li>
+                <b>Arithmetic Instruction</b>
+                <p>Eg: ADD, SUB, MUL</p>
+            </li>
+            <li>
+                <b>Logic Instruction(Bit Manipulatin Instruction)</b>
+                <p>Eg:AND, OR, XOR</p>
+            </li>
+            <li>
+                <b>Shift Instruction And Rotate Instruction</b>
+                <p>Eg: ROL, RCL, ROR, SHL</p>
+            </li>
+            <li>
+                <b>Program Execution and Transfer Instruction(Branch Instruction)</b>
+                <p>Eg: JMP, CALL, JC</p>
+            </li>
+            <li>
+                <b>Iteration Control Instruction(Loop Instruction)</b>
+                <p>Eg: LOOP, LOOPZ,LOOPNE</p>
+            </li>
+            <li>
+                <b>Processor Control Instructions(Instructin Operating on Flag)</b>
+                <p>Eg: STC , CLC, CMC</p>
+            </li>
+            <li>
+                <b>External Hardware Synchronization Instructions</b>
+                <p>Eg: LOCK, ECS, WAIT</p>
+            </li>
+            <li>
+                <b>Interrupt Control Instruction</b>
+                <p>Eg: INT n, IRET, INTO (Interrupt on overflow)</p>
+            </li>
+            <li>
+                <b>String Instruction</b>
+                <p>Eg: MOVSB, LODSB, STOSB</p>
+            </li>
+        </ol>
+    </article>
+    <!-- 8086 INSTRUCTION SET END -->
+
+    <br>
+
+    <!-- DATA TRANFER INSSTRUCTINO START -->
+    <article>
+        <h3 id="dtinst">Data Tranfer Instruction</h3>
+        <p>The data transfer instructions are used to transfer data from one location to another. This transfer of data can be either from register to register, register to memory or memory to register.</p>
+        <p>It is important to note here that the memory to memory transfer of data directly is not possible.</p>
+        <p>Following are some instructions that are used for data transfer purpose:</p>
+        <ol>
+            <li>MOV</li>
+            <li>PUSH</li>
+            <li>POP</li>
+            <li>XCHG</li>
+            <li>LAHF</li>
+            <li>SAHF</li>
+            <li>IN</li>
+            <li>OUT</li>
+            <li>LDS</li>
+            <li>LES</li>
+        </ol>
+        <ol>
+            <li>
+                <b>MOV</b>
+                <p>This instruction simply copies the data from the source to the destination.</p>
+                <div class="note">
+                    <p>   Syntax: 	MOV destination , source</p>
+                    <p>    Example: 	MOV AX, BX</p>
+                </div>
+            </li>
+            <li>
+                <b>PUSH</b>
+                <p>This instruction is used to push data into the stack.</p>
+                <div class="note"> 
+                    <p> Syntax:     PUSH source</p>
+                    <p>Example:    PUSH CX</p>
+                    <!-- <p>Working:    SP  <-  SP - 1</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[SP] <- CH</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SP <-  SP - 1</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[SP]  <-  CL</p> -->
+                </div>
+            </li>
+            <li>
+                <b>POP</b>
+                <p>This instruction is used to get the data from the stack.</p>
+                <div class="note">
+                    <p>Syntax:     POP destination</p>
+                    <p>Example:    POP CX</p>
+                    <!-- <p>Working:    CL<-  [SP]</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SP <- SP + 1</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CL  <-  [SP]</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SP <-  SP+ 1</p> -->
+                </div>
+            </li>
+            <li>
+                
+                <b>XCHG</b>
+                <p>It exchanges the contents of the source and the destination.</p>
+                <div class="note">
+                    <p>Syntax:     XCHG destination, source</p>
+                    <p>Example:    XCHG BL, AL</p>
+                </div>
+            </li>
+            <li>
+                <b>LAFH</b>
+                <p>It stands for 'Load AHfrom Flag register'. This instruction will, therefore, load the AH register with the content of lower byte of the flag register</p>
+                <div>
+                    <!-- <p>Syntax:     LAHF</p>
+                    <p>Working:    AH <- lower byte of the flag register</p> -->
+                </div>
+            </li>
+            <li>
+                <b>SAHF</b>
+                <p>t stands for 'Store AH to Flag register'. This instruction stores the content of AH register to the lower byte of flag register.</p>
+                <div class="note">
+                    <!-- <p>Syntax:     SAHF</p>
+                    <p>Working:    Lower Byte of flag register <- AH</p> -->
+                </div>
+            </li>
+            <li>
+                <b>IN</b>
+                <p>This instruction is used to transfer data from the input unit to accumulator.</p>
+                <div>
+                    <p>Syntax:     IN accumulator, Port address</p>
+                    <p>Working:    The content from the input unit whose address in mentioned in the instruction is transferred to the accumulator </p>
+                    
+                    <p>Example:    IN AX, 1326H</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; IN AL, DX</p>
+                </div>
+            </li>
+            <li>
+                <b>OUT</b>
+                <p>This instruction is used to transfer data from accumulator to the output unit.</p>
+                <div class="note">
+                    <p>Syntax:     OUT Port address, accumulator</p>
+                    <p>Working:    The content from the accumulator which is the AX registeris</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; transferred to the output unit whose address in mentioned in </p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; the instruction.</p>
+                    <p>Example:    OUT 1326H, AL</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; OUT DX, AX</p>
+                </div>
+            </li>
+            <li>
+                <b>LDS</b>
+                <p>This instruction will load the register that is defined in the instruction and the data segment (DS) from the source.</p>
+                <div class="note">
+                    <p>Syntax:     LDS destination, source</p>
+                    <p>Example:    LDS BX , [SI]</p>
+                    <!-- <p>Working:    BL <-  [SI]</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BH  <-  [SI + 1]</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DS  <-  [ SI + 3  :  SI + 2]</p> -->
+                </div>
+            </li>
+            <li>
+                <b> LES</b>
+                <p>The working and syntax of this instruction is the same as the LDS. The difference is only that instead of data segment register (DS), Extra Segment register (ES) is used.</p>
+            </li>
+        </ol>
+
+    </article>
+    <!-- DATA TRANFER INSSTRUCTINO END -->
+
+    
+</section>
+<!-- CHAPTER 2 END -->
 <!-- INTRODUCTION SECTION STARTS HERE -->
 <section class="main-section">
     <header>
@@ -53,6 +947,10 @@
 
     </article>
 </section>
+
+<br>
+
+
 
 <!-- INTRODUCTION SECTION ENDS HERE -->
 

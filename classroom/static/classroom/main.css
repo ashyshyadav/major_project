@@ -19,6 +19,19 @@ table, th, td{
    text-align: left;
 }
 
+
+/* Scroll UP STARTS HERE */
+
+#scroll-up {
+  position: fixed;
+  top: 95vh;
+  right: 10vh;
+  display:none;
+  
+}
+/* SCROLL UP ENDS HERE */
+
+
 /*Table Styling ends here*/
 /* <a> tag style */
 .main--section a{
