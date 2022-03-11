@@ -4,7 +4,7 @@
 
 <!-- INDEX STARTS HERE -->
 <section class="main-section">
-    <header>INDEX</header>
+    <header id="index">INDEX</header>
     <br><br>
     <ul>
         <li><h5><a href="#Chapter_1">Chapter 1: Introduction to multimedia</a></h5></li>
@@ -241,7 +241,7 @@
                     <li>Examples of impact printers:</li>
                     <ul>
                         <li>Dot−matrix printers: <p>These printers are examples of impact printers. They print one character at a time and their speed is measured in characters per second.</p>
-                        <img src="{% static 'css_img/Dot-matrix printer.png'%}" class="img-fluid" alt="Error 404 Image not found">
+                        {% comment %} <img src="{% static 'css_img/Dot-matrix printer.png'%}" class="img-fluid" alt="Error 404 Image not found"> {% endcomment %}
                         </li>
                         <li>Dot matrix printer:</li>
                         <ul>
@@ -250,7 +250,7 @@
                             <li>These printers are slow and noisy and are not usually used for personal computers anymore.</li>
                             <li>However, since the printing cost is less and several carbon-copies can be printed at the same time, they are used to print airline tickets and shop receipts (shown in fig. above)</li>
                             <li>Daisy wheel printer</li>
-                            <img src="{% static 'css_img/Daisywheelprinter.png'%}" class="img--fluid" alt="Error 404 Image not Found">
+                             {% comment %} <img src="{% static 'css_img/Daisywheelprinter.png'%}" class="img--fluid" alt="Error 404 Image not Found"> {% endcomment %}
                         </ul>
                 <li>Daisy wheel printers:</li>
                         </ul>
@@ -259,7 +259,7 @@
                             <li>These printers are able to print letter-quality documents. These documents have the same quality as that produced by a typewriter However, they cannot print graphics. They are slow and expensive than dot matrix printers.</li>
                             <li>In these printers, the print head is like a daisy flower and is made up of metallic or plastic wheels. A raised character is placed on the top of the arms of the wheel. For printing any character, the print wheel is rotated until the desired character is under the print hammer. The arm is then struck from behind by the print hammer against the ink ribbon and paper, creating the character.</li>
                             <li>Drum printers: </li>
-                            <img src="{% static 'css_img/Drumprinter.png'%}" class="img-fluid" alt="Error 404 Image not Found">
+                            {% comment %} <img src="{% static 'css_img/Drumprinter.png'%}" class="img-fluid" alt="Error 404 Image not Found"> {% endcomment %}
                             <p>These printers are much faster than the dot matrix and daisy wheel printers as they print a line in a single operation. • Thus, drum printers are quiet loud, very expensive and produce low quality print. • In these printers, a complete character set is embossed around the circumference of a drum at every print position. For instance, for 110-column printer there are 110 character sets wrapped around the circumference of the drum. • Thus, the drum revolves continuously and when the character is to be printed, the hammer strikes the character.</p>
                         </ul>
                     </ul>    
@@ -271,9 +271,9 @@
                     <ol>
                         <li>Inkjet printers: <p>The most commonly used printer for home computers is the inkjet printer. These printers form the images on paper by spraying tiny droplets of ink from the print head. Several colored ink can be used to produce colorful printouts.</p></li>
                         <li>Inkjet printers hardly make any noise: <p>They are relatively cheap to manufacture but the high cost of the ink make them expensive to operate in the long run.</p></li>
-                        <img src="{% static 'css_img/IPHMAN.png'%}" class="img-fluid" alt="Error 404 Image not Found">
+                        {% comment %} <img src="{% static 'css_img/IPHMAN.png'%}" class="img-fluid" alt="Error 404 Image not Found"> {% endcomment %}
                         <li>Laser printers: <p>These printers produce marks on paper by using a fine dust called toner. A laser makes the toner stick to the paper forming characters or images. The cost of Laser printers is high but they are cheap to use. A single toner cartridge can print 5000-10,000 pages. The printing is done relatively quietly and very fast compared to other printers, a page is printed in a few seconds. For these reasons laser printers are preferred in offices.</p></li>
-                        <img src="{% static 'css_img/laser.png'%}" alt="">
+                        {% comment %} <img src="{% static 'css_img/laser.png'%}" alt=""> {% endcomment %}
                     </ol>
                 </ul>
             </ul>
@@ -287,7 +287,7 @@
           <b>Scanner:</b>
           <li>An image scanner—often abbreviated to just scanner, is a device that optically scans images, printed text, handwriting or an object and converts it to a digital image.</li>
           <li>Converting a paper document to digital image.</li>
-          <img src="{% static 'css_img/Scanner.png'%}" class="img-fluid" alt="Error 404 Image not Found">
+          {% comment %} <img src="{% static 'css_img/Scanner.png'%}" class="img-fluid" alt="Error 404 Image not Found"> {% endcomment %}
           <li>Scanning bed in the scanner, a glass plate is utilized to place a document for scanning.</li>
           <li>A light source is mounted on a traction mechanism which moves from one end of the document to other end during scan session.</li>
           <li>A mirror is used to reflect each illuminated scan line to fixed CCD array as light source moves across the document.</li>
@@ -295,7 +295,7 @@
           <li>Once the scan is complete, the image is transferred to a computer via USB.</li>
           <b>Types of Scanner:</b>
           <li>Rotary Drum Scanner:</li>
-            <img src="{% static 'css_img/rdscanner.png'%}" class="img-fluid" alt="Error 404 Image not Found">
+            {% comment %} <img src="{% static 'css_img/rdscanner.png'%}" class="img-fluid" alt="Error 404 Image not Found"> {% endcomment %}
             <li>In case of flatbed scanner at a time we can scan only one side of paper. But mechanism of rotary drum scanner is somewhat different that is in which two digital cameras with CCD array are mounted in a fixed position near the drum.</li>
             <li>As per the name suggest this scanner contains drum to wrap the paper and two set of belts three set roller guides to guide the paper.</li>
             <li>So this rotary drum scanner will scan both the sides of papers in single attempt and scanning mechanism with CCD array is same like flatbed scanner.</li>
@@ -303,7 +303,7 @@
             <li>The front side of the page is scanned in position 1 as it is around the drum and the back side of the page is scanned in position 2 as the transport mechanism pulls the paper from the drum and ejects it out to the stacking tray.</li>
           </ol>
           <li>Handheld Scanner:</li>
-          <img src="{% static 'css_img/hhscanner.png'%}" class="img-fluid" alt="Error 404 Image not Found">
+          {% comment %} <img src="{% static 'css_img/hhscanner.png'%}" class="img-fluid" alt="Error 404 Image not Found"> {% endcomment %}
           <ol>
             <li>Hand held document scanners are manual devices that are dragged across the surface of the image to be scanned.</li>
             <li>Scanning documents in this manner requires a steady hand, as an uneven scanning rate would produce distorted images.</li>
@@ -318,7 +318,7 @@
 
         <!-- PLOTTER STARTS HERE -->
         <h4>Plotter</h4>
-        <img src="{% static 'css_img/plotter.jpg'%}"  class="img-fluid" alt="">
+        {% comment %} <img src="{% static 'css_img/plotter.jpg'%}"  class="img-fluid" alt=""> {% endcomment %}
         <ul>
           <li>Plotters are special output devices that use pens to draw on paper. The pens are held in an arm that can move up and down across the paper. The arm and the pen together can draw just like a human but more accurately and quickly. Different colored pens can be used to get colored drawings. Plotters are used by designers and architects since they work with large pieces of paper.</li>
           <li>Plotters are widely used in applications such as computer aided design.</li>
@@ -398,7 +398,7 @@
               </table>
             </ul>
             <li>Logical structure: <p>The DVD is essentially made up of three zones, which represent information area,</p></li>
-            <img src="{% static 'css_img/lgstr.jpg'%}"  class="img-fluid" alt="">
+            {% comment %} <img src="{% static 'css_img/lgstr.jpg'%}"  class="img-fluid" alt=""> {% endcomment %}
             <ul>
               <li>Lead-in Area (or LIA for short) only contains data which describes the disc's contents (this information is stored in the Table of Contents). This area lets the DVD player/drive to synchronize itself with the data found in the program area.</li>
               <li>The Program Area is the area which contains the data.</li>
@@ -488,8 +488,16 @@
         <h2 id="Text_File_Format">Text File Format</h2>
         <br>
 
-        <!-- RTF START -->
-      <h4>RTF text file format</h4>
+
+<section class="main-section">
+  <header id="Chapter_2">Chapter 2: Text and Digital Image</header>
+  <br>
+   <!--INTRODUCTION TO DIGITAL TEXT STARTS  -->
+  <h2 id="Introduction_to_Digital_Text">Introduction to Digital Text</h2>
+  <br>
+  <article>
+    <!-- TEXT DIGITAL REPRESENTATION START -->
+    <h4>How Text can be Digitally Representation?</h4>
       <ul>
         <li>A file format is a standard way that information is encoded for storage in a computer file.</li>
         <li>A file format specifies how bits are used to encode information in a digital storage medium.</li>
@@ -532,9 +540,9 @@
       <li>The TIFF design is flexible enough to take advantage of the functionality offered by image capture devices.</li>
       <li>TIFF is extensible, allowing new enhancing specification without sacrificing download compatibility.</li>
       <li><b>TIFF file format header</b></li>
-      <img src="{% static 'css_img/tiff_ffh.png'%}" class="img-fluid" alt="">
+      {% comment %} <img src="{% static 'css_img/tiff_ffh.png'%}" class="img-fluid" alt=""> {% endcomment %}
       <li><b>Structure of TIFF Image File Directory (IFD)</b></li>
-      <img src="{% static 'css_img/tiff_ifd.jpg'%}"  class="img-fluid" alt="">
+      {% comment %} <img src="{% static 'css_img/tiff_ifd.jpg'%}"  class="img-fluid" alt=""> {% endcomment %}
       <i>In tagged file formats, tags are used to keep all attribute information in a standard manner . For e.g. The TIFF file format provides tags that store information such as:</i>
       <li>about resolution,</li>
       <li>pixel information,</li>
@@ -693,7 +701,7 @@
         <p>Following is Uncompressed string:</p>
         <b>PPPPPPPPPPPPPPPPPPPPPP</b>
         <li>Compressed string with RLE:</li>
-        <img src="{% static 'css_img/cs_rle.png'%}" class="img-fluid" alt="not found">
+        {% comment %} <img src="{% static 'css_img/cs_rle.png'%}" class="img-fluid" alt="not found"> {% endcomment %}
         <li>The 20P code generated to represent character string is called RLE Packet.</li>
         <li> Two bytes are required to store '20P'.</li>
         <li>First 1 byte require to store 20 and second byte is required to store 'Run value' i.e. 'P' But, initially uncompressed string require 20 bytes to store same data.</li>
@@ -701,15 +709,15 @@
         <b>Advantages</b>
         <li>A black and white image that is mostly white, such as page of book will encode very well due to large amount of contiguous data that is all the same color.</li>
         <li>In sequential processing, A bitmap is encoded starting at upper left corner and proceeding from left to right across each scan line(The axis).</li>
-        <img src="{% static 'css_img/en_alx-a.png'%}" class="img-fluid" alt="">
+        {% comment %} <img src="{% static 'css_img/en_alx-a.png'%}" class="img-fluid" alt=""> {% endcomment %}
         <li>Alternative RLE schemes can also be written to encode data down the length of bitmap (the Y-axis).</li>
-        <img src="{% static 'css_img/en_aly-a.png'%}" class="img-fluid" alt="">
+        {% comment %} <img src="{% static 'css_img/en_aly-a.png'%}" class="img-fluid" alt=""> {% endcomment %}
         <li>Encode pixels on a diagonal in zig-zag fashion.</li>
-        <img src="{% static 'css_img/zzen_brlemf.png'%}" class="img-fluid" alt="">
+        {% comment %} <img src="{% static 'css_img/zzen_brlemf.png'%}" class="img-fluid" alt=""> {% endcomment %}
         <li>Example: Use the RLE method to compress the following sequence of symbols:</li>
         <p>AAAACCBBBDDDDDEFF</p>
         <p>Sol:</p>
-        <img src="{% static 'css_img/rle_encoding.png' %}" class="img-fluid"  alt="">
+        {% comment %} <img src="{% static 'css_img/rle_encoding.png' %}" class="img-fluid"  alt=""> {% endcomment %}
         <li>In this way a string of 17 symbols has been compressed into a string of only 12 symbols.</li>
         <li>In such a case only the count of one of the symblos which occurs between each occurence of the other symbol is used.</li>
       </ul>
@@ -794,7 +802,7 @@
       <li>allowing shades of that color.</li>
       <li>Each pixel is stored as a single bit.</li>
       <li>Example</li>
-      <img src="{% static 'css_img/monochrome_img_eg.jpg' %}" class="img-fluid" alt="">
+      {% comment %} <img src="{% static 'css_img/monochrome_img_eg.jpg' %}" class="img-fluid" alt=""> {% endcomment %}
     </ul>
 
     <!-- DIGITAL IMAGE ENDS HERE -->
@@ -829,7 +837,7 @@
         <li>
           <b>Line Follower robot</b>
           <p>Most of the robots work today by following a line and thus are called line follower robots. This has also acheived through image processing.</p>
-          <img src="{% static 'css_img/ch2_images_different_field.jpg' %}" class="img-fluid" alt="">
+          {% comment %} <img src="{% static 'css_img/ch2_images_different_field.jpg' %}" class="img-fluid" alt=""> {% endcomment %}
         </li>
         <li>
           <b>Colour processing</b>
@@ -877,7 +885,7 @@
         <b>Step2: Apply DCT (Discrete Cosine Transform):</b>
         <ol>
           <li>In this step, grey scale image with 8*8 block image is divided into 8-pixel by 8-pixel block shown in Fig1 below.</li>
-          <img src="{% static 'css_img/ch2_dct.png' %}" class="img-fluid" alt="">
+          {% comment %} <img src="{% static 'css_img/ch2_dct.png' %}" class="img-fluid" alt=""> {% endcomment %}
           <b>Fig1: Input Matrix of DCT coefficient</b>
           <li>This image is given as an input to DCT formula</li>
           <b>DCT Calculation:</b>
@@ -989,7 +997,7 @@
           </ul>
           <li>Then DCT coefficients are generated by applying DCT formula on 8*8 block using Equation 1 shown above.</li>
           <li>After applying DCT formula, we will get 8*8 output matrix showing DCT coefficients as shown in Fig2 below</li>
-          <img src="{% static 'css_img/ch2_dct2.png' %}" class="img-fluid" alt="">
+          {% comment %} <img src="{% static 'css_img/ch2_dct2.png' %}" class="img-fluid" alt=""> {% endcomment %}
           <b>Fig2: Output Matrix of DCT coefficient</b>
         </ol>
       </li>
@@ -1002,7 +1010,7 @@
           <li> Quantized coefficient is result of dividing a DCT output matrix by a quantum matrix to generate quantized DCT values</li>
           <li>Typically, JPEG quantum matrix has large values in lower half of quantum matrix which in turn results in zero quantized coefficients in lower half of quantized matrix.</li>
           <li>Quantized matrix is shown below in Fig3</li>
-          <img src="{% static 'css_img/ch2_dct3.png' %}" class="img-fluid" alt="">
+          {% comment %} <img src="{% static 'css_img/ch2_dct3.png' %}" class="img-fluid" alt=""> {% endcomment %}
           <li>Therefore, matrix ends up with most DCT values as zeros and some non-zero DCT values.</li>
         </ol>
       </li>
@@ -1010,7 +1018,7 @@
         <b>Step4: Zig-Zag sequence:</b>
         <ol>
           <li>JPEG came up with ordering quantized DCT coefficient in zigzag sequence as shown in figure below.</li>
-          <img src="{% static 'css_img/ch2_dct4.png' %}" class="img-fluid" alt="">
+          {% comment %} <img src="{% static 'css_img/ch2_dct4.png' %}" class="img-fluid" alt=""> {% endcomment %}
           <li>After the quantization step, most of the coefficients towards the lower right corner are zero.</li>
           <li>The zigzag ordering rearranges the coefficients in one dimensional order, in result most of the zeros will be placed at the end of the stream.</li>
         </ol>
@@ -1045,7 +1053,7 @@
           <p>C 6</p>
           <p>D 6</p>
           <p>E 5</p>
-          <img src="{% static 'css_img/ch2_shannofanno.jpg' %}" class="img-fluid" alt="">
+          {% comment %} <img src="{% static 'css_img/ch2_shannofanno.jpg' %}" class="img-fluid" alt=""> {% endcomment %}
           <p>Symbol: ABCDE</p>
           <p>Code</p>
           <p>A 00</p>
