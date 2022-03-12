@@ -4,10 +4,11 @@
 
 <!-- INDEX STARTS HERE -->
 <section class="main-section">
-    <header class="INDEX">INDEX</header>
+    <header class="INDEX" id="index">INDEX</header>
+    <br>
     <article>
-        <br>
-        <li><a href="#ch1"><h5> Chapter 1: 8086 Microprocessor </h5></a></li>
+        <ul>
+            <li><a href="#ch1"><h5> Chapter 1: 8086 Microprocessor </h5></a></li>
         <ol>
             <li><a href="#IMP">Introduction to Microprocessor</a></li>
             <li><a href="#BOC">Basic Organization of a Computer</a></li>
@@ -17,8 +18,8 @@
             <li><a href="#8086_mem_bank">8086 Memory Banking</a></li>
             <li><a href="#8086_pin_diag">8086 Pin Diagram</a> </li>
         </ol>
-        <br>
-        <li><h5> Chapeter 2: 8086 Assembly Language</h5></li>
+        
+        <li><h5><a href="#chap2">Chapeter 2: 8086 Assembly Language</a> </h5></li>
         <ol>
             <li><a href="#8086_Addg_Modes"> 8086 Addressing Modes</a></li>
             <li><a href="#Data_mem_addrg_mode">Data Memory Addressing modes</a> </li>
@@ -27,76 +28,27 @@
             <li> <a href="#soft_mdl"> 8086 Software Model</a></li>
             <li><a href="#8086_intutn_set">8086 Insruction Set</a> </li>
             <li><a href="#dtinst">Data Transfer Instruction</a> </li>
-            <li>Arithmetic Instruction</li>
-            <li>Decimal Adjust Instruction</li>
-            <li>ASCII Adjust Instruction</li>
-            <li>Logic Instruction(Bit Manipulation Instruction)</li>
-            <li>Shift Instructions</li>
-            <li>Rotate Instructions</li>
-            <li>Branch Instructions(Program Execution and Transfer)</li>
-            <li>Iteration Control Instructions</li>
-            <li>Processor Control / Machine Control Instructions</li>
-            <li>External Hardware Synchronization Instructions</li>
-            <li>Interrupt Control Instructions</li>
-            <li>String Instructions f 8086</li>
-            <li>8086 Instruction Template/Format</li>
-            <li>8086 Assembler Directive, Pseudo Opcodes</li>
-            <li>8086 Programming</li>
-            <li>8086 Passing Parameters to Subroutines</li>
-            <li>Mixed Language Programming using Assembly and C</li>
+            <li><a href="#arith_inst">Arithmetic Instruction</a> </li>
+            <li><a href="#dec_adj_inst"> Decimal Adjust Instruction</a></li>
+            <li><a href="#ascii_adj_inst"> ASCII Adjust Instruction</a></li>
+            <li><a href="#log_inst">Logic Instruction(Bit Manipulation Instruction)</a></li>
+            <li><a href="#shi_inst">Shift Instructions</a> </li>
+            <li> <a href="#rte_inst"> Rotate Instructions</a></li>
+            <li><a href="#brh_inst">Branch Instructions(Program Execution and Transfer)</a> </li>
+            <li><a href="#itrn_ctl_inst">Iteration Control Instructions</a></li>
+            <li><a href="#p/m_con_inst">Processor Control / Machine Control Instructions</a> </li>
+            <li><a href="#exl_hwe_syn_inst">External Hardware Synchronization Instructions</a> </li>
+            <li><a href="#itr_clt_inst">Interrupt Control Instructions</a> </li>
+            <li><a href="#str_inst">String Instructions f 8086</a> </li>
+            <li><a href="#inst_temp">8086 Instruction Template/Format</a> </li>
+            <li><a href="#amlr_dir_psd_opcd"> 8086 Assembler Directive, Pseudo Opcodes</a></li>
         </ol>
-        <br>
-        <li><h5>Chapter 3: 8086 Interrupts</h5></li>
-        <ol>
-            <li>8086 Interrupts</li>
-            <li>Interrupt Vector Table</li>
-            <li>How 8086 Responds to an Interrupt</li>
-            <li>Interrupt Priorities</li>
-            <li>Interrupt Priority Flowchart</li>
-        </ol>
-        <br>
-        <li><h5>8086 Circuit Conofiguration</h5></li>
-        <ol>
-            <li>8282 8-bit(Octal) Latch</li>
-            <li>8286 8-bit Data Trans-receiver</li>
-            <li>8284 Clock Generator</li>
-            <li>8086 Minimum Mode Configuration</li>
-            <li>8086 Maximum Modes Configuration</li>
-        </ol>
-        <br>
-        <li><h5>Chapter 5: 8259 Programmable Interrupt Controller</h5></li>
-        <ol>
-            <li>8259 Introduction</li>
-            <li>Need for 8259 PIC</li>
-            <li>8259 Architecture Block Diagram</li>
-            <li>8259 Operating Modes</li>
-            <li>Initialization Sequence of 8259</li>
-            <li>8259 Interfacing and working of a single Modes</li>
-            <li>8259 Interfacing and Working of a Cascaded Modes</li>
-            <li>8259 Programming</li>
-        </ol>
-        <br>
-        <li><h5>Chapter 6: 8255 Programmable Peripheral Interface</li>
-        <ol>
-            <li>8255 Introduction</li>
-            <li>8255 Salient Feature</li>
-            <li>8255 Architecture Internal Block Diagram</li>
-            <li>Control Word of 8255- I/O Modes(I/O Commad)</li>
-            <li>Control Word of 8255 BSR Mode(BSR Command){ONLY for Port C}</li>
-            <li>8255 Data Tranfer Modes</li>
-            <li>8255 Interfacing with 8086</li>
-            <li>8255 Programming </li>
-        </ol>
-        <br>
-        <li><h5> Chapter 7: 8253 Programmable Interval Timer</li>
-        <ol>
-            <li>8253 Salient Feature</li>
-            <li>8253 Architecture</li>
-            <li>Control Word Register</li>
-            <li>8253 Timer Modes</li>
-            <li>8253 Programming</li>
-        </ol>
-    </ul>
+        </ul>
+
+                
+        
+        
+       
     </article>
 
 </section>
@@ -775,7 +727,7 @@
 
     <br>
 
-    <!-- DATA TRANFER INSSTRUCTINO START -->
+    <!-- DATA TRANFER INSTRUCTION START -->
     <article>
         <h3 id="dtinst">Data Tranfer Instruction</h3>
         <p>The data transfer instructions are used to transfer data from one location to another. This transfer of data can be either from register to register, register to memory or memory to register.</p>
@@ -892,655 +844,809 @@
         </ol>
 
     </article>
-    <!-- DATA TRANFER INSSTRUCTINO END -->
+    <!-- DATA TRANFER INSTRUCTION END -->
 
+    <br>
+
+    <!-- ARITHMETIC INSTRUCTION START -->
+    <article>
+        <h3 id="arith_inst"> Arithmetic Instruction</h3>
+        <p>These instructions are used to perform arithmetic operations like addition, subtraction, multiplication, division, etc. In 8086 the destination address is need not to be the accumulator.</p>
+        <p>Let us see the arithmetic instructions of 8086 microprocessor. Here the D and S are destination and source respectively. D and S can be either register, data or memory address.</p>
+        <table>
+            <tr>
+                <th>Opcode</th>
+                <th>Operand</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <th><b>ADD</b></th>
+                <th>D,S</th>
+                <th>Used to add the provided byte to byte/word to word</th>
+            </tr>
+            <tr>
+                <th><b>ADS</b></th>
+                <th>D,S</th>
+                <th>Used to Add with Carry</th>
+            </tr>
+            <tr>
+                <th><b>TNC</b></th>
+                <th>D</th>
+                <th>Used to increment thr provided byte/word by 1</th>
+            </tr>
+            <tr>
+                <th><b>AAA</b></th>
+                <th>---</th>
+                <th>Used to adjust ASCII after addition</th>
+            </tr>
+            <tr>
+                <th><b>DSS</b></th>
+                <th>---</th>
+                <th>USed to adjust the decimal after te addition/subtraction operation</th>
+            </tr>
+            <tr>
+                <th><b>SUB</b></th>
+                <th>D,S</th>
+                <th>Used to subtract the byte from byte/ word from word</th>
+            </tr>
+            <tr>
+                <th><b>SBB</b></th>
+                <th>D,S</th>
+                <th>Used to prefrom subtraction with borrow</th>
+            </tr>
+            <tr>
+                <th><b>DEC</b></th>
+                <th>D</th>
+                <th>Used to decrement the provided byte/word by 1</th>
+            </tr>
+            <tr>
+                <th><b>NEG</b></th>
+                <th>D</th>
+                <th>Used to negate each bit of the provided byte/word and add 1/2 complement</th>
+            </tr>
+            <tr>
+                <th><b>CMP</b></th>
+                <th>D</th>
+                <th>Used to compare 2 provided byte/word</th>
+            </tr>
+            <tr>
+                <th><b>AAS</b></th>
+                <th>---</th>
+                <th>Used to adjust ASCII codes after subtraction</th>
+            </tr>
+            <tr>
+                <th><b>DAS</b></th>
+                <th>---</th>
+                <th>Used to adjust decimal after subtraction.</th>
+            </tr>
+            <tr>
+                <th><b>MUL</b></th>
+                <th>8-bit reg</th>
+                <th>Used to multiply unsigned byte by byte/word by word.</th>
+            </tr>
+            <tr>
+                <th><b>IMUL</b></th>
+                <th>8  or 16 bit reg</th>
+                <th>Used to multiply signed byte by byte/word by word.</th>
+            </tr>
+            <tr>
+                <th><b>AAM</b></th>
+                <th>---</th>
+                <th>Used to adjust ASCII codes after multiplication.</th>
+            </tr>
+            <tr>
+                <th><b>DIV</b></th>
+                <th>8-bit reg</th>
+                <th>Used to divide the unsigned word by byte or unsigned double word by word.</th>
+            </tr>
+            <tr>
+                <th><b>IDIV</b></th>
+                <th>8 or 16-bit reg </th>
+                <th>Used to divide the signed word by byte or signed double word by word.</th>
+            </tr>
+            <tr>
+                <th><b>AAD</b></th>
+                <th>---</th>
+                <th>Used to adjust ASCII codes after division.</th>
+            </tr>
+            <tr>
+                <th><b>CBW</b></th>
+                <th>---</th>
+                <th>Used to fill the upper byte of the word with the copies of sign bit of the lower byte.</th>
+            </tr>
+            <tr>
+                <th><b>CWD</b></th>
+                <th>---</th>
+                <th>Used to fill the upper word of the double word with the sign bit of the lower word</th>
+            </tr>
+        </table>    
+    </article>
+    <!-- ARITHMETIC INSTRUCTION ENDS -->
+    <br>
+
+    <!-- DECIMAL ADJUST INSTRUCTION START -->
+    <article>
+        <h3 id="dec_adj_inst">Decimal Adjust Instructions</h3>
+        <ol>
+            <li>
+                <h5><b>DAA</b></h5>
+                <ul>
+                    <li>The DAA (Decimal Adjust after Addition) instruction allows addition of numbers represented in 8-bit packed BCD code. It is used immediately after normal addition instruction operating on BCD codes. This instruction assumes the AL register as the source and the destination, and hence it requires no operand.</li>
+                    <li>The effect of DAS (Decimal Adjust after Subtraction) instruction is similar to that of DAA, except that it is used after a subtraction instruction</li>
+                    <li>For example in the following program, that NUM1 and NUM2 are decimal numbers coded in BCD format, the result should be 61</li>
+                    <code>
+                        .MODEL SMALL
+                        .STACK 200
+                        .DATA
+                        NUM1	DB 	27H
+                        NUM2	DB	35H	
+                        .CODE
+                        .STARTUP
+
+                    	    MOV	AL,  NUM1	;load AX with number NUM1
+                        	ADD 	AL,  NUM2	;AL = AL + NUM2 i.e. AL = 5CH = 92 in decimal
+                        	;The expected result is 62 in decimal
+                        	DAA			; AL = 62
+                        .EXIT
+                        END
+                    </code>
+                    <b>DAA operation:</b>
+                    <p>For the processor there is no difference between a BCD and a hexadecimal number, all numbers are seen as hexadecimal numbers. After performing an addition and the result is saved in the AL register, conversion to decimal is carried out as follows:</p>
+                    <ul>
+                        <li>if the digit in the lower four nibbles of AL is greater than 10 (decimal),</li>
+                        <li>then subtract 10 and</l>
+                        <li>add 1 to the digit in the higher four nibbles of AL</li>
+                    </ul>
+
+                </ul>
+            </li>
+            <li>
+                <h5><b>DAS</b></h5>
+                <p>Decimal Adjust after Subtraction:- This instruction converts the result of subtraction operation of 2 packed BCD numbers to a valid BCD number. The subtraction operation has to be only in the AL. If the lower nibble of AL is higher than the value 9, this instruction will subtract 06 from lower nibble of the AL. If the output of subtraction operation sets the carry flag or if the upper nibble is higher than value 9, it subtracts 60H from the AL. This instruction modifies the CF, AF, PF, SF and ZF flags. The OF is not defined after DAS instruction. The instance is following:</p>
+                <img src="{% static 'mp_img/chp2_das.jpg' %}" class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="">
+            </li>
+        </ol>
+    </article>
+    <!-- DECIMAL ADJUST INSTRUCTION END -->
+    <br>
+
+    <!-- ASCII ADJUST INSTRUCTION START -->
+    <article>
+        <h3 id="ascii_adj_inst">ASCII Adjust Instructions</h3>
+        <ol>
+            <li>
+                <h5><b>AAA Instruction</b></h5>
+                <ul>
+                    <li>Adjust the sum of two unpacked BCD values to create an unpacked BCD result.</li>
+                    <li>The AL register is the implied source and destination operand for this instruction.</li>
+                    <li>The AAA instruction is only useful when its follow an ADD instruction that adds (binary addition) two unpacked BCD values.</li>
+                    <li>The AAA instruction then adjusts the contents of AL register to contain the correct 1-digit unpacked BCD result.</li>
+                    <li>If the addition produces a decimal carry, the AH register is incremented by 1, and the CF and AF flags are set</li>
+                </ul>
+            </li>
+            <li>
+                <h5><b>AAD Instruction</b></h5>
+                <ul>
+                    <li>Unlike all other adjustment instructions, the AAD instruction appears before a division.</li>
+                    <li>The AAD instruction requires that the AX register contain a two-digit unpacked BCD number (not ASCII) before executing</li>
+                    <li>After adjusting the AX register with AAD, it is divided by an unpacked BCD number to generate a single-digit result in AL with any remainder in AH.</li>
+                    <li>Example:</li>
+                    <code>
+                        MOV BL, 9H
+                        MOV AX, 702H
+                        AAD
+                        DIV BL
+                    </code>
+                    <LI>The above example show how 72 is unpacked BCD is divided by 9 to produce a quotient of 8. The 0702H loaded into AX register is adjusted by the AAD instruction to 0048H.</LI>
+                </ul>
+            </li>
+            <li>
+                <h5><b>AAM Instruction</b></h5>
+                <ul>
+                    <li>Adjust the result of the multiplication of two unpacked BCD values to create a pair of unpacked BCD values.</li>
+                    <li>The AX register is the implied source and destination operand for this instruction.</li>
+                    <li>The AAM instruction is only useful when it follows an MUL instruction that multiplies (binary multiplication) two unpacked BCD values and stores a word result in AX registers.</li>
+                </ul>
+            </li>
+            <li>
+                <h5><b>AAS Instruction</b></h5>
+                <ul>
+                    <li>Adjust the result of the subtraction of two unpacked BCD values to create a unpacked BCD result.</li>
+                    <li>The AL register is the implied source and destination for this instructions.</li>
+                    <li>The AAS instruction is only useful when it follows a SUB instruction that subtracts (binary subtraction) one unpacked BCD valued from another and stores a byte result in the AL register.</li>
+                    <li>If the subtraction produced a decimal carry, the AH register is decremented by 1, and the CF and AF flags are set.</li>
+                    <li>If no decimal carry occurred, the CF and AF flags are cleared, and the AH register is unchanged.</li>
+                </ul>
+            </li>
+        </ol>
+        
+    </article>
+    <!-- ASCII ADJUST INSTRUCTION END -->
+
+    <!-- LOGIC INSTRUCTION START -->
+    <article>
+        <h3 id="log_inst">Logic Instructions</h3>
+        <ul>
+            <li>These instructions are used to perform operations where data bits are involved, i.e. operations like logical, shift, etc. We can say that these instructions are logical instructions. In 8086, the destination register may or may not the Accumulator.</li>
+            <li>Let us see the logical instructions of 8086 microprocessor. Here the D, S and C are destination and source and count respectively. D, S and C can be either register, data or memory address.</li>
+            <table>
+                <tr>
+                    <th>Opcode</th>
+                    <th>Operand</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <th><b>ADD</b></th>
+                    <th>D,S</th>
+                    <th>Used to add the provided byte to byte/word to word</th>
+                </tr>
+                <tr>
+                    <th>OR</th>
+                    <th>D,S</th>
+                    <th>Used to multiply each bit in a byte/word with the corresponding bit in another byte/word.</th>
+                </tr>
+                <tr>
+                    <th>NOT</th>
+                    <th>D</th>
+                    <th>Used to invert each bit of a byte or word.</th>
+                </tr>
+                <tr>
+                    <th>XOR</th>
+                    <th>D,S</th>
+                    <th>Used to perform Exclusive-OR operation over each bit in a byte/word with the corresponding bit in another byte/word</th>
+                </tr>
+                <tr>
+                    <th>TEST</th>
+                    <tr>D,S</tr>
+                    <th>Used to add operands to update flags, without affecting operands</th>
+                </tr>
+                <tr>
+                    <th>SHR</th>
+                    <th>D,C</th>
+                    <th>Used to shift bits of a byte/word towards the right and put zero(S) in MSBs.</th>
+                </tr>
+                <tr>
+                    <th>SHR</th>
+                    <th>D,C</th>
+                    <th>Used to shift bits of a byte/word towards the right and put zero(S) in MSBs.</th>
+                </tr>
+                <tr>
+                    <th>SHL/SAL</th>
+                    <th>D,C</th>
+                    <th>Used to shift bits of a byte/word towards left and put zero(S) in LSBs</th>
+                </tr>
+                <tr>
+                    <th>ROR</th>
+                    <th> D,C</th>
+                    <th>Used to rotate bits of byte/word towards the right, i.e. LSB to MSB and to Carry Flag [CF].</th>
+                </tr>
+                <tr>
+                    <th>ROL</th>
+                    <th>D,C</th>
+                    <th>Used to rotate bits of byte/word towards the left, i.e. MSB to LSB and to Carry Flag [CF].</th>
+                </tr>
+                <tr>
+                    <th>RCR</th>
+                    <th>D,C</th>
+                    <th>Used to rotate bits of byte/word towards the right, i.e. LSB to CF and CF to MSB.</th>
+                </tr>
+                <tr>
+                    <th>RCL</th>
+                    <th>D,C</th>
+                    <th>Used to rotate bits of byte/word towards the left, i.e. MSB to CF and CF to LSB.</th>
+                </tr>
+            </table>
+        </ul>
+    </article>
+    <!-- LOGIC INSTRUCTION ENDS -->
+    <br> 
+
+    <!-- SHIFT INSTRUCTIONS START -->
+    <article>
+        <h3 id="shi_inst">Shift Instruction </h3>
+        <p>As we know that any machine (system) works on machine language, which consists of binary numbers. In the 8086 microprocessor, we have 16-bit registers to handle our data. Sometimes, the need to perform some necessary shift and rotate operations on our data may occur according to the given condition and requirement. So, for that purpose, we have various Shift and Rotate instructions present in the 8086 microprocessor. Let us discuss them one by one and understand their working:</p>
+        <ol>
+            <li>SHR : Shift Right</li>
+            <li>SAR : Shift Arithmetic Right</li>
+            <li>SHL : Shift Left</li>
+            <li>SAL : Shift Arithmetic Left</li>
+        </ol>
+        <ol>
+            <li>
+                <h5><b>SHR : Shift Right</b></h5>
+                <p>The SHR instruction is an abbreviation for ‘Shift Right’. This instruction simply shifts the mentioned bits in the register to the right side one by one by inserting the same number (bits that are being shifted) of zeroes from the left end. The rightmost bit that is being shifted is stored in the Carry Flag (CF).</p>
+                <div class="note">
+                    <p>Syntax: 	SHR Register, Bits to be shifted</p>
+                    <p>Example:	SHR AX, 2</p>
+                </div>
+                <p>Working:</p>
+                <img src="{% static 'mp_img/ch2_shr.webp' %}" alt="">
+            </li>
+            <li>
+                <h5><b>SAR : Shift Arithmetic Right</b></h5>
+                <p>The SAR instruction stands for ‘Shift Arithmetic Right’. This instruction shifts the mentioned bits in the register to the right side one by one, but instead of inserting the zeroes from the left end, the MSB is restored. The rightmost bit that is being shifted is stored in the Carry Flag (CF).</p>
+                <div class="note">
+                    <p>Syntax: 	SAR Register, Bits to be shifted</p>
+                    <p>Example:	SAR BX, 5</p>
+                </div>
+                <p>Working:</p>
+                <img src="{% static 'mp_img/ch2_sar.jpg' %}" alt="">
+            </li>
+            <li>
+                <h5><b>SHL : Shift Left</b></h5>
+                <p>The SHL instruction is an abbreviation for ‘Shift Left’. This instruction simply shifts the mentioned bits in the register to the left side one by one by inserting the same number (bits that are being shifted) of zeroes from the right end. The leftmost bit that is being shifted is stored in the Carry Flag (CF).</p>
+                <div class="note">
+                    <p>Syntax: 	SHL Register, Bits to be shifted</p>
+                    <p>Example:	SHL AX, 2</p>
+                </div>
+                <p>Working:</p>
+                <img src="{% static 'mp_img/ch2_shl.jpg' %}" alt="">
+            </li>
+            <li>
+                <h5><b>SAL : Shift Arithmetic Left</b></h5>
+                <p>The SAL instruction is an abbreviation for ‘Shift Arithmetic Left’. This instruction is the same as SHL.</p>
+                <div class="note">
+                    <p>Syntax: 	SAL Register, Bits to be shifted</p>
+                    <p>Example:	SAL CL, 2</p>
+                </div>
+                <p>Working:</p>
+                <img src="{% static 'mp_img/ch2_shl.jpg' %}" alt="">
+            </li>
+        </ol>
+    </article>
+    <!-- SHIFT INSTRUCTIONS END -->
+    <br>
+
+    <!-- ROTATE INSTRUCTION START -->
+    <article>
+        <h3 id="rte_inst">Rotate Instructions</h3>
+        <ol>
+            <li>
+                <h5><b>ROL : Rotate Left</b></h5>
+                <p>The ROL instruction is an abbreviation for ‘Rotate Left’. This instruction rotates the mentioned bits in the register to the left side one by one such that leftmost bit that is being rotated is again stored as the rightmost bit in the register, and it is also stored in theCarry Flag (CF)</p>
+                <div class="note">
+                    <p>Syntax: 	ROL Register, Bits to be shifted</p>
+                    <p>Example:	ROL AH, 4</p>
+                </div>
+                <p>Working:</p>
+                <img src="{% static 'mp_img/ch2_rol.webp' %}" alt="">
+            </li>
+            <li>
+                <h5><b>ROR : Rotate Right</b></h5>
+                <p>The ROR instruction stands for ‘Rotate Right’. This instruction rotates the mentioned bits in the register to the right side one by one such that rightmost bit that is being rotated is again stored as the MSB in the register, and it is also stored in the Carry Flag (CF).</p>
+                <div class="note">
+                    <p>Syntax: 	ROR Register, Bits to be shifted</p>
+                    <p>Example:	ROR AH, 4</p>
+                </div>
+                <p>Working:</p>
+                <img src="{% static 'mp_img/chp2_ror.webp' %}" alt="">
+            </li>
+            <li>
+                <h5><b>RCL : Rotate Carry Left</b></h5>
+                <p>This instruction rotates the mentioned bits in the register to the left side one by one such that leftmost bit that is being rotated it is stored in the Carry Flag (CF), and the bit in the CF moved as the LSB in the register.</p>
+                <div class="note">
+                    <p>Syntax: 	RCL Register, Bits to be shifted</p>
+                    <p>Example:	RCL CH, 1</p>
+                </div>
+                <p>Working:</p>
+                <img src="{% static 'mp_img/chp2_rcr.webp' %}" alt="">
+            </li>
+            <li>
+                <h5><b>RCR : Rotate Carry Right</b></h5>
+                <p>This instruction rotates the mentioned bits in the register to the right side such that rightmost bit that is being rotated it is stored in the Carry Flag (CF), and the bit in the CF moved as the MSB in the register.</p>
+                <div class="note">
+                    <p>Syntax: 	RCR Register, Bits to be shifted</p>
+                    <p>Example:	RCR BH, 6</p>
+                </div>
+                <p>Working:</p>
+                <img src="{% static 'mp_img/chp2_rcl.webp' %}" alt="">
+            </li>
+        </ol>
+
+    </article>
+    <!-- ROTATE INSTRUCTION END -->
+    <br>
     
+    <!-- BRANCH INSTRUCTION START -->
+    <article>
+        <h3 id="brh_inst">Branch Instruction</h3>
+        <p>These instructions are used to transfer/branch the instructions during an execution. There are two types of branching instructions. The unconditional branch and conditional branch.</p>
+        <p>The Unconditional Program execution transfer instructions are as follows.</p>
+        <table >
+            <thead>
+                <tr>
+                    <th><strong>Opcode</strong><br></th>
+                    <th><strong>Operand</strong><br></th>
+                    <th style="text-align: center;"><strong>Description</strong><br></th>
+                </tr>
+            </thead><tbody>
+                <tr>
+                    <td><strong>CALL</strong><br></td>
+                    <td>address<br></td>
+                    <td>Used to call a procedure and save their return address to the stack.<br></td>
+                </tr>
+                <tr>
+                    <td><strong>RET</strong><br></td>
+                    <td>----<br></td>
+                    <td>Used to return from the procedure to the main program.<br></td>
+                </tr>
+                <tr>
+                    <td><strong>JMP</strong><br></td>
+                    <td>address<br></td>
+                    <td>Used to jump to the provided address to proceed to the next instruction.<br></td>
+                </tr>
+                <tr>
+                    <td><strong>LOOP</strong><br></td>
+                    <td>address<br></td>
+                    <td>Used to loop a group of instructions until the condition satisfies, i.e., CX = 0<br></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p>Now let us see the Conditional Program execution transfer instructions.</p>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th><strong>Opcode</strong><br></th>
+                    <th><strong>Operand</strong><br></th>
+                    <th style="text-align: center;"><strong>Description</strong><br></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>JC</strong><br></td>
+                    <td>address<br></td>
+                    <td>Used to jump if carry flag CY = 1<br></td>
+                </tr>
+                <tr>
+                    <td><strong>JNC</strong><br></td>
+                    <td>address<br></td>
+                    <td>Used to jump if no carry flag (CY = 0)<br></td>
+                </tr>
+                <tr>
+                    <td><strong>JE/JZ</strong><br></td>
+                    <td>address<br></td>
+                    <td>Used to jump if equal/zero flag ZF = 1<br></td>
+                </tr>
+                <tr>
+                    <td><strong>JNE/JNZ</strong><br></td
+                        ><td>address<br></td>
+                        <td>Used to jump if not equal/zero flag ZF = 0<br></td>
+                    </tr>
+                    <tr>
+                        <td><strong>JO</strong><br></td>
+                        <td>address<br></td>
+                        <td>Used to jump if overflow flag OF = 1<br></td>
+                    </tr>
+                    <tr>
+                        <td><strong>JNO</strong><br></td>
+                        <td>address<br></td>
+                        <td>Used to jump if no overflow flag OF = 0<br></td>
+                    </tr>
+                    <tr>
+                        <td><strong>JP/ JPE</strong><br></td>
+                        <td>address<br></td>
+                        <td>Used to jump if parity/parity even PF = 1<br></td>
+                    </tr>
+                    <tr>
+                        <td><strong>JNP/ JPO</strong><br></td>
+                        <td>address<br></td>
+                        <td>Used to jump if not parity/parity odd PF = 0<br></td>
+                    </tr>
+                    <tr>
+                        <td><strong>JS</strong><br></td>
+                        <td>address<br></td>
+                        <td>Used to jump if sign flag SF = 1<br></td>
+                    </tr>
+                    <tr>
+                        <td><strong>JNS</strong><br></td>
+                        <td>address<br></td>
+                        <td>Used to jump if not sign SF = 0<br></td>
+                    </tr>
+                    <tr>
+                        <td><strong>JA/ JNBE</strong><br></td>
+                        <td>address<br></td>
+                        <td>Used to jump if above/not below/equal instruction satisfies.<br></td>
+                    </tr>
+                    <tr>
+                        <td><strong>JAE/ JNB</strong><br></td>
+                        <td>address<br></td>
+                        <td>Used to jump if above/not below instruction satisfies.<br></td>
+                    </tr>
+                    <tr>
+                        <td><strong>JBE/ JNA</strong><br></td>
+                        <td>address<br></td>
+                        <td>Used to jump if below/equal/ not above instruction satisfies.<br></td>
+                    </tr>
+                    <tr>
+                        <td><strong>JG/ JNLE</strong><br></td>
+                        <td>address<br></td>
+                        <td>Used to jump if greater/not less than/equal instruction satisfies.<br></td>
+                    </tr>
+                    <tr>
+                        <td><strong>JGE/ JNL</strong><br></td>
+                        <td>address<br></td>
+                        <td>Used to jump if greater than/equal/not less than instruction satisfies.<br></td>
+                    </tr>
+                    <tr>
+                        <td><strong>JL/ JNGE</strong><br></td>
+                        <td>address<br></td>
+                        <td>Used to jump if less than/not greater than/equal instruction satisfies.<br></td>
+                    </tr>
+                    <tr>
+                        <td><strong>JLE/ JNG</strong><br></td>
+                        <td>address<br></td>
+                        <td>Used to jump if less than/equal/if not greater than instruction satisfies.<br></td>
+                    </tr>
+                    <tr>
+                        <td><strong>JCXZ</strong><br></td>
+                        <td>address<br></td>
+                        <td>Used to jump to the provided address if CX = 0<br></td>
+                    </tr>
+                    <tr>
+                        <td><strong>LOOPE/ LOOPZ</strong><br></td>
+                        <td>address<br></td>
+                        <td>Used to loop a group of instructions till it satisfies ZF = 1 &amp; CX = 0<br></td>
+                    </tr>
+                    <tr>
+                        <td><strong>LOOPNE/ LOOPNZ</strong><br></td>
+                        <td>address<br></td>
+                        <td>Used to loop a group of instructions till it satisfies ZF = 0 &amp; CX = 0<br></td>
+                    </tr>
+                </tbody>
+            </table>
+
+    </article>
+    <!-- BRANCH INSTRUCTION ENDS -->
+    <br>
+
+    <!-- Iteration Control Instruction start -->
+    <article>
+        <h3 id="itrn_ctl_inst">Iteration Control Instruction</h3>
+        <p>These instructions are used to execute the given instructions for number of times. Following is the list of instructions under this group</p>
+        <ul>
+            <li><strong>LOOP</strong> − Used to loop a group of instructions until the condition satisfies, i.e., CX = 0</li>
+            <li><strong>LOOPE/LOOPZ </strong>− Used to loop a group of instructions till it satisfies ZF = 1 & CX = 0</li>
+            <li><strong>LOOPNE/LOOPNZ</strong>− Used to loop a group of instructions till it satisfies ZF = 0 & CX = 0</li>
+            <li><strong>JCXZ</strong>− Used to jump to the provided address if CX = 0</li>
+        </ul>
+    </article>
+    <!-- Iteration Control Instruction start -->
+
+    <!-- Processor Control / machine Control Instruction start -->
+    <article>
+        <h3 id="p/m_con_inst">Processor Control / machine Control Instruction</h3>
+        <p>These instructions are used to control the processor action by setting/resetting the flag values</p>
+        <p>Following are the instructions under this group </p>
+        <ul>
+            <li>STC − Used to set carry flag CF to 1</li>
+            <li>CLC − Used to clear/reset carry flag CF to 0</li>
+            <li>CMC − Used to put complement at the state of carry flag CF.</li>
+            <li>STD − Used to set the direction flag DF to 1</li>
+            <li>CLD − Used to clear/reset the direction flag DF to 0</li>
+            <li>STI − Used to set the interrupt enable flag to 1, i.e., enable INTR input.</li>
+            <li>CLI − Used to clear the interrupt enable flag to 0, i.e., disable INTR input.</li>
+        </ul>
+    </article>
+    <!-- Processor Control / machine Control Instruction Ends -->
+    <br>
+
+    <!-- External Hardware Synchronization Instruction start -->
+    <article>
+        <h3 id="exl_hwe_syn_inst">External Hardware Synchronization Instruction</h3>
+        <p>The 8086 External Hardware Synchronization Instructions are namely</p>
+        <ol>
+            <li>
+                <h5>HLT Instruction :</h5>
+                <p>The HLT instruction will cause the 8086 to stop fetching and executing instructions. The 8086 will enter a halt state. The only ways to get the processor out of the halt state are with an interrupt signal on the INTR pin, an interrupt signal on the NMI pin, or a reset signal on the RESET input.</p>
+                
+            </li>
+            <li>
+                <h5>WAIT Instruction :</h5>
+                <p>When this instruction executes, the 8086 enters an idle condition where it is doing no processing. The 8086 will stay in this idle state until a signal is asserted on the 8086 TEST input pin, or until a valid interrupt signal is received on the INTR or the NMI interrupt input pins. If a valid interrupt occurs while the 8086 is in this idle state, the 8086 will return to the idle state after the execution of interrupt service procedure. WAIT affects, no flags. The WAIT, instruction is used to synchronize the 8086 with 8086 External Hardware Synchronization Instructions such as the 8087 math coprocessor.</p>
+            </li>
+            <li>
+                <h5>ESC Instruction :</h5>
+                <p>This instruction is used to pass instructions to a coprocessor such as the 8087 math coprocessor which shares the address and data bus with an 8086. Instructions for the coprocessor are represented by a 6-bit code embedded in the escape instruction. When the 8086 fetches an ESC instruction, the coprocessor decodes the instruction and carries out the action specified by the 6-bit code specified in the instruction. In most cases the 8086 treats the ESC instruction as a NOP. In some cases the 8086 will access a data item in memory for the coprocessor.</p>
+            </li>
+            <li>
+                <h5>LOCK Instruction :</h5>
+                <p>In a multiprocessor system each microprocessor has its own local’ buses and memory. The individual microprocessors are connected together by a system bus so that each can access system resources such as disk drives , or, memory. Each microprocessor only takes control of the system bus when it needs to access some system resources. The LOCK prefix allows a microprocessor to make sure that another processor does not take control of the system bus while it is in the middle of a critical instruction which uses the system bus. The LOCK prefix is put in front of the critical instruction. When an instruction with a LOCK prefix executes, the 8086 will assert its bus lock signal output. This signal is connected to an 8086 External Hardware Synchronization Instructions bus controller device which then prevents any other processor from taking over the system bus. LOCK affects no flags.</p>
+            </li>
+            <li>
+                <h5>NOP Instruction :</h5>
+                <p>At the time of execution of NOP instruction, no operation is performed except fetch and decode. It takes three clock cycles to execute the instruction. NOP instruction does not affect any flag. This instruction is used to fill in time delays or to delete and insert instructions in the program while trouble shooting.</p>
+            </li>
+        </ol>
+    </article>
+    <!-- External Hardware Synchronization Instruction end -->
+    <br>
+
+    <!-- Interrupt Control Instruction start -->
+    <article>
+        <h3 id="itr_clt_inst">Interrupt Control Instruction</h3>
+        <p>These instructions are used to call the interrupt during program execution.</p>
+        <ul>
+            <li>INT − Used to interrupt the program during execution and calling service specified</li>
+            <li>INTO − Used to interrupt the program during execution if OF = 1</li>
+            <li>IRET − Used to return from interrupt service to the main program</li>
+        </ul>
+
+    </article>
+    <!-- Interrupt Control Instruction end -->
+    <br>
+
+    <!-- String Instruction of 8086 start -->
+    <article>
+        <h3 id="str_inst">String Instruction of 8086</h3>
+        <p>String is a group of bytes/words and their memory is always allocated in a sequential order.</p>
+        <p>Following is the list of instructions under this group </p>
+        <ul>
+            <li>REP − Used to repeat the given instruction till CX ≠ 0.</li>
+            <li>REPE/REPZ − Used to repeat the given instruction until CX = 0 or zero flag ZF = 1</li>
+            <li>REPNE/REPNZ − Used to repeat the given instruction until CX = 0 or zero flag ZF = 1.</li>
+            <li>MOVS/MOVSB/MOVSW − Used to move the byte/word from one string to another</li>
+            <li>COMS/COMPSB/COMPSW − Used to compare two string bytes/words</li>
+            <li>INS/INSB/INSW − Used as an input string/byte/word from the I/O port to the provided memory location</li>
+            <li>OUTS/OUTSB/OUTSW − Used as an output string/byte/word from the provided memory location to the I/O port</li>
+            <li>SCAS/SCASB/SCASW − Used to scan a string and compare its byte with a byte in AL or string word with a word in AX.</li>
+            <li>LODS/LODSB/LODSW − Used to store the string byte into AL or string word into AX.</li>
+        </ul>
+    </article>
+    <!-- String Instruction of 8086 end -->
+    <br>
+    
+    <!-- 8086 Instruction Template/Format start -->
+    <article>
+        <h3 id="inst_temp">8086 Instruction Template/Format</h3>
+        <p>For every instruction that is executed in the 8086 microprocessor, an instruction format is available that is the binary representation of that instruction.</p>
+        <p>This instruction format can be coded from 1 to 6 bytes depending upon the addressing modes used for instructions</p>
+        <p>The general Instruction format that most of the instructions of the 8086 microprocessor follow is:</p>
+        <img src="{% static 'mp_img/ch2_inst_fmt.jpg' %}" alt="">
+        <br>
+        <ul>
+            <li>The Opcode stands for Operation Code. Every Instruction has a unique 6-bit opcode. For example, the opcode for MOV is 100010.</li>
+            <li>
+                <p>D stands for direction</p>
+                <p>If D=0, then the direction is from the register</p>
+                <p>If D=1, then the direction is to the register</p>
+            </li>
+            <li>
+                <p>W stands for word</p>
+                <p>If W=0, then only a byte is being transferred, i.e. 8 bits</p>
+                <p>If W=1, them a whole word is being transferred, i.e. 16 bits</p>
+            </li>
+            <li>The MOD and R/M together is calculated based upon the addressing mode and register being used in it. This is calculated as follows:</li>
+            <table >
+                <tr>
+                    <th>R/M </th>
+                    <th>0 0<br />(Memory Mode with no displacement)</th>
+                    <th>0 1<br />(Memory mode with 8 bit displacement)</th>
+                    <th>1 0<br />(Memory Mode with 16 bit displacement)</th>
+                    <th>1 1<br />(Register Mode)</th>
+                </tr>
+                <tr>
+                    <td>000</td>
+                    <td>[BX] + [SI]</td>
+                    <td>[BX] + [SI] + d8</td>
+                    <td>[BX] + [SI] + d16</td>
+                    <td>AL AX</td>
+                </tr>
+                <tr>
+                    <td>001</td>
+                    <td>[BX] + [DI]</td>
+                    <td>[BX] + [DI] + d8</td>
+                    <td>[BX] + [DI] + d16</td>
+                    <td>CL CX</td>
+                </tr>
+                <tr>
+                <td>010</td><td>[BP] + [SI]</td><td>[BP] + [SI] + d8</td><td>[BP] + [SI] + d16</td><td>DL DX</td>
+                </tr>
+                <tr>
+                <td>011</td><td>[BP] + [DI]</td><td>[BP] + [DI] + d8</td><td>[BP] + [DI] + d16</td><td>BL BX</td>
+                </tr>
+                <tr>
+                <td>100</td><td>[SI]</td><td>[SI] + d8</td><td>[SI] + d16</td><td>AH SP</td>
+                </tr>
+                <tr>
+                <td>101</td><td>[DI]</td><td>[DI] + d8</td><td>[DI] + d16</td><td>CH BP</td>
+                </tr>
+                <tr>
+                <td>110</td><td>d16 (direct)</td><td>[BP] + d8</td><td>[BP] + d16</td><td>DH SI</td>
+                </tr>
+                <tr>
+                <td>111</td><td>[BX]</td><td>[BX] + d8</td><td>[BX] + d16</td><td>BH DI</td>
+                </tr>
+            </table>
+            <li><li>REG stands for register selected. It is a 3-bit code which is calculated as follows:</li></li>
+            <table >
+                <tr>
+                <th>REG Code</th>
+                <th>Register Selected</th>
+                </tr>
+                <tr>
+                <td>0 0 0</td><td>AL AX</td>
+                </tr>
+                <tr>
+                <td>0 0 1</td><td>CL CX</td>
+                </tr>
+                <tr>
+                <td>0 1 0</td><td>DL DX</td>
+                </tr>
+                <tr>
+                <td>0 1 1 </td><td>BL BX</td>
+                </tr>
+                <tr>
+                <td>1 0 0</td><td>AH SP</td>
+                </tr>
+                <tr>
+                <td>1 0 1</td><td>CH BP</td>
+                </tr>
+                <tr>
+                <td>1 1 0</td><td>DH SI</td>
+                </tr>
+                <tr>
+                <td>1 1 1 </td><td>BH DI</td>
+                </tr>
+            </table>
+            <li><li>The low order displacement and high order displacement are optional and the instruction format contains them only if there exists any displacement in the instruction. If the displacement is of 8 bits, then only the cell of low order displacement infilled and if the displacement is of 16 bits, then both the cells od low order and high order are filled, with the exact bits that the displacement number represents.</li></li>
+        </ul>
+    </article>
+    <!-- 8086 Instruction Template/Format end  -->
+    <br>
+
+    <!-- 8086 Assembler Directive, Pseudo Opcodes start -->
+    <article>
+        <h3 id="amlr_dir_psd_opcd">8086 Assembler Directive, Pseudo Opcodes</h3>
+        <p>Assembly language has 2 types of statements :</p>
+        <p>1. Executable : Instructions that are translated into Machine Code by the assembler.</p>
+        <p>2 Assembler Directives :</p>
+        <ul>
+            <li>Statements that direct the assembler to do some special task.</li>
+            <li>No M/C language code is produced for these statements</li>
+            <li>Their main task is to inform the assembler about the start/end of a segment, procedure or program, to reserve appropriate space for data storage etc. </li>
+            <li>Some of the assembler directives are listed below: </li>
+            <ol>
+                <li>
+                    <p>DB (Define Byte) Used to define a Byte type variable.</p>
+                    <p>Eg.: SUM DBO Assembler reserves 1 Byte of memory for the variable</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;named SUM and initialize it to 0.</p>
+                </li>
+                <li>
+                    <p>DW (Define Word) Used to define a Word type variable (2 Bytes)</p>
+                </li>
+                <li>DD (Double Word) ; Used to define a Double Word type variable (4 Bytes).</li>
+                <li>DD (Double Word) ; Used to define a Double Word type variable (4 Bytes). </li>
+                <li>DQ (Quad Word) Used to define a Quad Word type variable (8 Bytes). </li>
+                <li>DT (Ten Bytes) Used to define 10 Bytes to a variable (10 Bytes). </li>
+                <li>DUP()  ;  Copies the contents of the bracket followed by this</li>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;keyword into the memory location specified before it.</p>
+                <li>SEGMENT ;   Used to indicate the beginning of a segment. </li>
+                <li>ENDS    ; Used to indicate the end of a segment</li>
+                <li>ASSUME    ; Associates a logical segment with a processor segment.</li>
+                <li>PROC    ;    Used to indicate the beginning of a procedure.</li>
+                <li>ENDP    ;    Used to indicate the end of a procedure.</li>
+                <li>END     ;    Used to indicate the end of a program.</li>
+                <li>EQU     ;   Defines a constant</li>
+                <br>
+
+                <p>Do remember, in the class, you have been clearly made to understand the difference between using a variable and using a constant </p>
+                <li>EVEN / ALIGN    ; Ensures that the data will be stored by the assembler in the memory in an aligned form. Aligned data works faster as it can be accessed in one cycle. Misaligned data, though is valid, requires two cycles
+                                   to be accessed hence works slower.
+                </li>
+            </ol>
+        </ul>
+    </article>
+    <!-- 8086 Assembler Directive, Pseudo Opcodes end -->
+    <br>    
 </section>
 <!-- CHAPTER 2 END -->
-<!-- INTRODUCTION SECTION STARTS HERE -->
-<section class="main-section">
-    <header>
-        Introduction
-    </header>
-    <br>
-    <article>
-        <h4>What is Python?</h4>
-        <p>Python is a popular programming language. It was created by Guido van Rossum, and released in 1991.</p>
-        <p>It is used for:</p>
-        <ul>
-            <li>web development (server-side),</li>
-            <li>software development,</li>
-            <li>mathematics,</li>
-            <li>system scripting.</li>
-        </ul>
-        <h4>What can Python do?</h4>
-        <ul>
-            <li>Python can be used on a server to create web applications.</li>
-            <li>Python can be used alongside software to create workflows.</li>
-            <li>Python can connect to database systems. It can also read and modify files.</li>
-            <li>Python can be used to handle big data and perform complex mathematics.</li>
-            <li>Python can be used for rapid prototyping, or for production-ready software development.</li>
-        </ul>
-        <h4>Why Python?</h4>
-        <ul>
-            <li>Python works on different platforms (Windows, Mac, Linux, Raspberry Pi, etc).</li>
-            <li>Python has a simple syntax similar to the English language.</li>
-            <li>Python has syntax that allows developers to write programs with fewer lines than some other programming languages.</li>
-            <li>Python runs on an interpreter system, meaning that code can be executed as soon as it is written. This means that prototyping can be very quick.</li>
-            <li>Python can be treated in a procedural way, an object-oriented way or a functional way.</li>
-        </ul>
-        <h5>Good to know</h5>
-        <ul>
-            <li>The most recent major version of Python is Python 3, which we shall be using in this tutorial. However, Python 2, although not being updated with anything other than security updates, is still quite popular.</li>
-            <li>In this tutorial Python will be written in a text editor. It is possible to write Python in an Integrated Development Environment, such as Thonny, Pycharm, Netbeans or Eclipse which are particularly useful when managing larger collections of Python files.</li>
-        </ul>
-        <h4>Python Syntax compared to other programming languages</h4>
-        <ul>
-            <li>Python was designed for readability, and has some similarities to the English language with influence from mathematics.</li>
-            <li>Python uses new lines to complete a command, as opposed to other programming languages which often use semicolons or parentheses.</li>
-            <li>Python relies on indentation, using whitespace, to define scope; such as the scope of loops, functions and classes. Other programming languages often use curly-brackets for this purpose.</li>
-        </ul>
-        <h5>Example</h5>
-        <code>
-            print("Hello, World!")
-        </code>
-
-    </article>
-</section>
-
-<br>
-
-
-
-<!-- INTRODUCTION SECTION ENDS HERE -->
-
-<br>
-
-
-<!-- PYTHON SETUP SECTION STARTS HERE -->
-
-<section>
-    <header>Python Setup</header>
-    <br>
-    <article>
-        <h4>Python Install</h4>
-        <p>Many PCs and Macs will have python already installed.</p>
-        <p>To check if you have python installed on a Windows PC, search in the start bar for Python or run the following on the Command Line (cmd.exe):</p>
-        <code>
-            C:\Users\Your Name>python --version
-        </code>
-        <br>
-        <p>To check if you have python installed on a Linux or Mac, then on linux open the command line or on Mac open the Terminal and type:</p>
-        <code>
-            python --version
-        </code>
-        <br>
-        <p>If you find that you do not have python installed on your computer, then you can download it for free from the following website: https://www.python.org/</p>
-        <h4>Python Quickstart</h4>
-        <p>Python is an interpreted programming language, this means that as a developer you write Python (.py) files in a text editor and then put those files into the python interpreter to be executed.</p>
-        <p>The way to run a python file is like this on the command line:</p>
-        <code>
-            C:\Users\Your Name>python helloworld.py
-        </code>
-        <br>
-        <p>Where "helloworld.py" is the name of your python file.</p>
-        <p>Let's write our first Python file, called helloworld.py, which can be done in any text editor.</p>
-        <h5>helloworld.py: </h5>
-        <code>
-            print("Hello, World!")
-        </code>
-        <br>
-        <p>Simple as that. Save your file. Open your command line, navigate to the directory where you saved your file, and run:</p>
-        <code>
-            C:\Users\Your Name>python helloworld.py
-        </code>
-        <br>
-        <p>The output should read:</p>
-        <code>
-            Hello, World!
-        </code>
-        <br>
-        <p>Congratulations, you have written and executed your first Python program.</p>
-        <h4>The Python Command Line</h4>
-        <p>To test a short amount of code in python sometimes it is quickest and easiest not to write the code in a file. This is made possible because Python can be run as a command line itself.</p>
-        <p>Type the following on the Windows, Mac or Linux command line:</p>
-        <code>
-            C:\Users\Your Name>python
-        </code>
-        <br>
-        <p>Or, if the "python" command did not work, you can try "py":</p>
-        <code>
-            C:\Users\Your Name>py
-        </code>
-        <br>
-        <p>From there you can write any python, including our hello world example from earlier in the tutorial:</p>
-        <code>
-            C:\Users\Your Name>python
-            Python 3.6.4 (v3.6.4:d48eceb, Dec 19 2017, 06:04:45) [MSC v.1900 32 bit (Intel)] on win32
-            Type "help", "copyright", "credits" or "license" for more information.
-            >>> print("Hello, World!")
-        </code>
-        <br>
-        <p>Which will write "Hello, World!" in the command line:</p>
-        <code>            
-            C:\Users\Your Name>python
-            Python 3.6.4 (v3.6.4:d48eceb, Dec 19 2017, 06:04:45) [MSC v.1900 32 bit (Intel)] on win32
-            Type "help", "copyright", "credits" or "license" for more information.
-            >>> print("Hello, World!")
-            Hello, World!
-        </code>
-        <br>
-        <p>Whenever you are done in the python command line, you can simply type the following to quit the python command line interface:</p>
-        <code>
-            exit()
-        </code>
-
-    </article>
-</section>
-
-<!-- PUTHON SETUP SECTION ENDS HERE -->
-
-<br>
-<p></p>
-<!-- PYTHON SYNTAX SECTION STARTS HERE -->
-
-<section class="main-section">
-    <header>Python Syntax</header>
-    <br>
-    <article>
-        <h4>Execute Python Syntax</h4>
-        <p>As we learned in the previous page, Python syntax can be executed by writing directly in the Command Line:</p>
-        <code>
-            >>> print("Hello, World!")
-            Hello, World!
-        </code>
-        <br>
-        <p>Or by creating a python file on the server, using the .py file extension, and running it in the Command Line:</p>
-        <code>
-            C:\Users\Your Name>python myfile.py
-        </code>
-        <br>
-        <h4>Python Indentation</h4>
-        <p>Indentation refers to the spaces at the beginning of a code line.</p>
-        <p>Where in other programming languages the indentation in code is for readability only, the indentation in Python is very important.</p>
-        <p>Python uses indentation to indicate a block of code.</p>
-        <h5>Example</h5>
-        <code>
-            if 5 > 2:
-                print("Five is greater than two!")
-        </code>
-        <br>
-        <p>Python will give you an error if you skip the indentation:</p>
-        <h5>Example</h5>
-        <code id="error-code">
-            Syntax Error:
-
-            if 5 > 2:
-            print("Five is greater than two!")
-        </code>
-        <br>
-        <p>The number of spaces is up to you as a programmer, but it has to be at least one.</p>
-        <h4>Example</h4>
-        <code>
-            if 5 > 2:
-                print("Five is greater than two!") 
-            if 5 > 2:
-                    print("Five is greater than two!") 
-        </code>
-        <br>
-        <p>You have to use the same number of spaces in the same block of code, otherwise Python will give you an error:</p>
-        <h4>Example</h4>
-        <code id="error-code">
-            Syntax Error:
-
-            if 5 > 2:
-                print("Five is greater than two!")
-                    print("Five is greater than two!")
-        </code>
-        <br>
-        <h4>Python Variables</h4>
-        <p>In Python, variables are created when you assign a value to it:</p>
-        <h4>Example</h4>
-        <p>Variables in Python:</p>
-        <code>
-            x = 5
-            y = "Hello, World!"
-        </code>
-        <br>
-        <p>Python has no command for declaring a variable.</p>
-        <p>You will learn more about variables in the Python Variables chapter.</p>
-
-    </article>
-</section>
-
-<!-- PYTHON SYNTAX SECTION ENDS HERE -->
-
-<br>
-
-<!-- PYTHON VARIABLES SECTION STARTS HERE -->
-
-
-<section class="main-section">
-    <header>Python Variables</header>
-    <br>
-    <article>
-        <h4>Variables</h4>
-        <p>Variables are containers for storing data values.</p>
-        <h4>Creating Variables</h4>
-        <p>Python has no command for declaring a variable.</p>
-        <p>A variable is created the moment you first assign a value to it.</p>
-        <h5>Example</h5>
-        <code>
-            x = 5
-            y = "John"
-        </code>
-        <br>
-        <p>Variables do not need to be declared with any particular type, and can even change type after they have been set.</p>
-        <h5>Example</h5>
-        <code>
-            x = 4       # x is of type int
-            x = "Sally" # x is now of type str
-            print(x)
-        </code>
-        <br>
-        <h4>Casting</h4>
-        <p>If you want to specify the data type of a variable, this can be done with casting.</p>
-        <h5>Example</h5>
-        <code>
-            x = str(3)    # x will be '3'
-            y = int(3)    # y will be 3
-            z = float(3)  # z will be 3.0
-        </code>
-        <br>
-        <h4>Get the Type</h4>
-        <p>You can get the data type of a variable with the type() function.</p>
-        <h5>Example</h5>
-        <code>
-            x = 5
-            y = "John"
-            print(type(x))
-            print(type(y))
-        </code>
-        <br>
-        <p class="note">You will learn more about data types and casting later.</p>
-        <h4>Single or Double Quotes?</h4>
-        <p>String variables can be declared either by using single or double quotes:</p>
-        <h5>Example</h5>
-        <code>
-            x = "John"
-            # is the same as
-            x = 'John'
-        </code>
-        <br>
-        <h4>Case-Sensitive</h4>    
-        <p>Variable names are case-sensitive.</p>
-        <h5>Example</h5>
-        <p>This will create two variables:</p>
-        <code>
-            a = 4
-            A = "Sally"
-            #A will not overwrite a
-        </code>
-        <br>
-        <h5>Variable Names</h5>
-        <p>A variable can have a short name (like x and y) or a more descriptive name (age, carname, total_volume). Rules for Python variables:</p>
-        <ul>
-            <li>A variable name must start with a letter or the underscore character</li>
-            <li>A variable name cannot start with a number</li>
-            <li>A variable name can only contain alpha-numeric characters and underscores (A-z, 0-9, and _ )</li>
-            <li>Variable names are case-sensitive (age, Age and AGE are three different variables)</li>
-        </ul>
-        <h5>Example</h5>
-        <p>Legal variable names:</p>
-        <code>
-            myvar = "John"
-            my_var = "John"
-            _my_var = "John"
-            myVar = "John"
-            MYVAR = "John"
-            myvar2 = "John"
-        </code>
-        <br>
-        <h5>Example</h5>
-        <p>Illegal variable names:</p>
-        <code id="error-code">
-            2myvar = "John"
-            my-var = "John"
-            my var = "John"
-        </code>
-        <br>
-        <p class="note">Remember that variable names are case-sensitive</p>
-        <h4>Multi Words Variable Names</h4>
-        <p>Variable names with more than one word can be difficult to read.</p>
-        <p>There are several techniques you can use to make them more readable:
-        <h5>Camel Case</h5>
-        <p>Each word, except the first, starts with a capital letter:</p>
-        <code>
-            myVariableName = "John"
-        </code>
-        <br>
-        <h5>Pascal Case</h5>
-        <p>Each word starts with a capital letter:</p>
-        <code>
-            MyVariableName = "John"
-        </code>
-        <br>
-        <h5>Snake Case</h5>
-        <p>Each word is separated by an underscore character:</p>
-        <code>
-            my_variable_name = "John"
-        </code>
-        <br>
-        <h4>Many Values to Multiple Variables</h4>
-        <p>Python allows you to assign values to multiple variables in one line:</p>
-        <h5>Example</h5>
-        <code>
-            x, y, z = "Orange", "Banana", "Cherry"
-            print(x)
-            print(y)
-            print(z)
-        </code>
-        <br>
-        <p class="note"><strong>Note:</strong> Make sure the number of variables matches the number of values, or else you will get an error.</p>
-        <h4>One Value to Multiple Variables</h4>
-        <p>And you can assign the same value to multiple variables in one line:</p>
-        <h5>Example</h5>
-        <code>
-            x = y = z = "Orange"
-            print(x)
-            print(y)
-            print(z)
-        </code>
-        <br>
-        <h4>Unpack a Collection</h4>
-        <p>If you have a collection of values in a list, tuple etc. Python allows you extract the values into variables. This is called unpacking.</p>
-        <h5>Example</h5>
-        <code>
-            fruits = ["apple", "banana", "cherry"]
-            x, y, z = fruits
-            print(x)
-            print(y)
-            print(z)
-        </code>
-        <br>
-        <h4>Output Variables</h4>
-        <p>The Python print statement is often used to output variables.</p>
-        <p>To combine both text and a variable, Python uses the + character:</p>
-        <h5>Example</h5>
-        <code>
-            x = "awesome"
-            print("Python is " + x)
-        </code>
-        <br>
-        <p>You can also use the + character to add a variable to another variable:</p>
-        <h5>Example</h5>
-        <code>
-            x = "Python is "
-            y = "awesome"
-            z =  x + y
-            print(z)
-        </code>
-        <br>
-        <p>For numbers, the + character works as a mathematical operator:</p>
-        <h5>Example</h5>
-        <code>
-            x = 5
-            y = 10
-            print(x + y)
-        </code>
-        <p>If you try to combine a string and a number, Python will give you an error:</p>
-        <h5>Example</h5>
-        <code id="error-code">
-            x = 5
-            y = "John"
-            print(x + y)
-        </code>
-        <br>
-        <h4>Global Variables</h4>
-        <p>Variables that are created outside of a function (as in all of the examples above) are known as global variables.</p>
-        <p>Global variables can be used by everyone, both inside of functions and outside.</p>
-        <h5>Example</h5>
-        <p>Create a variable outside of a function, and use it inside the function</p>
-        <code>
-            x = "awesome"
-
-            def myfunc():
-                print("Python is " + x)
-
-            myfunc()
-        </code>
-        <br>
-        <p>If you create a variable with the same name inside a function, this variable will be local, and can only be used inside the function. The global variable with the same name will remain as it was, global and with the original value.</p>
-        <h5>Example</h5>
-        <p>Create a variable inside a function, with the same name as the global variable</p>
-        <code>
-            x = "awesome"
-
-            def myfunc():
-            x = "fantastic"
-            print("Python is " + x)
-
-            myfunc()
-
-            print("Python is " + x)
-        </code>
-        <br>
-        <h4>The global Keyword</h4>
-        <p>Normally, when you create a variable inside a function, that variable is local, and can only be used inside that function.</p>
-        <p>To create a global variable inside a function, you can use the global keyword.</p>
-        <h5>Example</h5>
-        <p>If you use the global keyword, the variable belongs to the global scope:</p>
-        <code>
-            def myfunc():
-            global x
-            x = "fantastic"
-
-            myfunc()
-
-            print("Python is " + x)
-        </code>
-        <br>
-        <p>Also, use the global keyword if you want to change a global variable inside a function.</p>
-        <h5>Example</h5>
-        <p>To change the value of a global variable inside a function, refer to the variable by using the global keyword:</p>
-        <code>
-            x = "awesome"
-
-            def myfunc():
-                global x
-                x = "fantastic"
-
-            myfunc()
-
-            print("Python is " + x)
-        </code>
-        <br>
-    </article>
-</section>
-
-
-<!-- PYTHONN VARIABLES SECTION ENDS HERE -->
 
 
 <br>
 
-<!-- PYTHON DATA TYPES SECTION STARTS HERE -->
 
 
-<section class="main-section">
-    <header>Python Data Types</header>
-    <br>
-    <h4>Built-in Data Types</h4>
-    <p>In programming, data type is an important concept.</p>
-    <p>Variables can store data of different types, and different types can do different things.</p>
-    <p>Python has the following data types built-in by default, in these categories:</p>
-    <table>
-        <tr>
-          <td>Text Type: </td>
-          <td>str</td>
-        </tr>
-        <tr>
-          <td>Numeric Type: </td>
-          <td>int, float, complex</td>
-        </tr>
-        <tr>
-          <td>Sequence Types:</td>
-          <td>list, tuple, range</td>
-        </tr>
-        <tr>
-            <td>Mapping Type:</td>
-            <td>dict</td>
-        </tr>
-        <tr>
-            <td>Set Types:	</td>
-            <td>set, frozenset</td>
-        </tr>
-        <tr>
-            <td>Boolean Type:	</td>
-            <td>boo</td>
-          </tr>
-         <tr>
-            <td>Binary Types:	</td>
-            <td>bytes, bytearray, memoryview</td>
-        </tr>
-      </table>
-      <br>
-      <h4>Getting the Data Type</h4>
-      <p>You can get the data type of any object by using the type() function:</p>
-      <h5>Example</h5>
-      <p>Print the data type of the variable x:</p>
-      <code>
-        x = 5
-        print(type(x))
-      </code>
-      <br>
-</section>
 
-
-<!-- PYTHON DATA TYPES SECTION ENDS HERE -->
-
-<br>
-
-<!-- PYTHON NUMBER SECTION STARTS HERE -->
-
-
-<section class="main-section">
-    <header>Python Numbers</header>
-    <br>
-    <article>
-        <p>There are three numeric types in Python:</p>
-        <ul>
-            <li>int</li>
-            <li>float</li>
-            <li>complex</li>
-        </ul>
-        <p>Variables of numeric types are created when you assign a value to them:</p>
-        <h5>Example</h5>
-        <code>
-            x = 1    # int
-            y = 2.8  # float
-            z = 1j   # complex
-        </code>
-        <br>
-        <p>To verify the type of any object in Python, use the type() function:</p>
-        <h4>Example</h4>
-        <code>
-            print(type(x))
-            print(type(y))
-            print(type(z))
-        </code><br>
-        <h4>Int</h4>
-        <p>Int, or integer, is a whole number, positive or negative, without decimals, of unlimited length.</p>
-        <h5>Example</h5>
-        <code>
-            x = 1
-            y = 35656222554887711
-            z = -3255522
-    
-            print(type(x))
-            print(type(y))
-            print(type(z))
-        </code>
-        <br>
-        <h4>Float</h4>
-        <p>Float, or "floating point number" is a number, positive or negative, containing one or more decimals.</p>
-        <h5>Example</h5>
-        <code>
-            x = 1.10
-            y = 1.0
-            z = -35.59
-    
-            print(type(x))
-            print(type(y))
-            print(type(z))
-        </code>
-        <br>
-        <p>Float can also be scientific numbers with an "e" to indicate the power of 10.</p>
-        <h5>Example</h5>
-        <code>
-            x = 35e3
-            y = 12E4
-            z = -87.7e100
-    
-            print(type(x))
-            print(type(y))
-            print(type(z))
-        </code>
-        <br>
-        <h4>Complex</h4>
-        <p>Complex numbers are written with a "j" as the imaginary part:</p>
-        <h5>Example</h5>
-        <code>
-            x = 3+5j
-            y = 5j
-            z = -5j
-    
-            print(type(x))
-            print(type(y))
-            print(type(z))
-        </code>
-        <br>
-        <h4>Type Conversion</h4>
-        <p>You can convert from one type to another with the int(), float(), and complex() methods:</p>
-        <h5>Example</h5>
-        <p>Convert from one type to another:</p>
-        <code>
-            x = 1    # int
-            y = 2.8  # float
-            z = 1j   # complex
-    
-            #convert from int to float:
-            a = float(x)
-    
-            #convert from float to int:
-            b = int(y)
-    
-            #convert from int to complex:
-            c = complex(x)
-    
-            print(a)
-            print(b)
-            print(c)
-            
-            print(type(a))
-            print(type(b))
-            print(type(c))
-        </code>
-        <br>
-        <p class="note"><strong>Note:</strong> You cannot convert complex numbers into another number type.</p>
-        <h4>Random Number</h4>
-        <p>Python does not have a random() function to make a random number, but Python has a built-in module called random that can be used to make random numbers:</p>
-        <h5>Example</h5>
-        <p>Import the random module, and display a random number between 1 and 9:</p>
-        <code>
-            import random
-
-            print(random.randrange(1, 10))
-        </code>
-    </article>
-</section>
-
-
-<!-- PYTHON NUMBER SECTION ENDS HERE -->
 
 {% endblock main %}
