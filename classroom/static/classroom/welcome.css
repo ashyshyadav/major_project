@@ -15,9 +15,11 @@
     font-size: 2rem;
 }
 .subjects > h2 {
-    margin: 1.5rem;
+    margin: 1rem;
+    padding: 1.5rem;
     text-align: center;
-    /* border: 1px solid black; */
+    border: 3px solid rgba(2, 54, 102, 0.397);
+    border-radius: 1.2rem;
     font-size: 2rem;
 }
 

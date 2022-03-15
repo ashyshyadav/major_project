@@ -5,7 +5,7 @@ from django.contrib.auth.models import User
 
 class Exam(models.Model):
     name = models.CharField(max_length=120)
-    # subject = models.ForeignKey(Subject, on_delete=models.CASCADE)
+    subject = models.ForeignKey(Subject, on_delete=models.CASCADE)
     number_of_questions = models.IntegerField(default=10)
     required_score_pass =models.IntegerField(default=40,)
     time = models.IntegerField(help_text="duration of test in minutes")
@@ -41,7 +41,7 @@ class Answer(models.Model):
     question =models.ForeignKey(Question, on_delete=models.CASCADE)
 
     def __str__(self):
-        return f" question: {self.question.text}, answer: {self.text}, correct: {self.correct}"
+        return " question: {self.question.text}, answer: {self.text}, correct: {self.correct}"
 
 
 class Result(models.Model):
