@@ -126,7 +126,7 @@ def add_questions(request, subject, exam_name, number_of_questions):
         formset = CustomFormset(request.POST)
         print(f'--------------{formset.is_valid()}-------')
         if formset.is_valid():
-            for f in formset:
+            for f in formset:   
                 input_question = f.cleaned_data['question']
                 input_option_1 = f.cleaned_data['option_1']
                 input_option_2 = f.cleaned_data['option_2']
