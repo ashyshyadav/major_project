@@ -32,9 +32,14 @@ def register(request):
 
 def profile(request):
     user = request.user
+    if (user.teacher):
+        context = {
+            'user': user,
+        }
+        return render(request, 'users/teacher_dashboard.html', context)
     result = Result.objects.filter(user = user)
     context={
         'user':user,
         'result':result
-    }
+    }   
     return render(request, 'users/profile.html', context)
