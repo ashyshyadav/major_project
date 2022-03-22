@@ -41,7 +41,7 @@ class Answer(models.Model):
     question =models.ForeignKey(Question, on_delete=models.CASCADE)
 
     def __str__(self):
-        return " question: {self.question.text}, answer: {self.text}, correct: {self.correct}"
+        return f"question: {self.question.text}, answer: {self.text}, correct: {self.correct}"
 
 
 class Result(models.Model):

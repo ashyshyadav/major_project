@@ -8,48 +8,62 @@
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    background: linear-gradient(90deg, rgba(226, 90, 253, 0.705), #fa8a8a);
+    background: linear-gradient(90deg, rgba(101, 76, 245, 0.705), #bdee8d);
     height: 100vh;
     color: rgb(143, 56, 71);
     font-family: 'Rock Salt', cursive;
-    font-size: 2rem;
 }
-.subjects > h2 {
+
+.subjects > a {
     margin: 1rem;
     padding: 1.5rem;
     text-align: center;
     border: 3px solid rgba(2, 54, 102, 0.397);
-    border-radius: 1.2rem;
+    border-radius: 1.2em;
     font-size: 2rem;
+    
 }
 
-a{
+.subjects > a {
     color: white;
     text-decoration: none;
 }
 
-.subjects > h2:hover{
+.subjects > a:hover{
     background-color: teal;
-}
-
-.text-white{
-    color: white;
 }
 
 .register{
     display: flex;
 }
 
-.register > div {
+.register > a {
     color: rgb(143, 56, 71);
     margin:0 100px;
     
 }
-.register > div > h2> a{
+.register  a{
     color: rgb(143, 56, 71);
+    text-decoration: none;
+    border: 3px solid rgba(2, 54, 102, 0.397);
+    border-radius: 1.2em;
+    font-size: 2rem;
+    padding: 1.5rem;
 }
 
-.register > div:hover {
-    background-color: white;
-    border-radius: 5px; 
+.register > a:hover {
+    background-color: white; 
+
+}
+
+
+@media (max-width:1199px)  {
+    .subjects > a {
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    
 }

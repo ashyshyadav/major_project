@@ -133,17 +133,18 @@ def add_questions(request, subject, exam_name, number_of_questions):
                 input_option_3 = f.cleaned_data['option_3']
                 input_option_4 = f.cleaned_data['option_4']
                 input_correct  = f.cleaned_data['correct_option']
-                # print(f'---{input_question}---\n------{input_option_1}\n------{input_option_2}\n------{input_option_3}\n------{input_option_4}\n-----{input_correct}')
+                print(f'---{input_question}---\n------{input_option_1}\n------{input_option_2}\n------{input_option_3}\n------{input_option_4}\n-----{input_correct}')
                 question = Question(text=input_question, exam=exam)
                 question.save()
-                # print(f"questio____{question}")
-                if input_correct == 1 :
+                print(f"questio____{question}")
+                print(type(input_correct))
+                if input_correct == '1' :
                     co = input_option_1
-                elif input_correct == 2 :
+                elif input_correct == '2' :                 
                     co = input_option_2 
-                elif input_correct == 3 :
+                elif input_correct == '3' :
                     co = input_option_3
-                else:
+                elif input_correct == '4':
                     co = input_option_4 
 
                 if co == input_option_1 :
@@ -166,9 +167,9 @@ def add_questions(request, subject, exam_name, number_of_questions):
                 else :  
                     answer_3 = Answer(text=input_option_3, correct=False, question=question)
                     answer_3.save()
-                # print(f'OUTSIDE-----------{input_correct}----------{input_option_4}---{co}')
+                print(f'OUTSIDE-----------{input_correct}----------{input_option_4}---{co}')
                 if co == input_option_4 :
-                    # print(f'{input_correct}-----EQUALS-----{input_option_4}')
+                    print(f'{input_correct}-----EQUALS-----{input_option_4}')
                     answer_4 = Answer(text=input_option_4, correct=True, question=question)
                     answer_4.save()
                 else :

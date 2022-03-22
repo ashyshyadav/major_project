@@ -13,6 +13,9 @@
     <!-- GOOGLE FONTS LINKS END HERE -->
     <!-- FAVICON STARTS HERE -->
     <link rel="shortcut icon" href="{%  static 'favicon.svg ' %}">
+    <!-- BOOTSTRAP LINK -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- BOOTSTRAP LINK END -->
     <!-- FAVICON ENDS HERE -->
     <link rel="stylesheet" href="{% static 'classroom/welcome.css' %}">
     <title>ClassInator | Welcome</title>
@@ -23,18 +26,18 @@
             <div class="welcome-text">
                 <h1>Welcome to ClassInator</h1>
             </div>
-            <div class="subjects">
-                <h2><a href="{% url 'index' 'python'%}">Python</a></h2>
-                <h2><a href="{% url 'index' 'multimediasystem' %}">Multi Media System</a></h2>
-                <h2><a href="{% url 'index' 'dbms' %}">DBMS</a></h2>
-                <h2><a href="{% url 'index' 'microprocessor' %}">Microprocessor</a></h2>
+            <div class="subjects container">
+                <a href="{% url 'index' 'python'%}">Python</a>
+                <a href="{% url 'index' 'multimediasystem' %}">Multi Media System</a>
+                <a href="{% url 'index' 'dbms' %}">DBMS</a>
+                <a href="{% url 'index' 'microprocessor' %}">Microprocessor</a>
             </div>
-            <div class="register">
+            <div class="register ">
                 {% if user.is_authenticated %}
-                    <div><h2><a href="{% url 'logout' %}">Logout</a></h2><div>
+                    <a href="{% url 'logout' %}">Logout</a>
                 {% else %}
-                <div><h2><a href="{% url 'login' %}">Login</a></h2></div>
-                <div><h2><a href="{% url 'register' %}">Register</a></h2></div>        
+                <a href="{% url 'login' %}">Login</a>
+                <a href="{% url 'register' %}">Register</a>        
                 {% endif %}
                 
             </div>
