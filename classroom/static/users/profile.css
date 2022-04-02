@@ -1,0 +1,22 @@
+/* main{
+    margin-right: 5rem;
+    margin-left: 5rem;
+} */
+.user-info{
+    border-bottom:1px solid black;
+    display: flex;
+    padding: 3rem;
+    background: linear-gradient(20deg, rgba(241, 134, 227, 0.705), #8de7ee);
+    /* border-radius: 2rem; */
+}
+.profile-pic  img{
+    height: 10rem;
+    width: 10rem;
+    border-radius: 50%;
+    border: 1px black solid;
+}
+
+
+.charts {
+    display: flex;
+}

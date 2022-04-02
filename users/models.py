@@ -3,6 +3,7 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.db.models.base import Model
 from classroom.models import Subject
+from PIL import Image
 # Create your models here.
 
 class Profile(models.Model):

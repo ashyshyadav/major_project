@@ -1,6 +1,85 @@
-<h1>{{user}}</h1>
-<h3>Syllabus</h3>
-<ul>
-    <li><a href="">Add Ciriculum</a></li>
-    <li><a href="">Update Ciriculum</a></li>
-</ul>
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- BOOTSTRAP LINK -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- CSS LINK -->
+    <link rel="stylesheet" href="{% static 'users/teacher_dashboard.css'%}">
+    <title>ClassInator | {{user | title}}</title>
+</head>
+<body>
+    <div class="user-info">
+        <div class="profile-pic">
+          <img class="img-fluid" src="{{user.profile.image.url}}" alt="notfound">
+        </div>
+        <div class="user-info-items">
+          <h1>{{user.get_full_name | title }}</h1>
+          <p>@{{user}}</p>
+      
+          <a class="btn btn-dark text-white" href="/user/updateprofile/">Update</a>
+      
+        </div>
+    </div>
+    
+    <div class="charts" style="position: relative; height:50vw; width:45vw">
+    <canvas id="syllabusDoughnutChart"></canvas>
+    <canvas id="syllabusLineChart"></canvas>
+    <div>
+
+    
+</body>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+<!-- <script src="{% static 'users/teacher_dashboard.js' %}"></script> -->
+<script>
+const ctx = document.getElementById('syllabusDoughnutChart').getContext('2d');
+const myChart = new Chart(ctx, {
+    type: 'doughnut',
+    data: {
+        labels: ['Pending',  'Completed', ],
+        datasets: [{
+            label: '# of Votes',
+            data: [{{pending | safe}}, {{completed | safe}},],
+            backgroundColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(75, 192, 192, 0.2)',
+                
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                
+                'rgba(75, 192, 192, 1)',
+                
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+});
+
+
+
+const myChart1 = new Chart('syllabusLineChart', {
+    type: 'line',
+    data: {
+    labels:['Jan','Feb','Mar','Apr',] ,
+    datasets: [{
+      label: 'Chapters', 
+      backgroundColor: "rgba(75, 192, 192, 0.2)",
+      borderColor: "rgba(75, 192, 192, 0.2)",
+      data: {{ line_data | safe }}
+    }]
+  }
+});
+</script>
+</html>
+
