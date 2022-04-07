@@ -28,11 +28,13 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',classroom_views.welcome, name='welcome'),
     path('user/', include('users.urls')),
+    path("syllabus/", include('syllabus.urls')),
+    # path('chatroom/', include('chat.urls')),
     path('register/', users_views.register, name='register'),
     path('login/', auth_views.LoginView.as_view(template_name='users/login.html'), name='login'),
     path('logout/', auth_views.LogoutView.as_view(template_name='users/logout.html'), name='logout'),
     path('thankyou/', exam_views.thankyou, name="exam-thankyou" ),
-    path('<str:subject>/', include('classroom.urls')),
+    path('subject/<str:subject>/', include('classroom.urls')),
     path('<str:subject>/exam/', include('exam.urls'), name='main_exam'),
     
 ] 

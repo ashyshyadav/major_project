@@ -34,6 +34,8 @@ INSTALLED_APPS = [
     'classroom.apps.ClassroomConfig',
     'exam.apps.ExamConfig',
     'users.apps.UsersConfig',
+    'syllabus',
+    'channels',
     'crispy_forms',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -74,6 +76,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'project.wsgi.application'
 
+ASGI_APPLICATION = 'project.asgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases

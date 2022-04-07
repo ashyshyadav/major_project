@@ -28,10 +28,10 @@
                 <h1>Welcome to ClassInator</h1>
             </div>
             <div class="subjects container">
-                <a href="{% url 'index' 'python'%}">Python</a>
-                <a href="{% url 'index' 'multimediasystem' %}">Multi Media System</a>
-                <a href="{% url 'index' 'dbms' %}">DBMS</a>
-                <a href="{% url 'index' 'microprocessor' %}">Microprocessor</a>
+                <a href="{% url 'classroom:index' 'python'%}">Python</a>
+                <a href="{% url 'classroom:index' 'multimediasystem' %}">Multi Media System</a>
+                <a href="{% url 'classroom:index' 'dbms' %}">DBMS</a>
+                <a href="{% url 'classroom:index' 'microprocessor' %}">Microprocessor</a>
             </div>
             <div class="register ">
                 {% if user.is_authenticated %}

@@ -1,11 +1,14 @@
-from distutils.command.sdist import sdist
-from exam.models import Result
+from exam.models import Result, Exam
 from django.shortcuts import redirect, render
 from .forms import UserRegisterForm, UserUpdateForm , ProfileUpdateForm
 from django.contrib import messages 
 from classroom.models import Curriculum, Subject
 from django.core.exceptions import ObjectDoesNotExist
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.mixins import LoginRequiredMixin
+from django.views.generic.edit import UpdateView
+from django.views.generic.list import ListView
+
 # Create your views here.
 
 # REGISTER VIEW, IT IS FOR USER REGISTRATION
@@ -41,6 +44,11 @@ def profile(request):
         check_teacher = False    
     if (check_teacher):
         subject = user.teacher.subject
+        exams = Exam.objects.filter(subject=subject)
+        result_query_list = []
+        for e in exams :
+            result_query_list.append(Result.objects.filter(exam=e))
+            
         completed = Curriculum.objects.filter(subject=subject, is_complete=True).count()
         pending = Curriculum.objects.filter(subject=subject, is_complete=False).count()
         completed_qs = Curriculum.objects.filter(subject=subject, is_complete=True)
@@ -70,6 +78,8 @@ def profile(request):
             'pending': pending,
             'line_data':line_data,
             'user': user,
+            'subject': subject, 
+            'result_query_list': result_query_list,     
         }
         return render(request, 'users/teacher_dashboard.html', context)
     
@@ -122,3 +132,5 @@ def update_profile(request):
     }
 
     return render(request , 'users/updateprofile.html', context)
+
+

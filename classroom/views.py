@@ -2,7 +2,8 @@ from os import name
 from typing import ContextManager
 from django.http.response import Http404
 from django.shortcuts import render
-from . models import Subject
+from . models import Subject, Curriculum
+
 def index(request, subject):
     # try:
         template_path = "classroom/" + subject + ".html"

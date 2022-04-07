@@ -100,6 +100,8 @@ def exam(request, subject, exam_pk):
 @login_required
 def create_exam(request,subject):
     if request.method == 'POST':
+        user = request.user
+        subject = user.teacher
         exam_creation_form = ExamCreationForm(request.POST)
         if exam_creation_form.is_valid():
             exam_creation_form.save()

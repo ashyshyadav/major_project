@@ -20,17 +20,41 @@
           <h1>{{user.get_full_name | title }}</h1>
           <p>@{{user}}</p>
       
-          <a class="btn btn-dark text-white" href="/user/updateprofile/">Update</a>
-      
+          <a class="btn btn-dark text-white" href="/user/updateprofile/">Update Profile</a>
+          <a class="btn btn-dark text-white" href="/{{user.teacher.subject.name}}/exam/create-exam">Create Exam</a>
+          <a class="btn btn-dark text-white" href="{% url 'create-syllabus' %}">Add Syllabus</a>
+          <a class="btn btn-dark text-white" href="/{{user.teacher.subject.name}}/exam/create-exam">Update Syllabus</a>
+          <a class="btn btn-dark text-white" href="">Announcement</a>
+          <a class="btn btn-dark text-white" href="/">Home</a>
         </div>
     </div>
-    
-    <div class="charts" style="position: relative; height:50vw; width:45vw">
+    <div class="dashboard">
+    <div class="charts" style="position: relative;  width:45vw">
     <canvas id="syllabusDoughnutChart"></canvas>
     <canvas id="syllabusLineChart"></canvas>
-    <div>
-
-    
+    </div>
+    <div class="result">
+        <h4>Results</h4>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Exam</th>
+                <th>Score</th>
+            </tr>
+            
+                {% for result in result_query_list %}
+                    {% for r in result %}
+                    <tr>
+                        <td>{{r.user.get_full_name}}</td>
+                        <td>{{r.exam.name}}</td>
+                        <td>{{r.score}}</td>
+                    </tr>    
+                    {% endfor %}
+                {% endfor %}
+            
+        </table>   
+    </div>
+    </div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
 <!-- <script src="{% static 'users/teacher_dashboard.js' %}"></script> -->

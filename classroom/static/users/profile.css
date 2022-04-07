@@ -2,10 +2,17 @@
     margin-right: 5rem;
     margin-left: 5rem;
 } */
+html{
+    scroll-behavior: smooth;
+}
+.subject{
+    padding: 3rem;
+    border: 1px black solid;
+}
 .user-info{
     border-bottom:1px solid black;
     display: flex;
-    padding: 3rem;
+    padding: 2rem;
     background: linear-gradient(20deg, rgba(241, 134, 227, 0.705), #8de7ee);
     /* border-radius: 2rem; */
 }

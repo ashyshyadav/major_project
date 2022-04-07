@@ -25,8 +25,12 @@
     <h1>{{user.get_full_name | title }}</h1>
     <p>@{{user}}</p>
 
-    <a class="btn btn-dark text-white">Update</a>
-
+    <a href="/user/updateprofile/" class="btn btn-dark text-white">Update</a>
+    <a href="#python" class="btn btn-dark text-white">Python</a>
+    <a href="#mms" class="btn btn-dark text-white">Multi Media System</a>
+    <a href="#dbms" class="btn btn-dark text-white">DBMS</a>
+    <a href="#microprocessor" class="btn btn-dark text-white">Microprocessor</a>
+    <a href="/" class="btn btn-dark">Home</a>
   </div>
 </div>
 
@@ -40,22 +44,34 @@
 
 
 <div class="subject-container" >
-  <div class="subject">
+  <div id='python' class="subject">
     <h3>Python</h3>
     <h4>Syllabus</h4>
+    <hr>
     {% if True %}
       <div class="charts">
         <div class="doughnut">
           <canvas id= "pythonSyllabusDoughnutChart" style="position: relative; height:20em; width:30em"></canvas>
         </div>
         <div>
-          <canvas id="pythonSyllabusLineChart" style="position: relative; height:20em; width:40em"></></canvas>
+          <canvas id="pythonSyllabusLineChart" style="position: relative; height:20em; width:35em"></></canvas>
         </div>
+      </div>
+      <div class="result">
+        <h4>Exam Results.</h4>
+        <hr>
+        <ul>
+        {% for r in result %}
+        {% if r.exam.subject.name == 'python' %}
+        <li>{{r.exam.name}}: {{r.score}}%</li>
+        {% endif %}
+        {% endfor %}
+      </ul>            
       </div>
 
     {% endif %}
   </div>
-  <div class="subject">
+  <div id="mms" class="subject">
     <h3>Multi Media System</h3>
     <h4>Syllabus</h4>
     {% if True %}
@@ -67,9 +83,21 @@
           <canvas id="mmsSyllabusLineChart" style="position: relative; height:20em; width:40em"></canvas>
         </div>
       </div>
+      <div class="result">
+        <h4>Exam Results.</h4>
+        <hr>
+        <ul>
+        {% for r in result %}
+        {% if r.exam.subject.name == 'multimediasystem' %}
+        <li>{{r.exam.name}}: {{r.score}}%</li>
+        {% endif %}
+        {% endfor %}
+      </ul>            
+    </div>
     {% endif %}
+    
   </div>
-  <div class="subject">
+  <div id="dbms" class="subject">
     <h3>DBMS</h3>
     <h4>Syllabus</h4>
     {% if True %}
@@ -81,9 +109,20 @@
           <canvas id="dbmsSyllabusLineChart" style="position: relative; height:20em; width:40em"></canvas>
         </div>
       </div>
+      <div class="result">
+        <h4>Exam Results.</h4>
+        <hr>
+        <ul>
+        {% for r in result %}
+        {% if r.exam.subject.name == 'dbms' %}
+        <li>{{r.exam.name}}: {{r.score}}%</li>
+        {% endif %}
+        {% endfor %}
+      </ul>            
+      </div>
     {% endif %}
   </div>
-  <div class="subject">
+  <div id="microprocessor" class="subject">
     <h3>Microprocessor</h3>
     <h4>Syllabus</h4>
     {% if True %}
@@ -96,6 +135,17 @@
         </div>
       </div>
     {% endif %}
+    <div class="result">
+      <h4>Exam Results.</h4>
+      <hr>
+      <ul>
+      {% for r in result %}
+      {% if r.exam.subject.name == 'microprocessor' %}
+      <li>{{r.exam.name}}: {{r.score}}%</li>
+      {% endif %}
+      {% endfor %}
+    </ul>            
+    </div>
   </div>
 </div>
 

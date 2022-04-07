@@ -20,7 +20,7 @@
     <form method="post">
     {% csrf_token %}
     {% for question in exam.get_questions %}
-        <p>{{question}}</p>
+        <p>{{question.text}}</p>
         {% for answer in question.get_answers %}
             <input type="radio" name="{{question.text}}" id="{{answer.text}}" value="{{answer.text}}" required>
             <label for="{{answer.text}}">{{answer.text}}</label>
