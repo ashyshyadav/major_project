@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClassInator | Syllabus Update</title>
+</head>
+<body>
+<div class="content-section">
+    <form method="post">
+    {% csrf_token %}
+        <fieldset class="form-group">
+            <legend class="border-bottom mb-4">Update Syllabus</legend>
+            {{update_syallbus | crispy}}
+        </fieldset>
+        <div class="form-group">
+            <button class="btn btn-info border border-dark" type="submit">Submit</button>
+        </div>
+    </form>
+</div>  
+</body>
+</html>

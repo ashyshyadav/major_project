@@ -1,0 +1,86 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="{% static 'classroom/main.css' %}">
+
+    <!-- Font awesome -->
+    <script src="https://kit.fontawesome.com/45179194c6.js" crossorigin="anonymous"></script>
+
+    <!-- FAVICON STARTS HERE -->
+    <link rel="shortcut icon" href="{%  static 'favicon.svg' %}">
+    <!-- FAVICON ENDS HERE -->    
+    <title>ClassInator | Announcement</title>
+</head>
+<body>
+    <nav id="navbar">
+        {% if user.is_authenticated %}
+          <header>
+              <a href="{% url 'profile'%}" class="active"><i class="fas fa-user"></i>{{user.username}}</a>
+          </header>
+        {% endif %}
+            
+            <ul>
+              <li {% if subject == 'python' %}class="current-page" {% endif %}>
+                <a class="nav-links " href="{% url 'classroom:index' 'python' %}">
+                    Python
+                </a>
+              </li>
+              <li {% if subject == 'multimediasystem' %}class="current-page" {% endif %}>
+                <a class="nav-links" href="{% url 'classroom:index' 'multimediasystem' %}">
+                  Multi Media System
+                </a>
+          
+              </li>
+              <li {% if subject == 'dbms' %}class="current-page" {% endif %}>
+                <a class="nav-links" href="{% url 'classroom:index' 'dbms' %}">
+                  DBMS
+                </a>
+              </li>
+              <li {% if subject == 'microprocessor' %}class="current-page" {% endif %}>
+                  <a class="nav-links" href="{% url 'classroom:index' 'microprocessor' %}">
+                    Microprocessor
+                  </a>
+              </li>
+              <li {% if subject == 'announcement' %}class="current-page" {% endif %} id="last-li">
+                  <a class="nav-links" href="{% url 'announcement-index' %}">
+                    Announcement
+                  </a>
+              </li>
+            </ul>
+    </nav>
+
+<main id="main-doc">
+{% for announcement in announcement_qs %}
+<div class="announcement">
+<div class="header">
+  <div class="profile-pic">
+    <img src="{{announcement.teacher.user.profile.image.url}}" alt="Image not found">
+  </div>
+  <div class="title">   
+    <h3>{{announcement.title}}</h3>
+    <div class="inner-title">
+      <p class="text-muted">{{announcement.teacher.user.get_full_name}} | {{announcement.date}}</p>
+      <p></p>
+    </div>  
+  </div>
+</div>
+<div class="content">
+  <p>{{announcement.content}}</p>
+</div>
+</div>
+
+
+{% endfor %}
+        
+    </div>
+</main>
+
+</body>
+</html>

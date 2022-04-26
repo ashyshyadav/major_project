@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- BOOTSTRAP LINK -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- FAVICON STARTS HERE -->
+    <link rel="shortcut icon" href="{%  static 'favicon.svg' %}">
+
+    <!-- CSS LINK -->
+    <link rel="stylesheet" href="{% static 'users/teacher_dashboard.css'%}">
+    <title>ClassInator | {{user | title}}</title>
+</head>
+<body>
+    <div class="user-info">
+        <div class="profile-pic">
+          <img class="img-fluid" src="{{user.profile.image.url}}" alt="notfound">
+        </div>
+        <div class="user-info-items">
+          <h1>{{user.get_full_name | title }}</h1>
+          <p>@{{user}}</p>
+      
+          <a class="btn btn-dark text-white" href="/user/updateprofile/">Update Profile</a>
+          <a class="btn btn-dark text-white" href="/{{user.teacher.subject.name}}/exam/create-exam">Create Exam</a>
+          <a class="btn btn-dark text-white" href="{% url 'create-syllabus' %}">Add Syllabus</a>
+          <a class="btn btn-dark text-white" href="{% url 'update-syllabus-list' %}">Update Syllabus</a>
+          <a class="btn btn-dark text-white" href="{% url 'create-announcement' %}">Make Announcement</a>
+          <a class="btn btn-dark text-white" href="/">Add Assignment</a>
+          <a class="btn btn-dark text-white" href="/">Home</a>
+          <button class="btn btn-dark text-white"  onclick="history.back()">Back</button>
+          
+        </div>
+    </div>
+    <div class="content-block">
+        {% block content %}{% endblock content %}
+    </div>    
+</body>
+{% block script_content %}{% endblock script_content %}
+
+</html>
+

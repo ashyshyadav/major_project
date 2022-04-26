@@ -1,34 +1,7 @@
+{% extends 'users/teacher_base.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- BOOTSTRAP LINK -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <!-- CSS LINK -->
-    <link rel="stylesheet" href="{% static 'users/teacher_dashboard.css'%}">
-    <title>ClassInator | {{user | title}}</title>
-</head>
-<body>
-    <div class="user-info">
-        <div class="profile-pic">
-          <img class="img-fluid" src="{{user.profile.image.url}}" alt="notfound">
-        </div>
-        <div class="user-info-items">
-          <h1>{{user.get_full_name | title }}</h1>
-          <p>@{{user}}</p>
-      
-          <a class="btn btn-dark text-white" href="/user/updateprofile/">Update Profile</a>
-          <a class="btn btn-dark text-white" href="/{{user.teacher.subject.name}}/exam/create-exam">Create Exam</a>
-          <a class="btn btn-dark text-white" href="{% url 'create-syllabus' %}">Add Syllabus</a>
-          <a class="btn btn-dark text-white" href="/{{user.teacher.subject.name}}/exam/create-exam">Update Syllabus</a>
-          <a class="btn btn-dark text-white" href="">Announcement</a>
-          <a class="btn btn-dark text-white" href="/">Home</a>
-        </div>
-    </div>
-    <div class="dashboard">
+{% block content %}
+<div class="dashboard">
     <div class="charts" style="position: relative;  width:45vw">
     <canvas id="syllabusDoughnutChart"></canvas>
     <canvas id="syllabusLineChart"></canvas>
@@ -55,7 +28,10 @@
         </table>   
     </div>
     </div>
-</body>
+
+{% endblock content %}
+
+{% block script_content %}
 <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
 <!-- <script src="{% static 'users/teacher_dashboard.js' %}"></script> -->
 <script>
@@ -105,5 +81,5 @@ const myChart1 = new Chart('syllabusLineChart', {
   }
 });
 </script>
-</html>
+{% endblock script_content %}
 

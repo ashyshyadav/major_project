@@ -60,7 +60,7 @@ header {
   color: black;
   margin: 10px;
   text-align: center;
-  font-size: 1.8em;
+  font-size: 1.3em;
   font-weight: thin;
   font-family: 'Ubuntu', sans-serif;
 }
@@ -221,3 +221,22 @@ code{
 /* CSS FOR exam_index.html ENDS HERE */
 
 
+/* Announcement section index style */
+
+.announcement{
+  border: 1px solid black;
+  margin: 0 0 2rem 0; 
+  padding: 1.5rem;
+  background:#f5f5f5;
+}
+
+.header{
+  display: flex;
+  align-items: center;
+}
+
+.header img{
+  width: 100px;
+  /* border: .5px solid black; */
+  border-radius: 50%;
+}

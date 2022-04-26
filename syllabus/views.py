@@ -1,6 +1,22 @@
 from django.shortcuts import render, redirect
 from . forms import  CreateSyllabus
+from django.http import HttpResponse
+from django.views.generic import ListView
+from classroom.models import Curriculum
 # Create your views here.
+
+def update_list(request):
+    teacher = request.user.teacher
+    subject = teacher.subject
+    syllabus_qs = Curriculum.objects.filter(subject = subject)
+    context = {
+        'teacher': teacher,
+        'subject':subject,
+        'syllabus_qs': syllabus_qs,
+    }
+    return render (request, 'syllabus/update-list.html', context)
+
+
 def create_syllabus(request):
     if request.method == 'POST':
         create_syllabus = CreateSyllabus(request.POST)
@@ -13,3 +29,4 @@ def create_syllabus(request):
             'create_syallbus': create_syllabus
         }
         return render(request, 'syllabus/create_syllabus.html', context=context)
+

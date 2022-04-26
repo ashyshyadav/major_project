@@ -1,0 +1,29 @@
+{% extends 'users/teacher_base.html' %}
+
+{% load static %}
+{% block content %}  
+<div class="dashboard">
+    <h4>Syllabus</h4>
+    <table>
+        <tr>
+            <th>Chapter</th>
+            <th>Is Completed</th>
+            <th>Completion Date</th>
+            <th>Update</th>
+        </tr>
+
+        {% for syllabus in syllabus_qs %}
+        <tr>
+            <td>{{syllabus.chapter}}</td>
+            <td>{{syllabus.is_complete}}</td>
+            <td>{{syllabus.completion_date | date:'d-F-y' }}</td>
+            <td><a class="btn btn-primary text-white">edit--{{syllabus.pk}}</a></td>
+        </tr>
+        {% endfor %}
+    </table>   
+</div>    
+{% endblock content %}
+
+    
+</body>
+</html>

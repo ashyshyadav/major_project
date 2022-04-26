@@ -36,6 +36,10 @@ INSTALLED_APPS = [
     'users.apps.UsersConfig',
     'syllabus',
     'channels',
+    'chat',
+    'announcement',
+    'assignment',
+    'django_extensions',
     'crispy_forms',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -77,6 +81,12 @@ TEMPLATES = [
 WSGI_APPLICATION = 'project.wsgi.application'
 
 ASGI_APPLICATION = 'project.asgi.application'
+
+CHANNEL_LAYERS = {
+    'default': {
+        'BACKEND': 'channels.layers.InMemoryChannelLayer',
+    },
+}
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
@@ -147,3 +157,9 @@ LOGIN_URL = 'login'
 
 MEDIA_ROOT = BASE_DIR / 'media'
 MEDIA_URL = '/media/'
+
+
+GRAPH_MODELS = {
+  'all_applications': True,
+  'group_models': True,
+}
