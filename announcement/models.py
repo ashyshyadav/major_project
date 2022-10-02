@@ -1,6 +1,4 @@
 from datetime import datetime
-from email.policy import default
-from xmlrpc.client import DateTime
 from django.db import models
 from django.utils import timezone
 from users.models import Teacher

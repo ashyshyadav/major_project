@@ -68,7 +68,17 @@
         {% endfor %}
       </ul>            
       </div>
-
+      <div class="result">
+        <h4>Assignments Completed</h4>
+        <hr>
+        <ul>
+        {% for s in submission %}
+        {% if s.assignment.subject.name == 'python' %}
+        <li>{{s.assignment.title}}</li>
+        {% endif %}
+        {% endfor %}
+      </ul>            
+      </div>
     {% endif %}
   </div>
   <div id="mms" class="subject">
@@ -93,6 +103,17 @@
         {% endif %}
         {% endfor %}
       </ul>            
+    </div>
+    <div class="result">
+      <h4>Assignments Completed</h4>
+      <hr>
+      <ul>
+      {% for s in submission %}
+      {% if s.assignment.subject.name == 'multimediasystem' %}
+      <li>{{s.assignment.title}}</li>
+      {% endif %}
+      {% endfor %}
+    </ul>            
     </div>
     {% endif %}
     
@@ -120,6 +141,17 @@
         {% endfor %}
       </ul>            
       </div>
+      <div class="result">
+        <h4>Assignments Completed</h4>
+        <hr>
+        <ul>
+        {% for s in submission %}
+        {% if s.assignment.subject.name == 'dbms' %}
+        <li>{{s.assignment.title}}</li>
+        {% endif %}
+        {% endfor %}
+      </ul>            
+      </div>
     {% endif %}
   </div>
   <div id="microprocessor" class="subject">
@@ -142,6 +174,17 @@
       {% for r in result %}
       {% if r.exam.subject.name == 'microprocessor' %}
       <li>{{r.exam.name}}: {{r.score}}%</li>
+      {% endif %}
+      {% endfor %}
+    </ul>            
+    </div>
+    <div class="result">
+      <h4>Assignments Completed</h4>
+      <hr>
+      <ul>
+      {% for s in submission %}
+      {% if s.assignment.subject.name == 'microprocessor' %}
+      <li>{{s.assignment.title}}</li>
       {% endif %}
       {% endfor %}
     </ul>            

@@ -6,29 +6,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Font awesome -->
-    <script src="https://kit.fontawesome.com/45179194c6.js" crossorigin="anonymous"></script>
-    <!-- FAVICON STARTS HERE -->
-    <link rel="shortcut icon" href="{%  static 'favicon.svg' %}">    
     <!-- BOOTSTRAP LINK -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-- CSS LINK -->
-    <link rel="stylesheet" href="{% static 'syllabus/create_syllabus.css' %}">    
-    <title>ClassInator | Syllabus</title>
+    <link rel="stylesheet" href="{% static 'announcement/create_announcement.css' %}">
+    <title>ClassInator | Discussion</title>
 </head>
 <body>
-    <div class="content-section">
+    {{subject}}
+    <div>
         <form method="post">
             {% csrf_token %}
             <fieldset class="form-group">
-                <legend class="border-bottom mb-4">Add Syllabus</legend>
-                {{create_syallbus | crispy}}
+                <legend class="border-bottom mb-4">Message</legend>
+                {{message_form | crispy}}
             </fieldset>
             <div class="form-group">
                 <button class="btn btn-info border border-dark" type="submit">Submit</button>
             </div>
         </form>
+        <div class="pt-3">
+            <h5 class="text-muted">
+                <a class="ml-2" href="/">Home</a>
+            </h5>
+        </div>  
     </div>
-    
 </body>
 </html>

@@ -1,0 +1,52 @@
+{% load static %}
+{% load crispy_forms_tags %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="{% static 'discussion/index.css' %}">
+
+    <!-- Font awesome -->
+    <script src="https://kit.fontawesome.com/45179194c6.js" crossorigin="anonymous"></script>
+
+    <!-- FAVICON STARTS HERE -->
+    <link rel="shortcut icon" href="{%  static 'favicon.svg' %}">
+    <!-- FAVICON ENDS HERE -->        
+    <title>ClassInator | Discussion</title>
+</head>
+<body>
+    <main id="main-doc">
+        
+        {% for message in message_qs %}
+        <div class="announcement">
+        <div class="header">
+          <div class="profile-pic">
+            <img src="{{message.user.profile.image.url}}" alt="Image not found">
+          </div>
+          <div class="title">   
+            <h3>{{message.title}}</h3>
+            <div class="inner-title">
+              <p class="text-muted">{{message.user.get_full_name}} | {{message.date}}</p>
+              <p></p>
+            </div>  
+          </div>
+        </div>
+        <div class="content">
+          <p>{{message.message}}</p>
+        </div>
+        </div>
+        {% endfor %}
+        <div class="pt-3">
+          <h5 class="text-muted">
+              <a class="ml-2" href="{% url 'discussion-create' 'subject' %}">Add Message</a>
+          </h5>
+      </div>  
+        </div>
+    <main>    
+</body>
+</html>

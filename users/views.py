@@ -3,6 +3,7 @@ from django.shortcuts import redirect, render
 from .forms import UserRegisterForm, UserUpdateForm , ProfileUpdateForm
 from django.contrib import messages 
 from classroom.models import Curriculum, Subject
+from assignment.models import Submission
 from django.core.exceptions import ObjectDoesNotExist
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
@@ -84,6 +85,7 @@ def profile(request):
         return render(request, 'users/teacher_dashboard.html', context)
     
     result = Result.objects.filter(user = user)
+    submission = Submission.objects.filter(user=user)
     python = Subject.objects.get(name='python')
     multimediasystem = Subject.objects.get(name='multimediasystem')
     dbms = Subject.objects.get(name='dbms') 
@@ -108,6 +110,7 @@ def profile(request):
         'dbms_completed': dbms_completed,
         'microprocessor_pending': microprocessor_pending,
         'microprocessor_completed': microprocessor_completed,
+        'submission': submission,
     }   
     return render(request, 'users/profile.html', context)
 

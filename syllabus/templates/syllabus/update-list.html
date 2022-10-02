@@ -15,9 +15,14 @@
         {% for syllabus in syllabus_qs %}
         <tr>
             <td>{{syllabus.chapter}}</td>
-            <td>{{syllabus.is_complete}}</td>
+            {% comment %} <td>{{syllabus.is_complete}}</td> {% endcomment %}
+            {% if syllabus.is_complete %}
+            <td>Yes</td>
+            {% else %}
+            <td>No</td>
+            {% endif %}
             <td>{{syllabus.completion_date | date:'d-F-y' }}</td>
-            <td><a class="btn btn-primary text-white">edit--{{syllabus.pk}}</a></td>
+            <td><a href='{% url "update-syllabus" syllabus.pk %}' class="btn btn-primary text-white">edit</a></td>
         </tr>
         {% endfor %}
     </table>   

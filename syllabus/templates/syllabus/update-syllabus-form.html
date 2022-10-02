@@ -1,0 +1,35 @@
+{% load static %}
+{% load crispy_forms_tags %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font awesome -->
+    <script src="https://kit.fontawesome.com/45179194c6.js" crossorigin="anonymous"></script>
+
+    <!-- FAVICON STARTS HERE -->
+    <link rel="shortcut icon" href="{%  static 'favicon.svg' %}">    
+    <!-- BOOTSTRAP LINK -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">    
+    <!-- CSS LINK -->
+    <link rel="stylesheet" href="{% static 'syllabus/update_syllabus.css' %}">    
+    <title>ClassInator | Syllabus Update</title>
+</head>
+<body>
+<div class="content-section">
+    <form method="post">
+    {% csrf_token %}
+        <fieldset class="form-group">
+            <legend class="border-bottom mb-4">Update Syllabus</legend>
+            <h4>{{syllabus.chapter}}</h4>
+            {{update_form | crispy}}
+        </fieldset>
+        <div class="form-group">
+            <button class="btn btn-info border border-dark" type="submit">Submit</button>
+        </div>
+    </form>
+</div>  
+</body>
+</html>

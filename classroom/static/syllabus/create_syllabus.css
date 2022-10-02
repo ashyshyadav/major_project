@@ -1,0 +1,27 @@
+*{
+    box-sizing: 0;
+    margin:0;
+}
+
+body {
+    text-align: center;
+    background: linear-gradient(45deg, rgb(227, 119, 244), rgb(135, 241, 236));
+    height: 100vh;
+}
+
+
+form{
+    color: rgb(138, 97, 11);
+    border: 1px solid black;
+    display: inline-block;
+    text-align: start;
+    padding: 0 30px;
+    margin: 7vh 10px 0;
+    font-weight: 600;
+    background: linear-gradient(45deg, rgb(135, 241, 236), rgb(227, 119, 244));
+}
+
+form > fieldset > legend{
+    text-align: center;
+}
+

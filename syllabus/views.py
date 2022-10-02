@@ -30,3 +30,5 @@ def create_syllabus(request):
         }
         return render(request, 'syllabus/create_syllabus.html', context=context)
 
+def update_syllabus(request, pk):
+    pass

@@ -1,12 +1,42 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ClassInator | Assignment</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Font awesome -->
+    <script src="https://kit.fontawesome.com/45179194c6.js" crossorigin="anonymous"></script>    
+    <!-- FAVICON STARTS HERE -->
+    <link rel="shortcut icon" href="{%  static 'favicon.svg' %}">    
+    <!-- CSS LINK -->
+    <link rel="stylesheet" href="{% static 'assignment/index.css' %}">
+    <title>ClassInator | Assignments</title>
 </head>
 <body>
-    
+    <h2>{{subject | title}}</h2>
+    <hr>
+    {% for assignment in new_assignment%}
+    <div class="announcement">
+        <div class="header">
+          <div class="profile-pic">
+            <img src="{{assignment.teacher.user.profile.image.url}}" alt="Image not found">
+          </div>
+          <div class="title">   
+            <h3>{{assignment.title}}</h3>
+            <div class="inner-title">
+              <p class="text-muted">{{assignment.teacher.user.get_full_name}} | {{assignment.date}}</p>
+              <p></p>
+            </div>  
+          </div>
+        </div>
+        <div class="content">
+          <p>{{assignment.content | linebreaks}}</p>
+          <a class="btn btn-primary" href="{% url 'assignment-upload' assignment.pk %}">Upload</a>
+        </div>
+    </div>
+    {% endfor %}
 </body>
 </html>

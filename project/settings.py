@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'chat',
     'announcement',
     'assignment',
+    'discussion',
     'django_extensions',
     'crispy_forms',
     'django.contrib.admin',

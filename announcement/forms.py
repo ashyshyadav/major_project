@@ -1,4 +1,3 @@
-from dataclasses import fields
 from django import forms
 from . models import Announcement
 from django.contrib.auth.models import User
