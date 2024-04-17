@@ -56,6 +56,21 @@
 
 }
 
+#logout-btn {
+    margin:0 100px;
+    color: rgb(143, 56, 71);
+    text-decoration: none;
+    border: 3px solid rgba(2, 54, 102, 0.397);
+    border-radius: 1.2em;
+    font-size: 2rem;
+    padding: 1.5rem;
+    
+}
+
+#logout-btn:hover {
+    background-color: white; 
+
+}
 
 @media (max-width:1199px)  {
     .subjects > a {

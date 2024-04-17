@@ -27,7 +27,7 @@
           <a class="btn btn-dark text-white" href="/user/updateprofile/">Update Profile</a>
           <a class="btn btn-dark text-white" href="/{{user.teacher.subject.name}}/exam/create-exam">Create Exam</a>
           <a class="btn btn-dark text-white" href="{% url 'create-syllabus' %}">Add Syllabus</a>
-          <a class="btn btn-dark text-white" href="{% url 'update-syllabus-list' %}">Update Syllabus</a>
+          {% comment %} <a class="btn btn-dark text-white" href="{% url 'update-syllabus-list' %}">Update Syllabus</a> {% endcomment %}
           <a class="btn btn-dark text-white" href="{% url 'create-announcement' %}">Make Announcement</a>
           <a class="btn btn-dark text-white" href="{% url 'assignment-create'%}">Add Assignment</a>
           <a class="btn btn-dark text-white" href="/">Home</a>

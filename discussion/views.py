@@ -9,6 +9,7 @@ def index(request, sub):
     message_qs = Message.objects.filter(subject=subject).order_by('-id')
     context = {
         'message_qs': message_qs,
+        'subject': subject
     }
     return render (request, 'discussion/index.html', context)
 
